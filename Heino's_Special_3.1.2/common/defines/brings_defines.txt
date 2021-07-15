@@ -1,0 +1,3 @@
+NGraphics = {
+		PLANET_RING_TILT_FROM_SUN				= 0.16
+	}

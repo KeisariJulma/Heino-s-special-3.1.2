@@ -1,0 +1,849 @@
+
+building_chemical_plant = {
+	base_buildtime = 480
+
+	category = manufacturing
+
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+	}	
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+	destroy_trigger = {
+		free_building_slots = 0
+		exists = owner
+		owner = {
+			is_ai = yes
+			has_monthly_income = {
+				resource = volatile_motes
+				value > 9
+			}
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }					
+		}
+		modifier = {
+			job_chemist_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }					
+		}
+		modifier = {
+			job_chemist_drone_add = 1
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}	
+		upkeep = {
+			energy = 3
+		}
+	}	
+
+	upgrades = {
+		building_motes_plant_upgraded
+	}
+	
+	prerequisites = {
+		"tech_volatile_motes"
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = no } 
+		}
+		text = job_chemist_effect_desc
+	}	
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = yes } 
+		}
+		text = job_chemist_drone_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			factor = 0
+			buildings_build_building = no
+		}
+		modifier = {
+			weight = 30
+			owner = {
+				has_monthly_income = {
+					resource = volatile_motes
+					value < 3
+				}#5 is too high since that means 2 extra buildings. Better to just go with 1 extra building
+			}
+		}
+		modifier = {
+			weight = 200
+			owner = {
+				has_monthly_income = {
+					resource = volatile_motes
+					value < 0
+				}#5 is too high since that means 2 extra buildings. Better to just go with 1 extra building
+			}
+		}
+	}
+	
+	ai_resource_production = {
+		volatile_motes = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_motes_plant_upgraded = {
+	base_buildtime = 500
+	can_build = no
+
+	category = manufacturing
+
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+	}	
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+	destroy_trigger = {
+		free_building_slots = 0
+		exists = owner
+		owner = {
+			is_ai = yes
+			has_monthly_income = {
+				resource = volatile_motes
+				value > 9
+			}
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }					
+		}
+		modifier = {
+			job_chemist_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }					
+		}
+		modifier = {
+			job_chemist_drone_add = 3
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1500
+		}	
+		upkeep = {
+			energy = 9
+		}
+	}	
+	
+	prerequisites = {
+		"tech_advanced_sr_producec"
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = no } 
+		}
+		text = job_chemist_effect_desc
+	}	
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = yes } 
+		}
+		text = job_chemist_drone_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 50
+			owner = {
+				has_monthly_income = {
+					resource = exotic_gases
+					value < 5
+				}
+			}
+			buildings_build_building = yes
+		}
+		modifier = {
+			weight = 200
+			owner = {
+				has_monthly_income = {
+					resource = exotic_gases
+					value < 1
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		exotic_gases = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+
+building_refinery = {
+	base_buildtime = 480
+
+	category = manufacturing
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	destroy_trigger = {
+		free_building_slots = 0
+		exists = owner
+		owner = {
+			is_ai = yes
+			has_monthly_income = {
+				resource = exotic_gases
+				value > 11
+			}
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }					
+		}
+		modifier = {
+			job_gas_refiner_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }					
+		}
+		modifier = {
+			job_gas_refiner_drone_add = 1
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}	
+		upkeep = {
+			energy = 3
+		}
+	}	
+
+	upgrades = {
+		building_gas_refinery_upgraded
+	}
+	
+	prerequisites = {
+		"tech_exotic_gases"
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = no } 
+		}
+		text = job_gas_refiner_effect_desc
+	}	
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = yes } 
+		}
+		text = job_gas_refiner_drone_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 50
+			owner = {
+				has_monthly_income = {
+					resource = exotic_gases
+					value < 5
+				}
+			}
+			buildings_build_building = yes
+		}
+		modifier = {
+			weight = 200
+			owner = {
+				has_monthly_income = {
+					resource = exotic_gases
+					value < 1
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		exotic_gases = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_gas_refinery_upgraded = {
+	base_buildtime = 500
+	can_build = no
+		
+	category = manufacturing
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	destroy_trigger = {
+		free_building_slots = 0
+		exists = owner
+		owner = {
+			is_ai = yes
+			has_monthly_income = {
+				resource = exotic_gases
+				value > 11
+			}
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }					
+		}
+		modifier = {
+			job_gas_refiner_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }					
+		}
+		modifier = {
+			job_gas_refiner_drone_add = 3
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1500
+		}	
+		upkeep = {
+			energy = 9
+		}
+	}	
+
+	
+	prerequisites = {
+		"tech_advanced_sr_producec"
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = no } 
+		}
+		text = job_gas_refiner_effect_desc
+	}	
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = yes } 
+		}
+		text = job_gas_refiner_drone_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 50
+			owner = {
+				has_monthly_income = {
+					resource = exotic_gases
+					value < 5
+				}
+			}
+			buildings_build_building = yes
+		}
+		modifier = {
+			weight = 200
+			owner = {
+				has_monthly_income = {
+					resource = exotic_gases
+					value < 1
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		exotic_gases = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+
+building_crystal_plant = {
+	base_buildtime = 480
+	
+	category = manufacturing
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		free_building_slots = 0
+		exists = owner
+		owner = {
+			is_ai = yes
+			has_monthly_income = {
+				resource = rare_crystals
+				value > 9
+			}
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }					
+		}
+		modifier = {
+			job_translucer_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }					
+		}
+		modifier = {
+			job_translucer_drone_add = 1
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}	
+		upkeep = {
+			energy = 3
+		}
+	}	
+
+	upgrades = {
+		building_crystal_plant_upgraded
+	}
+	
+	prerequisites = {
+		"tech_rare_crystals"
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = no } 
+		}
+		text = job_translucer_effect_desc
+	}	
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = yes } 
+		}
+		text = job_translucer_drone_effect_desc
+	}
+
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 50
+			owner = {
+				has_monthly_income = {
+					resource = exotic_gases
+					value < 5
+				}
+			}
+			buildings_build_building = yes
+		}
+		modifier = {
+			weight = 200
+			owner = {
+				has_monthly_income = {
+					resource = exotic_gases
+					value < 1
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		exotic_gases = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+building_crystal_plant_upgraded = {
+	base_buildtime = 500
+	can_build = no
+	
+	category = manufacturing
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		free_building_slots = 0
+		exists = owner
+		owner = {
+			is_ai = yes
+			has_monthly_income = {
+				resource = rare_crystals
+				value > 9
+			}
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }					
+		}
+		modifier = {
+			job_translucer_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }					
+		}
+		modifier = {
+			job_translucer_drone_add = 3
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1500
+		}	
+		upkeep = {
+			energy = 9
+		}
+	}	
+	
+	prerequisites = {
+		"tech_advanced_sr_producec"
+	}
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = no } 
+		}
+		text = job_translucer_effect_desc
+	}	
+	
+	triggered_desc = {
+		trigger = { 
+			exists = owner
+			owner = { is_gestalt = yes } 
+		}
+		text = job_translucer_drone_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 50
+			owner = {
+				has_monthly_income = {
+					resource = exotic_gases
+					value < 5
+				}
+			}
+			buildings_build_building = yes
+		}
+		modifier = {
+			weight = 200
+			owner = {
+				has_monthly_income = {
+					resource = exotic_gases
+					value < 1
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		exotic_gases = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
+building_dark_matter_maker = {
+	base_buildtime = 1920
+	can_build = yes
+	add_to_first_building_slot = yes
+	category = manufacturing
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		free_building_slots = 0
+		exists = owner
+		owner = {
+			is_ai = yes
+			has_monthly_income = {
+				resource = rare_crystals
+				value > 9
+			}
+		}
+	}
+	
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 5000
+		}	
+		upkeep = {
+			energy = 10
+			minerals = 40
+		}
+		produces = {
+			sr_dark_matter = 1
+		}
+	}	
+	
+	prerequisites = {
+		"tech_small_black_hole"
+	}	
+
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 200
+			owner = {
+				has_monthly_income = {
+					resource = sr_dark_matter
+					value < 3
+				}
+			}
+		}
+	}
+}
+
+building_high_energy_cube_building = {
+	base_buildtime = 1920
+	can_build = yes
+	add_to_first_building_slot = yes
+	category = manufacturing
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		free_building_slots = 0
+		exists = owner
+		owner = {
+			is_ai = yes
+			has_monthly_income = {
+				resource = rare_crystals
+				value > 9
+			}
+		}
+	}
+	
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 5000
+		}	
+		upkeep = {
+			energy = 20
+			alloys = 20
+		}
+		produces = {
+			nanites = 1
+		}
+	}	
+	
+	prerequisites = {
+		"tech_high_energy_cube_produce"
+	}
+
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 200
+			owner = {
+				has_monthly_income = {
+					resource = nanites
+					value < 3
+				}
+			}
+		}
+	}
+}
+
+building_living_metal_building = {
+	base_buildtime = 1920
+	can_build = yes
+	add_to_first_building_slot = yes
+	category = manufacturing
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }	
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	destroy_trigger = {
+		free_building_slots = 0
+		exists = owner
+		owner = {
+			is_ai = yes
+			has_monthly_income = {
+				resource = rare_crystals
+				value > 9
+			}
+		}
+	}
+	
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 5000
+		}	
+		upkeep = {
+			energy = 30
+			minerals = 10
+		}
+		produces = {
+			sr_living_metal = 1
+		}
+	}	
+	
+	prerequisites = {
+		"tech_living_metal_produce"
+	}
+		
+
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 200
+			owner = {
+				has_monthly_income = {
+					resource = sr_living_metal
+					value < 3
+				}
+			}
+		}
+	}
+}

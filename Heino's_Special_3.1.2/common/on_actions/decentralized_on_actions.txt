@@ -1,0 +1,47 @@
+on_game_start = {
+	events = {
+		regentmaker.10
+	}
+}
+on_single_player_save_game_load = {
+	events = {
+		regentmaker.10
+	}
+}
+#Fired whenever a new owner is set for a planet,
+#be it after a war or through a trade
+#From = Country scope (new owner)
+#This = Planet scope
+on_planet_transfer = {
+	events = {
+		decentralized.5 # Lose planetary_nationalism
+	}
+}
+
+on_planet_transfer = {
+	events = {
+		decentralized.8 # Chance for overlord to make subject release planet
+	}
+}
+
+# No scope, like on_game_start
+# on_yearly_pulse = {
+# 	events = {
+# 		decentralized.6 # Event for converting vassals into Member States
+# 	}
+# }
+
+# THIS = Country
+on_ruler_set = {
+	events = {
+		decentralized.201 # Starts decentralized elections
+	}
+}
+
+# This = subject
+# From = subject's overlord
+on_becoming_subject = {
+	events = {
+		decentralized.214 # Join Overlord's decentralization
+	}
+}

@@ -1,0 +1,168 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+portraits = {
+	ampl_robot_plant_1 = {
+		entity = "portrait_ampl_robot_plant_entity"	clothes_selector = "no_texture"	hair_selector = "no_texture"	greeting_sound = "robot_plantoid_greetings"
+		character_textures = {
+			"gfx/models/portraits/ampl/plant/light.dds"
+		}
+	}
+	ampl_robot_avian_1 = {
+		entity = "portrait_ampl_robot_avian_entity"	clothes_selector = "no_texture"	hair_selector = "no_texture"	greeting_sound = "robot_avian_greetings"
+		character_textures = {
+			"gfx/models/portraits/ampl/avian/light.dds"
+		}
+	}
+	ampl_robot_arthro_1 = {
+		entity = "portrait_ampl_robot_arthro_entity"	clothes_selector = "no_texture"	hair_selector = "no_texture"	greeting_sound = "robot_arthropoid_greetings"
+		character_textures = {
+			"gfx/models/portraits/ampl/arthro/light.dds"
+		}
+	}
+	ampl_robot_repti_1 = {
+		entity = "portrait_ampl_robot_repti_entity"	clothes_selector = "no_texture"	hair_selector = "no_texture"	greeting_sound = "robot_reptillian_greetings"
+		character_textures = {
+			"gfx/models/portraits/ampl/repti/light.dds"
+		}
+	}
+	ampl_robot_mammal_1 = {
+		entity = "portrait_ampl_robot_mammal_entity"	clothes_selector = "no_texture"	hair_selector = "no_texture"	greeting_sound = "robot_mammalian_greetings"
+		character_textures = {
+			"gfx/models/portraits/ampl/mammal/light.dds"
+		}
+	}
+	ampl_robot_fungus_1 = {
+		entity = "portrait_ampl_robot_fungus_entity"	clothes_selector = "no_texture"	hair_selector = "no_texture"	greeting_sound = "robot_fungoid_greetings"
+		character_textures = {
+			"gfx/models/portraits/ampl/fungus/light.dds"
+		}
+	}
+	ampl_robot_lithoid_1 = {
+		entity = "portrait_ampl_robot_lithoid_entity"	clothes_selector = "no_texture"	hair_selector = "no_texture"	greeting_sound = "robot_lithoid_greetings"
+		character_textures = {
+			"gfx/models/portraits/ampl/lithoid/light.dds"
+		}
+	}
+	ampl_robot_molluscoid_1 = {
+		entity = "portrait_ampl_robot_molluscoid_entity"	clothes_selector = "no_texture"	hair_selector = "no_texture"	greeting_sound = "robot_molluscoid_greetings"
+		character_textures = {
+			"gfx/models/portraits/ampl/molluscoid/light.dds"
+		}
+	}
+	ampl_robot_humanoid_1 = {
+		entity = "portrait_ampl_robot_humanoid_entity"	clothes_selector = "no_texture"	hair_selector = "no_texture"	greeting_sound = "robot_humanoid_greetings"
+		character_textures = {
+			"gfx/models/portraits/ampl/humanoid/light.dds"
+		}
+	}
+}
+
+portrait_groups = {
+	"ampl_robot_plant_group" = {
+			default = ampl_robot_plant_1
+			game_setup = {
+				add = {
+					portraits = {
+						ampl_robot_plant_1
+						
+					}
+				}
+			}
+		}
+	"ampl_robot_avian_group" = {
+		default = ampl_robot_avian_1
+		game_setup = {
+			add = {
+				portraits = {
+					ampl_robot_avian_1
+					
+				}
+			}
+		}
+	}
+	"ampl_robot_arthro_group" = {
+		default = ampl_robot_arthro_1
+		game_setup = {
+			add = {
+				portraits = {
+					ampl_robot_arthro_1
+					
+				}
+			}
+		}
+	}
+	"ampl_robot_repti_group" = {
+		default = ampl_robot_repti_1
+		game_setup = {
+			add = {
+				portraits = {
+					ampl_robot_repti_1
+					
+				}
+			}
+		}
+	}
+	"ampl_robot_mammal_group" = {
+		default = ampl_robot_mammal_1
+		game_setup = {
+			add = {
+				portraits = {
+					ampl_robot_mammal_1
+					
+				}
+			}
+		}
+	}
+	"ampl_robot_fungus_group" = {
+		default = ampl_robot_fungus_1
+		game_setup = {
+			add = {
+				portraits = {
+					ampl_robot_fungus_1
+					
+				}
+			}
+		}
+	}
+	"ampl_robot_lithoid_group" = {
+		default = ampl_robot_lithoid_1
+		game_setup = {
+			add = {
+				portraits = {
+					ampl_robot_lithoid_1
+					
+				}
+			}
+		}
+	}
+	"ampl_robot_molluscoid_group" = {
+		default = ampl_robot_molluscoid_1
+		game_setup = {
+			add = {
+				portraits = {
+					ampl_robot_molluscoid_1
+					
+				}
+			}
+		}
+	}
+	"ampl_robot_humanoid_group" = {
+		default = ampl_robot_humanoid_1
+		game_setup = {
+			add = {
+				portraits = {
+					ampl_robot_humanoid_1
+					
+				}
+			}
+		}
+	}
+}

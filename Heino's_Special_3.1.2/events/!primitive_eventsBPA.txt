@@ -1,0 +1,134 @@
+# Radio Signals
+country_event = {
+	id = primitive.11
+	title = "primitive.11.name"
+	desc = "primitive.11.desc"
+	picture = GFX_primitiveages3
+	location = FROM
+
+	is_triggered_only = yes
+
+	option = {
+		name = primitive.11.a
+	}
+}
+
+# Splitting the Atom
+country_event = {
+	id = primitive.13
+	title = "primitive.13.name"
+	desc = "primitive.13.desc"
+	picture = GFX_primitiveages3
+	location = FROM
+
+	is_triggered_only = yes
+
+	option = {
+		name = primitive.13.a
+	}
+}
+
+# First Satellite
+country_event = {
+	id = primitive.15
+	title = "primitive.15.name"
+	desc = "primitive.15.desc"
+	picture = GFX_primitiveages4
+	location = FROM
+
+	is_triggered_only = yes
+
+	option = {
+		name = primitive.15.a
+	}
+}
+
+# Iron Age
+country_event = {
+	id = primitive.21
+	title = "primitive.21.name"
+	desc = "primitive.21.desc"
+	picture = GFX_primitiveages1
+	location = FROM
+
+	is_triggered_only = yes
+
+	option = {
+		name = primitive.21.a
+	}
+}
+
+# Printing Press
+country_event = {
+	id = primitive.23
+	title = "primitive.23.name"
+	desc = "primitive.23.desc"
+	picture = GFX_primitiveages2
+	location = FROM
+
+	is_triggered_only = yes
+
+	option = {
+		name = primitive.23.a
+	}
+}
+
+# Gunpowder
+country_event = {
+	id = primitive.25
+	title = "primitive.25.name"
+	desc = "primitive.25.desc"
+	picture = GFX_primitiveages2
+	location = FROM
+
+	is_triggered_only = yes
+
+	option = {
+		name =  primitive.25.a
+	}
+}
+
+# Steam Engine
+country_event = {
+	id = primitive.27
+	title = "primitive.27.name"
+	desc = "primitive.27.desc"
+	picture = GFX_primitiveages2
+	location = FROM
+
+	is_triggered_only = yes
+
+	option = {
+		name = primitive.27.a
+	}
+}
+
+# Entering Industrial Age
+country_event = {
+	id = primitive.29
+	title = "primitive.29.name"
+	desc = "primitive.29.desc"
+	picture = GFX_primitiveages3
+	location = FROM
+
+	is_triggered_only = yes
+
+	option = {
+		name = primitive.29.a
+	}
+}
+
+# Bronze Age
+country_event = {
+	id = primitive.31
+	title = "primitive.31.name"
+	desc = "primitive.31.desc"
+	picture = GFX_primitiveages1
+	location = FROM
+
+	is_triggered_only = yes
+
+	option = {
+		name = primitive.31.a
+	}
+}

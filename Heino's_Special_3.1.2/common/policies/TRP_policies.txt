@@ -1,0 +1,32 @@
+TRP_psionic_policy_sacrifice = {
+	potential = {
+		has_country_flag = psionic_sacrifice_allowed
+	}
+
+	option = {
+		name = "TRP_psionic_policy_de_sacrifice"
+
+		policy_flags = {
+			TRP_policy_sacrifice_set_true
+		}
+
+		
+
+		ai_weight = {
+			weight = 1000
+		}
+	}
+	option = {
+		name = "TRP_psionic_policy_de_sacrifice1"
+
+		policy_flags = {
+			TRP_policy_sacrifice_set_false
+		}
+
+		
+
+		ai_weight = {
+			weight = 0
+		}
+	}
+}

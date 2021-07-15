@@ -1,0 +1,22 @@
+﻿l_english:
+ trp_event_title:"Super Industrial Cluster Plan Finished"
+ trp_event_desc_desc:"With the help of intelligent networks, our empire has demonstrated an unparalleled industrial level, transforming an entire planet into a huge industrial cluster in just a few years. Now it is ready to produce endless refined resources"
+ trp_event1:"Symbol of civilized power!"
+ trp_event2:"Technology lead the way!"
+ 
+ trp_event_title1:"Exhaust permeate"
+ trp_event_desc1_desc:"Mass industrial production not only brings resources, but also countless exhaust gases and impurities are discharged into the atmosphere. Now that we have enough ability to control the climate of this planet, it is time to clean up these obstructive things."
+ trp_event11:"Do it as soon as possible"
+ trp_event12:"Clean them up"
+ 
+ trp_sacrifice_event_title:"Shroud Survey"
+ trp_sacrifice_event_desc_desc:"After learning that this magical world does exist, many of our scientists showed extreme excitement and eagerness, and urgently asked us to allocate resources to them to study the principles of the existence of this world and the deeper secrets in order to incorporate it In our theoretical."
+ trp_sacrifice_shroud_research:"Permitted"
+ 
+ trp_sacrifice_event1_title:"Incredible truth"
+ trp_sacrifice_event_desc1_desc:"After a long study, our scientists discovered an amazing secret: "Shroud is a tool made by a civilization named "Hui". They can move galaxies, adjust the state of stars as they like, and convert a neutron star Reverting to a dwarf star is just commonplace, and even a black hole is just a little toy to pass the time in leisure. The power we and all known civilization used in Shroud is just the tip of the iceberg"
+ trp_shroud_describe:"Unbelievable"
+ 
+ trp_sacrifice_event2_title:"Bloody secret"
+ trp_sacrifice_event_desc2_desc:"But suddenly one day, this god-like civilization suddenly disappeared, leaving almost no trace except the Shroud. Our scientists believe that something led to their collective departure. If it was a war, the consequences of the conflict between civilizations at this levels cannot be concealed, or the victor has cleared all traces of the war. At the same time, the Shroud has undergone drastic changes after its owner disappeared. Like those powerful beings who tried to sign covenants with us are appeared after this drastic change. The rules of the Shroud prevent us from further exploring the drastic changes and the truth of the disappearance of civilization "Hui", but from the mouth of those beings, we learned the way to obtain more power from the Shroud: §R"Bloody Sacrifice"§! (Change the purge type to "Extermination" and enable sacrifice in the policy (The default is sacrifice))."
+ trp_shroud_researched:"§RThis is our chance....."

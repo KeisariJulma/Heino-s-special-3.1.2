@@ -1,0 +1,65 @@
+decision_refinery_planet = {
+	owned_planets_only = yes
+	icon = decision_arcology_project
+
+	enactment_time = 1800
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+			minerals = 20000
+		}
+	}
+
+	potential = {
+		NOR = {
+			is_planet_class = pc_refinery
+			has_modifier = resort_colony
+			has_modifier = penal_colony
+			has_modifier = slave_colony
+			has_modifier = pm_wenkwort_custodian
+		}
+		
+		habitable_structure = no
+		exists = owner
+		owner = { has_technology = tech_refinery_planet }
+		
+	}
+
+	allow = {
+		num_uncleared_blockers < 1
+	}
+
+	effect = {
+		hidden_effect = {
+			clear_deposits = yes
+			change_pc = pc_refinery
+			set_planet_entity = {
+				entity = "city_planet_entity"
+				graphical_culture = owner
+			}
+			set_country_flag = refine_planet_builded
+			add_deposit = trp_residue_gas_de
+			owner = {add_research_option = tech_residue_gas_clean}
+			}
+		if = {
+			limit = {
+				owner ={
+					NOT = {
+					 has_country_flag = gas_cleaned
+					 }
+				}
+			}
+				
+				owner = {
+					country_event = { id = trp_event.0 }
+					}
+			}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+

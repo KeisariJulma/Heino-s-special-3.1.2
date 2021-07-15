@@ -1,0 +1,9 @@
+EANDR = {
+	android = {
+		name = Android
+		plural = Androids
+		home_planet = Automata
+		home_system = Aubade
+		name_list = "MACHINE1"
+	}	
+}

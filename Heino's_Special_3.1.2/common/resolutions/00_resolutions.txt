@@ -25,8 +25,7 @@
 #	fail_effects = {} # effect to be applied if failed, scope is proposer unless there is a target country - then scope is target country, with proposer in from scope
 #	potential = {} # potential trigger, scope is country
 #	allow = {} # allow trigger, scope is country
-#	active = {} # Enacted sesolutions are cancelled if this trigger fails
-#	ai_weight = {} # ai weight modifiers, scope is country. from scope is the target country for targeted resolutions
+#	ai_weight = {} # ai weight modifiers, scope is country
 #	valid_target = {} # valid targets trigger, scope is country
 #}
 
@@ -101,7 +100,7 @@ resolution_galactic_market_form = {
 		}
 
 		modifier = {
-			factor = 1.25
+			factor = 1.5
 			OR = {
 				has_ai_personality = peaceful_traders
 				has_ai_personality = ruthless_capitalists
@@ -109,12 +108,32 @@ resolution_galactic_market_form = {
 		}
 
 		modifier = {
-			factor = 0.5
+			factor = 0
 			has_ai_personality = xenophobic_isolationists
+		}
+		
+		modifier = {
+			factor = 0.5
+			has_valid_civic = civic_agrarian_idyll
+		}
+		
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_merchant_guilds
+		}
+		
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_slaver_guilds
+		}
+		
+		modifier = {
+			factor = 0.5
+			has_valid_civic = civic_shared_burden
 		}
 
 		modifier = {
-			factor = 0.8
+			factor = 0.25
 			is_xenophobe = yes
 		}
 
@@ -183,7 +202,7 @@ resolution_ecology_repeal_1 = {
 		}
 
 		modifier = {
-			factor = 0.25
+			factor = 0
 			has_valid_civic = civic_agrarian_idyll
 		}
 
@@ -201,7 +220,7 @@ resolution_ecology_repeal_1 = {
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 1.5
 			is_lithoid_empire = yes
 		}
 	}
@@ -248,6 +267,8 @@ resolution_ecology_repeal_2 = {
 		resolution_ecology_recycling_initiatives = 1
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
@@ -257,7 +278,7 @@ resolution_ecology_repeal_2 = {
 		}
 
 		modifier = {
-			factor = 0.25
+			factor = 0
 			has_valid_civic = civic_agrarian_idyll
 		}
 
@@ -275,7 +296,7 @@ resolution_ecology_repeal_2 = {
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 1.5
 			is_lithoid_empire = yes
 		}
 	}
@@ -323,6 +344,8 @@ resolution_ecology_repeal_3 = {
 		resolution_ecology_natural_sanctuaries = 1
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
@@ -332,12 +355,12 @@ resolution_ecology_repeal_3 = {
 		}
 
 		modifier = {
-			factor = 0.25
+			factor = 0
 			has_valid_civic = civic_agrarian_idyll
 		}
 
 		modifier = {
-			factor = 2
+			factor = 3
 			OR = {
 				has_valid_civic = civic_mining_guilds
 				has_valid_civic = civic_machine_rockbreakers
@@ -345,12 +368,12 @@ resolution_ecology_repeal_3 = {
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 1.5
 			country_uses_food = no
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 2
 			is_lithoid_empire = yes
 		}
 	}
@@ -358,6 +381,10 @@ resolution_ecology_repeal_3 = {
 
 resolution_ecology_repeal_4 = {
 	icon = "GFX_repeal_blue"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -390,7 +417,6 @@ resolution_ecology_repeal_4 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_ecology_environmental_control_board"
 	}
 
@@ -399,6 +425,8 @@ resolution_ecology_repeal_4 = {
 		resolution_ecology_natural_sanctuaries = 1
 		resolution_ecology_integrated_gardens = 1
 	}
+
+	allow = {}
 
 	ai_weight = {
 		weight = @resolution_weight_unpopular
@@ -414,7 +442,7 @@ resolution_ecology_repeal_4 = {
 		}
 
 		modifier = {
-			factor = 0.25
+			factor = 0
 			has_valid_civic = civic_agrarian_idyll
 		}
 
@@ -427,12 +455,12 @@ resolution_ecology_repeal_4 = {
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 1.5
 			country_uses_food = no
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 3
 			is_lithoid_empire = yes
 		}
 	}
@@ -440,6 +468,10 @@ resolution_ecology_repeal_4 = {
 
 resolution_ecology_repeal_5 = {
 	icon = "GFX_repeal_blue"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -473,9 +505,9 @@ resolution_ecology_repeal_5 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_ecology_paradise_initiative"
 	}
+
 
 	modifier = {
 		resolution_ecology_recycling_initiatives = 1
@@ -483,6 +515,8 @@ resolution_ecology_repeal_5 = {
 		resolution_ecology_integrated_gardens = 1
 		resolution_ecology_environmental_control_board = 1
 	}
+
+	allow = {}
 
 	ai_weight = {
 		weight = @resolution_weight_unpopular
@@ -493,7 +527,7 @@ resolution_ecology_repeal_5 = {
 		}
 
 		modifier = {
-			factor = 0.25
+			factor = 0
 			has_valid_civic = civic_agrarian_idyll
 		}
 
@@ -506,12 +540,12 @@ resolution_ecology_repeal_5 = {
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 2
 			country_uses_food = no
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 4
 			is_lithoid_empire = yes
 		}
 	}
@@ -571,17 +605,27 @@ resolution_ecology_recycling_initiatives = {
 		weight = @resolution_weight_loved
 
 		modifier = {
-			factor = 2
+			factor = 4
 			has_valid_civic = civic_environmentalist
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 4
 			has_valid_civic = civic_agrarian_idyll
+		}
+		
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_idealistic_foundation
+		}
+		
+		modifier = {
+			factor = 3
+			has_valid_civic = civic_hive_ascetic
 		}
 
 		modifier = {
-			factor = 0.6
+			factor = 0.5
 			OR = {
 				has_valid_civic = civic_mining_guilds
 				has_valid_civic = civic_machine_rockbreakers
@@ -591,6 +635,11 @@ resolution_ecology_recycling_initiatives = {
 		modifier = {
 			factor = 0.8
 			country_uses_food = no
+		}
+		
+		modifier = {
+			factor = 0.5
+			is_lithoid_empire = yes
 		}
 	}
 }
@@ -640,17 +689,27 @@ resolution_ecology_natural_sanctuaries = {
 		weight = @resolution_weight_popular
 
 		modifier = {
-			factor = 2
+			factor = 4
 			has_valid_civic = civic_environmentalist
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 3
 			has_valid_civic = civic_agrarian_idyll
+		}
+		
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_idealistic_foundation
+		}
+		
+		modifier = {
+			factor = 2.5
+			has_valid_civic = civic_hive_ascetic
 		}
 
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			OR = {
 				has_valid_civic = civic_mining_guilds
 				has_valid_civic = civic_machine_rockbreakers
@@ -658,12 +717,12 @@ resolution_ecology_natural_sanctuaries = {
 		}
 
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			country_uses_food = no
 		}
-
+		
 		modifier = {
-			factor = 0.8
+			factor = 0.25
 			is_lithoid_empire = yes
 		}
 	}
@@ -715,17 +774,27 @@ resolution_ecology_integrated_gardens = {
 		weight = @resolution_weight_normal
 
 		modifier = {
-			factor = 2
+			factor = 4
 			has_valid_civic = civic_environmentalist
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 2.5
 			has_valid_civic = civic_agrarian_idyll
+		}
+		
+		modifier = {
+			factor = 1.25
+			has_valid_civic = civic_idealistic_foundation
+		}
+		
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_hive_ascetic
 		}
 
 		modifier = {
-			factor = 0.4
+			factor = 0
 			OR = {
 				has_valid_civic = civic_mining_guilds
 				has_valid_civic = civic_machine_rockbreakers
@@ -733,12 +802,12 @@ resolution_ecology_integrated_gardens = {
 		}
 
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			country_uses_food = no
 		}
-
+		
 		modifier = {
-			factor = 0.8
+			factor = 0
 			is_lithoid_empire = yes
 		}
 	}
@@ -806,13 +875,23 @@ resolution_ecology_environmental_control_board = {
 		}
 
 		modifier = {
-			factor = 2
+			factor = 4
 			has_valid_civic = civic_environmentalist
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 2
 			has_valid_civic = civic_agrarian_idyll
+		}
+		
+		modifier = {
+			factor = 1
+			has_valid_civic = civic_idealistic_foundation
+		}
+		
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_hive_ascetic
 		}
 
 		modifier = {
@@ -827,10 +906,15 @@ resolution_ecology_environmental_control_board = {
 			factor = 0.5
 			country_uses_food = no
 		}
-
+		
 		modifier = {
-			factor = 0.5
+			factor = 0
 			is_lithoid_empire = yes
+		}
+		
+		modifier = {
+			factor = 0
+			is_machine_empire = yes
 		}
 	}
 }
@@ -887,13 +971,18 @@ resolution_ecology_paradise_initiative = {
 		weight = @resolution_weight_disliked
 
 		modifier = {
-			factor = 2
+			factor = 4
 			has_valid_civic = civic_environmentalist
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 2
 			has_valid_civic = civic_agrarian_idyll
+		}
+		
+		modifier = {
+			factor = 2
+			has_valid_civic = civic_hive_ascetic
 		}
 
 		modifier = {
@@ -904,6 +993,11 @@ resolution_ecology_paradise_initiative = {
 				country_uses_food = no
 				is_lithoid_empire = yes
 			}
+		}
+		
+		modifier = {
+			factor = 0
+			is_machine_empire = yes
 		}
 	}
 }
@@ -959,6 +1053,13 @@ resolution_galacticstudies_repeal_1 = {
 			factor = 1.5
 			is_spiritualist = yes
 		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_philosopher_king
+			}
+		}
 	}
 }
 
@@ -1004,6 +1105,8 @@ resolution_galacticstudies_repeal_2 = {
 		resolution_galacticstudies_cooperative_research_channels = 1
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
@@ -1014,6 +1117,13 @@ resolution_galacticstudies_repeal_2 = {
 		modifier = {
 			factor = 1.5
 			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_philosopher_king
+			}
 		}
 	}
 }
@@ -1063,31 +1173,43 @@ resolution_galacticstudies_repeal_3 = {
 		resolution_galacticstudies_astral_studies_network = 1
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
 		modifier = {
 			factor = 0
 			is_materialist = yes
-			is_xenophile = no
 		}
 		modifier = {
 			factor = 1.5
 			is_spiritualist = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 2.5
 			is_xenophile = yes
 		}
 		modifier = {
 			factor = 10
 			in_breach_of = resolution_galacticstudies_advanced_xenostudies
 		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_philosopher_king
+			}
+		}
 	}
 }
 
 resolution_galacticstudies_repeal_4 = {
 	icon = "GFX_repeal_blue"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -1123,7 +1245,6 @@ resolution_galacticstudies_repeal_4 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_galacticstudies_ethical_guideline_refactoring"
 	}
 
@@ -1141,25 +1262,33 @@ resolution_galacticstudies_repeal_4 = {
 		modifier = {
 			factor = 0
 			is_materialist = yes
-			is_egalitarian = no
 		}
 		modifier = {
 			factor = 1.5
 			is_spiritualist = yes
 		}
 		modifier = {
-			factor = 2
-			is_egalitarian = yes
+			factor = 3
+			OR = {
+				is_xenophile = yes
+				is_egalitarian = yes
 		}
 		modifier = {
-			factor = 10
-			in_breach_of = resolution_galacticstudies_ethical_guideline_refactoring
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_philosopher_king
+			}
 		}
 	}
 }
 
 resolution_galacticstudies_repeal_5 = {
 	icon = "GFX_repeal_blue"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -1180,8 +1309,6 @@ resolution_galacticstudies_repeal_5 = {
 				days = 2200
 			}
 		}
-
-		custom_tooltip = resolution_galacticstudies_ethical_guideline_refactoring_tooltip
 	}
 
 	fail_effects = {
@@ -1195,7 +1322,6 @@ resolution_galacticstudies_repeal_5 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
 	}
 
@@ -1206,28 +1332,31 @@ resolution_galacticstudies_repeal_5 = {
 		resolution_galacticstudies_ethical_guideline_refactoring = 1
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
 		modifier = {
 			factor = 0
 			is_materialist = yes
-			is_egalitarian = no
-			is_xenophile = no
-			is_pacifist = no
 		}
 		modifier = {
 			factor = 1.5
 			is_spiritualist = yes
 		}
 		modifier = {
-			factor = 2
-			is_egalitarian = yes
+			factor = 4
+			OR = {
+				is_xenophile = yes
+				is_egalitarian = yes
 		}
 		modifier = {
-			factor = 2
-			is_pacifist = yes
-			is_xenophile = yes
+			factor = 0.8
+			OR = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_philosopher_king
+			}
 		}
 	}
 }
@@ -1287,12 +1416,27 @@ resolution_galacticstudies_cooperative_research_channels = {
 		weight = @resolution_weight_loved
 
 		modifier = {
-			factor = 1.5
+			factor = 1.75
 			is_materialist = yes
 		}
 		modifier = {
 			factor = 0.75
 			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_philosopher_king
+				has_valid_civic = civic_meritocracy
+				has_valid_civic = civic_hive_pooled_knowledge
+				has_valid_civic = civic_machine_predictive_analysis
+				has_valid_civic = civic_machine_introspective
+			}
+		}
+		modifier = {
+			factor = 3
+			has_valid_civic = civic_technocracy
 		}
 	}
 }
@@ -1347,8 +1491,28 @@ resolution_galacticstudies_astral_studies_network = {
 			is_materialist = yes
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_philosopher_king
+				has_valid_civic = civic_meritocracy
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_hive_pooled_knowledge
+				has_valid_civic = civic_machine_predictive_analysis
+				has_valid_civic = civic_machine_introspective
+			}
+		}
+		modifier = {
+			factor = 3
+			has_valid_civic = civic_technocracy
 		}
 	}
 }
@@ -1434,19 +1598,41 @@ resolution_galacticstudies_advanced_xenostudies = {
 		modifier = {
 			factor = 1.5
 			is_materialist = yes
-			is_xenophile = no
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0
 			is_spiritualist = yes
 		}
 		modifier = {
-			factor = 0.5
+			factor = 1.25
+			OR = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_philosopher_king
+				has_valid_civic = civic_meritocracy
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_hive_pooled_knowledge
+				has_valid_civic = civic_machine_predictive_analysis
+				has_valid_civic = civic_machine_introspective
+			}
+		}
+		modifier = {
+			factor = 0.25
 			is_xenophile = yes
 		}
 		modifier = {
 			factor = 0
 			in_breach_of = resolution_galacticstudies_advanced_xenostudies
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_valid_civic = civic_technocracy
+				has_valid_civic = civic_mechanists
+			}
 		}
 	}
 }
@@ -1475,29 +1661,11 @@ resolution_galacticstudies_ethical_guideline_refactoring = {
 	}
 
 	effect = {
-		custom_tooltip = resolution_galacticstudies_ethical_guideline_refactoring_tooltip
 		hidden_effect = {
 			set_timed_country_flag = { flag = galactic_community_resolution_passed_galacticstudies days = @resolution_flag_timer }
 			add_modifier = {
 				modifier = resolution_passed_diplomatic_weight
 				days = 2200
-			}
-			every_playable_country = {
-				limit = {
-					is_galactic_community_member = yes
-					OR = {
-						AND = {
-							has_technology = tech_selected_lineages
-							has_policy_flag = leader_enhancement_natural_selection
-						}
-
-						AND = {
-							has_technology = tech_capacity_boosters
-							NOT = { has_policy_flag = leader_enhancement_capacity_boosters }
-						}
-					}
-				}
-				country_event = { id = federations.10110 }
 			}
 		}
 	}
@@ -1516,39 +1684,50 @@ resolution_galacticstudies_ethical_guideline_refactoring = {
 		is_active_resolution = "resolution_galacticstudies_advanced_xenostudies"
 	}
 
-	breach = {
-		OR = {
-			AND = {
-				has_technology = tech_selected_lineages
-				has_policy_flag = leader_enhancement_natural_selection
-			}
-
-			AND = {
-				has_technology = tech_capacity_boosters
-				NOT = { has_policy_flag = leader_enhancement_capacity_boosters }
-			}
-		}
-	}
-
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
 		modifier = {
 			factor = 1.5
 			is_materialist = yes
-			is_egalitarian = no
 		}
 		modifier = {
-			factor = 0.75
-			is_spiritualist = yes
+			factor = 0.25
+			OR = {
+				is_egalitarian = yes
+				is_spiritualist = yes
+			}
 		}
 		modifier = {
-			factor = 0.5
-			is_egalitarian = yes
+			factor = 1.25
+			OR = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_philosopher_king
+				has_valid_civic = civic_meritocracy
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_hive_pooled_knowledge
+				has_valid_civic = civic_machine_predictive_analysis
+				has_valid_civic = civic_machine_introspective
+			}
+		}
+		modifier = {
+			factor = 0.25
+			is_xenophile = yes
 		}
 		modifier = {
 			factor = 0
-			in_breach_of = resolution_galacticstudies_ethical_guideline_refactoring
+			in_breach_of = resolution_galacticstudies_advanced_xenostudies
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_valid_civic = civic_technocracy
+				has_valid_civic = civic_mechanists
+			}
 		}
 	}
 }
@@ -1613,29 +1792,44 @@ resolution_galacticstudies_extradimensional_experimentation = {
 		modifier = {
 			factor = 1.5
 			is_materialist = yes
-			is_egalitarian = no
-			is_pacifist = no
 		}
 		modifier = {
-			factor = 0.75
-			is_spiritualist = yes
+			factor = 0.25
+			OR = {
+				is_egalitarian = yes
+				is_spiritualist = yes
+			}
 		}
 		modifier = {
-			factor = 0.5
-			is_pacifist = yes
+			factor = 1.25
+			OR = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_philosopher_king
+				has_valid_civic = civic_meritocracy
+			}
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_hive_pooled_knowledge
+				has_valid_civic = civic_machine_predictive_analysis
+				has_valid_civic = civic_machine_introspective
+			}
+		}
+		modifier = {
+			factor = 0.25
 			is_xenophile = yes
 		}
 		modifier = {
 			factor = 0
-			is_egalitarian = yes
+			in_breach_of = resolution_galacticstudies_advanced_xenostudies
 		}
 		modifier = {
-			factor = 0
-			has_policy_flag = ai_outlawed
-		}
-		modifier = {
-			factor = 0
-			has_policy_flag = interference_passive
+			factor = 3
+			OR = {
+				has_valid_civic = civic_technocracy
+				has_valid_civic = civic_mechanists
+			}
 		}
 	}
 }
@@ -1698,6 +1892,14 @@ resolution_commerce_repeal_1 = {
 				has_valid_civic = civic_trading_posts
 			}
 		}
+		
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_machine_factory_overclock
+			}
+		}
 
 		modifier = {
 			factor = 1.5
@@ -1748,6 +1950,8 @@ resolution_commerce_repeal_2 = {
 		resolution_commerce_buzzword_standardization = 1
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
@@ -1764,6 +1968,14 @@ resolution_commerce_repeal_2 = {
 			OR = {
 				has_valid_civic = civic_free_traders
 				has_valid_civic = civic_trading_posts
+			}
+		}
+		
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_machine_factory_overclock
 			}
 		}
 
@@ -1817,6 +2029,8 @@ resolution_commerce_repeal_3 = {
 		resolution_commerce_leveraged_privateering = 1
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
@@ -1835,6 +2049,14 @@ resolution_commerce_repeal_3 = {
 				has_valid_civic = civic_trading_posts
 			}
 		}
+		
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_machine_factory_overclock
+			}
+		}
 
 		modifier = {
 			factor = 1.5
@@ -1845,6 +2067,10 @@ resolution_commerce_repeal_3 = {
 
 resolution_commerce_repeal_4 = {
 	icon = "GFX_repeal_orange"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -1880,7 +2106,6 @@ resolution_commerce_repeal_4 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_commerce_holistic_asset_coordination"
 	}
 
@@ -1889,6 +2114,8 @@ resolution_commerce_repeal_4 = {
 		resolution_commerce_leveraged_privateering = 1
 		resolution_commerce_underdeveloped_system_utilization = 1
 	}
+
+	allow = {}
 
 	ai_weight = {
 		weight = @resolution_weight_unpopular
@@ -1908,6 +2135,14 @@ resolution_commerce_repeal_4 = {
 				has_valid_civic = civic_trading_posts
 			}
 		}
+		
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_machine_factory_overclock
+			}
+		}
 
 		modifier = {
 			factor = 1.5
@@ -1918,6 +2153,10 @@ resolution_commerce_repeal_4 = {
 
 resolution_commerce_repeal_5 = {
 	icon = "GFX_repeal_orange"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -1951,7 +2190,6 @@ resolution_commerce_repeal_5 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_commerce_profit_maximization_engines"
 	}
 
@@ -1961,6 +2199,8 @@ resolution_commerce_repeal_5 = {
 		resolution_commerce_underdeveloped_system_utilization = 1
 		resolution_commerce_holistic_asset_coordination = 1
 	}
+
+	allow = {}
 
 	ai_weight = {
 		weight = @resolution_weight_unpopular
@@ -1978,6 +2218,14 @@ resolution_commerce_repeal_5 = {
 			OR = {
 				has_valid_civic = civic_free_traders
 				has_valid_civic = civic_trading_posts
+			}
+		}
+		
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_machine_factory_overclock
 			}
 		}
 
@@ -2056,6 +2304,19 @@ resolution_commerce_buzzword_standardization = {
 				has_valid_civic = civic_trading_posts
 			}
 		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_machine_factory_overclock
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			has_valid_civic = civic_barbaric_despoilers
+		}
 
 		modifier = {
 			factor = 0.1
@@ -2117,10 +2378,18 @@ resolution_commerce_leveraged_privateering = {
 		}
 
 		modifier = {
-			factor = 0.8
+			factor = 0.75
 			is_militarist = yes
 		}
-
+		
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_naval_contractors
+				has_valid_civic = civic_private_military_companies
+			}
+		}
+		
 		modifier = {
 			factor = 0.1
 			is_gestalt = yes
@@ -2184,8 +2453,16 @@ resolution_commerce_underdeveloped_system_utilization = {
 		}
 
 		modifier = {
-			factor = 1.2
-			is_xenophile = yes
+			factor = 0.75
+			is_militarist = yes
+		}
+		
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_naval_contractors
+				has_valid_civic = civic_private_military_companies
+			}
 		}
 
 		modifier = {
@@ -2254,6 +2531,19 @@ resolution_commerce_holistic_asset_coordination = {
 			}
 		}
 
+		modifier = {
+			factor = 0.75
+			is_militarist = yes
+		}
+		
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_naval_contractors
+				has_valid_civic = civic_private_military_companies
+			}
+		}
+		
 		modifier = {
 			factor = 0.1
 			is_gestalt = yes
@@ -2330,6 +2620,19 @@ resolution_commerce_profit_maximization_engines = {
 			factor = 0.5
 			is_egalitarian = yes
 		}
+		
+				modifier = {
+			factor = 0.75
+			is_militarist = yes
+		}
+		
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_naval_contractors
+				has_valid_civic = civic_private_military_companies
+			}
+		}
 
 		modifier = {
 			factor = 0.1
@@ -2377,6 +2680,8 @@ resolution_industry_repeal_1 = {
 		is_active_resolution = "resolution_industry_regulatory_facilitation"
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
@@ -2388,12 +2693,6 @@ resolution_industry_repeal_1 = {
 		modifier = {
 			factor = 0.8
 			is_slaver = yes
-		}
-		
-		modifier = {
-			factor = 0.2
-			is_machine_empire = yes
-			NOT = { has_valid_civic = civic_machine_servitor }
 		}
 
 		modifier = {
@@ -2408,11 +2707,10 @@ resolution_industry_repeal_1 = {
 		
 		modifier = {
 			factor = 0.5
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
+			OR  = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_mining_guilds
 			}
-			has_technology = tech_colonization_3
 		}
 	}
 }
@@ -2458,6 +2756,8 @@ resolution_industry_repeal_2 = {
 		resolution_industry_regulatory_facilitation = 1
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
@@ -2469,12 +2769,6 @@ resolution_industry_repeal_2 = {
 		modifier = {
 			factor = 0.8
 			is_slaver = yes
-		}
-		
-		modifier = {
-			factor = 0.2
-			is_machine_empire = yes
-			NOT = { has_valid_civic = civic_machine_servitor }
 		}
 
 		modifier = {
@@ -2489,11 +2783,10 @@ resolution_industry_repeal_2 = {
 		
 		modifier = {
 			factor = 0.5
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
+			OR  = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_mining_guilds
 			}
-			has_technology = tech_colonization_4
 		}
 	}
 }
@@ -2540,6 +2833,8 @@ resolution_industry_repeal_3 = {
 		resolution_industry_collective_waste_management = 1
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
@@ -2551,12 +2846,6 @@ resolution_industry_repeal_3 = {
 		modifier = {
 			factor = 0.8
 			is_slaver = yes
-		}
-		
-		modifier = {
-			factor = 0.2
-			is_machine_empire = yes
-			NOT = { has_valid_civic = civic_machine_servitor }
 		}
 
 		modifier = {
@@ -2571,17 +2860,20 @@ resolution_industry_repeal_3 = {
 		
 		modifier = {
 			factor = 0.5
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
+			OR  = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_mining_guilds
 			}
-			has_technology = tech_colonization_5
 		}
 	}
 }
 
 resolution_industry_repeal_4 = {
 	icon = "GFX_repeal_orange"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -2614,7 +2906,6 @@ resolution_industry_repeal_4 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
 	}
 
@@ -2638,36 +2929,33 @@ resolution_industry_repeal_4 = {
 			factor = 0.8
 			is_slaver = yes
 		}
-		
-		modifier = {
-			factor = 0.2
-			is_machine_empire = yes
-			NOT = { has_valid_civic = civic_machine_servitor }
-		}
 
 		modifier = {
-			factor = 10
+			factor = 2
 			has_valid_civic = civic_environmentalist
 		}
 
 		modifier = {
-			factor = 10
+			factor = 2
 			has_valid_civic = civic_agrarian_idyll
 		}
 		
 		modifier = {
-			factor = 2
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
+			factor = 0.5
+			OR  = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_mining_guilds
 			}
-			NOT = { has_technology = tech_colonization_2 }
 		}
 	}
 }
 
 resolution_industry_repeal_5 = {
 	icon = "GFX_repeal_orange"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -2701,7 +2989,6 @@ resolution_industry_repeal_5 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_industry_project_cornucopia"
 	}
 
@@ -2711,6 +2998,8 @@ resolution_industry_repeal_5 = {
 		resolution_industry_building_a_better_tomorrow = 1
 		resolution_industry_environmental_ordinance_waivers = 1
 	}
+
+	allow = {}
 
 	ai_weight = {
 		weight = @resolution_weight_unpopular
@@ -2724,30 +3013,23 @@ resolution_industry_repeal_5 = {
 			factor = 0.8
 			is_slaver = yes
 		}
-		
-		modifier = {
-			factor = 0.5
-			is_machine_empire = yes
-			NOT = { has_valid_civic = civic_machine_servitor }
-		}
 
 		modifier = {
-			factor = 20
+			factor = 2
 			has_valid_civic = civic_environmentalist
 		}
 
 		modifier = {
-			factor = 20
+			factor = 2
 			has_valid_civic = civic_agrarian_idyll
 		}
 		
 		modifier = {
-			factor = 2
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
+			factor = 0.5
+			OR  = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_mining_guilds
 			}
-			NOT = { has_technology = tech_colonization_3 }
 		}
 	}
 }
@@ -2814,39 +3096,29 @@ resolution_industry_regulatory_facilitation = {
 			factor = 1.2
 			is_slaver = yes
 		}
-		
-		modifier = {
-			factor = 5
-			is_machine_empire = yes
-			NOT = { has_valid_civic = civic_machine_servitor }
-		}
 
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			has_valid_civic = civic_environmentalist
 		}
 
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			has_valid_civic = civic_agrarian_idyll
 		}
 		
 		modifier = {
-			factor = 0.5
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
+			factor = 1.5
+			OR  = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_mining_guilds
+				has_valid_civic = civic_machine_rockbreakers
 			}
-			NOT = { has_technology = tech_colonization_2 }
 		}
 		
 		modifier = {
-			factor = 2
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
-			}
-			has_technology = tech_colonization_3
+			factor = 1.25
+			has_valid_civic = civic_warrior_culture
 		}
 	}
 }
@@ -2904,48 +3176,29 @@ resolution_industry_collective_waste_management = {
 			factor = 1.2
 			is_slaver = yes
 		}
-		
-		modifier = {
-			factor = 5
-			is_machine_empire = yes
-			NOT = { has_valid_civic = civic_machine_servitor }
-		}
 
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			has_valid_civic = civic_environmentalist
 		}
 
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			has_valid_civic = civic_agrarian_idyll
 		}
 		
 		modifier = {
-			factor = 0.5
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
+			factor = 1.5
+			OR  = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_mining_guilds
+				has_valid_civic = civic_machine_rockbreakers
 			}
-			NOT = { has_technology = tech_colonization_2 }
 		}
 		
 		modifier = {
-			factor = 0.5
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
-			}
-			NOT = { has_technology = tech_colonization_3 }
-		}
-		
-		modifier = {
-			factor = 2
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
-			}
-			has_technology = tech_colonization_4
+			factor = 1.25
+			has_valid_civic = civic_warrior_culture
 		}
 	}
 }
@@ -2996,65 +3249,37 @@ resolution_industry_building_a_better_tomorrow = {
 		weight = @resolution_weight_normal
 
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			is_authoritarian = yes
 		}
 
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			is_slaver = yes
 		}
 
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			has_valid_civic = civic_environmentalist
 		}
 
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			has_valid_civic = civic_agrarian_idyll
 		}
 		
 		modifier = {
-			factor = 5
-			is_machine_empire = yes
-			NOT = { has_valid_civic = civic_machine_servitor }
+			factor = 1.5
+			OR  = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_mining_guilds
+				has_valid_civic = civic_machine_rockbreakers
+			}
 		}
 		
 		modifier = {
-			factor = 0.5
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
-			}
-			NOT = { has_technology = tech_colonization_2 }
-		}
-		
-		modifier = {
-			factor = 0.5
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
-			}
-			NOT = { has_technology = tech_colonization_3 }
-		}
-		
-		modifier = {
-			factor = 0.5
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
-			}
-			NOT = { has_technology = tech_colonization_4 }
-		}
-		
-		modifier = {
-			factor = 2
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
-			}
-			has_technology = tech_colonization_5
+			factor = 1.25
+			has_valid_civic = civic_warrior_culture
 		}
 	}
 }
@@ -3119,57 +3344,29 @@ resolution_industry_environmental_ordinance_waivers = {
 			factor = 1.2
 			is_slaver = yes
 		}
-		
-		modifier = {
-			factor = 3
-			is_machine_empire = yes
-			NOT = { has_valid_civic = civic_machine_servitor }
-		}
 
 		modifier = {
-			factor = 0.1
+			factor = 0.25
 			has_valid_civic = civic_environmentalist
 		}
 
 		modifier = {
-			factor = 0.1
+			factor = 0.25
 			has_valid_civic = civic_agrarian_idyll
 		}
 		
 		modifier = {
-			factor = 0.1
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
+			factor = 1.5
+			OR  = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_mining_guilds
+				has_valid_civic = civic_machine_rockbreakers
 			}
-			NOT = { has_technology = tech_colonization_2 }
 		}
 		
 		modifier = {
-			factor = 0.5
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
-			}
-			NOT = { has_technology = tech_colonization_3 }
-		}
-		
-		modifier = {
-			factor = 0.5
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
-			}
-			NOT = { has_technology = tech_colonization_4 }
-		}
-		
-		modifier = {
-			factor = 0.5
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
-			}
-			NOT = { has_technology = tech_colonization_5 }
+			factor = 1.25
+			has_valid_civic = civic_warrior_culture
 		}
 	}
 }
@@ -3239,57 +3436,29 @@ resolution_industry_project_cornucopia = {
 			factor = 1.2
 			is_slaver = yes
 		}
-		
-		modifier = {
-			factor = 2
-			is_machine_empire = yes
-			NOT = { has_valid_civic = civic_machine_servitor }
-		}
 
 		modifier = {
-			factor = 0
+			factor = 0.25
 			has_valid_civic = civic_environmentalist
 		}
 
 		modifier = {
-			factor = 0
+			factor = 0.25
 			has_valid_civic = civic_agrarian_idyll
 		}
 		
 		modifier = {
-			factor = 0
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
+			factor = 1.5
+			OR  = {
+				has_valid_civic = civic_merchant_guilds
+				has_valid_civic = civic_mining_guilds
+				has_valid_civic = civic_machine_rockbreakers
 			}
-			NOT = { has_technology = tech_colonization_2 }
 		}
 		
 		modifier = {
-			factor = 0.1
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
-			}
-			NOT = { has_technology = tech_colonization_3 }
-		}
-		
-		modifier = {
-			factor = 0.5
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
-			}
-			NOT = { has_technology = tech_colonization_4 }
-		}
-		
-		modifier = {
-			factor = 0.5
-			OR = {
-				is_machine_empire = no
-				has_valid_civic = civic_machine_servitor
-			}
-			NOT = { has_technology = tech_colonization_5 }
+			factor = 1.25
+			has_valid_civic = civic_warrior_culture
 		}
 	}
 }
@@ -3332,6 +3501,8 @@ resolution_greatergood_repeal_1 = {
 		is_active_resolution = "resolution_greatergood_workers_rights"
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
@@ -3357,7 +3528,7 @@ resolution_greatergood_repeal_1 = {
 		}
 
 		modifier = {
-			factor = 2
+			factor = 3
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
@@ -3408,6 +3579,8 @@ resolution_greatergood_repeal_2 = {
 		resolution_greatergood_workers_rights = 1
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
@@ -3438,7 +3611,7 @@ resolution_greatergood_repeal_2 = {
 		}
 
 		modifier = {
-			factor = 2
+			factor = 3
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
@@ -3491,6 +3664,8 @@ resolution_greatergood_repeal_3 = {
 		resolution_greatergood_five_year_plans = 1
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
@@ -3521,7 +3696,7 @@ resolution_greatergood_repeal_3 = {
 		}
 
 		modifier = {
-			factor = 2
+			factor = 3
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
@@ -3533,6 +3708,10 @@ resolution_greatergood_repeal_3 = {
 
 resolution_greatergood_repeal_4 = {
 	icon = "GFX_resolution_council_veto"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -3566,7 +3745,6 @@ resolution_greatergood_repeal_4 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_greatergood_balance_in_the_middle"
 	}
 
@@ -3575,6 +3753,8 @@ resolution_greatergood_repeal_4 = {
 		resolution_greatergood_five_year_plans = 1
 		resolution_greatergood_greater_than_ourselves = 1
 	}
+
+	allow = {}
 
 	ai_weight = {
 		weight = @resolution_weight_unpopular
@@ -3606,7 +3786,7 @@ resolution_greatergood_repeal_4 = {
 		}
 
 		modifier = {
-			factor = 2
+			factor = 5
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
@@ -3618,6 +3798,10 @@ resolution_greatergood_repeal_4 = {
 
 resolution_greatergood_repeal_5 = {
 	icon = "GFX_resolution_council_veto"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -3651,7 +3835,6 @@ resolution_greatergood_repeal_5 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
 	}
 
@@ -3661,6 +3844,8 @@ resolution_greatergood_repeal_5 = {
 		resolution_greatergood_greater_than_ourselves = 1
 		resolution_greatergood_balance_in_the_middle = 1
 	}
+
+	allow = {}
 
 	ai_weight = {
 		weight = @resolution_weight_unpopular
@@ -3692,7 +3877,7 @@ resolution_greatergood_repeal_5 = {
 		}
 
 		modifier = {
-			factor = 2
+			factor = 5
 			OR = {
 				has_valid_civic = civic_slaver_guilds
 				has_valid_civic = civic_indentured_assets
@@ -3756,7 +3941,7 @@ resolution_greatergood_workers_rights = {
 		weight = @resolution_weight_loved
 
 		modifier = {
-			factor = 1.2
+			factor = 1.5
 			is_egalitarian = yes
 		}
 
@@ -3771,12 +3956,12 @@ resolution_greatergood_workers_rights = {
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 2
 			has_ethic = ethic_fanatic_egalitarian
 		}
 
 		modifier = {
-			factor = 2
+			factor = 3
 			OR = {
 				has_valid_civic = civic_shared_burden
 				has_valid_civic = civic_machine_servitor
@@ -3784,7 +3969,7 @@ resolution_greatergood_workers_rights = {
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 1.5
 			OR = {
 				has_valid_civic = civic_agrarian_idyll
 				has_valid_civic = civic_free_haven
@@ -3794,11 +3979,11 @@ resolution_greatergood_workers_rights = {
 		}
 
 		modifier = {
-			factor = 0.8
+			factor = 0.25
 			OR = {
-				is_gestalt = yes
 				has_valid_civic = civic_aristocratic_elite
 				has_valid_civic = civic_police_state
+				has_valid_civic = civic_feudal_realm
 			}
 
 		}
@@ -3880,13 +4065,8 @@ resolution_greatergood_five_year_plans = {
 		weight = @resolution_weight_popular
 
 		modifier = {
-			factor = 1.2
+			factor = 1.5
 			is_egalitarian = yes
-		}
-
-		modifier = {
-			factor = 0.75
-			is_authoritarian = yes
 		}
 
 		modifier = {
@@ -3900,12 +4080,12 @@ resolution_greatergood_five_year_plans = {
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 2
 			has_ethic = ethic_fanatic_egalitarian
 		}
 
 		modifier = {
-			factor = 2
+			factor = 3
 			OR = {
 				has_valid_civic = civic_shared_burden
 				has_valid_civic = civic_machine_servitor
@@ -3913,7 +4093,7 @@ resolution_greatergood_five_year_plans = {
 		}
 
 		modifier = {
-			factor = 0.6
+			factor = 0.5
 			is_authoritarian = yes
 		}
 
@@ -3931,7 +4111,7 @@ resolution_greatergood_five_year_plans = {
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 1.5
 			OR = {
 				has_valid_civic = civic_agrarian_idyll
 				has_valid_civic = civic_free_haven
@@ -3941,9 +4121,9 @@ resolution_greatergood_five_year_plans = {
 		}
 
 		modifier = {
-			factor = 0.8
+			factor = 0.25
 			OR = {
-				is_gestalt = yes
+				has_valid_civic = civic_feudal_realm
 				has_valid_civic = civic_aristocratic_elite
 				has_valid_civic = civic_police_state
 			}
@@ -4053,12 +4233,12 @@ resolution_greatergood_greater_than_ourselves = {
 		weight = @resolution_weight_normal
 
 		modifier = {
-			factor = 1.2
+			factor = 1.5
 			is_egalitarian = yes
 		}
 
 		modifier = {
-			factor = 0.75
+			factor = 0.5
 			is_authoritarian = yes
 		}
 
@@ -4073,12 +4253,12 @@ resolution_greatergood_greater_than_ourselves = {
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 2
 			has_ethic = ethic_fanatic_egalitarian
 		}
 
 		modifier = {
-			factor = 2
+			factor = 3
 			OR = {
 				has_valid_civic = civic_shared_burden
 				has_valid_civic = civic_machine_servitor
@@ -4086,16 +4266,10 @@ resolution_greatergood_greater_than_ourselves = {
 		}
 
 		modifier = {
-			factor = 0.6
+			factor = 0.2
 			OR = {
-				is_authoritarian = yes
 				is_gestalt = yes
 			}
-		}
-
-		modifier = {
-			factor = 0.6
-			has_ethic = ethic_fanatic_authoritarian
 		}
 
 		modifier = {
@@ -4115,7 +4289,7 @@ resolution_greatergood_greater_than_ourselves = {
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 1.25
 			OR = {
 				has_valid_civic = civic_agrarian_idyll
 				has_valid_civic = civic_free_haven
@@ -4125,7 +4299,7 @@ resolution_greatergood_greater_than_ourselves = {
 		}
 
 		modifier = {
-			factor = 0.8
+			factor = 0.25
 			OR = {
 				has_valid_civic = civic_aristocratic_elite
 				has_valid_civic = civic_police_state
@@ -4234,12 +4408,12 @@ resolution_greatergood_balance_in_the_middle = {
 		weight = @resolution_weight_unpopular
 
 		modifier = {
-			factor = 1.2
+			factor = 1.5
 			is_egalitarian = yes
 		}
 
 		modifier = {
-			factor = 0.75
+			factor = 0.25
 			is_authoritarian = yes
 		}
 
@@ -4254,12 +4428,12 @@ resolution_greatergood_balance_in_the_middle = {
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 2
 			has_ethic = ethic_fanatic_egalitarian
 		}
 
 		modifier = {
-			factor = 2
+			factor = 3
 			OR = {
 				has_valid_civic = civic_shared_burden
 				has_valid_civic = civic_machine_servitor
@@ -4267,16 +4441,10 @@ resolution_greatergood_balance_in_the_middle = {
 		}
 
 		modifier = {
-			factor = 0.6
+			factor = 0.2
 			OR = {
-				is_authoritarian = yes
 				is_gestalt = yes
 			}
-		}
-		
-		modifier = {
-			factor = 0.6
-			has_ethic = ethic_fanatic_authoritarian
 		}
 
 		modifier = {
@@ -4298,7 +4466,7 @@ resolution_greatergood_balance_in_the_middle = {
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 1.25
 			OR = {
 				has_valid_civic = civic_agrarian_idyll
 				has_valid_civic = civic_free_haven
@@ -4308,7 +4476,7 @@ resolution_greatergood_balance_in_the_middle = {
 		}
 
 		modifier = {
-			factor = 0.8
+			factor = 0.25
 			OR = {
 				has_valid_civic = civic_aristocratic_elite
 				has_valid_civic = civic_police_state
@@ -4437,11 +4605,6 @@ resolution_greatergood_universal_prosperity_mandate = {
 
 		modifier = {
 			factor = 0
-			is_egalitarian = no
-		}
-
-		modifier = {
-			factor = 0.75
 			is_authoritarian = yes
 		}
 
@@ -4456,17 +4619,17 @@ resolution_greatergood_universal_prosperity_mandate = {
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 1.5
 			is_egalitarian = yes
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 2
 			has_ethic = ethic_fanatic_egalitarian
 		}
 
 		modifier = {
-			factor = 2
+			factor = 5
 			OR = {
 				has_valid_civic = civic_shared_burden
 				has_valid_civic = civic_machine_servitor
@@ -4474,7 +4637,7 @@ resolution_greatergood_universal_prosperity_mandate = {
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 1.25
 			OR = {
 				has_valid_civic = civic_agrarian_idyll
 				has_valid_civic = civic_free_haven
@@ -4537,6 +4700,19 @@ resolution_mutualdefense_repeal_1 = {
 			factor = 2
 			is_pacifist = yes
 		}
+		
+		modifier = {
+			factor = 5
+			has_valid_civic = civic_inwards_perfection
+		}
+		modifier = {
+			factor = 0.25
+			has_valid_civic = civic_barbaric_despoilers
+		}
+		modifier = {
+			factor = 0.5
+			has_valid_civic = civic_diplomatic_corps
+		}
 	}
 }
 
@@ -4581,6 +4757,8 @@ resolution_mutualdefense_repeal_2 = {
 		resolution_mutualdefense_the_readied_shield = 1
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
@@ -4590,13 +4768,26 @@ resolution_mutualdefense_repeal_2 = {
 		}
 
 		modifier = {
-			factor = 10
-			in_breach_of = resolution_mutualdefense_military_readiness_act
+			factor = 2
+			is_pacifist = yes
+		}
+		
+		modifier = {
+			factor = 5
+			has_valid_civic = civic_inwards_perfection
+		}
+		modifier = {
+			factor = 0.25
+			has_valid_civic = civic_barbaric_despoilers
+		}
+		modifier = {
+			factor = 0.5
+			has_valid_civic = civic_diplomatic_corps
 		}
 
 		modifier = {
-			factor = 2
-			is_pacifist = yes
+			factor = 10
+			in_breach_of = resolution_mutualdefense_military_readiness_act
 		}
 	}
 }
@@ -4645,6 +4836,8 @@ resolution_mutualdefense_repeal_3 = {
 		resolution_mutualdefense_naval_weight = 1
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
@@ -4657,11 +4850,33 @@ resolution_mutualdefense_repeal_3 = {
 			factor = 2
 			is_pacifist = yes
 		}
+		
+		modifier = {
+			factor = 5
+			has_valid_civic = civic_inwards_perfection
+		}
+		modifier = {
+			factor = 0.25
+			has_valid_civic = civic_barbaric_despoilers
+		}
+		modifier = {
+			factor = 0.5
+			has_valid_civic = civic_diplomatic_corps
+		}
+
+		modifier = {
+			factor = 10
+			in_breach_of = resolution_mutualdefense_military_readiness_act
+		}
 	}
 }
 
 resolution_mutualdefense_repeal_4 = {
 	icon = "GFX_repeal_red"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -4696,7 +4911,6 @@ resolution_mutualdefense_repeal_4 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_mutualdefense_castigation_proclamation"
 	}
 
@@ -4704,6 +4918,8 @@ resolution_mutualdefense_repeal_4 = {
 		resolution_mutualdefense_the_readied_shield = 1
 		resolution_mutualdefense_naval_weight = 2
 	}
+
+	allow = {}
 
 	ai_weight = {
 		weight = @resolution_weight_unpopular
@@ -4717,11 +4933,33 @@ resolution_mutualdefense_repeal_4 = {
 			factor = 2
 			is_pacifist = yes
 		}
+		
+		modifier = {
+			factor = 5
+			has_valid_civic = civic_inwards_perfection
+		}
+		modifier = {
+			factor = 0.25
+			has_valid_civic = civic_barbaric_despoilers
+		}
+		modifier = {
+			factor = 0.5
+			has_valid_civic = civic_diplomatic_corps
+		}
+
+		modifier = {
+			factor = 10
+			in_breach_of = resolution_mutualdefense_military_readiness_act
+		}
 	}
 }
 
 resolution_mutualdefense_repeal_5 = {
 	icon = "GFX_repeal_red"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -4756,7 +4994,6 @@ resolution_mutualdefense_repeal_5 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_mutualdefense_renegade_containment"
 	}
 
@@ -4764,6 +5001,8 @@ resolution_mutualdefense_repeal_5 = {
 		resolution_mutualdefense_the_readied_shield = 1
 		resolution_mutualdefense_naval_weight = 3
 	}
+
+	allow = {}
 
 	ai_weight = {
 		weight = @resolution_weight_unpopular
@@ -4776,6 +5015,24 @@ resolution_mutualdefense_repeal_5 = {
 		modifier = {
 			factor = 2
 			is_pacifist = yes
+		}
+		
+		modifier = {
+			factor = 5
+			has_valid_civic = civic_inwards_perfection
+		}
+		modifier = {
+			factor = 0.25
+			has_valid_civic = civic_barbaric_despoilers
+		}
+		modifier = {
+			factor = 0.5
+			has_valid_civic = civic_diplomatic_corps
+		}
+
+		modifier = {
+			factor = 10
+			in_breach_of = resolution_mutualdefense_military_readiness_act
 		}
 	}
 }
@@ -4849,12 +5106,33 @@ resolution_mutualdefense_the_readied_shield = {
 				has_valid_civic = civic_hive_subspace_ephapse
 				has_valid_civic = civic_hive_strength_of_legions
 				has_valid_civic = civic_machine_warbots
+				has_valid_civic = civic_barbaric_despoilers
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_diplomatic_corps
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_public_relations_specialists
+				has_valid_civic = civic_hive_empath
+				has_valid_civic = civic_machine_servitor
 			}
 		}
 
 		modifier = {
 			factor = 0.25
 			is_pacifist = yes
+		}
+		modifier = {
+			factor = 0.5
+			used_naval_capacity_percent < 0.5
+		}
+		modifier = {
+			factor = 1.1
+			used_naval_capacity_percent > 0.8
 		}
 	}
 }
@@ -4904,20 +5182,22 @@ resolution_mutualdefense_military_readiness_act = {
 
 	breach = {
 		used_naval_capacity_percent < 0.5
-		is_subject = no
 	}
 
 	ai_weight = {
 		weight = @resolution_weight_popular
 
 		modifier = {
-			factor = 2
-			is_militarist = yes
-		}
-
-		modifier = {
 			factor = 0
 			in_breach_of = resolution_mutualdefense_military_readiness_act
+		}
+		modifier = {
+			factor = 0.1
+			used_naval_capacity_percent < 0.5
+		}
+		modifier = {
+			factor = 2
+			is_militarist = yes
 		}
 
 		modifier = {
@@ -4931,16 +5211,24 @@ resolution_mutualdefense_military_readiness_act = {
 				has_valid_civic = civic_hive_subspace_ephapse
 				has_valid_civic = civic_hive_strength_of_legions
 				has_valid_civic = civic_machine_warbots
+				has_valid_civic = civic_barbaric_despoilers
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_diplomatic_corps
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_public_relations_specialists
+				has_valid_civic = civic_hive_empath
+				has_valid_civic = civic_machine_servitor
 			}
 		}
 
 		modifier = {
-			factor = 0.1
-			used_naval_capacity_percent < 0.5
-		}
-
-		modifier = {
-			factor = 0
+			factor = 0.25
 			is_pacifist = yes
 		}
 	}
@@ -4992,6 +5280,14 @@ resolution_mutualdefense_enemy_of_my_enemy = {
 		weight = @resolution_weight_normal
 
 		modifier = {
+			factor = 0
+			in_breach_of = resolution_mutualdefense_military_readiness_act
+		}
+		modifier = {
+			factor = 0.1
+			used_naval_capacity_percent < 0.5
+		}
+		modifier = {
 			factor = 2
 			is_militarist = yes
 		}
@@ -5007,11 +5303,24 @@ resolution_mutualdefense_enemy_of_my_enemy = {
 				has_valid_civic = civic_hive_subspace_ephapse
 				has_valid_civic = civic_hive_strength_of_legions
 				has_valid_civic = civic_machine_warbots
+				has_valid_civic = civic_barbaric_despoilers
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_diplomatic_corps
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_public_relations_specialists
+				has_valid_civic = civic_hive_empath
+				has_valid_civic = civic_machine_servitor
 			}
 		}
 
 		modifier = {
-			factor = 0
+			factor = 0.25
 			is_pacifist = yes
 		}
 	}
@@ -5067,6 +5376,21 @@ resolution_mutualdefense_castigation_proclamation = {
 		weight = @resolution_weight_unpopular
 
 		modifier = {
+			factor = 0.8
+			OR = {
+				has_modifier = resolution_denounced
+				is_in_breach_of_any = yes
+			}
+		}
+		modifier = {
+			factor = 0
+			in_breach_of = resolution_mutualdefense_military_readiness_act
+		}
+		modifier = {
+			factor = 0.1
+			used_naval_capacity_percent < 0.5
+		}
+		modifier = {
 			factor = 2
 			is_militarist = yes
 		}
@@ -5082,19 +5406,24 @@ resolution_mutualdefense_castigation_proclamation = {
 				has_valid_civic = civic_hive_subspace_ephapse
 				has_valid_civic = civic_hive_strength_of_legions
 				has_valid_civic = civic_machine_warbots
+				has_valid_civic = civic_barbaric_despoilers
 			}
 		}
-
+		
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			OR = {
-				has_modifier = resolution_denounced
-				is_in_breach_of_any = yes
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_diplomatic_corps
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_public_relations_specialists
+				has_valid_civic = civic_hive_empath
+				has_valid_civic = civic_machine_servitor
 			}
 		}
 
 		modifier = {
-			factor = 0
+			factor = 0.25
 			is_pacifist = yes
 		}
 	}
@@ -5150,6 +5479,14 @@ resolution_mutualdefense_renegade_containment = {
 		weight = @resolution_weight_disliked
 
 		modifier = {
+			factor = 0
+			in_breach_of = resolution_mutualdefense_military_readiness_act
+		}
+		modifier = {
+			factor = 0.1
+			used_naval_capacity_percent < 0.5
+		}
+		modifier = {
 			factor = 2
 			is_militarist = yes
 		}
@@ -5165,11 +5502,24 @@ resolution_mutualdefense_renegade_containment = {
 				has_valid_civic = civic_hive_subspace_ephapse
 				has_valid_civic = civic_hive_strength_of_legions
 				has_valid_civic = civic_machine_warbots
+				has_valid_civic = civic_barbaric_despoilers
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_diplomatic_corps
+				has_valid_civic = civic_free_traders
+				has_valid_civic = civic_public_relations_specialists
+				has_valid_civic = civic_hive_empath
+				has_valid_civic = civic_machine_servitor
 			}
 		}
 
 		modifier = {
-			factor = 0
+			factor = 0.25
 			is_pacifist = yes
 		}
 	}
@@ -5177,6 +5527,10 @@ resolution_mutualdefense_renegade_containment = {
 
 resolution_mutualdefense_castigation_denouncement = {
 	icon = "GFX_resolution_mutual_defense"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -5189,10 +5543,7 @@ resolution_mutualdefense_castigation_denouncement = {
 	harmful = yes
 	valid_target = {
 		is_country_type = default
-		NOR = { 
-			is_same_value = from # don't denounce yourself.
-			has_modifier = resolution_denounced # Give them a break.
-		} 
+		NOT = { is_same_value = from } # don't denounce yourself.
 		OR = {
 			is_galactic_community_member = no
 			is_in_breach_of_any = yes
@@ -5209,11 +5560,13 @@ resolution_mutualdefense_castigation_denouncement = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		OR = {
 			is_active_resolution = "resolution_mutualdefense_castigation_proclamation"
 			is_active_resolution = "resolution_mutualdefense_renegade_containment"
 		}
+	}
+
+	allow = {
 	}
 
 	ai_weight = {
@@ -5225,10 +5578,7 @@ resolution_council_denouncement = {
 	icon = "GFX_resolution_purges"
 
 	potential = {
-		OR = {
-			has_federations_dlc = yes
-			has_nemesis = yes
-		}
+		has_federations_dlc = yes
 	}
 
 	resources = {
@@ -5243,10 +5593,7 @@ resolution_council_denouncement = {
 	valid_target = {
 		is_country_type = default
 		is_galactic_community_member = yes
-		NOR = { 
-			is_same_value = from # don't denounce yourself.
-			has_modifier = resolution_denounced # Give them a break.
-		} 
+		NOT = { is_same_value = from } # don't denounce yourself.
 		OR = {
 			opinion_level = { who = from level < neutral }
 			from = { is_rival = prev }
@@ -5269,100 +5616,6 @@ resolution_council_denouncement = {
 
 	ai_weight = {
 		weight = @resolution_weight_disliked
-
-		# weaklings are scared of BtC
-		modifier = {
-			factor = 5
-			has_nemesis = yes
-			any_playable_country = {
-				#has_crisis_level >= crisis_level_1
-				OR = {
-					has_crisis_level = crisis_level_1
-					has_crisis_level = crisis_level_2
-					has_crisis_level = crisis_level_3
-					has_crisis_level = crisis_level_4
-					has_crisis_level = crisis_level_5
-				}
-				NOT = { is_same_value = prev }
-				has_resource = {
-					type = menace
-					amount > 1000
-				}
-				relative_power = {
-					who = prev
-					category = all
-					value > equivalent
-				}
-			}
-		}
-
-		# everyone is scared of BtC
-		modifier = {
-			factor = 5
-			has_nemesis = yes
-			any_playable_country = {
-				#has_crisis_level >= crisis_level_1
-				OR = {
-					has_crisis_level = crisis_level_1
-					has_crisis_level = crisis_level_2
-					has_crisis_level = crisis_level_3
-					has_crisis_level = crisis_level_4
-					has_crisis_level = crisis_level_5
-				}
-				NOT = { is_same_value = prev }
-				has_resource = {
-					type = menace
-					amount > 2000
-				}
-			}
-		}
-
-		# imagine having a BtC empire next door
-		modifier = {
-			factor = 5
-			has_nemesis = yes
-			any_neighbor_country = {
-				#has_crisis_level >= crisis_level_1
-				OR = {
-					has_crisis_level = crisis_level_1
-					has_crisis_level = crisis_level_2
-					has_crisis_level = crisis_level_3
-					has_crisis_level = crisis_level_4
-					has_crisis_level = crisis_level_5
-				}
-			}
-		}
-
-		# imagine your rival having a (not too scary) BtC empire next door - that's good
-		modifier = {
-			factor = 0.01
-			has_nemesis = yes
-			NOT = {
-				any_neighbor_country = {
-					#has_crisis_level >= crisis_level_1
-					OR = {
-						has_crisis_level = crisis_level_1
-						has_crisis_level = crisis_level_2
-						has_crisis_level = crisis_level_3
-						has_crisis_level = crisis_level_4
-						has_crisis_level = crisis_level_5
-					}
-				}
-			}
-			any_rival_country = {
-				any_neighbor_country = {
-					#has_crisis_level >= crisis_level_1
-					#has_crisis_level < crisis_level_5
-					OR = {
-						has_crisis_level = crisis_level_1
-						has_crisis_level = crisis_level_2
-						has_crisis_level = crisis_level_3
-						has_crisis_level = crisis_level_4
-						#has_crisis_level = crisis_level_5
-					}
-				}
-			}
-		}
 	}
 }
 
@@ -5405,6 +5658,8 @@ resolution_rulesofwar_repeal_1 = {
 		is_active_resolution = "resolution_rulesofwar_guardian_angels"
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
@@ -5416,6 +5671,34 @@ resolution_rulesofwar_repeal_1 = {
 		modifier = {
 			factor = 0
 			is_pacifist = yes
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_valid_civic = civic_diplomatic_corps
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_machine_servitor
+				has_valid_civic = civic_hive_empath
+				has_valid_civic = civic_public_relations_specialists
+			}
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_barbaric_despoilers
+				has_valid_civic = civic_distinguished_admiralty
+				has_valid_civic = civic_machine_warbots
+				has_valid_civic = civic_hive_subspace_ephapse
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_valid_civic = civic_citizen_service
+				has_valid_civic = civic_warrior_culture
+			}
 		}
 	}
 }
@@ -5461,27 +5744,51 @@ resolution_rulesofwar_repeal_2 = {
 		resolution_rulesofwar_guardian_angels = 1
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
 		modifier = {
-			factor = 2
-			is_militarist = yes
-		}
-		
-		modifier = {
-			factor = 2
-			is_xenophobe = yes
-		}
-		
-		modifier = {
 			factor = 10
 			in_breach_of = resolution_rulesofwar_reverence_for_life
+		}
+		modifier = {
+			factor = 2
+			is_militarist = yes
 		}
 
 		modifier = {
 			factor = 0
 			is_pacifist = yes
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_valid_civic = civic_diplomatic_corps
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_machine_servitor
+				has_valid_civic = civic_hive_empath
+				has_valid_civic = civic_public_relations_specialists
+			}
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_barbaric_despoilers
+				has_valid_civic = civic_distinguished_admiralty
+				has_valid_civic = civic_machine_warbots
+				has_valid_civic = civic_hive_subspace_ephapse
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_valid_civic = civic_citizen_service
+				has_valid_civic = civic_warrior_culture
+			}
 		}
 	}
 }
@@ -5529,33 +5836,65 @@ resolution_rulesofwar_repeal_3 = {
 		resolution_rulesofwar_reverence_for_life = 1
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
 		modifier = {
-			factor = 2
-			is_militarist = yes
-		}
-		
-		modifier = {
-			factor = 2
-			is_xenophobe = yes
-		}
-		
-		modifier = {
 			factor = 10
 			in_breach_of = resolution_rulesofwar_independent_tribunals
+		}
+		modifier = {
+			factor = 10
+			in_breach_of = resolution_rulesofwar_reverence_for_life
+		}
+		modifier = {
+			factor = 2
+			is_militarist = yes
 		}
 
 		modifier = {
 			factor = 0
 			is_pacifist = yes
 		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_valid_civic = civic_diplomatic_corps
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_machine_servitor
+				has_valid_civic = civic_hive_empath
+				has_valid_civic = civic_public_relations_specialists
+			}
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_barbaric_despoilers
+				has_valid_civic = civic_distinguished_admiralty
+				has_valid_civic = civic_machine_warbots
+				has_valid_civic = civic_hive_subspace_ephapse
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_valid_civic = civic_citizen_service
+				has_valid_civic = civic_warrior_culture
+			}
+		}
 	}
 }
 
 resolution_rulesofwar_repeal_4 = {
 	icon = "GFX_repeal_red"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -5589,7 +5928,6 @@ resolution_rulesofwar_repeal_4 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
 	}
 
@@ -5605,29 +5943,63 @@ resolution_rulesofwar_repeal_4 = {
 		weight = @resolution_weight_unpopular
 
 		modifier = {
-			factor = 2
-			is_militarist = yes
-		}
-
-		modifier = {
-			factor = 2
-			is_xenophobe = yes
-		}
-		
-		modifier = {
 			factor = 10
 			in_breach_of = resolution_rulesofwar_last_resort_doctrine
+		}
+		modifier = {
+			factor = 10
+			in_breach_of = resolution_rulesofwar_independent_tribunals
+		}
+		modifier = {
+			factor = 10
+			in_breach_of = resolution_rulesofwar_reverence_for_life
+		}
+		modifier = {
+			factor = 2
+			is_militarist = yes
 		}
 
 		modifier = {
 			factor = 0
 			is_pacifist = yes
 		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_valid_civic = civic_diplomatic_corps
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_machine_servitor
+				has_valid_civic = civic_hive_empath
+				has_valid_civic = civic_public_relations_specialists
+			}
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_barbaric_despoilers
+				has_valid_civic = civic_distinguished_admiralty
+				has_valid_civic = civic_machine_warbots
+				has_valid_civic = civic_hive_subspace_ephapse
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_valid_civic = civic_citizen_service
+				has_valid_civic = civic_warrior_culture
+			}
+		}
 	}
 }
 
 resolution_rulesofwar_repeal_5 = {
 	icon = "GFX_repeal_red"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -5661,7 +6033,6 @@ resolution_rulesofwar_repeal_5 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
 	}
 
@@ -5672,27 +6043,63 @@ resolution_rulesofwar_repeal_5 = {
 		resolution_rulesofwar_last_resort_doctrine = 1
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
 		modifier = {
-			factor = 2
-			is_militarist = yes
-		}
-		
-		modifier = {
-			factor = 2
-			is_xenophobe = yes
-		}
-		
-		modifier = {
 			factor = 10
 			in_breach_of = resolution_rulesofwar_demobilization_initiative
+		}
+		modifier = {
+			factor = 10
+			in_breach_of = resolution_rulesofwar_last_resort_doctrine
+		}
+		modifier = {
+			factor = 10
+			in_breach_of = resolution_rulesofwar_independent_tribunals
+		}
+		modifier = {
+			factor = 10
+			in_breach_of = resolution_rulesofwar_reverence_for_life
+		}
+		modifier = {
+			factor = 2
+			is_militarist = yes
 		}
 
 		modifier = {
 			factor = 0
 			is_pacifist = yes
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_valid_civic = civic_diplomatic_corps
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_machine_servitor
+				has_valid_civic = civic_hive_empath
+				has_valid_civic = civic_public_relations_specialists
+			}
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_barbaric_despoilers
+				has_valid_civic = civic_distinguished_admiralty
+				has_valid_civic = civic_machine_warbots
+				has_valid_civic = civic_hive_subspace_ephapse
+			}
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_valid_civic = civic_citizen_service
+				has_valid_civic = civic_warrior_culture
+			}
 		}
 	}
 }
@@ -5751,18 +6158,41 @@ resolution_rulesofwar_guardian_angels = {
 		weight = @resolution_weight_loved
 
 		modifier = {
-			factor = 0.8
+			factor = 0.25
 			is_militarist = yes
-		}
-
-		modifier = {
-			factor = 0.8
-			is_gestalt = yes
 		}
 
 		modifier = {
 			factor = 2
 			is_pacifist = yes
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_diplomatic_corps
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_machine_servitor
+				has_valid_civic = civic_hive_empath
+				has_valid_civic = civic_public_relations_specialists
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_valid_civic = civic_barbaric_despoilers
+				has_valid_civic = civic_distinguished_admiralty
+				has_valid_civic = civic_machine_warbots
+				has_valid_civic = civic_hive_subspace_ephapse
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_citizen_service
+				has_valid_civic = civic_warrior_culture
+			}
 		}
 	}
 }
@@ -5829,11 +6259,6 @@ resolution_rulesofwar_reverence_for_life = {
 
 		modifier = {
 			factor = 0
-			is_militarist = yes
-		}
-
-		modifier = {
-			factor = 0
 			in_breach_of = resolution_rulesofwar_reverence_for_life
 		}
 
@@ -5842,21 +6267,42 @@ resolution_rulesofwar_reverence_for_life = {
 			has_ai_personality_behaviour = purger
 			NOT = { has_valid_civic = civic_machine_servitor }
 		}
-		
 		modifier = {
-			factor = 0.5
-			is_xenophobe = yes
-			is_pacifist = no
-		}
-
-		modifier = {
-			factor = 2
-			has_valid_civic = civic_machine_servitor
+			factor = 0.25
+			is_militarist = yes
 		}
 
 		modifier = {
 			factor = 2
 			is_pacifist = yes
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_diplomatic_corps
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_machine_servitor
+				has_valid_civic = civic_hive_empath
+				has_valid_civic = civic_public_relations_specialists
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_valid_civic = civic_barbaric_despoilers
+				has_valid_civic = civic_distinguished_admiralty
+				has_valid_civic = civic_machine_warbots
+				has_valid_civic = civic_hive_subspace_ephapse
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_citizen_service
+				has_valid_civic = civic_warrior_culture
+			}
 		}
 	}
 }
@@ -5929,23 +6375,54 @@ resolution_rulesofwar_independent_tribunals = {
 
 		modifier = {
 			factor = 0
-			is_militarist = yes
+			in_breach_of = resolution_rulesofwar_independent_tribunals
+		}
+		modifier = {
+			factor = 0
+			in_breach_of = resolution_rulesofwar_reverence_for_life
 		}
 
 		modifier = {
-			factor = 0
-			in_breach_of = resolution_rulesofwar_independent_tribunals
+			factor = 0.2
+			has_ai_personality_behaviour = purger
+			NOT = { has_valid_civic = civic_machine_servitor }
 		}
-		
 		modifier = {
-			factor = 0.5
-			is_xenophobe = yes
-			is_pacifist = no
+			factor = 0.25
+			is_militarist = yes
 		}
 
 		modifier = {
 			factor = 2
 			is_pacifist = yes
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_diplomatic_corps
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_machine_servitor
+				has_valid_civic = civic_hive_empath
+				has_valid_civic = civic_public_relations_specialists
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_valid_civic = civic_barbaric_despoilers
+				has_valid_civic = civic_distinguished_admiralty
+				has_valid_civic = civic_machine_warbots
+				has_valid_civic = civic_hive_subspace_ephapse
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_citizen_service
+				has_valid_civic = civic_warrior_culture
+			}
 		}
 	}
 }
@@ -6013,32 +6490,59 @@ resolution_rulesofwar_last_resort_doctrine = {
 		weight = @resolution_weight_unpopular
 
 		modifier = {
-			factor = 0
-			OR = {
-				is_militarist = yes
-				has_policy_flag = unrestricted_wars
-			}
+			factor = 0.2
+			has_ai_personality_behaviour = conqueror
 		}
-
 		modifier = {
 			factor = 0
-			in_breach_of = resolution_rulesofwar_last_resort_doctrine
+			in_breach_of = resolution_rulesofwar_independent_tribunals
 		}
-		
 		modifier = {
-			factor = 0.5
-			is_xenophobe = yes
-			is_pacifist = no
+			factor = 0
+			in_breach_of = resolution_rulesofwar_reverence_for_life
 		}
 
 		modifier = {
 			factor = 0.2
-			has_ai_personality_behaviour = conqueror
+			has_ai_personality_behaviour = purger
+			NOT = { has_valid_civic = civic_machine_servitor }
+		}
+		modifier = {
+			factor = 0.25
+			is_militarist = yes
 		}
 
 		modifier = {
 			factor = 2
 			is_pacifist = yes
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_diplomatic_corps
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_machine_servitor
+				has_valid_civic = civic_hive_empath
+				has_valid_civic = civic_public_relations_specialists
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_valid_civic = civic_barbaric_despoilers
+				has_valid_civic = civic_distinguished_admiralty
+				has_valid_civic = civic_machine_warbots
+				has_valid_civic = civic_hive_subspace_ephapse
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_citizen_service
+				has_valid_civic = civic_warrior_culture
+			}
 		}
 	}
 }
@@ -6108,33 +6612,62 @@ resolution_rulesofwar_demobilization_initiative = {
 
 		modifier = {
 			factor = 0
-			OR = {
-				is_militarist = yes
-				has_ai_personality_behaviour = conqueror
-				has_policy_flag = economic_policy_military
-			}
+			in_breach_of = resolution_rulesofwar_demobilization_initiative
 		}
-		
+		modifier = {
+			factor = 0.2
+			has_ai_personality_behaviour = conqueror
+		}
 		modifier = {
 			factor = 0
-			has_ai_personality_behaviour = purger
-			NOT = { has_valid_civic = civic_machine_servitor }
+			in_breach_of = resolution_rulesofwar_independent_tribunals
 		}
-		
 		modifier = {
-			factor = 0.5
-			is_xenophobe = yes
-			is_pacifist = no
+			factor = 0
+			in_breach_of = resolution_rulesofwar_reverence_for_life
 		}
 
 		modifier = {
-			factor = 0
-			in_breach_of = resolution_rulesofwar_demobilization_initiative
+			factor = 0.2
+			has_ai_personality_behaviour = purger
+			NOT = { has_valid_civic = civic_machine_servitor }
+		}
+		modifier = {
+			factor = 0.25
+			is_militarist = yes
 		}
 
 		modifier = {
 			factor = 2
 			is_pacifist = yes
+		}
+		
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_valid_civic = civic_diplomatic_corps
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_machine_servitor
+				has_valid_civic = civic_hive_empath
+				has_valid_civic = civic_public_relations_specialists
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_valid_civic = civic_barbaric_despoilers
+				has_valid_civic = civic_distinguished_admiralty
+				has_valid_civic = civic_machine_warbots
+				has_valid_civic = civic_hive_subspace_ephapse
+			}
+		}
+		modifier = {
+			factor = 0.75
+			OR = {
+				has_valid_civic = civic_citizen_service
+				has_valid_civic = civic_warrior_culture
+			}
 		}
 	}
 }
@@ -6178,43 +6711,28 @@ resolution_divinity_repeal_1 = {
 		is_active_resolution = "resolution_divinity_comfort_the_fallen"
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
 		modifier = {
-			factor = 1.15
-			is_authoritarian = yes
-			is_spiritualist = no
-		}
-
-		modifier = {
-			factor = 1.15
-			is_megacorp = yes
-			is_spiritualist = no
-		}
-
-		modifier = {
-			factor = 1.25
+			factor = 1.75
 			is_materialist = yes
 		}
 
 		modifier = {
-			factor = 0.95
+			factor = 0.85
 			is_egalitarian = yes
 		}
 
 		modifier = {
-			factor = 1.5
-			is_gestalt = yes
-		}
-
-		modifier = {
-			factor = 2
+			factor = 5
 			is_synthetic_empire = yes
 		}
 
 		modifier = {
-			factor = 0.5
+			factor = 0
 			is_spiritualist = yes
 		}
 
@@ -6266,6 +6784,8 @@ resolution_divinity_repeal_2 = {
 		resolution_divinity_comfort_the_fallen = 1
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
@@ -6280,26 +6800,28 @@ resolution_divinity_repeal_2 = {
 		}
 
 		modifier = {
-			factor = 1.2
-			is_gestalt = yes
+			factor = 2
+			is_materialist = yes
 		}
 
 		modifier = {
-			factor = 2
+			factor = 0.85
+			is_egalitarian = yes
+		}
+
+		modifier = {
+			factor = 5
 			is_synthetic_empire = yes
 		}
 
 		modifier = {
-			factor = 0.8
-			NOR = {
-				has_ai_personality_behaviour = robot_exploiter
-				has_ai_personality_behaviour = robot_liberator
-			}
+			factor = 0
+			is_spiritualist = yes
 		}
 
 		modifier = {
-			factor = 0.5
-			is_spiritualist = yes
+			factor = 0
+			has_valid_civic = civic_shared_burden
 		}
 	}
 }
@@ -6363,32 +6885,38 @@ resolution_divinity_repeal_3 = {
 		}
 
 		modifier = {
-			factor = 1.2
-			is_gestalt = yes
+			factor = 2
+			is_materialist = yes
 		}
 
 		modifier = {
-			factor = 2
+			factor = 0.85
+			is_egalitarian = yes
+		}
+
+		modifier = {
+			factor = 5
 			is_synthetic_empire = yes
 		}
 
 		modifier = {
-			factor = 0.8
-			NOR = {
-				has_ai_personality_behaviour = robot_exploiter
-				has_ai_personality_behaviour = robot_liberator
-			}
+			factor = 0
+			is_spiritualist = yes
 		}
 
 		modifier = {
-			factor = 0.5
-			is_spiritualist = yes
+			factor = 0
+			has_valid_civic = civic_shared_burden
 		}
 	}
 }
 
 resolution_divinity_repeal_4 = {
 	icon = "GFX_repeal_blue"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -6422,7 +6950,6 @@ resolution_divinity_repeal_4 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_divinity_silence_the_soulless"
 	}
 
@@ -6431,6 +6958,8 @@ resolution_divinity_repeal_4 = {
 		resolution_divinity_tithe_on_the_soulless = 1
 		resolution_divinity_right_to_work = 1
 	}
+
+	allow = {}
 
 	ai_weight = {
 		weight = @resolution_weight_unpopular
@@ -6446,32 +6975,38 @@ resolution_divinity_repeal_4 = {
 		}
 
 		modifier = {
-			factor = 1.2
-			is_gestalt = yes
+			factor = 2.5
+			is_materialist = yes
 		}
 
 		modifier = {
-			factor = 2
+			factor = 0.9
+			is_egalitarian = yes
+		}
+
+		modifier = {
+			factor = 5
 			is_synthetic_empire = yes
 		}
 
 		modifier = {
-			factor = 0.8
-			NOR = {
-				has_ai_personality_behaviour = robot_exploiter
-				has_ai_personality_behaviour = robot_liberator
-			}
+			factor = 0
+			is_spiritualist = yes
 		}
 
 		modifier = {
-			factor = 0.5
-			is_spiritualist = yes
+			factor = 0
+			has_valid_civic = civic_shared_burden
 		}
 	}
 }
 
 resolution_divinity_repeal_5 = {
 	icon = "GFX_repeal_blue"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -6505,7 +7040,6 @@ resolution_divinity_repeal_5 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_divinity_a_defined_purpose"
 	}
 
@@ -6516,9 +7050,20 @@ resolution_divinity_repeal_5 = {
 		resolution_divinity_silence_the_soulless = 1
 	}
 
+	allow = {}
+
 	ai_weight = {
 		weight = @resolution_weight_unpopular
 
+		modifier = {
+			factor = 10
+			in_breach_of = resolution_divinity_a_defined_purpose
+		}
+
+		modifier = {
+			factor = 0
+			has_valid_civic = civic_machine_servitor
+		}
 		modifier = {
 			factor = 1.5
 			has_ai_personality_behaviour = robot_exploiter
@@ -6530,36 +7075,28 @@ resolution_divinity_repeal_5 = {
 		}
 
 		modifier = {
-			factor = 1.2
-			is_gestalt = yes
+			factor = 2.5
+			is_materialist = yes
 		}
 
 		modifier = {
-			factor = 2
+			factor = 0.9
+			is_egalitarian = yes
+		}
+
+		modifier = {
+			factor = 5
 			is_synthetic_empire = yes
 		}
 
 		modifier = {
-			factor = 0.8
-			NOR = {
-				has_ai_personality_behaviour = robot_exploiter
-				has_ai_personality_behaviour = robot_liberator
-			}
-		}
-
-		modifier = {
-			factor = 0.5
+			factor = 0
 			is_spiritualist = yes
 		}
 
 		modifier = {
-			factor = 10
-			in_breach_of = resolution_divinity_a_defined_purpose
-		}
-
-		modifier = {
 			factor = 0
-			has_valid_civic = civic_machine_servitor
+			has_valid_civic = civic_shared_burden
 		}
 	}
 }
@@ -6620,45 +7157,41 @@ resolution_divinity_comfort_the_fallen = {
 		weight = @resolution_weight_loved
 
 		modifier = {
-			factor = 0.85
-			is_authoritarian = yes
-			is_spiritualist = no
-		}
-
-		modifier = {
-			factor = 0.85
-			is_megacorp = yes
-			is_spiritualist = no
-		}
-
-		modifier = {
-			factor = 0.75
+			factor = 0.5
 			is_materialist = yes
 		}
 
 		modifier = {
-			factor = 1.05
+			factor = 1.1
 			is_egalitarian = yes
 		}
 
 		modifier = {
-			factor = 0.5
-			is_gestalt = yes
-		}
-
-		modifier = {
-			factor = 0.25
+			factor = 0
 			is_synthetic_empire = yes
 		}
 
 		modifier = {
-			factor = 1.5
+			factor = 2
 			is_spiritualist = yes
 		}
 
 		modifier = {
-			factor = 2
+			factor = 2.5
 			has_valid_civic = civic_shared_burden
+		}
+		
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_free_haven
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_valid_civic = civic_imperial_cult
+				has_valid_civic = civic_exalted_priesthood
+				has_valid_civic = civic_gospel_of_the_masses
+			}
 		}
 	}
 }
@@ -6718,8 +7251,13 @@ resolution_divinity_tithe_on_the_soulless = {
 		}
 
 		modifier = {
-			factor = 0.8
-			is_gestalt = yes
+			factor = 0.5
+			is_materialist = yes
+		}
+
+		modifier = {
+			factor = 1.1
+			is_egalitarian = yes
 		}
 
 		modifier = {
@@ -6728,16 +7266,26 @@ resolution_divinity_tithe_on_the_soulless = {
 		}
 
 		modifier = {
-			factor = 1.2
-			NOR = {
-				has_ai_personality_behaviour = robot_exploiter
-				has_ai_personality_behaviour = robot_liberator
-			}
+			factor = 2
+			is_spiritualist = yes
 		}
 
 		modifier = {
+			factor = 2.5
+			has_valid_civic = civic_shared_burden
+		}
+		
+		modifier = {
 			factor = 1.5
-			is_spiritualist = yes
+			has_valid_civic = civic_free_haven
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_valid_civic = civic_imperial_cult
+				has_valid_civic = civic_exalted_priesthood
+				has_valid_civic = civic_gospel_of_the_masses
+			}
 		}
 	}
 }
@@ -6800,8 +7348,13 @@ resolution_divinity_right_to_work = {
 		}
 
 		modifier = {
-			factor = 0.8
-			is_gestalt = yes
+			factor = 0.5
+			is_materialist = yes
+		}
+
+		modifier = {
+			factor = 1.1
+			is_egalitarian = yes
 		}
 
 		modifier = {
@@ -6810,16 +7363,26 @@ resolution_divinity_right_to_work = {
 		}
 
 		modifier = {
-			factor = 1.2
-			NOR = {
-				has_ai_personality_behaviour = robot_exploiter
-				has_ai_personality_behaviour = robot_liberator
-			}
+			factor = 2
+			is_spiritualist = yes
 		}
 
 		modifier = {
+			factor = 2.5
+			has_valid_civic = civic_shared_burden
+		}
+		
+		modifier = {
 			factor = 1.5
-			is_spiritualist = yes
+			has_valid_civic = civic_free_haven
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_valid_civic = civic_imperial_cult
+				has_valid_civic = civic_exalted_priesthood
+				has_valid_civic = civic_gospel_of_the_masses
+			}
 		}
 	}
 }
@@ -6900,8 +7463,13 @@ resolution_divinity_silence_the_soulless = {
 		}
 
 		modifier = {
-			factor = 0.8
-			is_gestalt = yes
+			factor = 0.5
+			is_materialist = yes
+		}
+
+		modifier = {
+			factor = 1.1
+			is_egalitarian = yes
 		}
 
 		modifier = {
@@ -6910,16 +7478,26 @@ resolution_divinity_silence_the_soulless = {
 		}
 
 		modifier = {
-			factor = 1.2
-			NOR = {
-				has_ai_personality_behaviour = robot_exploiter
-				has_ai_personality_behaviour = robot_liberator
-			}
+			factor = 2
+			is_spiritualist = yes
 		}
 
 		modifier = {
+			factor = 2.5
+			has_valid_civic = civic_shared_burden
+		}
+		
+		modifier = {
 			factor = 1.5
-			is_spiritualist = yes
+			has_valid_civic = civic_free_haven
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_valid_civic = civic_imperial_cult
+				has_valid_civic = civic_exalted_priesthood
+				has_valid_civic = civic_gospel_of_the_masses
+			}
 		}
 	}
 }
@@ -7022,14 +7600,6 @@ resolution_divinity_a_defined_purpose = {
 		}
 
 		modifier = {
-			factor = 1.2
-			NOR = {
-				has_ai_personality_behaviour = robot_exploiter
-				has_ai_personality_behaviour = robot_liberator
-			}
-		}
-
-		modifier = {
 			factor = 1.5
 			is_spiritualist = yes
 		}
@@ -7038,6 +7608,39 @@ resolution_divinity_a_defined_purpose = {
 			factor = 100
 			has_valid_civic = civic_machine_servitor
 		}
+
+		modifier = {
+			factor = 0.5
+			is_materialist = yes
+		}
+
+		modifier = {
+			factor = 1.1
+			is_egalitarian = yes
+		}
+
+		modifier = {
+			factor = 2
+			is_spiritualist = yes
+		}
+
+		modifier = {
+			factor = 2.5
+			has_valid_civic = civic_shared_burden
+		}
+		
+		modifier = {
+			factor = 1.5
+			has_valid_civic = civic_free_haven
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_valid_civic = civic_imperial_cult
+				has_valid_civic = civic_exalted_priesthood
+				has_valid_civic = civic_gospel_of_the_masses
+			}
+		}
 	}
 }
 
@@ -7045,6 +7648,10 @@ resolution_divinity_a_defined_purpose = {
 
 resolution_galacticreforms_abolish_council = {
 	icon = "GFX_resolution_council_veto"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -7081,12 +7688,7 @@ resolution_galacticreforms_abolish_council = {
 	}
 
 	potential = {
-		OR = {
-			has_federations_dlc = yes
-			has_nemesis = yes
-		}
 		has_global_flag = galactic_council_formed
-		has_galactic_emperor = no
 	}
 
 	ai_weight = {
@@ -7140,11 +7742,6 @@ resolution_galacticreforms_abolish_council = {
 			factor = 0.8
 			is_xenophile = yes
 		}
-		
-		modifier = {
-			factor = 0.8
-			is_authoritarian = yes
-		}
 	}
 }
 
@@ -7152,12 +7749,8 @@ resolution_galacticreforms_form_council = {
 	icon = "GFX_resolution_create_council"
 
 	potential = {
-		OR = {
-			has_federations_dlc = yes
-			has_nemesis = yes
-		}
+		has_federations_dlc = yes
 		NOT = { has_global_flag = galactic_council_formed }
-		has_galactic_emperor = no
 	}
 
 	resources = {
@@ -7258,7 +7851,7 @@ resolution_galacticreforms_form_council = {
 		}
 
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			OR = {
 				has_ai_personality = democratic_crusaders
 				has_valid_civic = civic_shared_burden
@@ -7266,7 +7859,7 @@ resolution_galacticreforms_form_council = {
 		}
 
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			is_xenophile = yes
 		}
 	}
@@ -7274,6 +7867,10 @@ resolution_galacticreforms_form_council = {
 
 resolution_galacticreforms_council_size_1 = {
 	icon = "GFX_resolution_council_size"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -7309,13 +7906,8 @@ resolution_galacticreforms_council_size_1 = {
 	}
 
 	potential = {
-		OR = {
-			has_federations_dlc = yes
-			has_nemesis = yes
-		}
 		has_global_flag = galactic_council_formed
 		num_council_positions = 2
-		has_galactic_emperor = no
 	}
 
 	ai_weight = {
@@ -7346,7 +7938,7 @@ resolution_galacticreforms_council_size_1 = {
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 1.5
 			is_authoritarian = yes
 		}
 	}
@@ -7354,6 +7946,10 @@ resolution_galacticreforms_council_size_1 = {
 
 resolution_galacticreforms_council_size_2 = {
 	icon = "GFX_resolution_council_size"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -7390,16 +7986,11 @@ resolution_galacticreforms_council_size_2 = {
 	}
 
 	potential = {
-		OR = {
-			has_federations_dlc = yes
-			has_nemesis = yes
-		}
 		has_global_flag = galactic_council_formed
 		OR = {
 			num_council_positions = 1
 			num_council_positions = 3
 		}
-		has_galactic_emperor = no
 	}
 
 	ai_weight = {
@@ -7508,6 +8099,10 @@ resolution_galacticreforms_council_size_2 = {
 resolution_galacticreforms_council_size_3 = {
 	icon = "GFX_resolution_council_size"
 
+	potential = {
+		has_federations_dlc = yes
+	}
+
 	resources = {
 		category = resolutions
 		cost = {
@@ -7543,16 +8138,11 @@ resolution_galacticreforms_council_size_3 = {
 	}
 
 	potential = {
-		OR = {
-			has_federations_dlc = yes
-			has_nemesis = yes
-		}
 		has_global_flag = galactic_council_formed
 		OR = {
 			num_council_positions = 2
 			num_council_positions = 4
 		}
-		has_galactic_emperor = no
 	}
 
 	ai_weight = {
@@ -7661,6 +8251,10 @@ resolution_galacticreforms_council_size_3 = {
 resolution_galacticreforms_council_size_4 = {
 	icon = "GFX_resolution_council_size"
 
+	potential = {
+		has_federations_dlc = yes
+	}
+
 	resources = {
 		category = resolutions
 		cost = {
@@ -7696,16 +8290,11 @@ resolution_galacticreforms_council_size_4 = {
 	}
 
 	potential = {
-		OR = {
-			has_federations_dlc = yes
-			has_nemesis = yes
-		}
 		has_global_flag = galactic_council_formed
 		OR = {
 			num_council_positions = 3
 			num_council_positions = 5
 		}
-		has_galactic_emperor = no
 	}
 
 	ai_weight = {
@@ -7815,6 +8404,10 @@ resolution_galacticreforms_council_size_4 = {
 resolution_galacticreforms_council_size_5 = {
 	icon = "GFX_resolution_council_size"
 
+	potential = {
+		has_federations_dlc = yes
+	}
+
 	resources = {
 		category = resolutions
 		cost = {
@@ -7850,13 +8443,8 @@ resolution_galacticreforms_council_size_5 = {
 	}
 
 	potential = {
-		OR = {
-			has_federations_dlc = yes
-			has_nemesis = yes
-		}
 		has_global_flag = galactic_council_formed
 		num_council_positions = 4
-		has_galactic_emperor = no
 	}
 
 	ai_weight = {
@@ -7897,6 +8485,10 @@ resolution_galacticreforms_council_size_5 = {
 resolution_galacticreforms_permanent_seat = {
 	icon = "GFX_resolution_council_member_permanent"
 
+	potential = {
+		has_federations_dlc = yes
+	}
+
 	resources = {
 		category = resolutions
 		cost = {
@@ -7911,7 +8503,6 @@ resolution_galacticreforms_permanent_seat = {
 		is_galactic_community_member = yes
 		is_part_of_galactic_council = yes
 		is_permanent_councillor = no
-		is_galactic_custodian = no
 	}
 
 	effect = {
@@ -7919,9 +8510,7 @@ resolution_galacticreforms_permanent_seat = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_galactic_council_established = yes
-		has_galactic_emperor = no
 	}
 
 	ai_weight = {
@@ -7931,6 +8520,10 @@ resolution_galacticreforms_permanent_seat = {
 
 resolution_galacticreforms_revoke_permanent_seat = {
 	icon = "GFX_resolution_council_member_permanent"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -7946,7 +8539,6 @@ resolution_galacticreforms_revoke_permanent_seat = {
 		is_galactic_community_member = yes
 		is_part_of_galactic_council = yes
 		is_permanent_councillor = yes
-		is_galactic_custodian = no
 	}
 
 	effect = {
@@ -7954,9 +8546,7 @@ resolution_galacticreforms_revoke_permanent_seat = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_galactic_council_established = yes
-		has_galactic_emperor = no
 	}
 
 	ai_weight = {
@@ -7967,6 +8557,10 @@ resolution_galacticreforms_revoke_permanent_seat = {
 resolution_galacticreforms_enable_council_veto = {
 	icon = "GFX_resolution_remove_council_member"
 
+	potential = {
+		has_federations_dlc = yes
+	}
+
 	resources = {
 		category = resolutions
 		cost = {
@@ -7974,6 +8568,9 @@ resolution_galacticreforms_enable_council_veto = {
 		}
 	}
 	target = no
+
+	modifier = {
+	}
 
 	effect = {
 		set_council_veto = yes
@@ -7999,10 +8596,8 @@ resolution_galacticreforms_enable_council_veto = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		has_global_flag = galactic_council_formed
 		NOT = { has_global_flag = galactic_council_veto }
-		has_galactic_emperor = no
 	}
 
 	ai_weight = {
@@ -8019,12 +8614,12 @@ resolution_galacticreforms_enable_council_veto = {
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 1.25
 			is_authoritarian = yes
 		}
 
 		modifier = {
-			factor = 2
+			factor = 2.5
 			OR = {
 				is_part_of_galactic_council = yes
 				AND = {
@@ -8053,6 +8648,10 @@ resolution_galacticreforms_enable_council_veto = {
 
 resolution_galacticreforms_disable_council_veto = {
 	icon = "GFX_resolution_council_veto"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -8089,10 +8688,8 @@ resolution_galacticreforms_disable_council_veto = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		has_global_flag = galactic_council_formed
 		has_global_flag = galactic_council_veto
-		has_galactic_emperor = no
 	}
 
 	ai_weight = {
@@ -8126,11 +8723,25 @@ resolution_galacticreforms_disable_council_veto = {
 				}
 			}
 		}
+		
+		modifier = {
+			factor = 1.25
+			is_egalitarian = yes
+		}
+		
+		modifier = {
+			factor = 2.5
+			has_valid_civic = civic_shared_burden
+		}
 	}
 }
 
 resolution_galacticreforms_enable_council_denouncement = {
 	icon = "GFX_resolution_denounce_empire"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -8166,9 +8777,7 @@ resolution_galacticreforms_enable_council_denouncement = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		has_global_flag = resolution_council_denouncement_abolished
-		has_galactic_emperor = no
 	}
 
 	ai_weight = {
@@ -8185,7 +8794,7 @@ resolution_galacticreforms_enable_council_denouncement = {
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 1.25
 			is_authoritarian = yes
 		}
 
@@ -8202,11 +8811,25 @@ resolution_galacticreforms_enable_council_denouncement = {
 				}
 			}
 		}
+		
+		modifier = {
+			factor = 0.75
+			is_egalitarian = yes
+		}
+		
+		modifier = {
+			factor = 0.15
+			has_valid_civic = civic_shared_burden
+		}
 	}
 }
 
 resolution_galacticreforms_disable_council_denouncement = {
 	icon = "GFX_resolution_council_veto"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -8242,10 +8865,8 @@ resolution_galacticreforms_disable_council_denouncement = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		has_global_flag = galactic_council_formed
 		NOT = { has_global_flag = resolution_council_denouncement_abolished }
-		has_galactic_emperor = no
 	}
 
 	ai_weight = {
@@ -8303,6 +8924,16 @@ resolution_galacticreforms_disable_council_denouncement = {
 					has_modifier = resolution_denounced
 				}
 			}
+		}
+		
+		modifier = {
+			factor = 1.25
+			is_egalitarian = yes
+		}
+		
+		modifier = {
+			factor = 2.5
+			has_valid_civic = civic_shared_burden
 		}
 	}
 }
@@ -8386,6 +9017,10 @@ resolution_sanctions_tech_repeal_1 = {
 resolution_sanctions_tech_repeal_2 = {
 	icon = "GFX_repeal_blue"
 
+	potential = {
+		has_federations_dlc = yes
+	}
+
 	resources = {
 		category = resolutions
 		cost = {
@@ -8418,7 +9053,6 @@ resolution_sanctions_tech_repeal_2 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_sanctions_tech_2"
 	}
 
@@ -8473,6 +9107,10 @@ resolution_sanctions_tech_repeal_2 = {
 resolution_sanctions_tech_repeal_3 = {
 	icon = "GFX_repeal_blue"
 
+	potential = {
+		has_federations_dlc = yes
+	}
+
 	resources = {
 		category = resolutions
 		cost = {
@@ -8505,7 +9143,6 @@ resolution_sanctions_tech_repeal_3 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_sanctions_tech_3"
 	}
 
@@ -8557,6 +9194,7 @@ resolution_sanctions_tech_repeal_3 = {
 	}
 }
 
+
 resolution_sanctions_tech_1 = {
 	icon = "GFX_sanctions_blue"
 	level = 1
@@ -8579,10 +9217,6 @@ resolution_sanctions_tech_1 = {
 				modifier = resolution_passed_diplomatic_weight
 				days = 2200
 			}
-			set_timed_global_flag = {
-				flag = recent_galcom_sanctions_passed
-				years = 10
-			}
 		}
 	}
 
@@ -8594,6 +9228,9 @@ resolution_sanctions_tech_1 = {
 				days = 2200
 			}
 		}
+	}
+
+	modifier = {
 	}
 
 	triggered_modifier = {
@@ -8629,11 +9266,6 @@ resolution_sanctions_tech_1 = {
 		modifier = {
 			factor = 0
 			is_in_breach_of_any = yes
-		}
-
-		modifier = {
-			factor = 0.33
-			has_global_flag = recent_galcom_sanctions_passed
 		}
 
 		modifier = {
@@ -8690,10 +9322,6 @@ resolution_sanctions_tech_2 = {
 				modifier = resolution_passed_diplomatic_weight
 				days = 2200
 			}
-			set_timed_global_flag = {
-				flag = recent_galcom_sanctions_passed
-				years = 10
-			}
 		}
 	}
 
@@ -8705,6 +9333,9 @@ resolution_sanctions_tech_2 = {
 				days = 2200
 			}
 		}
+	}
+
+	modifier = {
 	}
 
 	triggered_modifier = {
@@ -8730,11 +9361,6 @@ resolution_sanctions_tech_2 = {
 		modifier = {
 			factor = 0
 			is_in_breach_of_any = yes
-		}
-
-		modifier = {
-			factor = 0.33
-			has_global_flag = recent_galcom_sanctions_passed
 		}
 
 		modifier = {
@@ -8791,10 +9417,6 @@ resolution_sanctions_tech_3 = {
 				modifier = resolution_passed_diplomatic_weight
 				days = 2200
 			}
-			set_timed_global_flag = {
-				flag = recent_galcom_sanctions_passed
-				years = 10
-			}
 		}
 	}
 
@@ -8806,6 +9428,9 @@ resolution_sanctions_tech_3 = {
 				days = 2200
 			}
 		}
+	}
+
+	modifier = {
 	}
 
 	triggered_modifier = {
@@ -8831,11 +9456,6 @@ resolution_sanctions_tech_3 = {
 		modifier = {
 			factor = 0
 			is_in_breach_of_any = yes
-		}
-
-		modifier = {
-			factor = 0.33
-			has_global_flag = recent_galcom_sanctions_passed
 		}
 
 		modifier = {
@@ -8942,6 +9562,10 @@ resolution_sanctions_economic_repeal_1 = {
 resolution_sanctions_economic_repeal_2 = {
 	icon = "GFX_repeal_orange"
 
+	potential = {
+		has_federations_dlc = yes
+	}
+
 	resources = {
 		category = resolutions
 		cost = {
@@ -8974,7 +9598,6 @@ resolution_sanctions_economic_repeal_2 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_sanctions_economic_2"
 	}
 
@@ -9029,6 +9652,10 @@ resolution_sanctions_economic_repeal_2 = {
 resolution_sanctions_economic_repeal_3 = {
 	icon = "GFX_repeal_orange"
 
+	potential = {
+		has_federations_dlc = yes
+	}
+
 	resources = {
 		category = resolutions
 		cost = {
@@ -9061,7 +9688,6 @@ resolution_sanctions_economic_repeal_3 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_sanctions_economic_3"
 	}
 
@@ -9135,10 +9761,6 @@ resolution_sanctions_economic_1 = {
 				modifier = resolution_passed_diplomatic_weight
 				days = 2200
 			}
-			set_timed_global_flag = {
-				flag = recent_galcom_sanctions_passed
-				years = 10
-			}
 		}
 	}
 
@@ -9150,6 +9772,9 @@ resolution_sanctions_economic_1 = {
 				days = 2200
 			}
 		}
+	}
+
+	modifier = {
 	}
 
 	triggered_modifier = {
@@ -9185,11 +9810,6 @@ resolution_sanctions_economic_1 = {
 		modifier = {
 			factor = 0
 			is_in_breach_of_any = yes
-		}
-
-		modifier = {
-			factor = 0.33
-			has_global_flag = recent_galcom_sanctions_passed
 		}
 
 		modifier = {
@@ -9246,10 +9866,6 @@ resolution_sanctions_economic_2 = {
 				modifier = resolution_passed_diplomatic_weight
 				days = 2200
 			}
-			set_timed_global_flag = {
-				flag = recent_galcom_sanctions_passed
-				years = 10
-			}
 		}
 	}
 
@@ -9261,6 +9877,9 @@ resolution_sanctions_economic_2 = {
 				days = 2200
 			}
 		}
+	}
+
+	modifier = {
 	}
 
 	triggered_modifier = {
@@ -9286,11 +9905,6 @@ resolution_sanctions_economic_2 = {
 		modifier = {
 			factor = 0
 			is_in_breach_of_any = yes
-		}
-
-		modifier = {
-			factor = 0.33
-			has_global_flag = recent_galcom_sanctions_passed
 		}
 
 		modifier = {
@@ -9347,10 +9961,6 @@ resolution_sanctions_economic_3 = {
 				modifier = resolution_passed_diplomatic_weight
 				days = 2200
 			}
-			set_timed_global_flag = {
-				flag = recent_galcom_sanctions_passed
-				years = 10
-			}
 		}
 	}
 
@@ -9362,6 +9972,9 @@ resolution_sanctions_economic_3 = {
 				days = 2200
 			}
 		}
+	}
+
+	modifier = {
 	}
 
 	triggered_modifier = {
@@ -9387,11 +10000,6 @@ resolution_sanctions_economic_3 = {
 		modifier = {
 			factor = 0
 			is_in_breach_of_any = yes
-		}
-
-		modifier = {
-			factor = 0.33
-			has_global_flag = recent_galcom_sanctions_passed
 		}
 
 		modifier = {
@@ -9501,6 +10109,10 @@ resolution_sanctions_military_repeal_1 = {
 resolution_sanctions_military_repeal_2 = {
 	icon = "GFX_repeal_red"
 
+	potential = {
+		has_federations_dlc = yes
+	}
+
 	resources = {
 		category = resolutions
 		cost = {
@@ -9533,7 +10145,6 @@ resolution_sanctions_military_repeal_2 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_sanctions_military_2"
 	}
 
@@ -9591,6 +10202,10 @@ resolution_sanctions_military_repeal_2 = {
 resolution_sanctions_military_repeal_3 = {
 	icon = "GFX_repeal_red"
 
+	potential = {
+		has_federations_dlc = yes
+	}
+
 	resources = {
 		category = resolutions
 		cost = {
@@ -9623,7 +10238,6 @@ resolution_sanctions_military_repeal_3 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_sanctions_military_3"
 	}
 
@@ -9700,10 +10314,6 @@ resolution_sanctions_military_1 = {
 				modifier = resolution_passed_diplomatic_weight
 				days = 2200
 			}
-			set_timed_global_flag = {
-				flag = recent_galcom_sanctions_passed
-				years = 10
-			}
 		}
 	}
 
@@ -9715,6 +10325,9 @@ resolution_sanctions_military_1 = {
 				days = 2200
 			}
 		}
+	}
+
+	modifier = {
 	}
 
 	triggered_modifier = {
@@ -9750,11 +10363,6 @@ resolution_sanctions_military_1 = {
 		modifier = {
 			factor = 0
 			is_in_breach_of_any = yes
-		}
-
-		modifier = {
-			factor = 0.33
-			has_global_flag = recent_galcom_sanctions_passed
 		}
 
 		modifier = {
@@ -9814,10 +10422,6 @@ resolution_sanctions_military_2 = {
 				modifier = resolution_passed_diplomatic_weight
 				days = 2200
 			}
-			set_timed_global_flag = {
-				flag = recent_galcom_sanctions_passed
-				years = 10
-			}
 		}
 	}
 
@@ -9829,6 +10433,9 @@ resolution_sanctions_military_2 = {
 				days = 2200
 			}
 		}
+	}
+
+	modifier = {
 	}
 
 	triggered_modifier = {
@@ -9854,11 +10461,6 @@ resolution_sanctions_military_2 = {
 		modifier = {
 			factor = 0
 			is_in_breach_of_any = yes
-		}
-
-		modifier = {
-			factor = 0.33
-			has_global_flag = recent_galcom_sanctions_passed
 		}
 
 		modifier = {
@@ -9918,10 +10520,6 @@ resolution_sanctions_military_3 = {
 				modifier = resolution_passed_diplomatic_weight
 				days = 2200
 			}
-			set_timed_global_flag = {
-				flag = recent_galcom_sanctions_passed
-				years = 10
-			}
 		}
 	}
 
@@ -9933,6 +10531,9 @@ resolution_sanctions_military_3 = {
 				days = 2200
 			}
 		}
+	}
+
+	modifier = {
 	}
 
 	triggered_modifier = {
@@ -9958,11 +10559,6 @@ resolution_sanctions_military_3 = {
 		modifier = {
 			factor = 0
 			is_in_breach_of_any = yes
-		}
-
-		modifier = {
-			factor = 0.33
-			has_global_flag = recent_galcom_sanctions_passed
 		}
 
 		modifier = {
@@ -9995,6 +10591,7 @@ resolution_sanctions_military_3 = {
 		}
 	}
 }
+
 
 resolution_sanctions_administrative_repeal_1 = {
 	icon = "GFX_resolution_council_veto"
@@ -10079,6 +10676,10 @@ resolution_sanctions_administrative_repeal_1 = {
 resolution_sanctions_administrative_repeal_2 = {
 	icon = "GFX_resolution_council_veto"
 
+	potential = {
+		has_federations_dlc = yes
+	}
+
 	resources = {
 		category = resolutions
 		cost = {
@@ -10111,7 +10712,6 @@ resolution_sanctions_administrative_repeal_2 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_sanctions_administrative_2"
 	}
 
@@ -10173,6 +10773,10 @@ resolution_sanctions_administrative_repeal_2 = {
 resolution_sanctions_administrative_repeal_3 = {
 	icon = "GFX_resolution_council_veto"
 
+	potential = {
+		has_federations_dlc = yes
+	}
+
 	resources = {
 		category = resolutions
 		cost = {
@@ -10205,7 +10809,6 @@ resolution_sanctions_administrative_repeal_3 = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		is_active_resolution = "resolution_sanctions_administrative_3"
 	}
 
@@ -10286,10 +10889,6 @@ resolution_sanctions_administrative_1 = {
 				modifier = resolution_passed_diplomatic_weight
 				days = 2200
 			}
-			set_timed_global_flag = {
-				flag = recent_galcom_sanctions_passed
-				years = 10
-			}
 		}
 	}
 
@@ -10301,6 +10900,9 @@ resolution_sanctions_administrative_1 = {
 				days = 2200
 			}
 		}
+	}
+
+	modifier = {
 	}
 
 	triggered_modifier = {
@@ -10336,11 +10938,6 @@ resolution_sanctions_administrative_1 = {
 		modifier = {
 			factor = 0
 			is_in_breach_of_any = yes
-		}
-
-		modifier = {
-			factor = 0.33
-			has_global_flag = recent_galcom_sanctions_passed
 		}
 
 		modifier = {
@@ -10404,10 +11001,6 @@ resolution_sanctions_administrative_2 = {
 				modifier = resolution_passed_diplomatic_weight
 				days = 2200
 			}
-			set_timed_global_flag = {
-				flag = recent_galcom_sanctions_passed
-				years = 10
-			}
 		}
 	}
 
@@ -10419,6 +11012,9 @@ resolution_sanctions_administrative_2 = {
 				days = 2200
 			}
 		}
+	}
+
+	modifier = {
 	}
 
 	triggered_modifier = {
@@ -10444,11 +11040,6 @@ resolution_sanctions_administrative_2 = {
 		modifier = {
 			factor = 0
 			is_in_breach_of_any = yes
-		}
-
-		modifier = {
-			factor = 0.33
-			has_global_flag = recent_galcom_sanctions_passed
 		}
 
 		modifier = {
@@ -10512,10 +11103,6 @@ resolution_sanctions_administrative_3 = {
 				modifier = resolution_passed_diplomatic_weight
 				days = 2200
 			}
-			set_timed_global_flag = {
-				flag = recent_galcom_sanctions_passed
-				years = 10
-			}
 		}
 	}
 
@@ -10527,6 +11114,9 @@ resolution_sanctions_administrative_3 = {
 				days = 2200
 			}
 		}
+	}
+
+	modifier = {
 	}
 
 	triggered_modifier = {
@@ -10552,11 +11142,6 @@ resolution_sanctions_administrative_3 = {
 		modifier = {
 			factor = 0
 			is_in_breach_of_any = yes
-		}
-
-		modifier = {
-			factor = 0.33
-			has_global_flag = recent_galcom_sanctions_passed
 		}
 
 		modifier = {
@@ -10607,13 +11192,19 @@ resolution_galactic_focus_crisis_prethoryn = {
 	}
 	target = no
 
+	modifier = {}
+
 	effect = {
 		custom_tooltip = resolution_galactic_focus_crisis_prethoryn_effect_success
 
 		hidden_effect = {
-			repeal_all_galactic_focus_resolutions = yes
 			set_global_flag = galactic_focus_crisis_prethoryn
 			set_global_flag = galactic_community_crisis_fighting
+
+			remove_global_flag = galactic_focus_crisis_unbidden
+			remove_global_flag = galactic_focus_crisis_contingency
+			remove_global_flag = galactic_focus_crisis_greatkhan
+			remove_global_flag = galactic_focus_crisis_nanites
 
 			set_global_flag = galactic_community_resolution_passed
 
@@ -10640,6 +11231,9 @@ resolution_galactic_focus_crisis_prethoryn = {
 		NOT = { has_global_flag = galactic_focus_crisis_prethoryn }
 	}
 
+	allow = {
+	}
+
 	active = { # Resolution only in effect while this trigger is met
 		has_global_flag = ongoing_prethoryn_invasion
 	}
@@ -10648,7 +11242,7 @@ resolution_galactic_focus_crisis_prethoryn = {
 		base = @resolution_weight_normal
 
 		modifier = {
-			factor = 5
+			factor = 10
 
 			any_neighbor_country = {
 				is_country_type = swarm
@@ -10672,7 +11266,7 @@ resolution_galactic_focus_crisis_prethoryn = {
 		}
 
 		modifier = {
-			factor = 1.25
+			factor = 1.5
 
 			has_crisis_stage_3 = yes
 		}
@@ -10688,15 +11282,28 @@ resolution_galactic_focus_crisis_prethoryn = {
 
 			has_ascension_perk = ap_defender_of_the_galaxy
 		}
-
+		
 		modifier = {
-			factor = 1.2
-			is_militarist = yes
+			factor = 1.25
+			has_valid_civic = civic_philosopher_king
+			has_valid_civic = civic_machine_servitor
+			has_valid_civic = civic_diplomatic_corps
 		}
 
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			is_xenophile = yes
+		}
+		
+		modifier = {
+			factor = 1.25
+			is_spiritualist = yes
+			is_hive_empire = yes
+		}
+		
+		modifier = {
+			factor = 0.5
+			is_at_war = yes
 		}
 
 		modifier = {
@@ -10708,6 +11315,16 @@ resolution_galactic_focus_crisis_prethoryn = {
 					is_country_type = swarm
 				}
 			}
+		}
+
+		modifier = {
+			factor = 1.25
+			has_authority = auth_corporate
+		}
+		
+		modifier = {
+			factor = 0
+			has_valid_civic = civic_inwards_perfection
 		}
 	}
 }
@@ -10723,13 +11340,19 @@ resolution_galactic_focus_crisis_unbidden = {
 	}
 	target = no
 
+	modifier = {}
+
 	effect = {
 		custom_tooltip = resolution_galactic_focus_crisis_unbidden_effect_success
 
 		hidden_effect = {
-			repeal_all_galactic_focus_resolutions = yes
 			set_global_flag = galactic_focus_crisis_unbidden
 			set_global_flag = galactic_community_crisis_fighting
+
+			remove_global_flag = galactic_focus_crisis_prethoryn
+			remove_global_flag = galactic_focus_crisis_contingency
+			remove_global_flag = galactic_focus_crisis_greatkhan
+			remove_global_flag = galactic_focus_crisis_nanites
 
 			set_global_flag = galactic_community_resolution_passed
 
@@ -10759,6 +11382,9 @@ resolution_galactic_focus_crisis_unbidden = {
 		}
 	}
 
+	allow = {
+	}
+
 	active = { # Resolution only in effect while this trigger is met
 		NOT = { has_global_flag = extradimensional_invasion_defeated }
 	}
@@ -10767,7 +11393,7 @@ resolution_galactic_focus_crisis_unbidden = {
 		base = @resolution_weight_normal
 
 		modifier = {
-			factor = 5
+			factor = 10
 
 			any_neighbor_country = {
 				OR = {
@@ -10799,7 +11425,7 @@ resolution_galactic_focus_crisis_unbidden = {
 		}
 
 		modifier = {
-			factor = 1.25
+			factor = 1.5
 
 			has_crisis_stage_3 = yes
 		}
@@ -10817,18 +11443,56 @@ resolution_galactic_focus_crisis_unbidden = {
 		}
 
 		modifier = {
-			factor = 1.2
-			is_militarist = yes
+			factor = 1.25
+			has_valid_civic = civic_philosopher_king
+			has_valid_civic = civic_machine_servitor
+			has_valid_civic = civic_diplomatic_corps
 		}
 
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			is_xenophile = yes
 		}
-
+		
 		modifier = {
-			factor = 1.1
+			factor = 1.25
+			is_egalitarian = yes
+			is_pacifist = yes
+		}
+		
+		modifier = {
+			factor = 0.75
 			is_spiritualist = yes
+		}
+		
+		modifier = {
+			factor = 1.25
+			AND = {
+				has_authority = auth_corporate
+				OR = {
+					has_valid_civic = civic_brand_loyalty
+					has_valid_civic = civic_free_traders
+					has_valid_civic = civic_franchising
+					has_valid_civic = civic_trading_posts
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.75
+			AND = {
+				has_authority = auth_corporate
+				OR = {
+					has_valid_civic = civic_naval_contractors
+					has_valid_civic = civic_private_military_companies
+					has_valid_civic = civic_criminal_heritage
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			is_at_war = yes
 		}
 
 		modifier = {
@@ -10845,6 +11509,11 @@ resolution_galactic_focus_crisis_unbidden = {
 				}
 			}
 		}
+		
+		modifier = {
+			factor = 0
+			has_valid_civic = civic_inwards_perfection
+		}
 	}
 }
 
@@ -10859,13 +11528,19 @@ resolution_galactic_focus_crisis_contingency = {
 	}
 	target = no
 
+	modifier = {}
+
 	effect = {
 		custom_tooltip = resolution_galactic_focus_crisis_contingency_effect_success
 
 		hidden_effect = {
-			repeal_all_galactic_focus_resolutions = yes
 			set_global_flag = galactic_focus_crisis_contingency
 			set_global_flag = galactic_community_crisis_fighting
+
+			remove_global_flag = galactic_focus_crisis_unbidden
+			remove_global_flag = galactic_focus_crisis_prethoryn
+			remove_global_flag = galactic_focus_crisis_greatkhan
+			remove_global_flag = galactic_focus_crisis_nanites
 
 			set_global_flag = galactic_community_resolution_passed
 
@@ -10892,6 +11567,9 @@ resolution_galactic_focus_crisis_contingency = {
 		NOT = { has_global_flag = galactic_focus_crisis_contingency }
 	}
 
+	allow = {
+	}
+
 	active = { # Resolution only in effect while this trigger is met
 		has_global_flag = ai_invasion_ongoing
 	}
@@ -10900,7 +11578,7 @@ resolution_galactic_focus_crisis_contingency = {
 		base = @resolution_weight_normal
 
 		modifier = {
-			factor = 5
+			factor = 10
 
 			any_neighbor_country = {
 				is_country_type = ai_empire
@@ -10924,7 +11602,7 @@ resolution_galactic_focus_crisis_contingency = {
 		}
 
 		modifier = {
-			factor = 1.25
+			factor = 1.5
 
 			has_crisis_stage_3 = yes
 		}
@@ -10942,21 +11620,58 @@ resolution_galactic_focus_crisis_contingency = {
 		}
 
 		modifier = {
-			factor = 1.2
-			is_militarist = yes
-		}
-
-		modifier = {
-			factor = 1.1
+			factor = 1.25
 			is_xenophile = yes
 		}
 
 		modifier = {
-			factor = 1.2
+			factor = 1.25
 			OR = {
 				is_materialist = yes
 				is_synthetic_empire = yes
 			}
+		}
+		
+		modifier = {
+			factor = 1.25
+			is_machine_empire = yes
+		}
+		
+		modifier = {
+			factor = 1.25
+			has_valid_civic = civic_philosopher_king
+			has_valid_civic = civic_machine_servitor
+			has_valid_civic = civic_diplomatic_corps
+		}
+		
+		modifier = {
+			factor = 1.25
+			AND = {
+				has_authority = auth_corporate
+				OR = {
+					has_valid_civic = civic_brand_loyalty
+					has_valid_civic = civic_free_traders
+					has_valid_civic = civic_franchising
+					has_valid_civic = civic_trading_posts
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.75
+			AND = {
+				has_authority = auth_corporate
+				OR = {
+					has_valid_civic = civic_naval_contractors
+					has_valid_civic = civic_private_military_companies
+					has_valid_civic = civic_criminal_heritage
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			is_at_war = yes
 		}
 
 		modifier = {
@@ -10968,6 +11683,11 @@ resolution_galactic_focus_crisis_contingency = {
 					is_country_type = ai_empire
 				}
 			}
+		}
+		
+		modifier = {
+			factor = 0
+			has_valid_civic = civic_inwards_perfection
 		}
 	}
 }
@@ -10983,13 +11703,19 @@ resolution_galactic_focus_crisis_greatkhan = {
 	}
 	target = no
 
+	modifier = {}
+
 	effect = {
 		custom_tooltip = resolution_galactic_focus_crisis_greatkhan_effect_success
 
 		hidden_effect = {
-			repeal_all_galactic_focus_resolutions = yes
 			set_global_flag = galactic_focus_crisis_greatkhan
 			set_global_flag = galactic_community_crisis_fighting
+
+			remove_global_flag = galactic_focus_crisis_unbidden
+			remove_global_flag = galactic_focus_crisis_prethoryn
+			remove_global_flag = galactic_focus_crisis_contingency
+			remove_global_flag = galactic_focus_crisis_nanites
 
 			set_global_flag = galactic_community_resolution_passed
 
@@ -11017,6 +11743,9 @@ resolution_galactic_focus_crisis_greatkhan = {
 		NOT = { has_global_flag = galactic_focus_crisis_greatkhan }
 	}
 
+	allow = {
+	}
+
 	active = { # Resolution only in effect while this trigger is met
 		NOT = { has_global_flag = great_khan_dead }
 	}
@@ -11039,7 +11768,7 @@ resolution_galactic_focus_crisis_greatkhan = {
 		}
 
 		modifier = {
-			factor = 2
+			factor = 7.5
 
 			any_neighbor_country = {
 				is_country_type = awakened_marauders
@@ -11047,7 +11776,7 @@ resolution_galactic_focus_crisis_greatkhan = {
 		}
 
 		modifier = {
-			factor = 1.1
+			factor = 2.5
 
 			any_neighbor_country = {
 				is_subject_type = satrapy
@@ -11056,13 +11785,61 @@ resolution_galactic_focus_crisis_greatkhan = {
 		}
 
 		modifier = {
-			factor = 1.2
-			is_militarist = yes
-		}
-
-		modifier = {
-			factor = 1.2
+			factor = 1.25
 			is_pacifist = yes
+		}
+		
+		modifier = {
+			factor = 1.25
+			is_xenophile = yes
+		}
+		
+		modifier = {
+			factor = 5
+			has_valid_civic = civic_beacon_of_liberty
+		}
+		
+		modifier = {
+			factor = 0.1
+			has_valid_civic = civic_barbaric_despoilers
+			has_valid_civic = civic_feudal_realm
+		}
+		
+		modifier = {
+			factor = 0.75
+			is_authoritarian = yes
+		}
+		
+		modifier = {
+			factor = 1.25
+			has_valid_civic = civic_philosopher_king
+			has_valid_civic = civic_machine_servitor
+			has_valid_civic = civic_diplomatic_corps
+		}
+		
+		modifier = {
+			factor = 1.25
+			AND = {
+				has_authority = auth_corporate
+				OR = {
+					has_valid_civic = civic_brand_loyalty
+					has_valid_civic = civic_free_traders
+					has_valid_civic = civic_franchising
+					has_valid_civic = civic_trading_posts
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.75
+			AND = {
+				has_authority = auth_corporate
+				OR = {
+					has_valid_civic = civic_naval_contractors
+					has_valid_civic = civic_private_military_companies
+					has_valid_civic = civic_criminal_heritage
+				}
+			}
 		}
 
 		modifier = {
@@ -11078,6 +11855,10 @@ resolution_galactic_focus_crisis_greatkhan = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0
+			has_valid_civic = civic_inwards_perfection
+		}
 	}
 }
 
@@ -11092,13 +11873,19 @@ resolution_galactic_focus_crisis_nanites = {
 	}
 	target = no
 
+	modifier = {}
+
 	effect = {
 		custom_tooltip = resolution_galactic_focus_crisis_nanites_effect_success
 
 		hidden_effect = {
-			repeal_all_galactic_focus_resolutions = yes
 			set_global_flag = galactic_focus_crisis_nanites
 			set_global_flag = galactic_community_crisis_fighting
+
+			remove_global_flag = galactic_focus_crisis_unbidden
+			remove_global_flag = galactic_focus_crisis_prethoryn
+			remove_global_flag = galactic_focus_crisis_contingency
+			remove_global_flag = galactic_focus_crisis_greatkhan
 
 			set_global_flag = galactic_community_resolution_passed
 
@@ -11125,6 +11912,9 @@ resolution_galactic_focus_crisis_nanites = {
 		NOT = { has_global_flag = galactic_focus_crisis_nanites }
 	}
 
+	allow = {
+	}
+
 	active = { # Resolution only in effect while this trigger is met
 		has_global_flag = gray_goo_crisis_active
 	}
@@ -11133,7 +11923,7 @@ resolution_galactic_focus_crisis_nanites = {
 		base = @resolution_weight_normal
 
 		modifier = {
-			factor = 2
+			factor = 10
 
 			any_neighbor_country = {
 				is_country_type = gray_goo
@@ -11152,7 +11942,7 @@ resolution_galactic_focus_crisis_nanites = {
 		}
 
 		modifier = {
-			factor = 1.1
+			factor = 1.5
 
 			any_country = {
 				is_country_type = gray_goo
@@ -11162,7 +11952,7 @@ resolution_galactic_focus_crisis_nanites = {
 		}
 
 		modifier = {
-			factor = 1.5
+			factor = 2.5
 
 			any_country = {
 				is_country_type = gray_goo
@@ -11172,7 +11962,7 @@ resolution_galactic_focus_crisis_nanites = {
 		}
 
 		modifier = {
-			factor = 2
+			factor = 3
 
 			any_country = {
 				is_country_type = gray_goo
@@ -11182,7 +11972,7 @@ resolution_galactic_focus_crisis_nanites = {
 		}
 
 		modifier = {
-			factor = 3
+			factor = 5
 
 			any_country = {
 				is_country_type = gray_goo
@@ -11207,13 +11997,40 @@ resolution_galactic_focus_crisis_nanites = {
 		}
 
 		modifier = {
-			factor = 1.2
-			is_militarist = yes
-		}
-
-		modifier = {
-			factor = 1.2
+			factor = 1.25
 			is_materialist = yes
+		}
+		
+		modifier = {
+			factor = 1.25
+			has_valid_civic = civic_philosopher_king
+			has_valid_civic = civic_machine_servitor
+			has_valid_civic = civic_diplomatic_corps
+		}
+		
+		modifier = {
+			factor = 1.25
+			AND = {
+				has_authority = auth_corporate
+				OR = {
+					has_valid_civic = civic_brand_loyalty
+					has_valid_civic = civic_free_traders
+					has_valid_civic = civic_franchising
+					has_valid_civic = civic_trading_posts
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.75
+			AND = {
+				has_authority = auth_corporate
+				OR = {
+					has_valid_civic = civic_naval_contractors
+					has_valid_civic = civic_private_military_companies
+					has_valid_civic = civic_criminal_heritage
+				}
+			}
 		}
 
 		modifier = {
@@ -11240,11 +12057,12 @@ resolution_galactic_focus_war_in_heaven_support_side_1 = {
 	}
 	target = no
 
+	modifier = {}
+
 	effect = {
 		custom_tooltip = resolution_galactic_focus_war_in_heaven_support_side_1_success
 
 		hidden_effect = {
-			repeal_all_galactic_focus_resolutions = yes
 			set_global_flag = galactic_focus_war_in_heaven
 			set_global_flag = galactic_community_resolution_passed
 			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
@@ -11267,9 +12085,10 @@ resolution_galactic_focus_war_in_heaven_support_side_1 = {
 
 	potential = {
 		has_global_flag = war_in_heaven_ongoing
-		has_galactic_emperor = no # Empire always at war with WiH sides
 		NOT = { has_global_flag = galactic_focus_war_in_heaven }
-		exists = event_target:SecondSleeper
+	}
+
+	allow = {
 	}
 
 	active = { # Resolution only in effect while this trigger is met
@@ -11286,24 +12105,18 @@ resolution_galactic_focus_war_in_heaven_support_side_1 = {
 	}
 
 	ai_weight = {
-		base = @resolution_weight_unpopular
+		base = @resolution_weight_normal
 
 		modifier = {
-			factor = 10
+			factor = 2
 			exists = overlord
-			has_overlord = event_target:FirstAwakened
-		}
-		
-		modifier = {
-			factor = 0
-			has_federation = yes
-			alliance = { has_federation_flag = non_aligned_league }
+			has_overlord = event_target:FirstSleeper
 		}
 
 		modifier = {
 			factor = 0
 			exists = overlord
-			NOT = { has_overlord = event_target:FirstAwakened }
+			has_overlord = event_target:SecondSleeper
 		}
 	}
 }
@@ -11319,11 +12132,12 @@ resolution_galactic_focus_war_in_heaven_support_side_2 = {
 	}
 	target = no
 
+	modifier = {}
+
 	effect = {
 		custom_tooltip = resolution_galactic_focus_war_in_heaven_support_side_2_success
 
 		hidden_effect = {
-			repeal_all_galactic_focus_resolutions = yes
 			set_global_flag = galactic_focus_war_in_heaven
 			set_global_flag = galactic_community_resolution_passed
 			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
@@ -11346,9 +12160,10 @@ resolution_galactic_focus_war_in_heaven_support_side_2 = {
 
 	potential = {
 		has_global_flag = war_in_heaven_ongoing
-		has_galactic_emperor = no # Empire always at war with WiH sides
 		NOT = { has_global_flag = galactic_focus_war_in_heaven }
-		exists = event_target:FirstSleeper
+	}
+
+	allow = {
 	}
 
 	active = { # Resolution only in effect while this trigger is met
@@ -11365,22 +12180,16 @@ resolution_galactic_focus_war_in_heaven_support_side_2 = {
 	}
 
 	ai_weight = {
-		base = @resolution_weight_unpopular
+		base = @resolution_weight_normal
 
 		modifier = {
 			factor = 0
 			exists = overlord
-			NOT = { has_overlord = event_target:SecondAwakened }
-		}
-		
-		modifier = {
-			factor = 0
-			has_federation = yes
-			alliance = { has_federation_flag = non_aligned_league }
+			has_overlord = event_target:FirstSleeper
 		}
 
 		modifier = {
-			factor = 10
+			factor = 2
 			exists = overlord
 			has_overlord = event_target:SecondSleeper
 		}
@@ -11397,6 +12206,8 @@ resolution_galactic_focus_war_in_heaven_denounce_both = {
 		}
 	}
 	target = no
+
+	modifier = {}
 
 	triggered_modifier = {
 		potential = {
@@ -11420,7 +12231,6 @@ resolution_galactic_focus_war_in_heaven_denounce_both = {
 		custom_tooltip = resolution_galactic_focus_war_in_heaven_denounce_both_success
 
 		hidden_effect = {
-			repeal_all_galactic_focus_resolutions = yes
 			set_global_flag = galactic_focus_war_in_heaven
 			set_global_flag = galactic_community_resolution_passed
 			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
@@ -11443,10 +12253,10 @@ resolution_galactic_focus_war_in_heaven_denounce_both = {
 
 	potential = {
 		has_global_flag = war_in_heaven_ongoing
-		has_galactic_emperor = no # Empire always at war with WiH sides
 		NOT = { has_global_flag = galactic_focus_war_in_heaven }
-		exists = event_target:FirstSleeper
-		exists = event_target:SecondSleeper
+	}
+
+	allow = {
 	}
 
 	active = { # Resolution only in effect while this trigger is met
@@ -11464,12 +12274,6 @@ resolution_galactic_focus_war_in_heaven_denounce_both = {
 
 	ai_weight = {
 		base = @resolution_weight_normal
-		
-		modifier = {
-			factor = 10
-			has_federation = yes
-			alliance = { has_federation_flag = non_aligned_league }
-		}
 
 		modifier = {
 			factor = 0
@@ -11484,6 +12288,10 @@ resolution_galactic_focus_war_in_heaven_denounce_both = {
 
 resolution_tiyanki_conservation_act = {
 	icon = "GFX_resolution_tiyanki_preservation"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -11518,7 +12326,6 @@ resolution_tiyanki_conservation_act = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		NOT = {
 			is_active_resolution = "resolution_tiyanki_pest_control"
 			has_global_flag = tiyanki_extinct
@@ -11526,10 +12333,6 @@ resolution_tiyanki_conservation_act = {
 	}
 
 	allow = {
-		custom_tooltip = {
-			fail_text = "resolution_already_active"
-			NOT = { is_active_resolution = "resolution_tiyanki_conservation_act" }
-		}
 	}
 
 	active = { # Resolution only in effect while this trigger is met
@@ -11556,6 +12359,16 @@ resolution_tiyanki_conservation_act = {
 		modifier = {
 			factor = 0.75
 			is_militarist = yes
+		}
+		
+		modifier = {
+			factor = 0.75
+			is_materialist
+			has_valid_civic = civic_mining_guilds
+			has_valid_civic = civic_corporate_dominion
+			has_valid_civic = civic_barbaric_despoilers
+			has_valid_civic = civic_machine_assimilator
+			has_authority = auth_corporate
 		}
 
 		modifier = {
@@ -11626,6 +12439,16 @@ resolution_repeal_tiyanki_conservation_act = {
 			factor = 1.5
 			is_militarist = yes
 		}
+		
+		modifier = {
+			factor = 1.25
+			is_materialist
+			has_valid_civic = civic_mining_guilds
+			has_valid_civic = civic_corporate_dominion
+			has_valid_civic = civic_barbaric_despoilers
+			has_valid_civic = civic_machine_assimilator
+			has_authority = auth_corporate
+		}
 
 		modifier = {
 			factor = 0.5
@@ -11649,6 +12472,10 @@ resolution_repeal_tiyanki_conservation_act = {
 
 resolution_tiyanki_pest_control = {
 	icon = "GFX_resolution_tiyanki_hunt"
+
+	potential = {
+		has_federations_dlc = yes
+	}
 
 	resources = {
 		category = resolutions
@@ -11684,7 +12511,6 @@ resolution_tiyanki_pest_control = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
 		NOT = {
 			is_active_resolution = "resolution_tiyanki_conservation_act"
 			has_global_flag = tiyanki_extinct
@@ -11692,10 +12518,6 @@ resolution_tiyanki_pest_control = {
 	}
 
 	allow = {
-		custom_tooltip = {
-			fail_text = "resolution_already_active"
-			NOT = { is_active_resolution = "resolution_tiyanki_pest_control" }
-		}
 	}
 
 	active = { # Resolution only in effect while this trigger is met
@@ -11722,6 +12544,16 @@ resolution_tiyanki_pest_control = {
 		modifier = {
 			factor = 1.25
 			is_militarist = yes
+		}
+		
+		modifier = {
+			factor = 1.25
+			is_materialist
+			has_valid_civic = civic_mining_guilds
+			has_valid_civic = civic_corporate_dominion
+			has_valid_civic = civic_barbaric_despoilers
+			has_valid_civic = civic_machine_assimilator
+			has_authority = auth_corporate
 		}
 
 		modifier = {
@@ -11793,6 +12625,16 @@ resolution_repeal_tiyanki_pest_control = {
 			factor = 0.75
 			is_militarist = yes
 		}
+		
+		modifier = {
+			factor = 0.75
+			is_materialist
+			has_valid_civic = civic_mining_guilds
+			has_valid_civic = civic_corporate_dominion
+			has_valid_civic = civic_barbaric_despoilers
+			has_valid_civic = civic_machine_assimilator
+			has_authority = auth_corporate
+		}
 
 		modifier = {
 			factor = 1.5
@@ -11830,6 +12672,9 @@ resolution_amoeba_conservation_act = {
 	}
 	target = no
 
+	modifier = {
+	}
+
 	effect = {
 		custom_tooltip = resolution_amoeba_conservation_act_tooltip
 		hidden_effect = {
@@ -11858,12 +12703,11 @@ resolution_amoeba_conservation_act = {
 		}
 	}
 
+	potential = {
+	}
+
 	allow = {
 		is_active_resolution = resolution_tiyanki_conservation_act
-		custom_tooltip = {
-			fail_text = "resolution_already_active"
-			NOT = { is_active_resolution = "resolution_amoeba_conservation_act" }
-		}
 	}
 
 	breach = {
@@ -11886,6 +12730,16 @@ resolution_amoeba_conservation_act = {
 		modifier = {
 			factor = 0.75
 			is_militarist = yes
+		}
+		
+		modifier = {
+			factor = 0.75
+			is_materialist
+			has_valid_civic = civic_mining_guilds
+			has_valid_civic = civic_corporate_dominion
+			has_valid_civic = civic_barbaric_despoilers
+			has_valid_civic = civic_machine_assimilator
+			has_authority = auth_corporate
 		}
 
 		modifier = {
@@ -11958,6 +12812,16 @@ resolution_repeal_amoeba_conservation_act = {
 			factor = 1.25
 			is_militarist = yes
 		}
+		
+		modifier = {
+			factor = 1.25
+			is_materialist
+			has_valid_civic = civic_mining_guilds
+			has_valid_civic = civic_corporate_dominion
+			has_valid_civic = civic_barbaric_despoilers
+			has_valid_civic = civic_machine_assimilator
+			has_authority = auth_corporate
+		}
 
 		modifier = {
 			factor = 0.5
@@ -11982,6 +12846,11 @@ resolution_repeal_amoeba_conservation_act = {
 resolution_galactic_market_ban_sentient_organic_slave_trade = {
 	icon = "GFX_resolution_galactic_market_slave_trade"
 
+	potential = {
+		has_federations_dlc = yes
+		host_has_dlc = "Megacorp"
+	}
+
 	resources = {
 		category = resolutions
 		cost = {
@@ -11990,6 +12859,9 @@ resolution_galactic_market_ban_sentient_organic_slave_trade = {
 	}
 
 	target = no
+
+	modifier = {
+	}
 
 	effect = {
 		custom_tooltip = resolution_galactic_market_ban_sentient_organic_slave_trade_effect_success
@@ -12014,9 +12886,6 @@ resolution_galactic_market_ban_sentient_organic_slave_trade = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
-		host_has_dlc = "Megacorp"
-		has_global_flag = galactic_market_founded
 		NOT = {
 			is_active_resolution = "resolution_galactic_market_ban_sentient_organic_slave_trade"
 			has_global_flag = organic_slave_trade_banned_flag
@@ -12027,12 +12896,12 @@ resolution_galactic_market_ban_sentient_organic_slave_trade = {
 		weight = @resolution_weight_disliked
 
 		modifier = {
-			factor = 1.5
+			factor = 2.5
 			is_xenophile = yes
 		}
 
 		modifier = {
-			factor = 1.5
+			factor = 2.5
 			is_egalitarian = yes
 		}
 
@@ -12054,7 +12923,12 @@ resolution_galactic_market_ban_sentient_organic_slave_trade = {
 }
 
 resolution_galactic_market_repeal_sentient_organic_slave_trade = {
-	icon = "GFX_repeal_orange"
+	icon = "GFX_repeal_yellow"
+
+	potential = {
+		has_federations_dlc = yes
+		host_has_dlc = "Megacorp"
+	}
 
 	resources = {
 		category = resolutions
@@ -12091,8 +12965,6 @@ resolution_galactic_market_repeal_sentient_organic_slave_trade = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
-		host_has_dlc = "Megacorp"
 		has_global_flag = organic_slave_trade_banned_flag
 		is_active_resolution = "resolution_galactic_market_ban_sentient_organic_slave_trade"
 	}
@@ -12101,12 +12973,12 @@ resolution_galactic_market_repeal_sentient_organic_slave_trade = {
 		weight = @resolution_weight_disliked
 
 		modifier = {
-			factor = 0.5
+			factor = 0
 			is_xenophile = yes
 		}
 
 		modifier = {
-			factor = 0.5
+			factor = 0
 			is_egalitarian = yes
 		}
 
@@ -12121,7 +12993,7 @@ resolution_galactic_market_repeal_sentient_organic_slave_trade = {
 		}
 
 		modifier = {
-			factor = 2
+			factor = 3
 			is_slaver = yes
 		}
 	}
@@ -12129,6 +13001,11 @@ resolution_galactic_market_repeal_sentient_organic_slave_trade = {
 
 resolution_galactic_market_ban_sentient_slave_trade = {
 	icon = "GFX_resolution_galactic_market_slave_trade"
+
+	potential = {
+		has_federations_dlc = yes
+		host_has_dlc = "Megacorp"
+	}
 
 	resources = {
 		category = resolutions
@@ -12165,8 +13042,6 @@ resolution_galactic_market_ban_sentient_slave_trade = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
-		host_has_dlc = "Megacorp"
 		has_global_flag = organic_slave_trade_banned_flag
 		is_active_resolution = "resolution_galactic_market_ban_sentient_organic_slave_trade"
 	}
@@ -12176,12 +13051,18 @@ resolution_galactic_market_ban_sentient_slave_trade = {
 
 		modifier = {
 			factor = 1.5
-			is_xenophile = yes
+			AND = {
+				is_xenophile = yes
+				is_materialist = yes
+			}
 		}
 
 		modifier = {
 			factor = 1.5
-			is_egalitarian = yes
+			AND = {
+				is_egalitarian = yes
+				is_materialist = yes
+			}
 		}
 
 		modifier = {
@@ -12195,7 +13076,7 @@ resolution_galactic_market_ban_sentient_slave_trade = {
 		}
 
 		modifier = {
-			factor = 0.75
+			factor = 0.25
 			is_spiritualist = yes
 		}
 
@@ -12207,7 +13088,12 @@ resolution_galactic_market_ban_sentient_slave_trade = {
 }
 
 resolution_galactic_market_allow_sentient_slave_trade = {
-	icon = "GFX_repeal_orange"
+	icon = "GFX_repeal_yellow"
+
+	potential = {
+		has_federations_dlc = yes
+		host_has_dlc = "Megacorp"
+	}
 
 	resources = {
 		category = resolutions
@@ -12244,8 +13130,6 @@ resolution_galactic_market_allow_sentient_slave_trade = {
 	}
 
 	potential = {
-		has_federations_dlc = yes
-		host_has_dlc = "Megacorp"
 		has_global_flag = sentient_slave_trade_banned_flag
 		is_active_resolution = "resolution_galactic_market_ban_sentient_slave_trade"
 	}
@@ -12255,12 +13139,18 @@ resolution_galactic_market_allow_sentient_slave_trade = {
 
 		modifier = {
 			factor = 0.5
-			is_xenophile = yes
+			AND = {
+				is_xenophile = yes
+				is_materialist = yes
+			}
 		}
 
 		modifier = {
 			factor = 0.5
-			is_egalitarian = yes
+			AND = {
+				is_egalitarian = yes
+				is_materialist = yes
+			}
 		}
 
 		modifier = {
@@ -12274,12 +13164,12 @@ resolution_galactic_market_allow_sentient_slave_trade = {
 		}
 
 		modifier = {
-			factor = 1.25
+			factor = 1.75
 			is_spiritualist = yes
 		}
 
 		modifier = {
-			factor = 2
+			factor = 2.5
 			is_slaver = yes
 		}
 	}
@@ -12287,6 +13177,11 @@ resolution_galactic_market_allow_sentient_slave_trade = {
 
 resolution_galactic_market_relocate = {
 	icon = "GFX_resolution_relocate_galactic_market"
+
+	potential = {
+		has_federations_dlc = yes
+		host_has_dlc = "Megacorp"
+	}
 
 	resources = {
 		category = resolutions
@@ -12331,9 +13226,10 @@ resolution_galactic_market_relocate = {
 		}
 	}
 
+	modifier = {
+	}
+
 	potential = {
-		has_federations_dlc = yes
-		host_has_dlc = "Megacorp"
 		has_global_flag = galactic_market_founded
 		NOT = {
 			has_global_flag = ongoing_market_relocation_nomination
@@ -12383,6 +13279,1026 @@ resolution_galactic_market_relocate = {
 				has_ai_personality = ruthless_capitalists
 			}
 			NOT = { has_modifier = galactic_market_founder }
+		}
+	}
+}
+
+# EDUCATION
+
+resolution_education_repeal_1 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+
+	effect = {
+		custom_tooltip = resolution_education_repeal_1_effect_success
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_education_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_education_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_education_galaxy_education_standards"
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+
+	allow = {
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0.5
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 0.25
+			is_egalitarian = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_valid_civic = civic_philosopher_king
+				has_valid_civic = civic_technocracy
+			}
+		}
+		modifier = {
+			factor = 0.75
+			is_megacorp = yes
+		}
+		modifier = {
+			factor = 2.5
+			has_valid_civic = civic_exalted_priesthood
+			has_valid_civic = civic_feudal_realm
+			has_valid_civic = civic_slaver_guilds
+			has_valid_civic = civic_gospel_of_the_masses
+			has_valid_civic = civic_indentured_assets
+		}
+		modifier = {
+			factor = 2.5
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 2
+			is_gestalt = yes
+		}
+	}
+}
+
+resolution_education_repeal_2 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t2
+		}
+	}
+	target = no
+
+	effect = {
+		custom_tooltip = resolution_education_repeal_2_effect_success
+
+		hidden_effect = {
+			pass_resolution = "resolution_education_galaxy_education_standards"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_education_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_education_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_education_galactic_schools"
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+
+	modifier = {
+		resolution_education_galaxy_education_standards = 1
+	}
+
+	allow = {
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0.5
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 0.25
+			is_egalitarian = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				has_valid_civic = civic_philosopher_king
+				has_valid_civic = civic_technocracy
+			}
+		}
+		modifier = {
+			factor = 0.75
+			is_megacorp = yes
+		}
+		modifier = {
+			factor = 2.5
+			has_valid_civic = civic_exalted_priesthood
+			has_valid_civic = civic_feudal_realm
+			has_valid_civic = civic_slaver_guilds
+			has_valid_civic = civic_gospel_of_the_masses
+			has_valid_civic = civic_indentured_assets
+		}
+		modifier = {
+			factor = 2.5
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 2
+			is_gestalt = yes
+		}
+	}
+}
+
+resolution_education_repeal_3 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t3
+		}
+	}
+	target = no
+
+	effect = {
+		custom_tooltip = resolution_education_repeal_3_effect_success
+
+		hidden_effect = {
+			pass_resolution = "resolution_education_galactic_schools"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_education_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_education_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_education_synthetic_brain_development"
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+
+	modifier = {
+		resolution_education_galaxy_education_standards = 1
+		resolution_education_galactic_schools = 1
+	}
+
+	allow = {
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0.5
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_egalitarian = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_valid_civic = civic_philosopher_king
+				has_valid_civic = civic_technocracy
+			}
+		}
+		modifier = {
+			factor = 0.75
+			is_megacorp = yes
+		}
+		modifier = {
+			factor = 5
+			has_valid_civic = civic_shared_burden
+			has_valid_civic = civic_idealistic_foundation
+		}
+		modifier = {
+			factor = 2.5
+			has_valid_civic = civic_exalted_priesthood
+			has_valid_civic = civic_feudal_realm
+			has_valid_civic = civic_slaver_guilds
+			has_valid_civic = civic_gospel_of_the_masses
+			has_valid_civic = civic_indentured_assets
+		}
+		modifier = {
+			factor = 2.5
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 2
+			is_gestalt = yes
+		}
+	}
+}
+
+resolution_education_repeal_4 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t4
+		}
+	}
+	target = no
+
+	effect = {
+		custom_tooltip = resolution_education_repeal_4_effect_success
+
+		hidden_effect = {
+			pass_resolution = "resolution_education_synthetic_brain_development"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_education_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_education_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_education_genetic_splicing"
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+
+	modifier = {
+		resolution_education_galaxy_education_standards = 1
+		resolution_education_galactic_schools = 1
+		resolution_education_synthetic_brain_development = 1
+	}
+
+	allow = {
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0.5
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_egalitarian = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_valid_civic = civic_philosopher_king
+				has_valid_civic = civic_technocracy
+			}
+		}
+		modifier = {
+			factor = 0.75
+			is_megacorp = yes
+		}
+		modifier = {
+			factor = 5
+			has_valid_civic = civic_shared_burden
+			has_valid_civic = civic_idealistic_foundation
+		}
+		modifier = {
+			factor = 2.5
+			has_valid_civic = civic_exalted_priesthood
+			has_valid_civic = civic_feudal_realm
+			has_valid_civic = civic_slaver_guilds
+			has_valid_civic = civic_gospel_of_the_masses
+			has_valid_civic = civic_indentured_assets
+		}
+		modifier = {
+			factor = 2.5
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 2
+			is_gestalt = yes
+		}
+	}
+}
+
+resolution_education_repeal_5 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t5
+		}
+	}
+	target = no
+
+	effect = {
+		custom_tooltip = resolution_education_repeal_5_effect_success
+
+		hidden_effect = {
+			pass_resolution = "resolution_education_genetic_splicing"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_education_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_education_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_education_enhancements"
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+
+	modifier = {
+		resolution_education_galaxy_education_standards = 1
+		resolution_education_galactic_schools = 1
+		resolution_education_synthetic_brain_development = 1
+		resolution_education_genetic_splicing = 1
+	}
+
+	allow = {
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 0.5
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 2.5
+			is_egalitarian = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 0.25
+			OR = {
+				has_valid_civic = civic_philosopher_king
+				has_valid_civic = civic_technocracy
+			}
+		}
+		modifier = {
+			factor = 0.75
+			is_megacorp = yes
+		}
+		modifier = {
+			factor = 5
+			has_valid_civic = civic_shared_burden
+			has_valid_civic = civic_idealistic_foundation
+		}
+		modifier = {
+			factor = 2.5
+			has_valid_civic = civic_exalted_priesthood
+			has_valid_civic = civic_feudal_realm
+			has_valid_civic = civic_slaver_guilds
+			has_valid_civic = civic_gospel_of_the_masses
+			has_valid_civic = civic_indentured_assets
+		}
+		modifier = {
+			factor = 2.5
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 2
+			is_gestalt = yes
+		}
+	}
+}
+
+resolution_education_galaxy_education_standards = {
+	icon = "GFX_resolution_border_status"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+
+	target = no
+	level = 1
+
+	modifier = {
+		resolution_education_galaxy_education_standards = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_education days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_education days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "resolution_already_active"
+			NOR = {
+				is_active_resolution = "resolution_education_galaxy_education_standards"
+				is_active_resolution = "resolution_education_galactic_schools"
+				is_active_resolution = "resolution_education_synthetic_brain_development"
+				is_active_resolution = "resolution_education_genetic_splicing"
+				is_active_resolution = "resolution_education_enhancements"
+			}
+		}
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_loved
+
+		modifier = {
+			factor = 1.5
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_egalitarian = yes
+		}
+		modifier = {
+			factor = 0.75
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_valid_civic = civic_philosopher_king
+				has_valid_civic = civic_technocracy
+			}
+		}
+		modifier = {
+			factor = 1.5
+			is_megacorp = yes
+		}
+		modifier = {
+			factor = 0.25
+			has_valid_civic = civic_exalted_priesthood
+			has_valid_civic = civic_feudal_realm
+			has_valid_civic = civic_slaver_guilds
+			has_valid_civic = civic_gospel_of_the_masses
+			has_valid_civic = civic_indentured_assets
+		}
+		modifier = {
+			factor = 0
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_gestalt = yes
+		}
+	}
+}
+
+resolution_education_galactic_schools = {
+	icon = "GFX_resolution_border_status"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t2
+		}
+	}
+	target = no
+	level = 2
+
+	modifier = {
+		resolution_education_galaxy_education_standards = 1
+		resolution_education_galactic_schools = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_education days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_education days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_education_galaxy_education_standards"
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_popular
+
+		modifier = {
+			factor = 1.5
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 1.5
+			is_egalitarian = yes
+		}
+		modifier = {
+			factor = 0.75
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_valid_civic = civic_philosopher_king
+				has_valid_civic = civic_technocracy
+			}
+		}
+		modifier = {
+			factor = 1.5
+			is_megacorp = yes
+		}
+		modifier = {
+			factor = 0.25
+			has_valid_civic = civic_exalted_priesthood
+			has_valid_civic = civic_feudal_realm
+			has_valid_civic = civic_slaver_guilds
+			has_valid_civic = civic_gospel_of_the_masses
+			has_valid_civic = civic_indentured_assets
+		}
+		modifier = {
+			factor = 0
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_gestalt = yes
+		}
+	}
+}
+
+resolution_education_synthetic_brain_development = {
+	icon = "GFX_resolution_border_status"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t3
+		}
+	}
+	target = no
+	level = 3
+
+	modifier = {
+		resolution_education_galaxy_education_standards = 1
+		resolution_education_galactic_schools = 1
+		resolution_education_synthetic_brain_development = 1
+	}
+
+	effect = {
+		custom_tooltip = resolution_galacticstudies_ethical_guideline_refactoring_tooltip
+
+		hidden_effect = {
+			set_global_flag = resolution_with_breach_effect_passed
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_education days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_education days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+	
+	potential = {
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_education_galactic_schools"
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+	
+	breach = {
+		OR = {
+			AND = {
+				has_technology = tech_selected_lineages
+				has_policy_flag = leader_enhancement_natural_selection
+			}
+
+			AND = {
+				has_technology = tech_capacity_boosters
+				NOT = { has_policy_flag = leader_enhancement_capacity_boosters }
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = @resolution_weight_normal
+
+		modifier = {
+			factor = 1.5
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_egalitarian = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_valid_civic = civic_philosopher_king
+				has_valid_civic = civic_technocracy
+			}
+		}
+		modifier = {
+			factor = 1.5
+			is_megacorp = yes
+		}
+		modifier = {
+			factor = 0.25
+			has_valid_civic = civic_shared_burden
+			has_valid_civic = civic_idealistic_foundation
+		}
+		modifier = {
+			factor = 0.25
+			has_valid_civic = civic_exalted_priesthood
+			has_valid_civic = civic_feudal_realm
+			has_valid_civic = civic_slaver_guilds
+			has_valid_civic = civic_gospel_of_the_masses
+			has_valid_civic = civic_indentured_assets
+		}
+		modifier = {
+			factor = 0
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_gestalt = yes
+		}
+	}
+}
+
+resolution_education_genetic_splicing = {
+	icon = "GFX_resolution_border_status"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t4
+		}
+	}
+	target = no
+	level = 4
+
+	modifier = {
+		resolution_education_galaxy_education_standards = 1
+		resolution_education_galactic_schools = 1
+		resolution_education_synthetic_brain_development = 1
+		resolution_education_genetic_splicing = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_education days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_education days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+	
+	potential = {
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_education_synthetic_brain_development"
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 1.5
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_egalitarian = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_valid_civic = civic_philosopher_king
+				has_valid_civic = civic_technocracy
+			}
+		}
+		modifier = {
+			factor = 1.5
+			is_megacorp = yes
+		}
+		modifier = {
+			factor = 0.25
+			has_valid_civic = civic_shared_burden
+			has_valid_civic = civic_idealistic_foundation
+		}
+		modifier = {
+			factor = 0.25
+			has_valid_civic = civic_exalted_priesthood
+			has_valid_civic = civic_feudal_realm
+			has_valid_civic = civic_slaver_guilds
+			has_valid_civic = civic_gospel_of_the_masses
+			has_valid_civic = civic_indentured_assets
+		}
+		modifier = {
+			factor = 0
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_gestalt = yes
+		}
+	}
+}
+
+resolution_education_enhancements = {
+	icon = "GFX_resolution_border_status"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t5
+		}
+	}
+	target = no
+	level = 5
+
+	modifier = {
+		resolution_education_galaxy_education_standards = 1
+		resolution_education_galactic_schools = 1
+		resolution_education_synthetic_brain_development = 1
+		resolution_education_genetic_splicing = 1
+		resolution_education_enhancements = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_education days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_galacticstudies days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+	
+	potential = {
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+
+	allow = {
+		is_active_resolution = "resolution_education_genetic_splicing"
+		NOT = {
+			has_global_flag = vanilla_resolutions
+		}
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_loved
+
+		modifier = {
+			factor = 1.5
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_egalitarian = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_spiritualist = yes
+		}
+		modifier = {
+			factor = 3
+			OR = {
+				has_valid_civic = civic_philosopher_king
+				has_valid_civic = civic_technocracy
+			}
+		}
+		modifier = {
+			factor = 1.5
+			is_megacorp = yes
+		}
+		modifier = {
+			factor = 0.25
+			has_valid_civic = civic_shared_burden
+			has_valid_civic = civic_idealistic_foundation
+		}
+		modifier = {
+			factor = 0.25
+			has_valid_civic = civic_exalted_priesthood
+			has_valid_civic = civic_feudal_realm
+			has_valid_civic = civic_slaver_guilds
+			has_valid_civic = civic_gospel_of_the_masses
+			has_valid_civic = civic_indentured_assets
+		}
+		modifier = {
+			factor = 0
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_gestalt = yes
 		}
 	}
 }

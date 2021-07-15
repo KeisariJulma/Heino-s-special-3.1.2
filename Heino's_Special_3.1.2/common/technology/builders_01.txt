@@ -1,0 +1,30 @@
+builders_technology = {
+	cost = @tier1cost2
+	area = engineering
+	tier = 1
+	category = { industry }
+	is_rare = no
+	weight = @tier1weight2
+	prerequisites = { "tech_assembly_pattern" }
+}
+
+
+builders_technology_2 = {
+	cost = @tier2cost2
+	area = engineering
+	tier = 2
+	prerequisites = { "builders_technology" }
+	category = { industry }
+	is_rare = no
+	weight = @tier2weight2
+}
+
+builders_technology_3 = {
+	cost = @tier3cost2
+	area = engineering
+	tier = 3
+	prerequisites = { "builders_technology_2" }
+	category = { industry }
+	is_rare = no
+	weight = @tier3weight3
+}

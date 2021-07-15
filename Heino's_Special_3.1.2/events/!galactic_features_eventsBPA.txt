@@ -1,0 +1,44 @@
+# Medieval Civilization
+country_event = {
+	id = galactic_features.101
+	title = "primitive.1.name"
+	desc = "galactic_features.101.desc"
+	picture = GFX_primitiveages2
+	location = FROM
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = INTERESTING
+	}
+}
+
+# Industrial Civilization
+country_event = {
+	id = galactic_features.102
+	title = "primitive.1.name"
+	desc = "galactic_features.102.desc"
+	picture = GFX_primitiveages3
+	location = FROM
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = INTERESTING
+	}
+}
+
+# Early Space Age Civilization
+country_event = {
+	id = galactic_features.103
+	title = "primitive.1.name"
+	desc = "galactic_features.103.desc"
+	picture = GFX_primitiveages4
+	location = FROM
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = INTERESTING
+	}
+}

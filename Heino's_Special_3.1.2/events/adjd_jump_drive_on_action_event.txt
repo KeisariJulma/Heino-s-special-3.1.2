@@ -1,0 +1,84 @@
+ship_event = {
+	id = action.8900
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		
+		if = {
+			limit = {
+				owner = {
+					NOR = {
+						has_technology = tech_jump_drive_2
+						has_technology = tech_jump_drive_3
+						has_technology = tech_jump_drive_4
+						has_technology = tech_jump_drive_5
+						has_technology = tech_psi_jump_drive_2
+						has_technology = tech_psi_jump_drive_3
+					}
+				}
+			}
+
+			add_modifier = {
+				modifier = jump_drive_cooldown
+				days = 120
+			}
+		} else_if {
+			limit = {
+				owner = {
+					NOR = {
+						has_technology = tech_jump_drive_3
+						has_technology = tech_jump_drive_4
+						has_technology = tech_jump_drive_5
+						has_technology = tech_psi_jump_drive_2
+						has_technology = tech_psi_jump_drive_3
+					}
+				}
+			}
+
+			add_modifier = {
+				modifier = jump_drive_cooldown
+				days = 90
+			}
+		} else_if {
+			limit = {
+				owner = {
+					NOR = {
+						has_technology = tech_jump_drive_4
+						has_technology = tech_jump_drive_5
+						has_technology = tech_psi_jump_drive_3
+					}
+				}
+			}
+
+			add_modifier = {
+				modifier = jump_drive_cooldown
+				days = 60
+			}
+		} else if {
+			limit = {
+				owner = {
+					NOT = {
+						has_technology = tech_jump_drive_5
+					}
+				}
+			}
+
+			add_modifier = {
+				modifier = jump_drive_cooldown
+				days = 30
+			}
+		} else_if {
+			limit = {
+				owner = {
+					has_technology = tech_jump_drive_5
+				}
+			}
+
+			add_modifier = {
+				modifier = jump_drive_cooldown
+				days = 15
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+﻿    l_english:
+
+#tech
+    
+    builders_technology:0 "Dedicated Builders"
+    builders_technology_desc:0 "With the new economic might we can dedicate hundreds of millions, if not billions of workers towards construction only. This will help our construction efforts immensely."
+    builders_technology_2:0 "Construction Complexes"
+    builders_technology_2_desc:0 "Expansion of the existing construction efforts will make us able to complete massive projets in short order"
+    builders_technology_3:0 "Mega-Construction"
+    builders_technology_3_desc:0 "If we will need to build housing for trillions of people in a matter of years - we will be able to, provided we have adequate construction infrastructure."
+    
+#builder buildings
+    
+    building_center_1:0 "Building Center"
+    building_center_1_desc: "Base of operations for hundreds of millions of builders."
+    building_center_2:0 "Construction Complex"
+    building_center_2_desc: "Base of operations for billions of builders."
+    building_center_3:0 "Construction Mega-Complex"
+    building_center_3_desc: "A massive complex dedicated exclusively to construction. Be it manufacturing of standard architecture, transportation to building sites, or providing supplies for builders on-site."
+    
+#jobs
+    
+    job_builder:0 "Builder"
+    job_builder_plural:0 "Builders"
+    job_builder_desc:0 "£job_builder£ $job_builder_plural$ produce £engineering£ §YEngineering Research§! and increase §YBuilding Speed§!."
+    mod_job_builder_add:0 "Builder Jobs"
+    mod_builder_produces_mult:0 "£job_builder£ $job_builder_plural$"
+    builders:0 "Builder Jobs"
+    job_builder_drone:0 "Builder Drone"
+    job_builder_drone_plural:0 "Builder Drones"
+    job_builder_drone_desc:0 "£job_builder_drone£ $job_builder_drone_plural$ produce £engineering£ §YEngineering Research§!, £amenities£ §YAmenities§! and increase §YBuilding Speed§!."
+    mod_job_builder_drone_add:0 "Builder Drone Jobs"
+    mod_builder_drone_produces_mult:0 "£job_builder_drone£ $job_builder_drone_plural$"
+    builder_drones:0 "Builder Drone Jobs"

@@ -1,0 +1,82 @@
+### Decentralized Scripted Triggers
+# This = pop
+# Prev = planet
+# root = country = decentralizer
+is_decent_majority_species = {
+	is_sapient = yes
+	OR = {
+		NOT = { is_same_species = event_target:decentralizer.species }
+		species = {
+			exists = home_planet
+			home_planet = { is_planet = PREVPREVPREV }
+		}
+	}
+	OR = {
+		species = {
+			exists = home_planet
+			home_planet = { is_planet = PREVPREVPREV }
+		}
+		AND = {
+			is_enslaved = no
+			is_being_purged = no
+			is_robot_pop = no
+			is_being_assimilated = no
+			pop_can_live_on_planet = yes
+			# has_population_control = no CW262?
+			has_population_control = {
+				value = no
+				country = event_target:decentralizer # prev.owner
+			}
+			# has_migration_control = no CW262?
+			has_migration_control = {
+				value = no
+				country = event_target:decentralizer # prev.owner
+			}
+			has_colonization_control = {
+				value = no
+				country = event_target:decentralizer # prev.owner
+			}
+			PREV = {
+				habitability = { who = PREV value > 0.65 }
+			}
+			# species = {
+			# 	has_citizenship_type = {
+			# 		type = citizenship_full
+			# 		country = event_target:decentralizer
+			# 	}
+			# 	species_has_happiness_with_owner = event_target:decentralizer
+			# 	is_sapient = yes # NOT = { is_archetype = PRESAPIENT }
+			# }
+		}
+		species = {
+			PREVPREV = { is_ideal_planet_class = { who = PREV status = yes } }
+			OR = {
+				PREVPREV = { is_majority_species = PREV }
+				species_has_happiness_with_owner = event_target:decentralizer
+				has_citizenship_type = {
+					type = citizenship_full
+					country = event_target:decentralizer
+				}
+			}
+			is_sapient = yes # NOT = { is_archetype = PRESAPIENT }
+		}
+		AND = {
+			PREV = { is_majority_species = PREV.species }
+			NOT = { is_same_species = event_target:decentralizer.owner_species }
+		}
+	}
+	PREV = {
+		habitability = { who = PREV value > 0.65 }
+		count_owned_pop = {
+			limit = {
+				is_enslaved = no
+				is_being_purged = no
+				is_robot_pop = no
+				happiness > 0.5
+				pop_can_live_on_planet = yes
+				is_same_species = PREVPREV.species
+			}
+			count > 4
+		}
+	}
+}

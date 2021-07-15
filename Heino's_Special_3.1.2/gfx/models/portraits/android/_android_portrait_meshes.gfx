@@ -1,0 +1,35 @@
+objectTypes = {
+
+#FEMALE
+	
+	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	
+	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#
+	
+	
+	pdxmesh = {
+		name = "portrait_android_female_01_mesh"
+		file = "gfx/models/portraits/android/android_female_01_portrait.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle"	type = "android_female_01_happy_animation" }
+		animation = { id = "idle2"	type = "android_female_01_happy_2_animation" }
+	}	
+		
+		
+#MALE
+	
+#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	
+#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#	#
+	
+		
+	pdxmesh = {
+		name = "portrait_android_male_01_mesh"
+		file = "gfx/models/portraits/android/android_male_01_portrait.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle"	type = "android_male_01_happy_animation" }
+		animation = { id = "idle2"	type = "android_male_01_happy_2_animation" }
+	}	
+	
+	
+}

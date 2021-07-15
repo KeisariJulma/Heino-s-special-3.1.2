@@ -1,0 +1,28 @@
+
+############
+## FEMALE ##
+############
+
+animation = {
+		name = "android_female_01_happy_animation"
+		file = "android_female_01_portrait_happy.anim"
+}
+
+animation = {
+		name = "android_female_01_happy_2_animation"
+		file = "android_female_01_portrait_happy_2.anim"
+}
+
+##########
+## MALE ##
+##########
+
+animation = {
+	name = "android_male_01_happy_animation"
+	file = "android_male_01_portrait_happy.anim"
+}
+
+animation = {
+	name = "android_male_01_happy_2_animation"
+	file = "android_male_01_portrait_happy_2.anim"
+}

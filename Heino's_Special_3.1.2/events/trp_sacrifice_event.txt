@@ -1,0 +1,81 @@
+namespace = trp_sacrifice_event
+
+country_event = {
+	id = trp_sacrifice_event.0
+	title = trp_sacrifice_event_title
+	desc = trp_sacrifice_event_desc_desc
+	picture = GFX_evt_psionics
+
+	is_triggered_only = yes
+	
+	option = {
+		name = trp_sacrifice_shroud_research
+		capital_scope = {
+			enable_special_project = {
+       		name = "SHROUD_NEXT_RESEARCH"
+        		location = this
+        		owner = root
+        	}
+        }
+	}
+}
+
+country_event = {
+	id = trp_sacrifice_event.1
+	title = trp_sacrifice_event1_title
+	desc = trp_sacrifice_event_desc1_desc
+	picture = GFX_evt_zro_3
+	
+	is_triggered_only = yes
+
+	option = {
+		name = trp_shroud_describe
+		country_event = {id = trp_sacrifice_event.2}
+	}
+}
+
+country_event = {
+	id = trp_sacrifice_event.2
+	title = trp_sacrifice_event2_title
+	desc = trp_sacrifice_event_desc2_desc
+	picture = GFX_evt_zro_4
+	
+	is_triggered_only = yes
+
+	option = {
+		name = trp_shroud_researched
+		set_country_flag = psionic_sacrifice_allowed	
+	}
+}
+
+planet_event = {
+	id = trp_sacrifice_event.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			has_policy_flag = TRP_policy_sacrifice_set_true
+			}
+		FROMFROM = {
+			is_robot_pop = no
+			is_being_purged = yes
+			has_purge_type = {
+				type = purge_normal
+			}
+		}
+		is_controlled_by = FROM
+		}	
+	
+	immediate = {
+		FROM = {
+			if = {
+				limit = { FROMFROM = { has_trait = trait_psionic } }
+				add_resource = { sr_zro = 400}
+			}
+			else = {
+				add_resource = { sr_zro = 200 }
+			}
+		}
+	}
+}

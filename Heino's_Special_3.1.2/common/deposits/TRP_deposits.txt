@@ -1,0 +1,16 @@
+trp_residue_gas_de = {
+	is_for_colonizeable = yes
+	icon = "residue_gas"
+
+	category = deposit_cat_rare	
+	
+	planet_modifier = { 
+		pop_happiness = -0.2
+		pop_growth_speed = -0.2
+		planet_pops_energy_upkeep_mult = 0.2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}

@@ -1,0 +1,184 @@
+tech_refinery_planet = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 1
+	category = { industry }
+	ai_update_type = all
+	weight = @tier5weight3
+	is_rare = yes
+
+	potential = {
+		host_has_dlc = "Megacorp"
+		host_has_dlc = "Utopia"
+	}
+	
+	prereqfor_desc = {
+		custom = {
+			title = feature_refineryplanet
+			desc = feature_refineryplanet_desc
+		}
+	}
+	
+	weight_modifier = {
+		factor = 10000
+		modifier = {
+			factor = 0
+			NOR = {
+				has_ascension_perk = ap_arcology_project
+				has_ascension_perk = ap_machine_worlds
+				has_ascension_perk = ap_hive_worlds
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 0
+		}
+}
+
+tech_residue_gas_clean = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 1
+	category = { industry }
+	ai_update_type = all
+	weight = @tier5weight3
+	prerequisites = {"tech_refinery_planet"}
+	is_rare = yes
+
+	potential = {
+		host_has_dlc = "Megacorp"
+		host_has_dlc = "Utopia"
+	}
+	
+	prereqfor_desc = {
+		custom = {
+			title = feature_residue_gas_collect
+			desc = feature_residue_gas_collect_desc
+		}
+	}
+	
+	weight_modifier = {
+		factor = 0
+	}
+
+	ai_weight = {
+		factor = 0
+		}
+	}
+
+tech_advanced_sr_producec = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 1
+	category = { materials }
+	ai_update_type = all
+	weight = @tier5weight1
+	prerequisites = {"tech_volatile_motes" "tech_exotic_gases" "tech_rare_crystals"}
+	is_rare = yes
+
+	potential = {
+		host_has_dlc = "Megacorp"
+		host_has_dlc = "Utopia"
+	}
+	
+	weight_modifier = {
+		factor = 10000
+	}
+	ai_weight = {
+		factor = 0
+		}
+	}
+
+tech_small_black_hole = {
+	area = physics
+	cost = @tier5cost3
+	tier = 1
+	category = { field_manipulation }
+	ai_update_type = all
+	weight = @tier5weight3
+	prerequisites = {"tech_mine_dark_matter" "tech_advanced_sr_producec"}
+	is_rare = yes
+
+	potential = {
+		host_has_dlc = "Megacorp"
+		host_has_dlc = "Utopia"
+	}
+	
+	prereqfor_desc = {
+		custom = {
+			title = feature_dark_matter_produce
+			desc = feature_dark_matter_produce_desc
+		}
+	}
+	
+	weight_modifier = {
+		factor = 10000
+	}
+
+	ai_weight = {
+		factor = 0
+		}
+	}
+
+tech_high_energy_cube_produce = {
+	area = engineering
+	cost = @tier5cost3
+	tier = 1
+	category = { materials }
+	ai_update_type = all
+	weight = @tier5weight3
+	prerequisites = {"tech_advanced_sr_producec"}
+	is_rare = yes
+
+	potential = {
+		host_has_dlc = "Megacorp"
+		host_has_dlc = "Utopia"
+	}
+	
+	prereqfor_desc = {
+		custom = {
+			title = feature_high_energy_cube_make
+			desc = feature_high_energy_cube_make_desc
+		}
+	}
+	
+	weight_modifier = {
+		factor = 10000
+	}
+
+	ai_weight = {
+		factor = 0
+		}
+	}
+	
+tech_living_metal_produce = {
+	area = physics
+	cost = @tier5cost3
+	tier = 1
+	category = { computing }
+	ai_update_type = all
+	weight = @tier5weight3
+	prerequisites = {"tech_high_energy_cube_produce"}
+	is_rare = yes
+
+	potential = {
+		host_has_dlc = "Megacorp"
+		host_has_dlc = "Utopia"
+	}
+	
+	prereqfor_desc = {
+		custom = {
+			title = feature_living_metal_make
+			desc = feature_living_metal_make_desc
+		}
+	}
+	
+	weight_modifier = {
+		factor = 10000
+	}
+
+	ai_weight = {
+		factor = 0
+		}
+	}

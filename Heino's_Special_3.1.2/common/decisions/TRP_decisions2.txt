@@ -1,0 +1,29 @@
+decision_gas_clean = {
+	enactment_time = 360
+	resources = {
+		category = decisions
+		cost = {
+			energy = 5000
+		}
+	}
+	potential = {
+		has_deposit = trp_residue_gas_de
+		owner = { has_technology = tech_residue_gas_clean}
+	}
+
+	effect = {
+		hidden_effect = {
+			remove_deposit = trp_residue_gas_de
+		}
+		owner = {set_country_flag = gas_cleaned}
+		add_resource = {
+		volatile_motes = 50
+		rare_crystals = 50
+		exotic_gases = 50
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

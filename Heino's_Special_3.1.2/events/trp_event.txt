@@ -1,0 +1,43 @@
+namespace = trp_event
+
+country_event = {
+	id = trp_event.0
+	title = trp_event_title
+	desc = trp_event_desc_desc
+	picture = GFX_evt_city_planet
+	
+	is_triggered_only = yes
+
+
+	option = {
+		name = trp_event1
+		hidden_effect = {
+			country_event = { id = trp_event.1 days = 30 }
+		}
+	}
+	option = {
+		name = trp_event2
+		hidden_effect = {
+			country_event = { id = trp_event.1 days = 30 }
+		}
+		}
+	}
+
+
+country_event = {
+	id = trp_event.1
+	title = trp_event_title1
+	desc = trp_event_desc1_desc
+	picture = GFX_evt_residue_gas
+	
+	is_triggered_only = yes
+
+
+	option = {
+		name = trp_event11
+	}
+	option = {
+		name = trp_event12
+		}
+	}
+

@@ -1,0 +1,18 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_primitiveages1"
+        texturefile = "gfx/event_pictures/primitiveages1.dds"
+    }
+    spriteType = {
+        name = "GFX_primitiveages2"
+        texturefile = "gfx/event_pictures/primitiveages2.dds"
+    }
+    spriteType = {
+        name = "GFX_primitiveages3"
+        texturefile = "gfx/event_pictures/primitiveages3.dds"
+    }
+    spriteType = {
+        name = "GFX_primitiveages4"
+        texturefile = "gfx/event_pictures/primitiveages4.dds"
+    }
+}
