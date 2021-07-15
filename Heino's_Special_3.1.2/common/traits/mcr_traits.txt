@@ -1,0 +1,119 @@
+########################
+##  species traits
+########################
+
+trait_mechroid = {
+	cost = 0
+	allowed_archetypes = { BIOLOGICAL }
+	potential_crossbreeding_chance = 0
+	opposites = {
+		"trait_rapid_breeders"
+		"trait_slow_breeders" 
+		"trait_fertile" 
+		"trait_very_strong"
+		"trait_strong"
+		"trait_weak"
+		"trait_delicious"
+		"trait_robust"
+	} 
+	sorting_priority = 20
+	initial = no
+	randomized = no
+	modification = no	
+	ai_weight = {
+		weight = 0
+	}
+	icon = "gfx/interface/icons/trait_mechroid.dds"
+	modifier = {
+		pop_environment_tolerance = 1
+		army_damage_mult = 0.30
+		planet_jobs_worker_produces_mult = 0.15
+		pop_growth_speed = -10.00
+	}
+}
+
+trait_emotion_inhibitor = {
+	cost = 1
+	potential_crossbreeding_chance = 0
+	opposites = {"trait_decadent" "trait_solitary" "trait_nerve_stapled"}
+	initial = yes
+	randomized = no
+	forced_happiness = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	icon = "gfx/interface/icons/trait_emotionsuppressor.dds" 
+}
+
+########################
+##  leader traits
+########################
+
+leader_trait_general_mechroid = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/trait_mechroid.dds"
+	leader_trait = { general }
+	leader_class = { general }
+	initial = no
+	randomized = no
+	modifier = {
+		army_morale_damage_mult = 0.10
+		army_disengage_chance_mult = -0.10
+	}
+}
+
+leader_trait_governor_mechroid = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/trait_mechroid.dds"
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no
+	modifier = {
+		planet_district_generator_build_speed_mult = 0.1
+		planet_district_mining_build_speed_mult = 0.1
+		planet_district_farming_build_speed_mult = -0.2
+	}
+}
+
+leader_trait_ruler_mechroid = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/trait_mechroid.dds"
+	leader_trait = { ruler }
+	leader_class = { ruler }
+	initial = no
+	randomized = no
+	modifier = {
+		planet_pop_assembly_organic_mult = 0.1
+		pop_growth_speed_reduction = 0.1
+	}
+}
+
+leader_trait_admiral_mechroid = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/trait_mechroid.dds"
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+	modifier = {
+		ship_fire_rate_mult = 0.05
+		ship_home_territory_fire_rate_mult = -0.1
+	}
+}
+
+leader_trait_scientist_mechroid = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/trait_mechroid.dds"
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+	modifier = {
+		category_biology_research_speed_mult = 0.05
+		category_computing_research_speed_mult = -0.05
+	}
+}

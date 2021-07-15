@@ -1,0 +1,12 @@
+trait_pc_infestation_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
+	modification = no
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	sorting_priority = 30
+	modifier = {
+		pc_infestation_habitability = 1.0
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

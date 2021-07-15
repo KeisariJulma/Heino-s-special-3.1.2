@@ -1,0 +1,261 @@
+﻿l_english:
+
+sc_t:1 "$pc_t_star$"
+sc_t_desc:1 "$pc_t_star_desc$"
+
+pc_molten_adj:0 "molten"
+pc_toxic_adj:0 "noxious"
+pc_barren_adj:0 "sterile"
+pc_barren_cold_adj:0 "sterile"
+pc_frozen_adj:0 "frozen"
+pc_gas_giant_adj:0 "gaseous"
+pc_m_star_adj:0 "red"
+pc_m_giant_star_adj:0 "bloated"
+pc_k_star_adj:0 "orange"
+pc_k_giant_star_adj:0 "bloated"
+pc_g_star_adj:0 "yellow"
+pc_f_star_adj:0 "white"
+pc_a_star_adj:0 "blue"
+pc_b_star_adj:0 "purple"
+pc_o_star_adj:0 "brilliant"
+pc_d_star_adj:0 "pallid"
+
+dry_planet_info:0 "§T§Y$climate_dry$§T planets are more likely to have deposits that produce £energy£ §YEnergy Credits§T."
+wet_planet_info:0 "§T§G$climate_wet$§T planets are more likely to have deposits that produce £food£ §GFood§T."
+cold_planet_info:0 "§T§E$climate_cold$§T planets are more likely to have deposits that produce £minerals£ §RMinerals§T."
+
+evermore_science_desc:0 "The digitized aliens trapped within the Evermore are tired of counting legumes, and eagerly aid our researchers."
+
+# Meritocracy
+ 
+MERIT_TO_NON_01_HOSTILE_GREETING:1 "It is painfully obvious now that your [From.GetRulerTitle] gained [From.Leader.GetHerHis] office through political cloak-and-dagger, if not random fortune, rather than any ability to govern."
+MERIT_TO_NON_01_NEUTRAL_GREETING:0 "In the [Root.GetAdj] meritocracy, only the best and brightest [Root.GetSpeciesNamePlural] are considered for important government postings. Is it not the same on [From.Capital.GetName]? How did [From.GetRulerName] become your [From.GetRulerTitle]?"
+MERIT_TO_NON_01_FRIENDLY_GREETING:0 "I do not pretend to understand your system of government, but it clearly works for you. We are proud to call the [From.GetName] our friends."
+MERIT_TO_NON_01_WAR_GREETING:0 "Every [Root.GetSpeciesName] in the [Root.GetAdj] military has earned their place there. How can you hope to best us with your impractical mode of governance?"
+
+NON_TO_MERIT_01_HOSTILE_GREETING:1 "You lord your meritocracy over us, [From.GetSpeciesName], but you would still be no match for us should our people enter a state of war."
+NON_TO_MERIT_02_HOSTILE_GREETING:1 "You lord your meritocracy over us, [From.GetRulerTitle], but you would still be no match for us should our people enter a state of war."
+NON_TO_MERIT_01_NEUTRAL_GREETING:0 "Your meritocracy is most interesting. I can see the benefits, but it lacks somewhat in entertainment value..."
+NON_TO_MERIT_01_FRIENDLY_GREETING:0 "Your meritocracy is an example to us all, [From.GetRulerTitle]."
+NON_TO_MERIT_01_WAR_GREETING:0 "Isn't [From.Capital.GetName] supposed to be a meritocracy? The quality of most [From.GetAdj] commanders we've seen so far suggests otherwise."
+
+# Citizen Service
+CIT_SER_TO_NON_01_HOSTILE_GREETING:1 "Every [Root.GetSpeciesSpawnName] on [Root.Capital.GetName] knows how to fire a weapon by the time they're old enough to walk. [From.GetAdj] troops would prove no match for them."
+CIT_SER_TO_NON_01_NEUTRAL_GREETING:0 "Is it true that you don't have mandatory military service? How can you possibly maintain a fleet?"
+CIT_SER_TO_NON_01_FRIENDLY_GREETING:0 "[From.GetRulerTitle], my friend! You really should consider making military service mandatory. We know from personal experience that it goes a long way toward securing your borders."
+CIT_SER_TO_NON_01_WAR_GREETING:0 "Our entire population stands ready to defend the interests of the [Root.GetName]!"
+
+CIT_SER_TO_CIT_SER_01_NEUTRAL_GREETING:0 "I see [Root.Capital.GetName] and [From.Capital.GetName] have similar views on the necessity of mandatory military service."
+
+NON_TO_CIT_SER_01_HOSTILE_GREETING:1 "Any nation that has to arm its own citizenry to maintain a border is doomed to fall."
+NON_TO_CIT_SER_01_NEUTRAL_GREETING:0 "I understand that the [From.GetName] enforces mandatory military service? Isn't that a bit excessive?"
+NON_TO_CIT_SER_01_FRIENDLY_GREETING:0 "Your citizens make proficient soldiers, [From.GetRulerTitle]. Not as good as [Root.GetAdj] troops, of course, but still better than one might expect from a militia."
+NON_TO_CIT_SER_01_WAR_GREETING:0 "Now we shall see how your [From.GetSpeciesSpawnName]-militia stands up to [Root.GetAdj] soldiers!"
+
+# Technocracy
+TECHNO_TO_NON_01_HOSTILE_GREETING:1 "$EE_HOSTILE_GREETING_01$"
+TECHNO_TO_NON_01_NEUTRAL_GREETING:0 "$EE_NEUTRAL_GREETING_01$"
+TECHNO_TO_NON_01_FRIENDLY_GREETING:0 "$EE_FRIENDLY_GREETING_01$"
+TECHNO_TO_NON_01_WAR_GREETING:0 "$EE_WAR_GREETING_02$"
+
+TECHNO_TO_TECHNO_01_FRIENDLY_GREETING:0 "$EE_FRIENDLY_GREETING_03$"
+
+NON_TO_TECHNO_01_HOSTILE_GREETING:1 "Your obsession with applying the scientific method to anything and everything is blinding all [From.GetSpeciesNamePlural] to the truths of existence!"
+NON_TO_TECHNO_02_HOSTILE_GREETING:1 "Your obsession with applying the scientific method to anything and everything is blinding all of [From.Capital.GetName] to the truths of existence!"
+NON_TO_TECHNO_01_FRIENDLY_GREETING:0 "I'm glad that [From.GetRulerTitle] [From.GetRulerName] recognizes the logic of peaceful relations between [From.Capital.GetName] and [Root.Capital.GetName]."
+
+# Feudal Realm
+FEUDAL_REALM_TO_NON_01_HOSTILE_GREETING:1 "Do not mistake our fondness for vassals as a weakness. They will fight for us, and there are more of them than you might think..."
+FEUDAL_REALM_TO_NON_01_NEUTRAL_GREETING:0 "You [From.GetSpeciesNamePlural] seem rather fond of micro-managing your subjects. We in the [Root.GetName] prefer to organize them into semi-independent vassals. Much tidier that way."
+FEUDAL_REALM_TO_NON_02_NEUTRAL_GREETING:0 "Most star nations are content to constantly micro-manage their subjects. We in the [Root.GetName] prefer to organize them into semi-independent vassals. Much tidier that way."
+FEUDAL_REALM_TO_NON_01_FRIENDLY_GREETING:0 "[From.CapitalGetName] would have made quite a fascinating vassal, [From.GetRulerTitle]. But strong relations between our two cultures are almost as good."
+FEUDAL_REALM_TO_NON_01_WAR_GREETING:0 "The [From.GetName] will soon be just another vassal of [Root.GetRulerTitle] [Root.GetRulerName]!"
+
+NON_TO_FEUDAL_REALM_01_HOSTILE_GREETING:1 "Don't think you can subjugate us like you did your neighbors, [From.GetSpeciesName]. [Root.GetRulerTitle] [Root.GetRulerName] will fight to the death for [Root.GetAdj] independence."
+NON_TO_FEUDAL_REALM_02_HOSTILE_GREETING:1 "Don't think you can subjugate us like you did your neighbors. [Root.GetRulerTitle] [Root.GetRulerName] will fight to the death for [Root.GetAdj] independence."
+NON_TO_FEUDAL_REALM_01_NEUTRAL_GREETING:0 "Keep your vassals where we can see them, [From.GetSpeciesName]."
+NON_TO_FEUDAL_REALM_02_NEUTRAL_GREETING:0 "Keep your vassals where we can see them, [From.GetRulerTitle]."
+NON_TO_FEUDAL_REALM_01_FRIENDLY_GREETING:0 "[From.GetRulerTitle], how do you keep track of all your vassals? My [Root.GetSpeciesOrganName] hurts just imaging the paperwork."
+NON_TO_FEUDAL_REALM_01_WAR_GREETING:0 "We will not be subject to the whims of your [From.GetRulerTitle], or anyone else!"
+
+# Police State
+POLICE_TO_NON_01_HOSTILE_GREETING:0 "We know your every secret, [From.GetSpeciesName]. [Root.GetAdj] Intelligence sees everything."
+POLICE_TO_NON_02_HOSTILE_GREETING:0 "We know your every secret, [From.GetRulerTitle]. [Root.GetAdj] Intelligence sees everything."
+POLICE_TO_NON_01_NEUTRAL_GREETING:0 "[Root.GetAdj] Intelligence knows what every [Root.GetSpeciesSpawnName] on [Root.Capital.GetName] had for breakfast. How long do you think [From.GetAdj] secrets can remain hidden from us?"
+POLICE_TO_NON_01_FRIENDLY_GREETING:0 "In the interest of [From.GetAdj]-[Root.GetAdj] relations, you have my word - and that of [Root.GetRulerTitle] [Root.GetRulerName] - that no [Root.GetAdj] Intelligence agents are active in the [From.Capital.System.GetName] system.\n\n§BI think [From.Leader.GetSheHe] bought it, [Root.GetRulerTitle]. Now we just have to...§! wait, is this thing still on?"
+POLICE_TO_NON_01_WAR_GREETING:1 "[Root.GetAdj] Intelligence has rooted out several of your spies, [From.GetRulerTitle]. Whatever we want to know, they'll tell us. Gratefully."
+
+POLICE_TO_POLICE_01_FRIENDLY_GREETING:0 "[Root.GetAdj] and [From.GetAdj]... who would have thought we could become friends?\n\nNot [Root.GetAdj] Intelligence, that's for certain!"
+
+NON_TO_POLICE_01_HOSTILE_GREETING:1 "A house divided cannot stand. Your obsession with secret-keeping will be your downfall."
+NON_TO_POLICE_01_NEUTRAL_GREETING:0 "Any [From.GetAdj] agents discovered within the [Root.GetName] will be detained indefinitely. Do not underestimate our OWN intelligence networks, [From.GetRulerTitle]."
+NON_TO_POLICE_01_FRIENDLY_GREETING:0 "Greetings, [From.GetRulerTitle]. This is a secure channel, right?"
+NON_TO_POLICE_01_WAR_GREETING:0 "Keep sending your spies, [From.GetSpeciesName]. We will root them out one by one, on [Root.Capital.GetName] and elsewhere."
+NON_TO_POLICE_02_WAR_GREETING:0 "Keep sending your spies, [From.GetRulerTitle]. We will root them out one by one, on [Root.Capital.GetName] and elsewhere."
+
+# Environmentalist and Agrarian Idyll
+ENVIRO_TO_NON_01_HOSTILE_GREETING:1 "I don't even want to know what you [From.GetSpeciesNamePluralInsult] have done to [From.GetHomeWorldName]. That poor [From.home_planet.GetPlanetMoon] must regret producing your kind all those years ago."
+ENVIRO_TO_NON_02_HOSTILE_GREETING:1 "I don't even want to know what you people have done to [From.Capital.GetName]. That poor [From.Capital.GetPlanetMoon] must regret the arrival of your kind all those years ago."
+ENVIRO_TO_NON_01_NEUTRAL_GREETING:0 "Your environmental policies are severely lacking, [From.GetSpeciesName]. I hope [From.GetRulerTitle] [From.GetRulerName] might consider correcting that."
+ENVIRO_TO_NON_02_NEUTRAL_GREETING:0 "Your environmental policies are severely lacking, [From.GetRulerTitle]. I hope you might consider correcting that, for the sake of future [From.GetAdj] generations."
+ENVIRO_TO_NON_01_FRIENDLY_GREETING:0 "[From.GetRulerTitle], we are your friends. We care about you. This is an intervention.\n\nFor the sake of [From.GetSpeciesNamePlural] everywhere, please consider adopting green policies so that the worlds of the [From.GetName] can bloom once more!"
+ENVIRO_TO_NON_02_FRIENDLY_GREETING:0 "[From.GetRulerTitle], we are your friends. We care about you. This is an intervention.\n\nFor the sake of future [From.GetAdj] generations, please consider adopting green policies so that the worlds of the [From.GetName] can bloom once more!"
+ENVIRO_TO_NON_01_WAR_GREETING:0 "Your worlds will be much healthier once we're through with them, [From.GetSpeciesName]."
+ENVIRO_TO_NON_02_WAR_GREETING:0 "Your worlds will be much healthier once the [Root.GetRulerTitle] is through with them."
+
+ENVIRO_TO_ENVIRO_01_NEUTRAL_GREETING:0 "We do have one thing in common, [From.GetSpeciesName]: we both value protecting the environment on our respective worlds. A starting point, I suppose."
+ENVIRO_TO_ENVIRO_02_NEUTRAL_GREETING:0 "We do have one thing in common, [From.GetRulerTitle]: we both value protecting the environment on our respective worlds. A starting point, I suppose."
+ENVIRO_TO_ENVIRO_01_FRIENDLY_GREETING:0 "I'm told [From.Capital.GetName] rivals our own [Root.Capital.GetName] in splendor. I would love to visit and see for myself!"
+
+NON_TO_ENVIRO_01_HOSTILE_GREETING:1 "Don't you have trees to hug, [From.GetSpeciesName]? Or whatever you call those tall things on [From.Capital.GetName]?"
+NON_TO_ENVIRO_02_HOSTILE_GREETING:1 "Don't you have trees to hug? Or whatever you call those tall things on [From.Capital.GetName]?"
+NON_TO_ENVIRO_01_NEUTRAL_GREETING:0 "Your committment to protecting the environment is admirable, [From.GetRulerName], if a bit naïve. The [From.GetSpeciesNamePlural] have already done irreparable damage just by evolving."
+NON_TO_ENVIRO_02_NEUTRAL_GREETING:0 "Your committment to protecting the environment is admirable, [From.GetRulerName], if a bit naïve. [From.GetSpeciesNamePlural] have already done irreparable damage just by moving in."
+NON_TO_ENVIRO_01_FRIENDLY_GREETING:0 "Your committment to protecting the environment is admirable, [From.GetRulerName]. I wouldn't have believed such a goal would survive the reality of interstellar life.\n\nIf we can afford it, perhaps the [Root.GetRulerTitle] might be pursuaded to attempt similar reforms..."
+NON_TO_ENVIRO_01_WAR_GREETING:0 "I hope you're not too attached to the wildlife on [From.Capital.GetName]. There won't be much left by the time we're through."
+
+# Distinguished Admiralty
+DIS_ADM_TO_NON_01_HOSTILE_GREETING:1 "The [Root.GetAdj] Star Navy stands ready to defend the [Root.GetName] from [From.GetAdj] aggression."
+DIS_ADM_TO_NON_01_NEUTRAL_GREETING:0 "The admiralty of the [Root.GetAdj] Star Navy has a great deal of influence over [Root.Capital.GetName]'s political landscape. If you wish to deal with us, you must also deal with them."
+DIS_ADM_TO_NON_01_FRIENDLY_GREETING:0 "When we first made contact with [From.Capital.GetName], the admiralty of the [Root.GetAdj] Star Navy listed you as a potential threat. I'm immensely pleased that they were proven wrong."
+DIS_ADM_TO_NON_01_WAR_GREETING:0 "The [Root.GetAdj] Star Navy has been preparing for this for generations, [From.GetSpeciesName]. Make no mistake, we will prevail."
+DIS_ADM_TO_NON_02_WAR_GREETING:0 "The [Root.GetAdj] Star Navy has been preparing for this for generations. We WILL prevail."
+
+DIS_ADM_TO_DIS_ADM_01_HOSTILE_GREETING:1 "Yours is not the only Navy, [From.GetSpeciesName]. Ours is armed and ready for battle, and when the shooting starts it will be [From.GetAdj] ships that fall from the skies."
+DIS_ADM_TO_DIS_ADM_02_HOSTILE_GREETING:1 "Yours is not the only Navy, [From.GetRulerTitle]. Ours is armed and ready for battle, and when the shooting starts it will be [From.GetAdj] ships that fall from the skies."
+DIS_ADM_TO_DIS_ADM_01_NEUTRAL_GREETING:0 "Our Navy is an important part of [Root.GetAdj] culture, and the same appears to be true of yours. We could learn much from each other."
+
+NON_TO_DIS_ADM_01_HOSTILE_GREETING:1 "That's a nice fleet. Be a shame if something happened to it."
+NON_TO_DIS_ADM_01_NEUTRAL_GREETING:0 "Your ingrained military culture is perplexing, [From.GetRulerTitle]. Does it not make you paranoid that everyone is out to get you?\n\nA word of caution: when your only tool is a battle fleet, all your problems tend to look like Space Amoebas. Be careful not to shoot any Tiyanki by mistake."
+NON_TO_DIS_ADM_02_NEUTRAL_GREETING:0 "Your vast fleet is impressive, [From.GetRulerTitle]. I wonder how long it would last against the [Root.GetAdj] armada."
+NON_TO_DIS_ADM_01_FRIENDLY_GREETING:0 "Greetings, [From.GetRulerTitle]. How are things in your navy?"
+NON_TO_DIS_ADM_01_WAR_GREETING:0 "Your beloved warships will soon be raining from the skies of [From.Capital.GetName], broken and burning."
+
+# Free Haven
+FREE_HAVEN_TO_NON_01_HOSTILE_GREETING:1 "We've noticed an influx of refugees lately. There are scattered reports claiming that [From.GetAdj] atrocities are responsible. Care to comment, [From.GetRulerTitle]?"
+FREE_HAVEN_TO_NON_01_NEUTRAL_GREETING:0 "The [Root.GetName] greets you, [From.GetRulerTitle]. If you have refugees, or anyone in need of a home, you are welcome to send them our way!"
+FREE_HAVEN_TO_NON_01_WAR_GREETING:0 "We will fight for all of the migrants and refugees in our care.\n\nEvery. Single. One."
+
+NON_TO_FREE_HAVEN_01_HOSTILE_GREETING:1 "For every migrant and refugee you take in, the [From.GetName] falls a little deeper into disrepair."
+NON_TO_FREE_HAVEN_01_NEUTRAL_GREETING:0 "You've taken on quite a task, [From.GetSpeciesName]. Accepting so many migrants and refugees must strain [From.Capital.GetName]'s infrastructure, no?"
+NON_TO_FREE_HAVEN_02_NEUTRAL_GREETING:0 "You've taken on quite a task, [From.GetRulerTitle]. Accepting so many migrants and refugees must strain [From.Capital.GetName]'s infrastructure, no?"
+NON_TO_FREE_HAVEN_01_FRIENDLY_GREETING:0 "To accept so many migrants and refugees... you [From.GetSpeciesNamePlural] truly are a race of [From.GetSpeciesNamePluralCompliment]."
+NON_TO_FREE_HAVEN_02_FRIENDLY_GREETING:0 "To accept so many migrants and refugees... the people of [From.Capital.GetName] truly are [From.GetSpeciesNamePluralCompliment]."
+
+# Cutthroat Politics
+CUT_POL_TO_NON_01_HOSTILE_GREETING:1 "Your [From.GetRulerTitle] is a clueless [From.GetSpeciesSpawnName]. A few coup d'état attempts would put [From.Leader.GetHerHim] in [From.Leader.GetHerHis] place."
+CUT_POL_TO_NON_01_NEUTRAL_GREETING:0 "Attempted coup d'états are a frequent occurrance on [Root.Capital.GetName]. Some call this a weakness, but [Root.GetRulerTitle] [Root.GetRulerName] believes they keep [Root.Leader.GetHerHim] sharp."
+CUT_POL_TO_NON_01_FRIENDLY_GREETING:0 "We only had two attempted coup' d'états this month! It appears the [Root.GetAdj] people favor our improved relations, and the [Root.GetRulerTitle]'s role therein."
+CUT_POL_TO_NON_01_WAR_GREETING:0 "[Root.GetRulerName] has spent years fighting tooth-and-[From.GetSpeciesHandName] to hold on to [Root.Leader.GetHerHis] office. Do you expect [Root.Leader.GetHerHim] to let some upstart [From.GetRulerTitle] take it all away?"
+
+CUT_POL_TO_CUT_POL_01_NEUTRAL_GREETING:0 "[From.GetRulerTitle]. Is this a secure channel?"
+CUT_POL_TO_CUT_POL_01_FRIENDLY_GREETING:0 "It's good to see a friendly face, [From.GetRulerTitle]. There aren't many on [Root.Capital.GetName] these days."
+
+NON_TO_CUT_POL_01_HOSTILE_GREETING:1 "I don't suppose we can rely on a fortuitious coup to remove your mad [From.GetRulerTitle] from power?"
+NON_TO_CUT_POL_01_NEUTRAL_GREETING:0 "Paranoia really is a way of life for you, isn't it?"
+NON_TO_CUT_POL_01_FRIENDLY_GREETING:0 "Glad to see you're still with us, [From.GetRulerTitle]! We heard rumors of a coup d'état on [From.Capital.GetName] and feared the worst."
+NON_TO_CUT_POL_01_WAR_GREETING:0 "The rein of [From.GetRulerName] will be short. Our [Root.GetAdj] military will see to that."
+
+# Efficient Bureaucracy
+EFF_BEAU_TO_NON_01_HOSTILE_GREETING:1 "Your [From.GetAdj] bureaucracy is slow and inefficient. It will be your undoing."
+EFF_BEAU_TO_NON_01_NEUTRAL_GREETING:0 "On [Root.Capital.GetName], all the mag-trains run on time. Is it not the same on [From.Capital.GetName]?"
+EFF_BEAU_TO_NON_01_FRIENDLY_GREETING:0 "For such an inefficient people, you [From.GetSpeciesNamePlural] are remarkably adept at keeping up with us."
+EFF_BEAU_TO_NON_02_FRIENDLY_GREETING:0 "For such an inefficient people, [From.GetAdj]-[From.GetSpeciesNamePlural] are remarkably adept at keeping up with us."
+EFF_BEAU_TO_NON_01_WAR_GREETING:0 "How can the sluggish [From.GetName] hope to match [Root.GetAdj] efficiency?"
+
+EFF_BEAU_TO_EFF_BEAU_01_FRIENDLY_GREETING:0 "[Root.Capital.GetName] and [From.Capital.GetName], [Root.GetAdj] and [From.GetAdj]... two civilizations united in the name of efficiency. What could possibly stand against us?"
+
+NON_TO_EFF_BEAU_01_HOSTILE_GREETING:1 "If given the chance, [From.GetSpeciesNamePlural] would \"optimize\" all the fun out of your lives."
+NON_TO_EFF_BEAU_02_HOSTILE_GREETING:1 "If given the chance, [From.GetAdj]-[From.GetSpeciesNamePlural] would \"optimize\" all the fun out of your lives."
+NON_TO_EFF_BEAU_01_NEUTRAL_GREETING:0 "[From.GetAdj] efficiency is fascinating, [From.GetSpeciesName], but I am almost afraid to ask how you accomplish it."
+NON_TO_EFF_BEAU_02_NEUTRAL_GREETING:0 "[From.GetAdj] efficiency is fascinating, [From.GetRulerTitle], but I am almost afraid to ask how you accomplish it."
+NON_TO_EFF_BEAU_01_FRIENDLY_GREETING:0 "I look forward to visiting [From.Capital.GetName] someday, [From.GetRulerTitle]. I'm told it has the cleanest cities in the sector!"
+NON_TO_EFF_BEAU_01_WAR_GREETING:0 "We'll see how efficient your mag-trains are when [Root.GetAdj] ships are through bombing them!"
+
+# Functional Architecture
+FUNC_ART_TO_NON_01_HOSTILE_GREETING:1 "Get used to [Root.GetAdj] architecure. You'll be seeing a lot of it in the near future."
+FUNC_ART_TO_NON_01_NEUTRAL_GREETING:0 "People call [Root.GetAdj] architecture \"boring\". They forget that in most cases, concrete does the job just as well as any other building material."
+FUNC_ART_TO_NON_01_FRIENDLY_GREETING:0 "Give it to me straight, [From.GetRulerTitle]: are our cities really that boring?"
+FUNC_ART_TO_NON_01_WAR_GREETING:0 "We'll see how \"boring\" our cities are when they loom over the shattered ruins of yours!"
+
+NON_TO_FUNC_ART_01_HOSTILE_GREETING:1 "That [From.Capital.GetPlanetMoon] of yours is quite an eyespore. You should pretty it up before someone else does it for you..."
+NON_TO_FUNC_ART_01_NEUTRAL_GREETING:0 "You call that a city, [From.GetRulerTitle]? [From.Capital.GetName] must be a dreadfully boring place to live."
+NON_TO_FUNC_ART_01_FRIENDLY_GREETING:0 "I suppose [From.GetAdj] architecture does have a sort of minimalistic charm to it..."
+NON_TO_FUNC_ART_01_WAR_GREETING:0 "I would threaten to destroy your cities, [From.GetRulerTitle], but your population would probably thank us for removing the eyesores."
+
+# Mechanists
+MECHANIST_TO_NON_01_HOSTILE_GREETING:1 "We tried programming one of our robots to understand [From.GetAdj] culture. It chose to self-terminate instead."
+MECHANIST_TO_NON_01_NEUTRAL_GREETING:0 "We [Root.GetSpeciesNamePlural] have been building robots for generations. They were used extensively during our interplanetary years, when our first pre-hyperdrive ships were exploring the [Root.home_planet.System.GetName] system."
+MECHANIST_TO_NON_02_NEUTRAL_GREETING:0 "Our people have been building robots for generations. They were used extensively during our interplanetary years, when our first pre-hyperdrive ships were exploring the [Root.home_planet.System.GetName] system."
+MECHANIST_TO_NON_01_FRIENDLY_GREETING:0 "Greetings, [From.GetRulerTitle]! Would you accept one of our droids as a free gift? Fully-functional, of course."
+MECHANIST_TO_NON_01_WAR_GREETING:0 "How do you think one [From.GetAdj] soldier will fare against a thousand [Root.GetAdj] battle droids?"
+
+MECHANIST_TO_MECHANIST_01_HOSTILE_GREETING:1 "[From.GetAdj] robots are superior to ours in only one respect: yours are better at dying."
+MECHANIST_TO_MECHANIST_01_NEUTRAL_GREETING:0 "Another culture of mechanists! [Root.GetRulerTitle] [Root.GetRulerName] would love to know more about your designs."
+MECHANIST_TO_MECHANIST_01_FRIENDLY_GREETING:0 "It's always nice to meet a fellow mechanist. How goes your tinkering, [From.GetRulerTitle]?"
+MECHANIST_TO_MECHANIST_01_WAR_GREETING:0 "Your think you can beat our robotic legions with THOSE outdated models?"
+
+NON_TO_MECHANIST_01_HOSTILE_GREETING:1 "Go coddle your robots, [From.GetSpeciesName]."
+NON_TO_MECHANIST_02_HOSTILE_GREETING:1 "Go coddle your robots, [From.GetRulerTitle]."
+NON_TO_MECHANIST_01_NEUTRAL_GREETING:0 "Interesting machines, your robots. Are they purely for physical labour, or do you have... other uses for them?"
+NON_TO_MECHANIST_02_NEUTRAL_GREETING:0 "Unnerving machines, your robots. Are they purely for physical labour, or do you have... other uses for them?"
+NON_TO_MECHANIST_01_FRIENDLY_GREETING:0 "Those robots of yours are a technological marvel, [From.GetRulerTitle]. I'd love to have one in every university on [Root.Capital.GetName]."
+NON_TO_MECHANIST_02_FRIENDLY_GREETING:0 "Robots or no robots, your [From.GetRulerTitle] has proven [From.Leader.GetHerHim]self a friend of the [Root.GetName]."
+NON_TO_MECHANIST_01_WAR_GREETING:0 "Those robots you love so much will soon litter the scrapyards of [Root.Capital.GetName]!"
+
+# Life-Seeded
+LIFE_SEED_TO_NON_01_HOSTILE_GREETING:1 "[Root.GetHomeWorldName] is a paradise worth defending. And we are prepared to defend it."
+LIFE_SEED_TO_NON_01_NEUTRAL_GREETING:0 "Many of the peoples we've encountered pity us for not being able to migrate beyond [Root.GetHomeWorldName]. But why would we want to? Everything we need is on this [Root.home_planet.GetPlanetMoon]."
+LIFE_SEED_TO_NON_01_FRIENDLY_GREETING:0 "While it may not approach [Root.GetHomeWorldName] in splendor, I hear [From.Capital.GetName] is a beautiful world as well."
+LIFE_SEED_TO_NON_01_WAR_GREETING:0 "There is no place for [From.GetSpeciesNamePlural] in paradise."
+LIFE_SEED_TO_NON_02_WAR_GREETING:0 "There is no place for you in paradise."
+
+LIFE_SEED_TO_LIFE_SEED_01_FRIENDLY_GREETING:0 "We are kindred spirits, [From.GetSpeciesName]. The splendor of [Root.GetHomeWorldName] and [From.GetHomeWorldName] shine brightly in this dark universe."
+LIFE_SEED_TO_LIFE_SEED_02_FRIENDLY_GREETING:0 "The splendor of [Root.GetHomeWorldName] and [From.GetHomeWorldName] shine brightly in this dark universe. Our two [Root.GetSpeciesAdj] worlds are kindred spirits."
+
+NON_TO_LIFE_SEED_01_HOSTILE_GREETING:1 "That precious [From.home_planet.GetPlanetMoon] of yours would be better off without [From.GetSpeciesAdj] [From.GetSpeciesNamePluralInsult] infesting it."
+NON_TO_LIFE_SEED_01_NEUTRAL_GREETING:0 "I wouldn't have thought a sapient species could evolve on a paradise [From.home_planet.GetPlanetMoon] like [From.GetHomeWorldName]. You [From.GetSpeciesNamePlural] are quite unusual in that regard."
+NON_TO_LIFE_SEED_01_FRIENDLY_GREETING:0 "Greetings, [From.GetRulerTitle]! Any trouble in paradise?"
+NON_TO_LIFE_SEED_01_WAR_GREETING:0 "Paradise will soon be closed to you, [From.GetSpeciesName]."
+
+# Post-Apocalyptic
+POST_APOC_TO_NON_01_HOSTILE_GREETING:1 "[Root.GetHomeWorldName] learned the hard way what unchecked violence can lead to. Don't make us teach [From.Capital.GetName] that same lesson."
+POST_APOC_TO_NON_02_HOSTILE_GREETING:1 "We once burned our own homeworld to a cinder. Don't make us demonstrate our resolve again."
+POST_APOC_TO_NON_01_NEUTRAL_GREETING:0 "Generations ago, [Root.GetHomeWorldName]'s nation-states committed horrible atrocities upon one another. We survived and learned from our mistakes, but our poor [Root.home_planet.GetPlanetMoon] still bears the scars of that great conflict."
+POST_APOC_TO_NON_02_NEUTRAL_GREETING:0 "When the bombs burst over the cities of [Root.GetHomeWorldName] all those years ago, no [Root.GetSpeciesName] was spared the consequences. That day, we learned a harsh lesson: in this universe, it is kill or be killed."
+POST_APOC_TO_NON_01_FRIENDLY_GREETING:0 "It's good to see you, [From.GetRulerTitle]. I would invite you to [Root.GetHomeWorldName] for a visit, but..."
+POST_APOC_TO_NON_02_FRIENDLY_GREETING:0 "Greetings, [From.GetRulerTitle]! Let us contemplate our shared future amidst the ruins of [Root.GetHomeWorldName]."
+POST_APOC_TO_NON_01_WAR_GREETING:0 "[Root.GetSpeciesName]-kind has already endured one nuclear apocalypse. We are fully capable of surviving whatever you [From.GetSpeciesNamePlural] throw at us."
+POST_APOC_TO_NON_02_WAR_GREETING:0 "[Root.GetHomeWorldName] has already endured one nuclear apocalypse. We are fully capable of surviving whatever [From.Capital.GetName] throws at us."
+
+POST_APOC_TO_POST_APOC_01_NEUTRAL_GREETING:0 "Our two worlds suffered the same fate, it seems. It is fortunate that [Root.GetSpeciesNamePlural] and [From.GetSpeciesNamePlural] both survived."
+POST_APOC_TO_POST_APOC_02_NEUTRAL_GREETING:0 "Our two worlds suffered the same fate, it seems. It is fortunate that both survived."
+POST_APOC_TO_POST_APOC_01_FRIENDLY_GREETING:0 "You more than anyone understand us, [From.GetRulerTitle]. Both our peoples learned a great lesson in humility, and at great cost."
+
+NON_TO_POST_APOC_01_HOSTILE_GREETING:1 "You [From.GetSpeciesNamePluralInsult] irradiated your own homeworld. What could the [Root.GetName] possibly stand to gain from diplomatic relations with [From.Capital.GetName]?"
+NON_TO_POST_APOC_01_NEUTRAL_GREETING:0 "Our ancestors on [Root.GetHomeWorldName] were fortunate enough to unify under the [Root.GetName] before disputes between nation-states could escalate to nuclear warfare. Had they not done so in time, it's likely we would still be picking through the rubble today, with civilization a distant memory."
+NON_TO_POST_APOC_01_FRIENDLY_GREETING:0 "[From.GetHomeWorldName] must have been beautiful back in its day. I'm sorry to see it in its present state, but glad that [From.GetSpeciesName]-kind managed to survive and prosper."
+NON_TO_POST_APOC_02_FRIENDLY_GREETING:0 "[From.GetHomeWorldName] must have been beautiful back in its day. I'm sorry to see it in its present state, but glad that your people managed to survive and prosper."
+NON_TO_POST_APOC_01_WAR_GREETING:0 "You might think we can do no worse to [From.GetHomeWorldName] that it has already experienced by your own [From.GetSpeciesHandName]s. You would be wrong."
+
+# Homeworld destroyed
+LOST_HOMEWORLD_01_FRIENDLY_GREETING:0 "We heard about what happened to [From.GetHomeWorldName]. The [Root.GetRulerTitle] offers [Root.Leader.GetHerHis] condolences."
+LOST_HOMEWORLD_02_FRIENDLY_GREETING:0 "We heard about what happened to [From.GetHomeWorldName]. May the souls of the departed find peace in the next life."
+
+# Ongoing Prethoryn Invasion
+PRETH_CRISIS_01_HOSTILE_GREETING:1 "Don't think we've forgotten your misdeeds. The Prethoryn crisis notwithstanding, we stand prepared to confront you if necessary."
+PRETH_CRISIS_01_NEUTRAL_GREETING:0 "Another fleet lost to the Prethoryn. These are dark times for all of us."
+PRETH_CRISIS_01_FRIENDLY_GREETING:0 "Only united can we prevail against the Prethoryn. The [Root.GetAdj] fleet stands by to support our friends from [From.Capital.GetName]."
+PRETH_CRISIS_01_WAR_GREETING:0 "The sooner you surrender, the sooner [Root.GetAdj] and [From.GetAdj] forces can commit our full strength against the Prethoryn invaders."
+
+# Ongoing Unbidden Invasion
+UNB_CRISIS_01_HOSTILE_GREETING:1 "Don't think we've forgotten your misdeeds. This extradimensional invasion notwithstanding, we stand prepared to confront you if necessary."
+UNB_CRISIS_01_NEUTRAL_GREETING:0 "Another fleet lost to the hunters. These are dark times for all of us."
+UNB_CRISIS_01_FRIENDLY_GREETING:0 "Only united can we prevail against these extradimensional invaders. The [Root.GetAdj] fleet stands by to support our friends from [From.Capital.GetName]."
+UNB_CRISIS_01_WAR_GREETING:0 "The sooner you surrender, the sooner [Root.GetAdj] and [From.GetAdj] forces can commit our full strength against the extradimensional invaders."
+
+# Ongoing Contingency Invasion
+CONT_CRISIS_01_HOSTILE_GREETING:1 "Don't think we've forgotten your misdeeds. The Contingency crisis notwithstanding, we stand prepared to confront you if necessary."
+CONT_CRISIS_01_NEUTRAL_GREETING:0 "Another fleet lost to the Contingency. These are dark times for all of us."
+CONT_CRISIS_01_FRIENDLY_GREETING:0 "Only united can we prevail against the Contingency. The [Root.GetAdj] fleet stands by to support our friends from [From.Capital.GetName]."
+CONT_CRISIS_01_WAR_GREETING:0 "The sooner you surrender, the sooner [Root.GetAdj] and [From.GetAdj] forces can commit our full strength against the Contingency."

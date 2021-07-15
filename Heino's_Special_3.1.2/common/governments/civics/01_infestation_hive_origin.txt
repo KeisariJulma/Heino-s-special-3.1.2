@@ -1,0 +1,41 @@
+origin_infestation_hive = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/unused/origins_purged_but_unbroken.dds"
+	picture = GFX_origin_infestation_hive
+	max_once_global = yes
+	
+	habitability_preference = pc_infestation
+	non_colonizable_planet_class_neighbor = yes
+
+	playable = {
+		host_has_dlc = "Utopia"
+	}
+
+	possible = {
+		authority = {
+			value = auth_hive_mind 
+		}
+		species = {
+			NOT = {
+				value = LITHOID
+			}
+		}
+	}
+	
+	modifier = {
+		###Vanilla
+		country_resource_max_food_add = 50000
+		#planet_pops_food_upkeep_mult = -0.33
+		pop_environment_tolerance = 2.0
+		country_trade_fee = 0.5
+	}
+	
+	description = "origin_tooltip_infestation_hive"
+	flags = { custom_start_screen }
+
+	advanced_start = yes
+
+	random_weight = {
+		base = 0
+	}
+}

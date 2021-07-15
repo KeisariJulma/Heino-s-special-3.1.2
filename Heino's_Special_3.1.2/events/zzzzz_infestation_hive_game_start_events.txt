@@ -1,0 +1,117 @@
+namespace = infestation_hive_game_start
+
+### hive start
+country_event = {
+	id = infestation_hive_game_start.0
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_infestation_hive 
+	}
+
+	immediate = {
+        set_country_flag = infestation_hive_origin_flag
+		set_global_flag = infestation_hive_origin_active
+		hidden_effect = {
+			add_resource = { food = 200 }
+            add_resource = { minerals = 100 }
+			add_resource = { alloys = -50 }
+			add_resource = { exotic_gases = 50 }
+		}
+		random_owned_planet ={
+			limit = { 
+				is_capital = yes
+			}
+			change_pc = pc_infestation
+			clear_deposits = yes
+			add_district = district_infestation_hive_city
+			add_district = district_infestation_hive_city
+			add_district = district_infestation_acidic_generator_uncapped
+			add_district = district_infestation_acidic_generator_uncapped
+			add_district = district_infestation_acidic_generator_uncapped
+			add_district = district_infestation_gas_uncapped
+			add_district = district_infestation_farming_uncapped
+			add_district = district_infestation_farming_uncapped
+			add_deposit = infestation_hive_origin_planet_deposit
+			set_planet_flag = infestation_hive_stage_3
+			add_modifier = {
+				modifier = infestation_hive_stage_3
+			}
+			set_planet_entity = {
+				entity = "infestation_planet_third_stage_01_entity"
+			}
+		}
+        add_modifier = {
+			modifier = infestation_hive_global_country_modifiers
+		}
+        add_modifier = {
+			modifier = infestation_hive_planet_buildings_cost
+		}
+		add_modifier = {
+			modifier = infestation_hive_global_ship_cost
+		}
+		add_modifier = {
+			modifier = infestation_hive_vanilla_civilian_ship_cost
+		}
+		if = {
+			limit = { 
+				has_origin = origin_infestation_hive
+				NOT = {
+					has_global_flag = has_nsc_active
+				}
+			}
+			add_modifier = {
+				modifier = infestation_hive_vanilla_military_ship_cost
+			}
+		}
+		if = {
+			limit = { 
+				has_origin = origin_infestation_hive
+				has_global_flag = has_nsc_active
+			}
+			add_modifier = {
+				modifier = infestation_hive_nsc_vanilla_military_ship_cost
+			}
+			add_modifier = {
+				modifier = infestation_hive_nsc_ship_cost
+			}
+		}
+		add_modifier = {
+			modifier = infestation_hive_rs_military_ship_cost
+		}
+		add_modifier = {
+			modifier = infestation_hive_rs_heavy_dreadnought_ship_cost
+		}
+		add_modifier = {
+			modifier = infestation_hive_at_war_pdf_upkeep
+		}
+        if = {
+            limit = {
+                is_ai = no
+                has_origin = origin_infestation_hive
+                NOT = {
+					has_civic = civic_hive_devouring_swarm
+				}
+            }
+            country_event = { id = infestation_hive_game_start.1 days = -1 }
+        }
+	}
+}
+
+country_event = {
+	id = infestation_hive_game_start.1
+	title = "infestation_hive_cb_option_window"
+	desc = "infestation_hive_cb_option_description"
+	picture = GFX_infestation_hive_casus_belli_option_window
+	is_triggered_only = yes
+
+	option = {
+		name = infestation_hive_cb_yes
+        set_country_flag = infestation_hive_cb_yes
+	}
+    option = {
+		name = infestation_hive_cb_no
+        set_country_flag = infestation_hive_cb_no
+	}
+}

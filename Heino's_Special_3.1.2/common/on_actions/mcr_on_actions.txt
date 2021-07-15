@@ -1,0 +1,18 @@
+on_game_start = {
+	events = {
+		mechroid_event.3 #set flag that a new Mechroids game has started
+	}
+}
+
+on_leader_spawned = {
+	events = {
+		mechroid_event.1 #new leaders get Mechroid trait
+	}
+}
+
+on_ruler_back_to_pre_ruler_class = {
+	events = {
+		mechroid_event.2 #leader gets mechroid trait for their normal leader class
+
+	}
+}

@@ -1,0 +1,4 @@
+﻿l_english:
+
+ describe_decision_mastery_of_nature:0 "§EThis is a Decision that permanently increases the maximum number of districts a planet can support by §Y2§!. It can only be performed once on each planet.§!"
+ allow_gaia:0 "Allows us to terraform worlds into §Y$pc_gaia$s§!."

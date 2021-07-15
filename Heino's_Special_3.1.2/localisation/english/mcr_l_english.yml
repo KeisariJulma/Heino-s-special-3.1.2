@@ -1,0 +1,60 @@
+﻿l_english:
+    #traits
+    trait_mechroid:0 "Mechroid"
+    trait_mechroid_desc:0 "§LMembers of this species still possess fully organic brains, but the rest of their organs were discarded or modified beyond recognition long ago.§!"
+    trait_emotion_inhibitor:0 "Emotional Suppressants"
+    trait_emotion_inhibitor_desc:0 "§LThis species has been liberated from the primitive heuristic of emotion.§! §YHappiness has no effect on this species.§!"
+	#leader traits
+	leader_trait_ruler_mechroid:0 "Mechroid"
+	leader_trait_ruler_mechroid_desc:0 "§LThis leader has had the majority of their organs replaced, or augmented with, cybernetic systems.§!"
+	
+	leader_trait_scientist_mechroid:0 "Mechroid"
+	leader_trait_scientist_mechroid_desc:0 "§LThis leader has had the majority of their organs replaced, or augmented with, cybernetic systems.§!"
+	
+	leader_trait_admiral_mechroid:0 "Mechroid"
+	leader_trait_admiral_mechroid_desc:0 "§LThis leader has had the majority of their organs replaced, or augmented with, cybernetic systems.§!"
+	
+	leader_trait_governor_mechroid:0 "Mechroid"
+	leader_trait_governor_mechroid_desc:0 "§LThis leader has had the majority of their organs replaced, or augmented with, cybernetic systems.§!"
+	
+	leader_trait_general_mechroid:0 "Mechroid"
+	leader_trait_general_mechroid_desc:0 "§LThis leader has had the majority of their organs replaced, or augmented with, cybernetic systems.§!"
+    #species
+    MECHROID:0 "Mechroid"  
+    MECHROID_desc:0 "A creature's Species Class has no effect on your Empire, but a Mechroid may consider other Mechroids to be less alien than creatures of other Species Classes."
+    MECHROID_plural:0 "Mechroids"
+    MECHROID_adj:0 "Mechroid"
+    MECHROID_insult_01:0 "brain-in-a-can"
+    MECHROID_insult_02:0 "lobotomy"
+    MECHROID_insult_plural_01:0 "brains-in-cans"
+    MECHROID_insult_plural_02:0 "lobotomies"
+    MECHROID_compliment_01:0 "amalgam"
+    MECHROID_compliment_plural_01:0 "amalgams"
+    MECHROID_spawn:0 "child-brain"
+    MECHROID_spawn_plural:0 "child-brains"
+    MECHROID_sound_01:0 "whirring"
+    MECHROID_sound_02:0 "buzzing"
+    MECHROID_sound_03:0 "bubbling"
+    MECHROID_sound_04:0 "ticking"
+    MECHROID_sound_05:0 "humming"
+    MECHROID_organ:0 "nutrient resevoir"
+    MECHROID_mouth:0 "voicebox"
+    MECHROID_hand:0 "limbs"
+	#buildings
+	building_mcr_cyber_replicators:0 "Bio-Assembly Plants"
+    building_mcr_cyber_replicators_desc:0 "Equipped to fabricate a myriad of complex organic structures, be they individual organs or entire living organisms."
+	#jobs
+	job_bio_assembler:0 "Bio-Assembler"
+	job_bio_assembler_plural:0 "Bio-Assemblers"
+	job_bio_assembler_desc:0 "Bio-Assemblers do whatever it takes to hasten population assembly, even if it requires appropriating resources that would otherwise augment traditional population growth."
+	mod_job_bio_assembler_add:0 "Bio-Assembler Jobs"
+    #opinion modifiers
+	triggered_opinion_uses_emotion_inhibitor_xenophile:0 "Suppresses Population With Emotion Inhibitors"
+	triggered_opinion_uses_emotion_inhibitor_spiritualist:0 "Cauterizes The Soul With Emotion Inhibitors"
+	triggered_opinion_is_mechroid:0 "Uncanny Mechroids"
+	triggered_opinion_is_mechroid_also_spiritualist:0 "Perverse Mechroids"
+	triggered_opinion_is_mechroid_also_fanatic_spiritualist:0 "Perverse Mechroids"
+	triggered_opinion_is_mechroid_also_materialist:0 "Upgraded From Flesh"
+	triggered_opinion_emotionless:0 "Disturbing Emotionlessness"
+	triggered_opinion_emotionless_machineauth:0 "Free From Organic Emotions"
+	triggered_opinion_has_emotion_inhibitor:0 "Unpredictable Emotives"

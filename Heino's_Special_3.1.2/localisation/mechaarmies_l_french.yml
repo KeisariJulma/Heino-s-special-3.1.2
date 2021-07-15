@@ -1,0 +1,376 @@
+﻿l_french:
+    ### Mecha Armies Mod
+    
+    # The Doom Slayer
+    doom_army:0 "Le Tueur de Mort"
+    doom_army_plural:0 "Le Tueur de Mort"
+    doom_army_desc:0 "Au premièr age, lors de la première bataille, lorsque les ombres se sont allongés pour la première fois seul s'est dressée, brulé par les braises d'armagesson, son ame tuméfié par les feux de l'enfer et corrompu au delà du salut, il a choisi la voie du tourment éternelle. Il n'a pas trouvé la paix dans sa haine dévorante, il a écumé les plaines sombre halles pour se venger des seigneur des ténèbres qui l'avait trahi et ceux qui ont haté de son épée l'on surnommé... Le tueur de mort."
+    
+    # robocop
+    cop_army:0 "Robocop"
+    cop_army_plural:0 "Robocop"
+    cop_army_desc:0 "La méga-entreprise Omni Consumer Products nous a fourni un design de cyborg expérimental désigné sous le nom de RoboCop, apparemment programmé avec trois directives: servir la confiance du public, protéger les innocents et faire respecter la loi, mais il a été transformé en une armée d'un seul homme pour satisfaire nos besoins militaires."
+    
+    # spartan
+    spartan_army:0 "Spartan 117"
+    spartan_army_plural:0 "Spartan 117"
+    spartan_army_desc:0 "Spartan 117, Master Chief Major john est le seul personnel qui a survécu au programe de guerriers géniques II."
+    
+    # buns
+    bun_army:0 "Spess Bunnies"
+    bun_army_plural:0 "Spess Bunnies"
+    bun_army_desc:0 "an adorable horde of fluffy bunnies...     why are we making these again ?"
+    
+    # Mech Mercs Army
+    mechmercs_army:0 "Armée Mercenenaire"
+    mechmercs_army_plural:0 "Armées Mercenenaire"
+    mechmercs_army_desc:0 "Esque vous avez déja eu besoin de armées mais avez pas le temps pour les entrainer? Embauchez des mercenaires pour les missions rapide et sale! Ils déploient immédiatement, mais demande beaucoup de paiement. Peut-être mieux de les virer dès que possible."
+    
+    # Colonial Marine Corps
+    colonialmarines_army:0 "Marine Colonial"
+    colonialmarines_army_plural:0 "Marines Colonial"
+    colonialmarines_army_desc:0 "Ces gens sont là pour vous protéger. Ce sont des soldats. Des Marines de la flotte."
+    
+    # Mobile Infantry
+    mobileinfantry_army:0 "Infantry Mobile"
+    mobileinfantry_army_plural:0 "l'Infantry Mobile"
+    mobileinfantry_army_desc:0 "La force pure a résolu plus de conflits à travers l'histoire que tout autre facteur. Troopers équipés des armures assistée."
+    
+    # XCOM Squad
+    xcom_army:0 "équipe XCOM"
+    xcom_army_plural:0 "équide XCOM"
+    xcom_army_desc:0 "Les soldats de XCOM opèrent dans de petites unités de combat et se spécialisent dans les tactiques d'attaque et de fuite, permettant des frappes dévastatrices avec un minimum de dommages collatéraux."
+    
+    # Armoured Divisions
+    tanks_army:0 "Divisions Blindées"
+    tanks_army_plural:0 "Divisions Blindées"
+    tanks_army_desc:0 "Des chars de combat principaux soutenus par l'infantry moblie permettant des percées rapides et mortelles ders ligne énemie."
+    
+    # Space Marines
+    spacemarines_army:0 "La Legion Damné"
+    spacemarines_army_plural:0 "La Legion Damné"
+    spacemarines_army_desc:0 "Purifier, Purger, Tuer! La Legion Damné est un groupe mystérieux de Supersoldiers qui semble invraisemblable lorsque tout espoir semble perdu, sortant de son monde caché pour apporter des rétributions à nos ennemis. Une fois leur travail accompli, les légionnaires disparaissent dans le mythe une fois de plus."
+
+    # Blood_Angels
+    blood_angels_army:0 "Anges de Sang"
+    blood_angels_army_plural:0 "Anges de Sang"
+    blood_angels_army_desc:0 "Pour l'Empereur et Sanguinius!"
+    
+    # Dark Angels
+    dark_angels_army:0 "Anges Sombre"
+    dark_angels_army_plural:0 "Anges Sombre"
+    dark_angels_army_desc:0 "Repenter! Car Demain tu meur!"
+    
+    # Imperial Fist
+    imperial_fist_army:0 "Fists Imperial"
+    imperial_fist_army_plural:0 "Fists Imperial"
+    imperial_fist_army_desc:0 "Primarch-Progenitor, pour votre gloire et la gloire de terre!"
+    
+    # Imperial Fist Garrison
+    imperial_fist_def_army:0 "Fists Imperial Garnison"
+    imperial_fist_def_army_plural:0 "Fists Imperial Garnison"
+    imperial_fist_def_army_desc:0 "Primarch-Progenitor, pour votre gloire et la gloire de terre!"
+    
+    # Iron Hands
+    iron_hands_army:0 "Mains de Fer"
+    iron_hands_army_plural:0 "Mains de Fer"
+    iron_hands_army_desc:0 "La Chair et faible!"
+    
+    # Raven Guard
+    raven_guard_army:0 "Raven Guard"
+    raven_guard_army_plural:0 "Raven Guard"
+    raven_guard_army_desc:0 "Victorus aut Mortis!"
+    
+    # Salamanders
+    salamanders_army:0 "Salamanders"
+    salamanders_army_plural:0 "Salamanders"
+    salamanders_army_desc:0 "Des les feux du battle, à l'enclume de la guerre!"
+    
+    # Space Wolves
+    space_wolves_army:0 "Loups de l'Espace"
+    space_wolves_army_plural:0 "Loups de l'Espace"
+    space_wolves_army_desc:0 "Pour Russ et le Père de tout!"
+    
+    # Ultramarines
+    Ultramarines_army:0 "Ultramarines"
+    Ultramarines_army_plural:0 "Ultramarines"
+    Ultramarines_army_desc:0 "Courage et Honeur, Nous marchons pour Macragge!"
+    
+    # White Scars
+    white_scars_army:0 "Les cicatrices Blanc"
+    white_scars_army_plural:0 "Les cicatrices Blanc"
+    white_scars_army_desc:0 "Pour Le Khan et l'Empereur!"
+    
+    # Mechwarriors
+    mechwarrior_army:0 "Guerrier mecha"
+    mechwarrior_army_plural:0 "Guerriers mecha"
+    mechwarrior_army_desc:0 "Des Titans de la guerres. Une Armées purement fait des plus grand mechas qui peuvent être construit."
+
+    # Merc Mechwarriors
+    mechwarrior_merc_army:0 "Guerrier mecha Mercenenaire"
+    mechwarrior_merc_army_plural:0 "Guerrier mecha Mercenenaire"
+    mechwarrior_merc_army_desc:0 "Un groupe de mercenaires spécialisée dans les Guerriers mecha."
+    
+    # Vertibird
+    vertibird_army:0 "Squadrons de Vertiptère"
+    vertibird_army_plural:0 "Squadronsde Vertiptère"
+    vertibird_army_desc:0 "Le Vertiptère est un avion VTOL avec un fuselage blindé extrêmement durable et peut être armé d'une variété d'armes offensives et de contre-mesures défensives. C'est l'avion le plus avancé de son genre jamais développé."
+    
+    # Inquisitors
+    inquisitor_army:0 "Ordre Inquisitorial"
+    inquisitor_army_plural:0 "l'Ordre Inquisitorial"
+    inquisitor_army_desc:0 "Inquisiteurs rassemblé, commandant les plus fortes unités de l'Empire."
+    
+    # necron
+    nec_army:0 "Necrons"
+    nec_army_plural:0 "Necrons"
+    nec_army_desc:0 "Maintenant que nos consciences ont été transférées dans des corps robotiques, les forces militaires sont libres d’explorer de nouvelles tactiques et de nouveaux moyens de guerre. La coque robotisée Necron permet à nos soldats de transférer leurs consciences entre les unités après leur destruction, ce qui permet un flux constant de soldats."
+    
+    # Mech Titans
+    titanic_mech_army:0 "Legion de Titan"
+    titanic_mech_army_plural:0 "Legions de Titan"
+    titanic_mech_army_desc:0 "Aucune Arme dans l'histoire de la galaxie est égale au Titan sur le champ de bataille, et une légion de ces vastes machines de guerre peut mettre n'importe quel monde à genoux. En vérité, un Titan n'a que trois ennemis: la folie, l'orgueil et un autre de son genre."
+
+    # Psi Titans
+    titanic_psic_army:0 "Titans Psionic"
+    titanic_psic_army_plural:0 "Titans Psionic"
+    titanic_psic_army_desc:0 "En concentrant notre énergie psionic, nous avons invoquer des êtres Titaniques enveloppés dans la brume et dominant le champ de bataille, que tous ceux qui se trouvent sur leur chemin voient la vrai puissance du divin et implorent la pitié à leurs pieds."
+    
+    # Bio Titans
+    titanic_bio_army:0 "Titans Domestiques"
+    titanic_bio_army_plural:0 "Titans Domestiques"
+    titanic_bio_army_desc:0 "Notre connaissance approfondie de la manipulation biologique et de l'ingénierie à des échelles autrefois considérées comme impossibles, ont débloqué les moyens de créer, d'armurer et de militariser les créatures domestiquées à des tailles titaniques. s'il vous plaît n'oubliez pas de frotter leurs ventres avant de les envoyer à la guerre."
+    
+    # Judge
+    judge_army:0 "Juges de Rue"
+    judge_army_plural:0 "Juges de Rue"
+    judge_army_desc:0 "NOUS SOME LA LOIS!"
+    
+    # XCOM Defense
+    xcom_defense:0 "Grid de Défense XCOM"
+    xcom_defense_plural:0 "Grid de Défense XCOM"
+    xcom_defense_desc:0 "Les soldats du Grid de défense XCOM sont la première et dernière ligne de défense contre les envahisseurs extraterrestres et servent d'unités de combat défensives les plus précieuses à notre disposition."
+    
+    # Machine Defensive Armies
+    machine_defense_2:0 "Grid de Defense Amélioré"
+    machine_defense_2_plural:0 "Grid de Defense Amélioré"
+    machine_defense_2_desc:0 "Une grid de défense drone renforcée avec des armements lourds et des défenses statiques."
+    
+    # Junkbot Armies
+    junkbot_army:0 "Junkbots"
+    junkbot_army_plural:0 "Junkbots"
+    junkbot_army_desc:0 "Une armée de automatrons jetés à la hâte, dont ils produisent rapidement l'efficacité laisse beaucoup à désirer." 
+    
+    # Assimilated Drones 
+    assimilated_drone:0 "Drones Assimilés"
+    assimilated_drone_plural:0 "Drones Assimilés"
+    assimilated_drone_desc:0 "Cyborgs assimilés, dénués d'autonomie et améliorés avec des membres armés."
+    
+    # Cyber Armies
+    cyber_army:0 "Armées Cyber"
+    cyber_army_plural:0 "Armées Cyber"
+    cyber_army_desc:0 "Les Drones Assimilés sont maintenant complètement enfermés dans une armure métallique avec des systèmes de réparation intégrés pour permettre de longues périodes de combat."
+    
+    # Rotor Drone
+    machine_assault_6:0 "Drones Rotor"
+    machine_assault_6_plural:0 "Drones a Rotor"
+    machine_assault_6_desc:0 "Un essaim de drones à double rotor capable d'écraser la plupart de nos adversaires et extrêmement simple à produire considérant leur efficacité." 
+    
+    # Terminator Armies
+    machine_assault_4:0 "Terminators"
+    machine_assault_4_plural:0 "Terminators"
+    machine_assault_4_desc:0 "Robots chasseur-tueur bipède équipés d'un mini canon automatique et d'un lance-grenade monté à l'arrière."
+    
+    # Spider Fromes
+    machine_assault_5:0 "Fromes Arachnid"
+    machine_assault_5_plural:0 "Fromes Arachnid"
+    machine_assault_5_desc:0 "Grands chars arachnides mécaniques, extrêmement mobiles et capables de grimper les murs, équipés d'un canon principal, de plusieurs canons d'éventreurs, lance-flammes et lanceur de missiles."
+    
+    # Aerial VTOL
+    machine_assault_8:0 "Squadrons d'Aerial"
+    machine_assault_8_plural:0 "Squadrons d'Aerial"
+    machine_assault_8_desc:0 "L'Aerial est un grand avion compatible de VTOL. Doté d'une gamme dévastatrice de lasers, de missiles et de canons à plasma sous les jantes et les ailes, l'Aerial est redoutable et terrifiant à voir."
+    
+    # World Engine
+    machine_assault_7:0 "Engine Planétaire"
+    machine_assault_7_plural:0 "Engines Planétaire"
+    machine_assault_7_desc:0 "L'Engine Planétaire est une Mégarobot titanique équipé avec assez d'armement pour raser des villes entière."
+    
+    # Spwan Armies
+    spwan_army:0 "Spwanlings"
+    spwan_army_plural:0 "Spwanlings"
+    spwan_army_desc:0 "Petit, rapidement creé et sacrifiable. Les Spawnlings sont des bioformage parfaits pour le chair à canon."
+    
+    # Lictors
+    lictor_army:0 "Lictors"
+    lictor_army_plural:0 "Lictors"
+    lictor_army_desc:0 "Le Lictor est un développement évolutif spécialisé. Capable de se déplacer rapidement et sans bruit à travers du terrain dense, et dissimulé par une carapace caméléon qui le rend invisible à l'œil nu, un Licteur peut rester caché jusqu'à ce qu'il décide de frapper."
+    
+    # Rippers
+    ripper_army:0 "Rippers"
+    ripper_army_plural:0 "Rippers"
+    ripper_army_desc:0 "Les Rippers sont des espèces ressemblant à des asticots qui se battent en grands essaims pour abattre et consommer des créatures plusieurs fois leur taille. Cependant, ils sont complètement idiots et périront s'ils perdent un lien synaptique avec l'esprit de ruche, bien que sous notre direction ils soient complètement implacables et posent une menace vraiment effrayante."
+    
+    # Trygons
+    trygon_army:0 "Trygons"
+    trygon_armyplural:0 "Trygons"
+    trygon_army_desc:0 "Un Trygon mène nos hordes au combat. Il crée d'énormes terriers pour creuser un tunnel derrière les lignes ennemies et utilise ses sens aigus pour détecter la présence des ennemis au-dessus. C'est un spécialiste du combat rapproché utilisant six bras griffus, des dents acérées et un champ bio-électrique qui traverse son armure qui peut neutraliser les ennemis qui attaquent."
+    
+    # Raveners
+    ravener_army:0 "Raveners"
+    ravener_army_plural:0 "Raveners"
+    ravener_army_desc:0 "Les Raveners sont la prochaine étape de l'évolution des Licteurs, maintenant armés de lanceurs d'acide et d'ailes."
+    
+    # The Great Devourer
+    great_devourer_army:0 "Le Grand Dévoreur"
+    great_devourer_army_plural:0 "Le Grand Dévoreur"
+    great_devourer_army_desc:0 "Les Grand Dévoreurs sont le bioforme évolutionnaire final destiné à contrer les plus grands moteurs de guerre déployés par les autres espèces intelligentes de la Galaxie. Dominant les champs de bataille, menant les essaims de créatures biofrom inférieures. Ces énormes machines de guerre biomécaniques traquent les zones de guerre de la Galaxie, crachant la mort et la destruction, réduisant leurs ennemis avec de puissantes armes biologiques."
+    
+    # Mecha Building
+    building_titan_forge:0 "Forge de Titan"
+    building_titan_forge_desc:0 "Une vaste usine consacrée uniquement à la production de Titans. pop doit avoir trait cybernétique pour créer titan."
+    
+    building_psi_forge:0 "Forge Psionic"
+    building_psi_forge_desc:0 "Un vast temple consacré uniquement au invocation des Titans."
+    
+    building_titanic_preserve:0 "Preverse de Titan"
+    building_titanic_preserve_desc:0 "Un vast laboratoire and preverse consacrée uniquement à la creation et soin des Titan Domestique."
+    
+    building_titan_factory:0 "Usine de Titan"
+    building_titan_factory_desc:0 "Un vast usine consacrée uniquement à la creation machines de guerre Titanique."
+    
+    building_titan_nest:0 "Nid de Titan"
+    building_titan_nest_desc:0 "Un nid géant pour des créatures titanesques."
+    
+    building_justice_department:0 "Département de l'Angoisse"
+    building_justice_department_desc:0 "Le Département de l'Angoisse est dévoué au maintien de l'ordre, par tous et n'importe quel moyens nécessaires."  
+
+    building_power_fort_1:0 "Centrales électriques de défense I"
+    building_power_fort_1_desc:1 "Power Flak Towers Ils produisent des crédits d'énergie, nécessaires pour entretenir la plupart des bâtiments et des navires. Ils sont enfermés dans des couches de béton armé avec des armes anti-aériennes. Ils servent également d'abris anti-aériens pour les civils."
+    building_power_fort_2:0 "Centrales électriques de défense II"
+    building_power_fort_2_desc:1 "$building_power_fort_1_desc$"
+    building_power_fort_3:0 "Centrales électriques de défense III"
+    building_power_fort_3_desc:1 "$building_power_fort_1_desc$"
+    building_power_fort_4:0 "Centrales électriques de défense IV"
+    building_power_fort_4_desc:1 "$building_power_fort_1_desc$"
+    building_power_fort_5:0 "Centrales électriques de défense V"
+    building_power_fort_5_desc:1 "$building_power_fort_1_desc$"
+    
+    building_power_hub_fort_1:2 "Centre d'alimentation Bastion"
+    building_power_hub_fort_1_desc:1 "Les centres d'alimentation produisent quelques crédits énergétiques par eux-mêmes, mais augmentent surtout le rendement global en crédits énergétiques de la planète."
+    building_power_hub_fort_2:2 "Centre d'alimentation Fortress"
+    building_power_hub_fort_2_desc:1 "$building_power_hub_fort_1_desc$"
+ 
+    building_hydroponics_fort_1:0 "Ferme hydroponique d'artillerie I"
+    building_hydroponics_fort_1_desc:1 "Les fermes hydroponiques d'artillerie produisent des légumes riches en nutriments conçus sur mesure pour être consommés par les pops locales et on the positions d'artillerie."
+    building_hydroponics_fort_2:0 "Ferme hydroponique d'artillerie II"
+    building_hydroponics_fort_2_desc:1 "$building_hydroponics_fort_1_desc$"
+    building_hydroponics_fort_3:0 "Ferme hydroponique d'artillerie III"
+    building_hydroponics_fort_3_desc:1 "$building_hydroponics_fort_1_desc$"
+    building_hydroponics_fort_4:0 "Ferme hydroponique d'artillerie IV"
+    building_hydroponics_fort_4_desc:1 "$building_hydroponics_fort_1_desc$"
+    building_hydroponics_fort_5:0 "Ferme hydroponique d'artillerie V"
+    building_hydroponics_fort_5_desc:1 "$building_hydroponics_fort_1_desc$"
+
+    building_mining_fort_1:0 "Abris de Minage I"
+    building_mining_fort_1_desc:1 "Des réseaux miniers extraient des minéraux essentiels sur la croûte de la planète et servent an temp que abris et réserves de munitions."
+    building_mining_fort_2:0 "Abris de Minage II"
+    building_mining_fort_2_desc:1 "$building_mining_fort_1_desc$"
+    building_mining_fort_3:0 "Abris de Minage III"
+    building_mining_fort_3_desc:1 "$building_mining_fort_1_desc$"
+    building_mining_fort_4:0 "Abris de Minage IV"
+    building_mining_fort_4_desc:1 "$building_mining_fort_1_desc$"
+    building_mining_fort_5:0 "Abris de Minage V"
+    building_mining_fort_5_desc:1 "$building_mining_fort_1_desc$"
+    
+    building_mineral_processing_fort_1:1 "Centrale des minéraux Fortifier I"
+    building_mineral_processing_fort_1_desc:1 "Les centrales de traitement des minéraux produisent quelques minéraux par elles-mêmes, mais augmentent surtout le rendement global en minéraux de la planète."
+    building_mineral_processing_fort_2:1 "Centrale des minéraux Fortifier II"
+    building_mineral_processing_fort_2_desc:1 "$building_mineral_processing_fort_1_desc$"
+    
+    building_basic_science_fort_1:1 "Bastion de Recherche"
+    building_basic_science_fort_1_desc:1 "Les Bastion de Recherche scientifiques fournissent les installations basiques pour la recherche générale et fonctionne en temp que centres de command pour les force de défense, ils peuvent être améliorés pour bénéficier de fonctionnalités plus spécifiques."
+    
+    building_engineering_fort_1:0 "Bastion D'ingénierie"
+    building_engineering_fort_1_desc:1 "Les complexes d'ingénierie sont des institutions spécialisées générant des recherches en ingénierie supplémentaires et fonctionne en temp que centres de command pour les force de défense."
+    building_engineering_fort_2:0 "Fortress D'ingénierie I"
+    building_engineering_fort_2_desc:1 "$building_engineering_fort_1_desc$"
+    building_engineering_fort_3:0 "Fortress D'ingénierie II"
+    building_engineering_fort_3_desc:1 "$building_engineering_fort_1_desc$"
+    building_engineering_fort_4:0 "Citadel D'ingénierie"
+    building_engineering_fort_4_desc:1 "$building_engineering_fort_1_desc$\n\n$requires_capital_planet_desc$"
+    building_engineering_fort_5:0 "Citadel D'ingénierie II"
+    building_engineering_fort_5_desc:1 "$building_engineering_fort_1_desc$"
+    
+    building_physics_fort_1:0 "Bastion de physique"
+    building_physics_fort_1_desc:1 "Les bastions de physique sont des institutions spécialisées dans la génération de ressources physiques supplémentaires et fonctionne en temp que centres de command pour les force de défense."
+    building_physics_fort_2:0 "Fortress de physique I"
+    building_physics_fort_2_desc:1 "$building_physics_fort_1_desc$"
+    building_physics_fort_3:0 "Fortress de physique II"
+    building_physics_fort_3_desc:1 "$building_physics_Fortress_1_desc$"
+    building_physics_fort_4:0 "Citadel de physique"
+    building_physics_fort_4_desc:1 "$building_physics_fort_1_desc$\n\n$requires_capital_planet_desc$"
+    requires_capital_planet_desc:0 "§RCan only be built on the capital planet.§!"
+    building_physics_fort_5:0 "Citadel de physique II"
+    building_physics_fort_5_desc:1 "$building_physics_fort_1_desc$"
+    
+    building_biofort_1:0 "BioBastion"
+    building_biofort_1_desc:1 "Les biobastion sont des institutions générant de la recherche sociétale supplémentaire et fonctionne en temp que centres de command pour les force de défense."
+    building_biofort_2:0 "BioFortress I"
+    building_biofort_2_desc:1 "$building_biofort_1_desc$"
+    building_biofort_3:0 "BioFortress II"
+    building_biofort_3_desc:1 "$building_biofort_1_desc$"
+    building_biofort_4:0 "BioCitadel"
+    building_biofort_4_desc:1 "$building_biofort_1_desc$\n\n$requires_capital_planet_desc$"
+    building_biofort_5:0 "BioCitadel II"
+    building_biofort_5_desc:1 "$building_biofort_1_desc$"
+    
+    # Mecha Policies
+    policy_standard_equipment_policie:0 "Équipement Spécialisé"
+    policy_standard_equipment_policie_desc:0 "Il est important de s'assurer que toutes nos forces au sol utilisent le meilleur équipement que nous pouvons leur donner."
+    
+    none:0 "Aucune Équipement Spécialisé"
+    none_desc:0 "Investir dans de l'équipement spécialisé ne fera que nous détourner du financement de nos forces principales."
+    none_name:1 "None"
+    
+    helldivers:0 "Helldivers"
+    helldivers_desc:0 "Une unité spéciale de quatre soldats hautement sophistiqués est déployée directement de l'orbite à une cible importante."
+    helldivers_name:1 "Helldivers"
+    
+    commissars:0 "Commissaires"
+    commissars_desc:0 "Les commissaires sont chargés de maintenir le moral des troupes lors de leurs campagnes massives, souvent face à des pertes stupéfiantes. Le commissaire est habilité à utiliser tous les moyens nécessaires pour assurer la pureté morale de ses soldats qui ne se retirent qu'en dernier recours *BLAM!* Insubordination! Il n'y a pas de retraite en présence d'un commissaire!"
+    commissars_name:0 "Commissaires"
+    
+    hunter_killer_drones:0 "Drones essaims chasseurs-tueurs"
+    hunter_killer_drones_desc:0 "Des essaims massifs de ces véhicules aériens relativement simples et sans pilote sont lâchés sur les positions ennemies dans l'espoir de brisez leur moral."
+    hunter_killer_drones_name:0 "Drones essaims chasseurs-tueurs"
+    
+    purity_seal:0 "Scellés de Purity"
+    purity_seal_desc:0 "En ces temps sombres, il est plus important que jamais pour nos troupes de garder la foi, alors bénissez sur leurs outils de guerre sacré parchemin pour soulager leurs soucis."
+    purity_seal_name:1 "Scellés de Purity"
+    
+    art_def:0 "L'Art de la Défense"
+    art_def_desc:0 "Nous n'avons pas besoin de ces équipement aussi agressif, concentrons-nous plutôt sur la fortification de nos mondes. Comme cela va dissuader toute idée de rébellion."
+    art_def_name:1 "Art de la Défense"
+    
+    mininukes:0 "Mini Nukes"
+    mininukes_desc:0 "Les Nukes d'Oxygène Tactique ne nécessitent aucun matériau de fission et ne produisent aucune retombée. Ils sont assez petits pour être déployés par l'infanterie."
+    mininukes_name:1 "Mini Nukes"
+    
+    jumpjets:0 "Jet Pack Advanced"
+    jumpjets_desc:0 "Les combinaisons d'armure assistée sont équipées de jet packs avancés, permettant des sauts plus importants, plus d'agilité et de rapidité. Augmente la capacité de survie de nos soldats."
+    jumpjets_name:1 "Jump Jets"
+    
+    jumpnukes:0 "Jump Packs n' Mini Nukes"
+    jumpnukes_desc:0 "Powered Armor Suits are equipped with Advanced Jump Jet Packs, allowing for greater jumps, more agility and dashing. Increases survivability. Tactical Oxygen Nukes require no fission material and produce no fallout. They are small enough to be deployed by infantry."
+    jumpnukes_name:1 "Jump Jets n' Mini Nukes"
+    
+    #XCOM
+    civic_xcom:0 "Le projet XCOM"
+    civic_xcom_desc:0 "En réaction à la récente incursion extraterrestre, ce conseil des nations s'est réuni pour approuver l'activation du projet XCOM. Notre première et dernière ligne de défense. Bonne chance commandan."
+    civic_xcom_effects:0 "Allows mobilization of XCOM units in Defense and assault and insight on psionic theory."
+   
+    #Cadian Defence Doctrine
+    civic_cadian_defence:0 "Doctrine de Défence Planétaire"
+    civic_cadian_defence_desc:0 "Certains peuvent appeler les mesures de défense de cette civilisation un cas de paranoïa dictatoriale mais ils ignorent que la meilleure offense est une bonne défense, la doctrine de défense Planétaire imposse la conscription de toutes les personnes valides dans la défense d'une planète et permet la construction de bâtiment civile fortifiée. Au momment d'invasion, les centrales électriques deviennent des tours de défense, les mines deviennent des abris et des réserves de munitions, les fermes deviennent des positions d'artillerie et les laboratoires deviennent des centres de commandement. Sachez que notre planète s'écroulera avant la garde."
+    

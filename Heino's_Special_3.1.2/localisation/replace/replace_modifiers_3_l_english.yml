@@ -1,0 +1,18 @@
+﻿l_english:
+
+ ai_fleet_desc:0 "A fleet controlled by an AI lies destroyed on the [This.GetPlanetMoon], giving us valuable engineering data to research."
+ irradiated_wasteland_desc:0 "The [This.GetPlanetMoon] has been bombarded with radiation, making large parts of it dangerous to most living creatures."
+ ancient_one_desc:0 "An ancient being, living deep beneath the waves, is the dominating life force on this [This.GetPlanetMoon]."
+ food_rich_planet_desc:0 "The [This.GetPlanetMoon]'s flora provides nutritious fruits and substances that improves living conditions."
+ fallen_robots_desc:0 "The [This.GetPlanetMoon] holds old robots built by a fallen society, giving us engineering material to research."
+ society_animal_life_desc:0 "Particularly odd animals inhabit this [This.GetPlanetMoon]. They provide interesting society research opportunities."
+ hostile_animal_life_desc:0 "The [This.GetPlanetMoon] is host to hostile creatures that are not happy to see us."
+ shifting_sands_desc:0 "The desert [This.GetPlanetMoon] consists of a near-liquid grained sand that makes construction extremely difficult."
+ liquid_sands_desc:0 "Sand covers this [This.GetPlanetMoon], so fine grained it resembles a liquid. The odd composition of minerals provide ample amounts of research."
+ abandoned_mining_desc:0 "An old mining station was orbiting the [This.GetPlanetMoon], showing that there's potential resources to be had here."
+ gas_rich_planet_desc:0 "Construct a colony on this [This.GetPlanetMoon] to begin tapping its resource.\n£energy£ §G+50%§!"
+ gas_rich_planet_fo_realz_desc:0 "The sparse natural resources on this [This.GetPlanetMoon] are currently being mined to boost the overall energy production."
+ gas_responsible_mining_desc:0 "Saving a sparse yet valuable gas resource on this [This.GetPlanetMoon] helps to make its energy production more efficient in the long term."
+ suppressed_opposition_desc:0 "A certain part of the population of this [This.GetPlanetMoon] has been violently suppressed for their opposition of the government."
+ syndaw_automated_work_desc:0 "Whether justified or not, fears of unemployment due to automation are affecting this [This.GetPlanetMoon]."
+ syndaw_unfriendly_robots_desc:0 "Tensions between robotic and organic populations on the [This.GetPlanetMoon] have reduced our £unity£ Unity output."

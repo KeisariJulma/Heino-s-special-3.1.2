@@ -1,0 +1,5 @@
+﻿l_english:
+
+pc_subterranean_dry_desc:0 "$pc_molten_desc$ $subterranean_desc$\n\n$dry_planet_info$"
+pc_subterranean_cold_desc:0 "$pc_frozen_desc$ $subterranean_desc$\n\n$cold_planet_info$"
+pc_subterranean_wet_desc:0 "$pc_toxic_desc$ $subterranean_desc$\n\n$wet_planet_info$"

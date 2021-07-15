@@ -1,0 +1,22 @@
+on_game_start_country = {
+	events = {
+		infestation_hive_game_start.0	#initial setup for the game start
+	}
+}
+on_planet_bombarded = {
+	events = {
+		infestation_hive_planet.0	#turns the planet into a tomb world
+	}
+}
+on_colonized = {
+	events = {
+		infestation_hive_planet.1	#turns the planet into a stage 1 infested Planet 
+	}
+}
+on_planet_transfer = {
+	events = {
+		infestation_hive_planet.2	#Adds "No Infestation" Modifier to a Planet when it gets a new owner
+		infestation_hive_planet.3	#Removes "No Infestation" Modifier on a Planet when it gets a new owner that is not a Infestation Hive
+		infestation_hive_planet.4	#Adds 2 Main Species Pops to a newly Conquered Planet
+	}
+}

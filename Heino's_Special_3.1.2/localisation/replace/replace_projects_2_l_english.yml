@@ -1,0 +1,10 @@
+﻿l_english:
+
+ DEAL_WITH_FLORA_DESC:0 "The [Root.GetPlanetMoon]'s flora is remarkably dexterous, alarmingly aggressive, and definitely worthy of closer study."
+ GRIMACING_PLANET_PROJECT:0 "Grimacing [Root.GetPlanetMoonCap]"
+ GRIMACING_PLANET_PROJECT_DESC:0 "The violently animated face of this [Root.GetPlanetMoon] can be stabilized into something potentially habitable, if we act soon."
+ ULTIMATE_WEAPON_PROJECT_DESC:0 "A cache of weapons lie hidden somewhere on the [Root.GetPlanetMoon]. If we can find them, they may provide new martial technologies for our empire."
+ REFINE_ROCK_PROJECT_DESC:0 "Controlled dispersal of positrons from orbit may change the minerals native to the [Root.GetPlanetMoon] into a more useful form."
+ BALANCE_ECOSYSTEM_PROJECT_DESC:0 "A plan has been formulated to attempt to balance the [Root.GetPlanetMoon]'s lopsided biosphere using only the tools available to a standard Science Ship.\n\nThere may be unforeseen consequences."
+ POLLEN_1_PROJECT_DESC:0 "Some of the [Root.GetPlanetMoon]'s native flora exhibit several potentially interesting properties."
+ POLLEN_3_PROJECT_DESC:0 "The situation on the pollen-infested [Root.GetPlanetMoon] has taken a turn for the potentially dangerous. A speedy assessment of the colony's unique situation and especially its increasingly volatile environmental factors is of the utmost importance.\n\nOnce all threats are known, an action plan can be drafted and executed within hours."

@@ -74,7 +74,7 @@ engineering_research = {
 }
 
 influence = {
-	max = 1000
+	max = 2500
 	tooltip_decimals = 1
 	fixed_max_amount = yes
 	
@@ -126,10 +126,6 @@ consumer_goods = {
 
 	ai_wants = {
 		base = 500
-		modifier = {
-			factor = 0.1
-			country_uses_consumer_goods = no
-		}
 	}
 }
 

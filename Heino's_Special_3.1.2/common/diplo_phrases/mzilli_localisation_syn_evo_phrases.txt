@@ -1,0 +1,936 @@
+### 
+# FROM is the actor ie the initiator of the diplomatic action
+# ROOT is the recipient of the diplomatic action
+
+greetings = {
+
+	### Syncretic Evolution 1
+
+	## Syncretic Evolution 1 to someone else
+
+	# ""
+	SYN_EVO_TO_NON_01_HOSTILE_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+			has_country_flag = syncretic_evolution_1
+			exists = event_target:syncretic_species_1
+		}
+	}
+
+	# ""
+	SYN_EVO_TO_NON_01_NEUTRAL_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+			has_country_flag = syncretic_evolution_1
+			exists = event_target:syncretic_species_1
+		}
+	}
+
+	# ""
+	SYN_EVO_TO_NON_01_FRIENDLY_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+			has_country_flag = syncretic_evolution_1
+			exists = event_target:syncretic_species_1
+		}
+	}
+
+	# ""
+	SYN_EVO_TO_NON_01_WAR_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			is_at_war_with = FROM
+			has_country_flag = syncretic_evolution_1
+			exists = event_target:syncretic_species_1
+		}
+	}
+
+	## Someone else to Syncretic Evolution 1
+
+	# ""
+	NON_TO_SYN_EVO_01_HOSTILE_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+			FROM = { has_country_flag = syncretic_evolution_1 }
+			exists = event_target:syncretic_species_1
+		}
+	}
+
+	# ""
+	NON_TO_SYN_EVO_01_NEUTRAL_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+			FROM = { has_country_flag = syncretic_evolution_1 }
+			exists = event_target:syncretic_species_1
+		}
+	}
+
+	# ""
+	NON_TO_SYN_EVO_01_FRIENDLY_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+			FROM = { has_country_flag = syncretic_evolution_1 }
+			exists = event_target:syncretic_species_1
+		}
+	}
+
+	# ""
+	NON_TO_SYN_EVO_01_WAR_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			is_at_war_with = FROM
+			FROM = { has_country_flag = syncretic_evolution_1 }
+			exists = event_target:syncretic_species_1
+		}
+	}
+
+	### Syncretic Evolution 2
+
+	## Syncretic Evolution 2 to someone else
+
+	# ""
+	SYN_EVO_TO_NON_02_HOSTILE_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+			has_country_flag = syncretic_evolution_2
+			exists = event_target:syncretic_species_2
+		}
+	}
+
+	# ""
+	SYN_EVO_TO_NON_02_NEUTRAL_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+			has_country_flag = syncretic_evolution_2
+			exists = event_target:syncretic_species_2
+		}
+	}
+
+	# ""
+	SYN_EVO_TO_NON_02_FRIENDLY_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+			has_country_flag = syncretic_evolution_2
+			exists = event_target:syncretic_species_2
+		}
+	}
+
+	# ""
+	SYN_EVO_TO_NON_02_WAR_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			is_at_war_with = FROM
+			has_country_flag = syncretic_evolution_2
+			exists = event_target:syncretic_species_2
+		}
+	}
+
+	## Someone else to Syncretic Evolution 2
+
+	# ""
+	NON_TO_SYN_EVO_02_HOSTILE_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+			FROM = { has_country_flag = syncretic_evolution_2 }
+			exists = event_target:syncretic_species_2
+		}
+	}
+
+	# ""
+	NON_TO_SYN_EVO_02_NEUTRAL_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+			FROM = { has_country_flag = syncretic_evolution_2 }
+			exists = event_target:syncretic_species_2
+		}
+	}
+
+	# ""
+	NON_TO_SYN_EVO_02_FRIENDLY_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+			FROM = { has_country_flag = syncretic_evolution_2 }
+			exists = event_target:syncretic_species_2
+		}
+	}
+
+	# ""
+	NON_TO_SYN_EVO_02_WAR_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			is_at_war_with = FROM
+			FROM = { has_country_flag = syncretic_evolution_2 }
+			exists = event_target:syncretic_species_2
+		}
+	}
+
+	### Syncretic Evolution 3
+
+	## Syncretic Evolution 3 to someone else
+
+	# ""
+	SYN_EVO_TO_NON_03_HOSTILE_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+			has_country_flag = syncretic_evolution_3
+			exists = event_target:syncretic_species_3
+		}
+	}
+
+	# ""
+	SYN_EVO_TO_NON_03_NEUTRAL_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+			has_country_flag = syncretic_evolution_3
+			exists = event_target:syncretic_species_3
+		}
+	}
+
+	# ""
+	SYN_EVO_TO_NON_03_FRIENDLY_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+			has_country_flag = syncretic_evolution_3
+			exists = event_target:syncretic_species_3
+		}
+	}
+
+	# ""
+	SYN_EVO_TO_NON_03_WAR_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			is_at_war_with = FROM
+			has_country_flag = syncretic_evolution_3
+			exists = event_target:syncretic_species_3
+		}
+	}
+
+	## Someone else to Syncretic Evolution 3
+
+	# ""
+	NON_TO_SYN_EVO_03_HOSTILE_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+			FROM = { has_country_flag = syncretic_evolution_3 }
+			exists = event_target:syncretic_species_3
+		}
+	}
+
+	# ""
+	NON_TO_SYN_EVO_03_NEUTRAL_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+			FROM = { has_country_flag = syncretic_evolution_3 }
+			exists = event_target:syncretic_species_3
+		}
+	}
+
+	# ""
+	NON_TO_SYN_EVO_03_FRIENDLY_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+			FROM = { has_country_flag = syncretic_evolution_3 }
+			exists = event_target:syncretic_species_3
+		}
+	}
+
+	# ""
+	NON_TO_SYN_EVO_03_WAR_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			is_at_war_with = FROM
+			FROM = { has_country_flag = syncretic_evolution_3 }
+			exists = event_target:syncretic_species_3
+		}
+	}
+
+	### Syncretic Evolution 4
+
+	## Syncretic Evolution 4 to someone else
+
+	# ""
+	SYN_EVO_TO_NON_04_HOSTILE_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+			has_country_flag = syncretic_evolution_4
+			exists = event_target:syncretic_species_4
+		}
+	}
+
+	# ""
+	SYN_EVO_TO_NON_04_NEUTRAL_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+			has_country_flag = syncretic_evolution_4
+			exists = event_target:syncretic_species_4
+		}
+	}
+
+	# ""
+	SYN_EVO_TO_NON_04_FRIENDLY_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+			has_country_flag = syncretic_evolution_4
+			exists = event_target:syncretic_species_4
+		}
+	}
+
+	# ""
+	SYN_EVO_TO_NON_04_WAR_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			is_at_war_with = FROM
+			has_country_flag = syncretic_evolution_4
+			exists = event_target:syncretic_species_4
+		}
+	}
+
+	## Someone else to Syncretic Evolution 4
+
+	# ""
+	NON_TO_SYN_EVO_04_HOSTILE_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+			FROM = { has_country_flag = syncretic_evolution_4 }
+			exists = event_target:syncretic_species_4
+		}
+	}
+
+	# ""
+	NON_TO_SYN_EVO_04_NEUTRAL_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+			FROM = { has_country_flag = syncretic_evolution_4 }
+			exists = event_target:syncretic_species_4
+		}
+	}
+
+	# ""
+	NON_TO_SYN_EVO_04_FRIENDLY_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+			FROM = { has_country_flag = syncretic_evolution_4 }
+			exists = event_target:syncretic_species_4
+		}
+	}
+
+	# ""
+	NON_TO_SYN_EVO_04_WAR_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			is_at_war_with = FROM
+			FROM = { has_country_flag = syncretic_evolution_4 }
+			exists = event_target:syncretic_species_4
+		}
+	}
+
+	### Syncretic Evolution 5
+
+	## Syncretic Evolution 5 to someone else
+
+	# ""
+	SYN_EVO_TO_NON_05_HOSTILE_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+			has_country_flag = syncretic_evolution_5
+			exists = event_target:syncretic_species_5
+		}
+	}
+
+	# ""
+	SYN_EVO_TO_NON_05_NEUTRAL_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+			has_country_flag = syncretic_evolution_5
+			exists = event_target:syncretic_species_5
+		}
+	}
+
+	# ""
+	SYN_EVO_TO_NON_05_FRIENDLY_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+			has_country_flag = syncretic_evolution_5
+			exists = event_target:syncretic_species_5
+		}
+	}
+
+	# ""
+	SYN_EVO_TO_NON_05_WAR_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			has_origin = origin_syncretic_evolution
+			FROM = { NOT = { has_origin = origin_syncretic_evolution } }
+			is_at_war_with = FROM
+			has_country_flag = syncretic_evolution_5
+			exists = event_target:syncretic_species_5
+		}
+	}
+
+	## Someone else to Syncretic Evolution 5
+
+	# ""
+	NON_TO_SYN_EVO_05_HOSTILE_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_hostile_to = FROM
+				is_domineering_to = FROM
+				is_unfriendly_to = FROM
+			}
+			FROM = { has_country_flag = syncretic_evolution_5 }
+			exists = event_target:syncretic_species_5
+		}
+	}
+
+	# ""
+	NON_TO_SYN_EVO_05_NEUTRAL_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_neutral_to = FROM
+				is_threatened_to = FROM
+			}
+			FROM = { has_country_flag = syncretic_evolution_5 }
+			exists = event_target:syncretic_species_5
+		}
+	}
+
+	# ""
+	NON_TO_SYN_EVO_05_FRIENDLY_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			NOT = { is_at_war_with = FROM }
+			OR = {
+				is_friendly_to = FROM
+				is_cordial_to = FROM
+				is_protective_to = FROM
+			}
+			FROM = { has_country_flag = syncretic_evolution_5 }
+			exists = event_target:syncretic_species_5
+		}
+	}
+
+	# ""
+	NON_TO_SYN_EVO_05_WAR_GREETING = {
+		trigger = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				FROM = { has_ethic = ethic_gestalt_consciousness }
+			}
+			NAND = {
+				has_ai_personality = fanatic_purifiers
+				NOT = { is_same_species = FROM }
+			}
+			FROM = { has_origin = origin_syncretic_evolution }
+			NOT = { has_origin = origin_syncretic_evolution }
+			is_at_war_with = FROM
+			FROM = { has_country_flag = syncretic_evolution_5 }
+			exists = event_target:syncretic_species_5
+		}
+	}
+}

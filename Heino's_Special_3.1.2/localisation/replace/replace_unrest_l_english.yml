@@ -1,0 +1,11 @@
+﻿l_english:
+
+ utopia.2017.desc:0 "Building on what remains of the ruined Ring World in the [From.System.GetName] system, our engineers have managed to fully restore one of its sections. The new biosphere had to be created more or less from scratch by our leading planetologists, but it is now considered stable and ready for habitation."
+
+ unrest.120.desc:0 "The disturbances on §Y[Root.GetName]§! have propelled a new narrative to the forefront of the [Root.GetPlanetMoon]'s political stage; one of populist strongmen and order at the expense of freedom."
+ unrest.150.desc:0 "The unrest on §Y[Root.GetName]§! has led to mounting calls from the locals for a more pronounced military presence, both on their [Root.GetPlanetMoon] and within the [Root.Owner.GetName] as a whole."
+ unrest.4220.desc:0 "Greetings, [Root.GetRulerTitle] [Root.GetRulerName]. I am [From.GetRulerTitle] [From.GetRulerName] of the [From.GetName], and I speak for the people of [From.From.GetName].\n\nWe recently broke free of the clutches of the [rebelled_against.GetName]. We are a young nation, and still an easy target for more... predatory powers. Many of us look back fondly on [Root.GetAdj] rule of this [From.From.GetPlanetMoon] - we humbly request that you take us back into the fold."
+ unrest.157.desc:0 "The slaves on [revolt_planet.GetName] have broken free! In a carefully planned assault, radical elements on [revolt_planet.GetName] have overrun the local authorities. The [revolt_planet.GetPlanetMoon] has since descended into a state of general disarray as mobs of enraged slaves, many armed with lethal weapons, have taken to the streets vandalizing and attacking all who stand in their way."
+ unrest.160.desc:1 "The slave population on [revolt_planet.Planet.GetName] has united and risen in open, armed revolt against the local leadership. The situation has escalated quickly, as rebel forces have struck against and disabled several key targets simultaneously. The fate of the [revolt_planet.Planet.GetPlanetMoon] now depends on our defending troops. If they fail, we lose [revolt_planet.Planet.GetName]."
+ unrest.160.a.tooltip:0 "Slave armies will attempt to seize the [revolt_planet.Planet.GetPlanetMoon]."
+ unrest.168.b:0 "We have no need for another [revolt_planet.GetPlanetMoon]."

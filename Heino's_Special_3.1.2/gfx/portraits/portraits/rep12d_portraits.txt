@@ -1,0 +1,110 @@
+portraits = {
+	rep12 = {	entity = "portrait_reptilian_12_entity"	clothes_selector = "reptilian_massive_clothes_01" hair_selector = "no_texture" 
+		greeting_sound = "reptilian_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/reptilian/reptilian_massive_12_brown.dds"
+			"gfx/models/portraits/reptilian/reptilian_massive_12_burgundy.dds"
+			"gfx/models/portraits/reptilian/reptilian_massive_12_red.dds"
+			"gfx/models/portraits/reptilian/reptilian_massive_12_orange.dds"
+			"gfx/models/portraits/reptilian/reptilian_massive_12_yellow.dds"
+			"gfx/models/portraits/reptilian/reptilian_massive_12_green.dds"
+			"gfx/models/portraits/reptilian/reptilian_massive_12_black.dds"
+		}
+	}
+	rep12_m	= {	entity = "portrait_reptilian_12_entity"	clothes_selector = "reptilian_massive_clothes_01" hair_selector = "no_texture" 
+		greeting_sound = "reptilian_01_greetings"
+		character_textures = {
+			"gfx/models/portraits/reptilian/reptilian_massive_12_brown_m.dds"
+			"gfx/models/portraits/reptilian/reptilian_massive_12_burgundy_m.dds"
+			"gfx/models/portraits/reptilian/reptilian_massive_12_red_m.dds"
+			"gfx/models/portraits/reptilian/reptilian_massive_12_orange_m.dds"
+			"gfx/models/portraits/reptilian/reptilian_massive_12_yellow_m.dds"
+			"gfx/models/portraits/reptilian/reptilian_massive_12_green_m.dds"
+			"gfx/models/portraits/reptilian/reptilian_massive_12_black_m.dds"
+		}
+	}
+}
+
+portrait_groups = {
+	rep12 = {
+		default = rep12
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					rep12_m
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					rep12
+				}
+			}
+		}		
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					rep12
+					rep12_m
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					rep12
+					rep12_m
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					rep12
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					rep12_m
+				}
+			}		
+		}
+		
+		#leader scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					rep12
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					rep12_m
+				}
+			}
+		}
+	}
+}

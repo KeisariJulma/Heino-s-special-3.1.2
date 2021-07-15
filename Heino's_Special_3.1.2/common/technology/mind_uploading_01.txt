@@ -1,0 +1,89 @@
+#normal empire technology
+
+virtual_reality_theory = {
+	cost = @tier4cost1
+	area = physics
+	tier = 4
+	prerequisites = { "tech_sapient_ai" }
+	category = { computing }
+	is_rare = yes
+	weight = @tier4weight1
+	modifier = {
+		country_admin_cap_mult = 0.05
+	}
+}
+
+virtual_reality_building = {
+	cost = @tier4cost2
+	area = engineering
+	tier = 4
+	prerequisites = { "virtual_reality_theory" }
+	category = { industry }
+	is_rare = no
+	weight = @tier4weight2
+}
+
+#machine intelligence technology
+
+virtual_reality_gestalt = {
+	cost = @tier4cost3
+	area = physics
+	tier = 4
+	prerequisites = { "tech_positronic_implants" }
+	category = { computing }
+	is_rare = yes
+	weight = @tier4weight3
+	modifier = {
+		country_admin_cap_mult = 0.05
+	}
+}
+
+virtual_reality_building_gestalt = {
+	cost = @tier4cost3
+	area = engineering
+	tier = 4
+	prerequisites = { "virtual_reality_gestalt" }
+	category = { industry }
+	is_rare = no
+	weight = @tier4weight3
+}
+
+#autonomous colonization technology
+
+full_automation_technology = {
+	cost = @tier4cost3
+	area = engineering
+	tier = 4
+	prerequisites = { }
+	category = { industry }
+	is_rare = no
+	weight = @tier4weight3
+	
+	potential = {
+		OR = {
+			has_technology = virtual_reality_building
+			has_technology = virtual_reality_building_gestalt
+		}
+	}
+}
+
+
+full_automation_technology_advanced = {
+	cost = @tier5cost1
+	area = engineering
+	tier = 5
+	prerequisites = { "full_automation_technology" }
+	category = { industry }
+	is_rare = no
+	weight = @tier5weight1
+}
+
+full_automation_technology_ascended = {
+	cost = @tier5cost2
+	area = engineering
+	tier = 5
+	prerequisites = { "full_automation_technology_advanced" }
+	category = { industry }
+	is_rare = no
+	weight = @tier5weight2
+}

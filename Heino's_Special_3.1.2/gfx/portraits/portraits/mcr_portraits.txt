@@ -1,0 +1,14 @@
+portraits = {
+	mcr_brainmech = {
+		entity = "portrait_mcr_mechroid_entity" 
+		clothes_selector = "no_texture"	
+		hair_selector = "no_texture"	
+		greeting_sound = "robot_molluscoid_greetings"
+		character_textures = {
+			"gfx/models/portraits/mechroids/mcr_synthdawn_portrait_brainmech.dds"
+			"gfx/models/portraits/mechroids/mcr_synthdawn_portrait_brainmech_orange.dds"
+			"gfx/models/portraits/mechroids/mcr_synthdawn_portrait_brainmech_blue.dds"
+			"gfx/models/portraits/mechroids/mcr_synthdawn_portrait_brainmech_green.dds"
+		}
+	}
+}

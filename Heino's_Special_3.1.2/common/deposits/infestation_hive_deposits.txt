@@ -1,0 +1,100 @@
+infestation_hive_energy_deposit = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_rare
+	
+	potential = {
+		is_planet_class = pc_infestation
+	}
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			energy = 10
+		}
+	}
+	drop_weight = {
+		weight = 1
+	}
+}
+
+infestation_hive_mineral_deposit = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_rare
+	
+	potential = {
+		is_planet_class = pc_infestation
+	}
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			minerals = 10
+		}
+	}
+	drop_weight = {
+		weight = 1
+	}
+}
+
+infestation_hive_food_deposit = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_rare
+	
+	potential = {
+		is_planet_class = pc_infestation
+	}
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			food = 10
+		}
+	}
+	drop_weight = {
+		weight =1
+	}
+}
+
+infestation_hive_gas_deposit = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_rare
+	
+	potential = {
+		is_planet_class = pc_infestation
+	}
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			exotic_gases = 1
+		}
+	}
+	drop_weight = {
+		weight = 1
+	}
+}
+
+infestation_hive_origin_planet_deposit = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_rare
+	
+	potential = {
+		is_planet_class = pc_infestation
+		is_capital = yes
+	}
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			exotic_gases = 2
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}

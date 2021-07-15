@@ -1,0 +1,2091 @@
+### Mecha Armies Mod
+
+# Mercs
+mechmercs_army = {
+	damage = 1.0
+	health = 1.0
+	morale = 0.5
+	morale_damage = 0.75
+	collateral_damage = 1.00
+	war_exhaustion = 0.50
+	time = 10
+	icon_frame = 2
+	resources = {
+		category = armies
+		cost = {
+			minerals = 150
+			energy = 150
+		}
+
+		upkeep = {
+			energy = 5
+		}
+	}
+	show_tech_unlock_if = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			OR = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+	}
+}
+
+
+# Colonial Marine Corps
+colonialmarines_army = {
+	damage = 1.25
+	health = 1.00
+	morale = 1.25
+	morale_damage = 1.00
+	collateral_damage = 2.00
+	war_exhaustion = 2.00
+	time = 250
+	maintenance = 0.75
+	icon_frame = 2
+	
+	resources = {
+		category = armies
+		cost = {
+			minerals = 200
+			energy = 50
+		}
+
+		upkeep = {
+			energy = 0.75
+		}
+	}
+	show_tech_unlock_if = { 
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			OR = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+	}
+}
+
+
+# Helghast
+helghast_army = {
+	damage = 1.75
+	health = 1.5
+	morale = 1.5
+	morale_damage = 1.20
+	collateral_damage = 2.50
+	war_exhaustion = 2.00
+	time = 250
+	icon_frame = 49
+	
+	resources = {
+		category = armies
+		cost = {
+			minerals = 250
+			energy = 75
+		}
+
+		upkeep = {
+			energy = 1.25
+		}
+	}
+	
+	show_tech_unlock_if = { has_origin = origin_post_apocalyptic }
+	
+	potential = {
+		planet = {
+			is_planet_class = pc_nuked
+		}	
+		from = { has_trait = "trait_survivor" }
+		owner = {
+			has_origin = origin_post_apocalyptic
+		}
+	}
+}
+
+
+# Mobile Infantry
+mobileinfantry_army = {
+	damage = 2.0
+	health = 2.0
+	morale = 2.0
+	morale_damage = 2.0
+	collateral_damage = 2.5
+	war_exhaustion = 2.5
+	time = 400
+	icon_frame = 14
+	resources = {
+		category = armies
+		cost = {
+			minerals = 350
+			energy = 100
+		}
+
+		upkeep = {
+			energy = 2
+		}
+	}
+	show_tech_unlock_if = { 
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			OR = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+	}	
+	
+	prerequisites = { "tech_powered_exoskeletons" "tech_combat_training" }
+}
+
+
+# XCOM Squad
+xcom_army = {
+	damage = 2.25
+	health = 1.75
+	morale = 1.75
+	morale_damage = 3.0
+	collateral_damage = 0.75
+	war_exhaustion = 3.5
+	time = 500
+	icon_frame = 28
+	resources = {
+		category = armies
+		cost = {
+			minerals = 400
+			energy = 150
+		}
+
+		upkeep = {
+			energy = 2
+		}
+	}
+	show_tech_unlock_if = { has_valid_civic = civic_xcom }
+	
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			has_valid_civic = civic_xcom
+		}
+	}
+	
+	prerequisites = { "tech_powered_exoskeletons" "tech_combat_training" }
+}
+
+
+# Armoured Divisions
+tanks_army = {
+	damage = 3.0
+	health = 3.0
+	morale = 3.0
+	morale_damage = 3.0
+	collateral_damage = 3.0
+	war_exhaustion = 3.0
+	time = 600
+	icon_frame = 25
+	resources = {
+		category = armies
+		cost = {
+			alloys = 50
+			minerals = 500
+			energy = 200
+		}
+
+		upkeep = {
+			energy = 4
+			minerals = 2
+		}
+	}
+	show_tech_unlock_if = { 
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	
+	prerequisites = { "tech_powered_exoskeletons" "tech_combat_training" "tech_assembly_pattern" }
+	
+	allow = {
+		has_building = "building_military_academy"
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			OR = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+	}	
+}
+
+
+# Vertibird
+vertibird_army = {
+	damage = 3.75
+	health = 2.5
+	morale = 3.75
+	morale_damage = 4.0
+	collateral_damage = 4.0
+	war_exhaustion = 4.0
+	time = 700
+	icon_frame = 27
+	resources = {
+		category = armies
+		cost = {
+			alloys = 75
+			minerals = 600
+			energy = 300
+		}
+
+		upkeep = {
+			energy = 4
+			alloys = 1
+		}
+	}
+	show_tech_unlock_if = { 
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			OR = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+	}	
+	
+	prerequisites = { "tech_powered_exoskeletons" "tech_combat_training" "tech_starbase_4" }
+}
+
+# Mechwarriors
+mechwarrior_army = {
+	damage = 4.0
+	health = 4.5
+	morale = 4.0
+	morale_damage = 4.0
+	collateral_damage = 5.0
+	war_exhaustion = 5.0
+	time = 750
+	icon_frame = 18
+	resources = {
+		category = armies
+		cost = {
+			alloys = 100
+			minerals = 750
+			energy = 250
+		}
+
+		upkeep = {
+			energy = 3
+			alloys = 2
+		}
+	}
+	show_tech_unlock_if = { 
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			OR = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+	}
+	
+	prerequisites = { "tech_powered_exoskeletons" "tech_combat_training" "tech_starbase_5" }
+}
+
+# Merc Mechwarriors
+mechwarrior_merc_army = {
+	damage = 4.0
+	health = 4.0
+	morale = 2.5
+	morale_damage = 4.0
+	collateral_damage = 5.5
+	war_exhaustion = 5.0
+	time = 50
+	maintenance = 20.0
+	icon_frame = 18
+	resources = {
+		category = armies
+		cost = {
+			alloys = 50
+			minerals = 500
+			energy = 2500
+		}
+
+		upkeep = {
+			energy = 20
+		}
+	}
+	show_tech_unlock_if = { 
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			OR = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+	}
+	
+	prerequisites = { "tech_powered_exoskeletons" "tech_combat_training" "tech_starbase_5" }
+}
+
+# Custodes
+custodes_army = {
+	damage = 6.0
+	health = 8.0
+	morale = 8.0
+	morale_damage = 5.0
+	collateral_damage = 5.0
+	war_exhaustion = 5.0
+	time = 800
+	icon_frame = 51
+	
+	resources = {
+		category = armies
+		cost = {
+			alloys = 100
+			minerals = 1000
+			energy = 550
+		}
+
+		upkeep = {
+			energy = 4
+		}
+	}
+	
+	show_tech_unlock_if = {
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		planet = {
+			is_planet_class = pc_city
+		}	
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+	}
+	
+	prerequisites = { "tech_gene_seed_purification" "tech_starbase_5" }
+}
+
+# SoB
+sisters_of_battle_army = {
+	damage = 5.0
+	health = 5.0
+	morale = 10.0
+	morale_damage = 6.0
+	collateral_damage = 6.0
+	war_exhaustion = 5.0
+	time = 800
+	icon_frame = 50
+	
+	resources = {
+		category = armies
+		cost = {
+			alloys = 100
+			minerals = 1000
+			energy = 550
+		}
+
+		upkeep = {
+			energy = 4
+		}
+	}
+	
+	show_tech_unlock_if = {
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		planet = {
+			is_planet_class = pc_gaia
+		}	
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+	}
+	
+	prerequisites = { "tech_gene_seed_purification" "tech_starbase_5" }
+}
+
+#Space Marines
+
+# Blood_Angels
+blood_angels_army = {
+	damage = 8.0
+	health = 5.0
+	morale = 7.0
+	morale_damage = 6.0
+	collateral_damage = 6.0
+	war_exhaustion = 5.0
+	time = 800
+	icon_frame = 37
+	
+	resources = {
+		category = armies
+		cost = {
+			alloys = 100
+			minerals = 1000
+			energy = 550
+		}
+
+		upkeep = {
+			energy = 5
+		}
+	}
+	show_tech_unlock_if = {
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		planet = {
+			is_planet_class = pc_desert
+		}	
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+	}	
+	
+	prerequisites = { "tech_gene_seed_purification" "tech_starbase_5" }
+}
+
+# Dark Angels
+dark_angels_army = {
+	damage = 7.0
+	health = 6.0
+	morale = 6.5
+	morale_damage = 6.5
+	collateral_damage = 6.0
+	war_exhaustion = 5.0
+	time = 800
+	icon_frame = 38
+	
+	resources = {
+		category = armies
+		cost = {
+			alloys = 100
+			minerals = 1000
+			energy = 550
+		}
+
+		upkeep = {
+			energy = 4
+		}
+	}
+	
+	show_tech_unlock_if = {
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		planet = {
+			is_planet_class = pc_tropical
+		}
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+	}
+	
+	prerequisites = { "tech_gene_seed_purification" "tech_starbase_5" }
+}
+
+# Imperial Fist
+imperial_fist_army = {
+	damage = 5.0
+	health = 9.0
+	morale = 7.0
+	morale_damage = 5.0
+	collateral_damage = 5.0
+	war_exhaustion = 5.0
+	time = 800
+	icon_frame = 39
+	
+	resources = {
+		category = armies
+		cost = {
+			alloys = 100
+			minerals = 1000
+			energy = 550
+		}
+
+		upkeep = {
+			energy = 4
+		}
+	}
+	
+	show_tech_unlock_if = {
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		planet = {
+			OR = {
+				is_planet_class = pc_tundra
+				is_planet_class = pc_habitat
+			}
+		}	
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+	}
+	
+	prerequisites = { "tech_gene_seed_purification" "tech_starbase_5" }
+}
+
+# Imperial Fist Defensive
+imperial_fist_def_army = {
+	defensive = yes
+	damage = 5.0
+	health = 9.0
+	morale = 7.0
+	morale_damage = 5.0
+	collateral_damage = 1.0
+	war_exhaustion = 5.0
+	time = 800
+	icon_frame = 39
+	
+	resources = {
+		category = armies
+		cost = {
+			alloys = 500
+			minerals = 500
+			energy = 250
+		}
+
+		upkeep = {
+			energy = 3
+			alloys = 2
+		}
+	}
+	
+	show_tech_unlock_if = {
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		planet = {
+			OR = {
+				is_capital = yes
+				is_planet_class = pc_habitat
+			}
+		}	
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+	}
+	
+	prerequisites = { "tech_gene_seed_purification" "tech_starbase_5" }
+}
+
+# Iron Hands
+iron_hands_army = {
+	damage = 7.0
+	health = 8.0
+	morale = 6.0
+	morale_damage = 6.0
+	collateral_damage = 6.0
+	war_exhaustion = 5.0
+	time = 800
+	icon_frame = 40
+	resources = {
+		category = armies
+		cost = {
+			alloys = 100
+			minerals = 1000
+			energy = 550
+		}
+
+		upkeep = {
+			energy = 5
+		}
+	}
+	show_tech_unlock_if = {
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		planet = {
+			is_planet_class = pc_ocean
+		}
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+	}
+	
+	prerequisites = { "tech_gene_seed_purification" "tech_starbase_5" }
+}
+
+# Raven Guard
+raven_guard_army = {
+	damage = 7.5
+	health = 5.5
+	morale = 7.0
+	morale_damage = 6.0
+	collateral_damage = 6.0
+	war_exhaustion = 5.0
+	time = 800
+	icon_frame = 41
+	
+	resources = {
+		category = armies
+		cost = {
+			alloys = 100
+			minerals = 1000
+			energy = 550
+		}
+
+		upkeep = {
+			energy = 5
+		}
+	}
+	
+	show_tech_unlock_if = {
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		planet = {
+			is_planet_class = pc_alpine
+		}
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+	}
+	
+	prerequisites = { "tech_gene_seed_purification" "tech_starbase_5" }
+}
+
+# Salamanders
+salamanders_army = {
+	damage = 7.0
+	health = 7.0
+	morale = 8.0
+	morale_damage = 6.0
+	collateral_damage = 4.0
+	war_exhaustion = 5.0
+	time = 800
+	icon_frame = 42
+	
+	resources = {
+		category = armies
+		cost = {
+			alloys = 100
+			minerals = 1000
+			energy = 550
+		}
+
+		upkeep = {
+			energy = 5
+		}
+	}
+	
+	show_tech_unlock_if = {
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		planet = {
+			is_planet_class = pc_arid
+		}
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			OR = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+	}
+	
+	prerequisites = { "tech_gene_seed_purification" "tech_starbase_5" }
+}
+
+# Space Wolves
+space_wolves_army = {
+	damage = 6.0
+	health = 6.0
+	morale = 7.0
+	morale_damage = 7.0
+	collateral_damage = 6.0
+	war_exhaustion = 5.0
+	time = 800
+	icon_frame = 43
+	
+	resources = {
+		category = armies
+		cost = {
+			alloys = 100
+			minerals = 1000
+			energy = 550
+		}
+
+		upkeep = {
+			energy = 5
+		}
+	}
+	
+	show_tech_unlock_if = {
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		planet = {
+			is_planet_class = pc_arctic
+		}
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+	}
+	
+	prerequisites = { "tech_gene_seed_purification" "tech_starbase_5" }
+}
+
+# Ultramarines
+Ultramarines_army = {
+	damage = 7.0
+	health = 6.0
+	morale = 7.0
+	morale_damage = 6.0
+	collateral_damage = 6.0
+	war_exhaustion = 5.0
+	time = 800
+	icon_frame = 44
+	
+	resources = {
+		category = armies
+		cost = {
+			alloys = 100
+			minerals = 1000
+			energy = 550
+		}
+
+		upkeep = {
+			energy = 5
+		}
+	}
+	
+	show_tech_unlock_if = {
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		planet = {
+			is_planet_class = pc_continental
+		}
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+	}
+	
+	prerequisites = { "tech_gene_seed_purification" "tech_starbase_5" }
+}
+
+# White Scars
+white_scars_army = {
+	damage = 6.0
+	health = 5.0
+	morale = 7.0
+	morale_damage = 8.0
+	collateral_damage = 6.0
+	war_exhaustion = 5.0
+	time = 800
+	icon_frame = 45
+	resources = {
+	
+		category = armies
+		cost = {
+			alloys = 100
+			minerals = 1000
+			energy = 550
+		}
+
+		upkeep = {
+			energy = 5
+		}
+	}
+	
+	show_tech_unlock_if = {
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		planet = {
+			is_planet_class = pc_savannah
+		}
+		from = {
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+	}
+	
+	prerequisites = { "tech_gene_seed_purification" "tech_starbase_5" }
+}
+
+# Space Marines
+spacemarines_army = {
+	damage = 6.0
+	health = 6.0
+	has_morale = no
+	morale_damage = 6.0
+	collateral_damage = 6.0
+	war_exhaustion = 6.0
+	time = 700
+	icon_frame = 13
+	
+	resources = {
+		category = armies
+		cost = {
+			alloys = 100
+			minerals = 900
+			energy = 40
+		}
+
+		upkeep = {
+			energy = 5
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			OR = {
+				NOT = { host_has_dlc = "Utopia" }
+				OR = {
+					has_trait = trait_latent_psionic
+					has_trait = trait_psionic
+				}
+			}
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+	}
+	
+	prerequisites = { "tech_telepathy" "tech_starbase_5" }
+}
+
+
+# Inquisitors
+inquisitor_army = {
+	damage = 6.5
+	health = 6.5
+	morale = 7.0
+	morale_damage = 7.00
+	collateral_damage = 7.00
+	war_exhaustion = 5.00
+	time = 850
+	icon_frame = 15
+	
+	resources = {
+		category = armies
+		cost = {
+			alloys = 25
+			minerals = 1000
+			energy = 600
+		}
+
+		upkeep = {
+			energy = 5.5
+		}
+	}
+	
+	show_tech_unlock_if = { 
+		OR = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+			has_valid_civic = civic_machine_assimilator
+		}
+	}
+	potential = {
+		from = {
+			OR = {
+				NOT = { host_has_dlc = "Utopia" }
+				OR = {
+					has_trait = trait_latent_psionic
+					has_trait = trait_psionic
+				}
+			}
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	prerequisites = { "tech_powered_exoskeletons" "tech_combat_training" "tech_telepathy" "tech_starbase_5" }
+}
+
+
+### TITANS
+
+# Mech Titans
+titanic_mech_army = {
+	damage = 17.5
+	health = 15.0
+	has_morale = no
+	morale_damage = 15.0
+	collateral_damage = 15.0
+	war_exhaustion = 15.0
+	time = 1600
+	icon_frame = 16
+	resources = {
+		category = armies
+		cost = {
+			alloys = 2500
+			minerals = 1000
+			energy = 550
+		}
+
+		upkeep = {
+			energy = 10
+			alloys = 5
+		}
+	}
+	show_tech_unlock_if = { has_ascension_perk = ap_the_flesh_is_weak }
+	
+	prerequisites = { "tech_powered_exoskeletons" "tech_combat_training" "tech_mega_engineering" }
+
+	allow = {
+		has_building = "building_titan_forge"
+	}
+	potential = {
+		from = {
+			OR = {
+				NOT = { host_has_dlc = "Utopia" }
+				OR = {
+					has_trait = trait_cybernetic
+				}
+			}
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			NOT = { has_ethic = ethic_gestalt_consciousness }
+		}
+	}
+}
+
+# Psic Titans
+titanic_psic_army = {
+	damage = 15.0
+	health = 15.0
+	has_morale = no
+	morale_damage = 17.5
+	collateral_damage = 15.0
+	war_exhaustion = 15.0
+	time = 1600
+	icon_frame = 9
+	resources = {
+		category = armies
+		cost = {
+			alloys = 500
+			minerals = 1000
+			energy = 2500
+		}
+
+		upkeep = {
+			energy = 15
+		}
+	}
+	show_tech_unlock_if = { has_ascension_perk = ap_mind_over_matter }
+	
+	prerequisites = { "tech_powered_exoskeletons" "tech_combat_training" "tech_telepathy" "tech_mega_engineering" }
+
+	allow = {
+		has_building = "building_psi_forge"
+	}
+	potential = {
+		from = {
+			OR = {
+				NOT = { host_has_dlc = "Utopia" }
+				OR = {
+					has_trait = trait_latent_psionic
+					has_trait = trait_psionic
+				}
+			}
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			OR = {
+				has_ethic = ethic_spiritualist
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+	}
+}
+
+# Bio Titans
+titanic_bio_army = {
+	damage = 15.0
+	health = 17.5
+	has_morale = no
+	morale_damage = 15.0
+	collateral_damage = 15.0
+	war_exhaustion = 15.0
+	time = 1600
+	maintenance = 10.0
+	icon_frame = 8
+	has_species = no
+	resources = {
+		category = armies
+		cost = {
+			alloys = 1000
+			food = 2500
+			energy = 550
+		}
+
+		upkeep = {
+			energy = 5
+			food = 10
+		}
+	}
+	show_tech_unlock_if = { has_ascension_perk = ap_engineered_evolution }
+	
+	prerequisites = { "tech_powered_exoskeletons" "tech_combat_training" "tech_gene_seed_purification" "tech_mega_engineering" }
+
+	allow = {
+		has_building = "building_titanic_preserve"
+	}
+	
+	owner = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+}
+
+### Defensive Armies
+# Judge
+judge_army = {
+	defensive = yes
+	is_pop_spawned = yes
+	health = 1.5
+	damage = 1.5
+	morale = 2.5
+	morale_damage = 2.5
+	collateral_damage = 0.75
+	war_exhaustion = 0.0
+	icon_frame = 17
+	
+	potential = {
+		owner = {
+			has_valid_civic = civic_police_state
+		}
+	}
+}
+
+# XCOM defense grid
+xcom_defense = {
+	defensive = yes
+	is_pop_spawned = yes
+	damage = 1.5
+	health = 2.0
+	morale = 2.0
+	collateral_damage = 0.0
+	war_exhaustion = 0.0 # No WE from defense armies
+	icon_frame = 29
+	
+	potential = {
+		owner = {
+			has_valid_civic = civic_xcom
+		}
+	}
+}
+
+
+### MACHINE Armies
+
+# junkbot Armies
+junkbot_army = {
+	damage = 0.50
+	health = 1.00
+	morale_damage = 1.00
+	collateral_damage = 1.00
+	war_exhaustion = 0.20
+	has_morale = no
+	time = 10
+	icon_frame = 4
+	has_species = no
+	pop_limited = no
+	resources = {
+		category = armies
+		cost = {
+			minerals = 50
+			energy = 50
+		}
+
+		upkeep = {
+			energy = 4
+		}
+	}
+	potential = {
+		owner = { has_authority = auth_machine_intelligence }
+	}
+	
+	show_tech_unlock_if = { has_authority = auth_machine_intelligence }
+	
+	prerequisites = { "tech_assault_armies" }
+}
+
+# Assimilated Drones
+assimilated_drone = {
+	damage = 1.25
+	health = 1.25
+	has_morale = no
+	morale_damage = 1.5
+	collateral_damage = 1.5
+	war_exhaustion = 0.5
+	time = 200
+	has_species = yes
+
+	icon_frame = 19
+
+	resources = {
+		category = armies
+		cost = {
+			minerals = 150
+			energy = 20
+		}
+
+		upkeep = {
+			energy = 1
+		}
+	}
+	potential = {
+		from = {
+			OR = {
+				NOT = { host_has_dlc = "Utopia" }
+				OR = {
+					has_trait = trait_cybernetic
+				}
+			}
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			OR = {
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+	}
+	
+	show_tech_unlock_if = { has_authority = auth_machine_intelligence }
+	
+	prerequisites = { "tech_assault_armies" }
+}
+
+# Terminator Armies
+machine_assault_4 = {
+	damage = 1.25
+	health = 1.25
+	has_morale = no
+	morale_damage = 1.5
+	collateral_damage = 1.5
+	war_exhaustion = 0.5
+	time = 200
+	has_species = yes
+	pop_limited = no
+
+	icon_frame = 20
+	
+	resources = {
+		category = armies
+		cost = {
+			minerals = 300
+		}
+
+		upkeep = {
+			energy = 1.5
+		}
+	}
+	potential = {
+		owner = { has_authority = auth_machine_intelligence }
+		from = {
+			has_trait = "trait_machine_unit"
+		}
+	}
+	
+	show_tech_unlock_if = { has_authority = auth_machine_intelligence }
+	
+	prerequisites = { "tech_assault_armies" }
+}
+
+# Cyber Armies
+cyber_army = {
+	damage = 2.0
+	health = 2.0
+	has_morale = no
+	morale_damage = 2.0
+	collateral_damage = 2.0
+	war_exhaustion = 1.0
+	time = 400
+	has_species = yes
+
+	icon_frame = 21
+	
+	resources = {
+		category = armies
+		cost = {
+			minerals = 450
+			energy = 200
+		}
+
+		upkeep = {
+			energy = 2
+		}
+	}
+	potential = {
+		from = {
+			OR = {
+				NOT = { host_has_dlc = "Utopia" }
+				OR = {
+					has_trait = trait_cybernetic
+				}
+			}
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			OR = {
+				has_valid_civic = civic_machine_assimilator
+			}
+		}
+	}
+	
+	show_tech_unlock_if = { has_authority = auth_machine_intelligence }
+	
+	prerequisites = { "tech_adaptive_combat_algorithms" }
+}
+
+# Rotor Drone
+machine_assault_6 = {
+	damage = 2.5
+	health = 1.5
+	has_morale = no
+	morale_damage = 3.5
+	collateral_damage = 3.5
+	war_exhaustion = 2.5
+	time = 400
+	has_species = no
+	pop_limited = no
+
+	icon_frame = 23
+	
+	resources = {
+		category = armies
+		cost = {
+			minerals = 400
+			energy = 500
+		}
+
+		upkeep = {
+			energy = 5
+		}
+	}
+	potential = {
+		owner = { has_authority = auth_machine_intelligence }
+	}
+	
+	prerequisites = { "tech_adaptive_combat_algorithms" }
+}
+
+# Spider Fromes
+machine_assault_5 = {
+	damage = 4.0
+	health = 4.0
+	has_morale = no
+	morale_damage = 3.5
+	collateral_damage = 3.5
+	war_exhaustion = 2.5
+	time = 660
+	maintenance = 2.0
+	has_species = yes
+	pop_limited = no
+
+	icon_frame = 22
+	
+	resources = {
+		category = armies
+		cost = {
+			alloys = 50
+			minerals = 600
+			energy = 200
+		}
+		
+		upkeep = {
+			energy = 3
+			minerals = 5
+			
+		}
+	}
+
+	potential = {
+		owner = { has_authority = auth_machine_intelligence }
+		from = {
+			has_trait = "trait_machine_unit"
+		}
+	}
+	
+	prerequisites = { "tech_adaptive_combat_algorithms" }
+}
+
+# Aerial VTOL
+machine_assault_8 = {
+	damage = 5.5
+	health = 5.5
+	has_morale = no
+	morale_damage = 5.5
+	collateral_damage = 5.5
+	war_exhaustion = 5.5
+	time = 880
+	has_species = yes
+	pop_limited = no
+
+	icon_frame = 26
+	
+	resources = {
+		category = armies
+		cost = {
+			alloys = 100
+			minerals = 1000
+			energy = 500
+		}
+
+		upkeep = {
+			energy = 5
+			alloys = 2
+		}
+	}
+	potential = {
+		owner = { has_authority = auth_machine_intelligence }
+		from = {
+			has_trait = "trait_machine_unit"
+		}
+	}
+	
+	prerequisites = { "tech_adaptive_combat_algorithms" "tech_starbase_5" }
+}
+
+# World Engine
+machine_assault_7 = {
+	damage = 15.0
+	health = 15.0
+	has_morale = no
+	morale_damage = 10.0
+	collateral_damage = 15.0
+	war_exhaustion = 10.0
+	time = 1250
+	has_species = no
+	pop_limited = no
+
+	icon_frame = 24
+	
+	resources = {
+		category = armies
+		cost = {
+			alloys = 1500
+			minerals = 1000
+			energy = 800
+		}
+
+		upkeep = {
+			energy = 10
+			alloys = 5
+		}
+	}
+	show_tech_unlock_if = { has_authority = auth_machine_intelligence }
+
+	potential = {
+		owner = { has_authority = auth_machine_intelligence }
+	}
+	
+	prerequisites = { "tech_biomechanics" "tech_mega_engineering" }
+	
+	allow = { has_building = "building_titan_factory" }
+}
+
+
+### Hivemind Armies
+
+# Spwan Armies
+spwan_army = {
+	damage = 0.50
+	health = 1.00
+	morale_damage = 1.50
+	collateral_damage = 1.00
+	war_exhaustion = 0.20
+	has_morale = no
+	time = 10
+	icon_frame = 8
+	has_species = no
+
+	resources = {
+		category = armies
+		cost = {
+			minerals = 50
+			food = 10
+		}
+
+		upkeep = {
+			food = 2
+		}
+	}
+	potential = {
+		owner = { has_authority = auth_hive_mind }
+	}
+	
+	show_tech_unlock_if = { has_authority = auth_hive_mind }
+	
+	prerequisites = { "tech_assault_armies" }
+}
+
+# 	Lictors
+lictor_army = {
+	damage = 1.5
+	health = 1.75
+	has_morale = no
+	morale_damage = 2.5
+	collateral_damage = 2.5
+	war_exhaustion = 0.5
+	time = 200
+	has_species = yes
+	pop_limited = no
+
+	icon_frame = 33
+	
+	resources = {
+		category = armies
+		cost = {
+			minerals = 100
+			food = 30
+		}
+
+		upkeep = {
+			food = 3
+		}
+	}
+	potential = {
+		owner = { has_authority = auth_hive_mind }
+		from = {
+			has_trait = "trait_hive_mind"
+		}
+	}
+	
+	show_tech_unlock_if = { has_authority = auth_hive_mind }
+	
+	prerequisites = { "tech_assault_armies" }
+}
+
+#	 Rippers
+ripper_army = {
+	damage = 2.5
+	health = 3.0
+	has_morale = no
+	morale_damage = 3.0
+	collateral_damage = 3.5
+	war_exhaustion = 3.5
+	time = 400
+	has_species = yes
+	pop_limited = no
+
+	icon_frame = 34
+	
+	resources = {
+		category = armies
+		cost = {
+			minerals = 150
+			food = 50
+		}
+
+		upkeep = {
+			food = 4
+		}
+	}
+	potential = {
+		owner = { has_authority = auth_hive_mind }
+		from = {
+			has_trait = "trait_hive_mind"
+		}
+	}
+	
+	show_tech_unlock_if = { has_authority = auth_hive_mind }
+	
+	prerequisites = { "tech_powered_exoskeletons" "tech_combat_training" }
+}
+
+#	 Trygons
+trygon_army = {
+	damage = 4.0
+	health = 4.0
+	has_morale = no
+	morale_damage = 3.5
+	collateral_damage = 3.5
+	war_exhaustion = 2.5
+	time = 660
+	has_species = yes
+	pop_limited = no
+
+	icon_frame = 47
+
+	resources = {
+		category = armies
+		cost = {
+			minerals = 300
+			food = 75
+		}
+
+		upkeep = {
+			food = 5
+		}
+	}
+	potential = {
+		owner = { has_authority = auth_hive_mind }
+		from = {
+			has_trait = "trait_hive_mind"
+		}
+	}
+	
+	show_tech_unlock_if = { has_authority = auth_hive_mind }
+	
+	prerequisites = { "tech_powered_exoskeletons" "tech_combat_training" }
+}
+
+#	Raveners
+ravener_army = {
+	damage = 5.5
+	health = 5.5
+	has_morale = no
+	morale_damage = 5.5
+	collateral_damage = 5.5
+	war_exhaustion = 5.5
+	time = 880
+	has_species = yes
+	pop_limited = no
+
+	icon_frame = 48
+	
+	resources = {
+		category = armies
+		cost = {
+			minerals = 450
+			food = 150
+		}
+
+		upkeep = {
+			food = 7
+		}
+	}
+	potential = {
+		owner = { has_authority = auth_hive_mind }
+		from = {
+			has_trait = "trait_hive_mind"
+		}
+	}
+	
+	show_tech_unlock_if = { has_authority = auth_hive_mind }
+	
+	prerequisites = { "tech_powered_exoskeletons" "tech_combat_training" "tech_starbase_5" }
+}
+
+#	The Great Devourer
+great_devourer_army = {
+	damage = 15.0
+	health = 12.5
+	has_morale = no
+	morale_damage = 20.0
+	collateral_damage = 15.0
+	war_exhaustion = 10.0
+	time = 1250
+	maintenance = 10.0
+	has_species = yes
+	pop_limited = no
+
+	icon_frame = 35
+	
+	resources = {
+		category = armies
+		cost = {
+			minerals = 1000
+			food = 250
+		}
+
+		upkeep = {
+			food = 10
+		}
+	}
+	show_tech_unlock_if = { has_authority = auth_hive_mind }
+
+	potential = {
+		owner = { has_authority = auth_hive_mind }
+		from = {
+			has_trait = "trait_hive_mind"
+		}
+	}
+	
+	prerequisites = { "tech_powered_exoskeletons" "tech_combat_training" "tech_mega_engineering" }
+	
+	allow = { has_building = "building_titan_nest" }
+}
+
+# Doom
+doom_army = {
+	damage = 9.0
+	health = 3.5
+	has_morale = no
+	morale_damage = 50.0
+	war_exhaustion = 5.0
+	time = 1
+	icon_frame = 32
+	has_species = no
+	
+	resources = {
+		category = armies
+		cost = {
+			energy = 100
+		}
+
+		upkeep = {
+			energy = 0
+		}
+	}
+	show_tech_unlock_if = { has_ascension_perk = ap_mind_over_matter }
+	
+	prerequisites = { "tech_powered_exoskeletons" "tech_combat_training" "tech_telepathy" "tech_mega_engineering" }
+
+	
+	potential = {
+		owner = {
+			exists = ruler
+			ruler = {
+				NOT = { has_leader_flag = has_elite_guard }
+			}
+		}
+	}
+	built_for_ruler = yes
+	
+	allow = {
+		AND = {
+			has_building = "building_psi_forge"
+			custom_tooltip = {
+				text = elite_guard_army_trigger_tooltip
+				owner = {
+					exists = ruler
+					ruler = {
+						NOT = { has_leader_flag = has_elite_guard }
+					}
+				}
+			}
+		}
+	}
+	on_queued = {
+		owner = {
+			ruler = { set_leader_flag = has_elite_guard }
+		}
+	}
+	on_unqueued = {
+		owner = {
+			ruler = { remove_leader_flag = has_elite_guard }
+		}
+	}
+}
+
+# robocop
+cop_army = {
+	damage = 3.5
+	health = 9.0
+	has_morale = no
+	morale_damage = 5.0
+	war_exhaustion = 5.0
+	time = 1
+	icon_frame = 30
+	resources = {
+		category = armies
+		cost = {
+			energy = 100
+		}
+
+		upkeep = {
+			energy = 0
+		}
+	}
+	show_tech_unlock_if = { has_ascension_perk = ap_the_flesh_is_weak }
+	
+	prerequisites = { "tech_powered_exoskeletons" "tech_combat_training" "tech_mega_engineering" }
+	potential = {
+		from = {
+			OR = {
+				NOT = { host_has_dlc = "Utopia" }
+				OR = {
+					has_trait = trait_cybernetic
+				}
+			}
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				has_trait = "trait_hive_mind"
+				is_sapient = no
+			}
+		}
+		owner = {
+			exists = ruler
+			ruler = {
+				NOT = { has_leader_flag = has_elite_guard }
+			}
+		}
+	}
+	built_for_ruler = yes
+	
+	allow = {
+		AND = {
+			has_building = "building_titan_forge"
+			custom_tooltip = {
+				text = elite_guard_army_trigger_tooltip
+				owner = {
+					exists = ruler
+					ruler = {
+						NOT = { has_leader_flag = has_elite_guard }
+					}
+				}
+			}
+		}
+	}
+	on_queued = {
+		owner = {
+			ruler = { set_leader_flag = has_elite_guard }
+		}
+	}
+	on_unqueued = {
+		owner = {
+			ruler = { remove_leader_flag = has_elite_guard }
+		}
+	}
+}
+
+# spartan
+spartan_army = {
+	damage = 7.5
+	health = 5.5
+	has_morale = no
+	morale_damage = 5.0
+	war_exhaustion = 5.0
+	time = 1
+	icon_frame = 31
+	has_species = no
+	resources = {
+		category = armies
+		cost = {
+			energy = 100
+		}
+
+		upkeep = {
+			energy = 0
+		}
+	}
+	show_tech_unlock_if = { has_ascension_perk = ap_engineered_evolution }
+	
+	prerequisites = { "tech_powered_exoskeletons" "tech_combat_training" "tech_gene_seed_purification" "tech_mega_engineering" }
+
+	potential = {
+		from = {
+			OR = {
+				NOT = { host_has_dlc = "Utopia" }
+				OR = {
+					has_trait = trait_cybernetic
+				}
+			}
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				has_trait = "trait_hive_mind"
+				is_sapient = no
+			}
+		}
+		owner = {
+			exists = ruler
+			ruler = {
+				NOT = { has_leader_flag = has_elite_guard }
+			}
+		}
+	}
+	built_for_ruler = yes
+	
+	allow = {
+		AND = {
+			has_building = "building_military_academy"
+			custom_tooltip = {
+				text = elite_guard_army_trigger_tooltip
+				owner = {
+					exists = ruler
+					ruler = {
+						NOT = { has_leader_flag = has_elite_guard }
+					}
+				}
+			}
+		}
+	}
+	
+	on_queued = {
+		owner = {
+			ruler = { set_leader_flag = has_elite_guard }
+		}
+	}
+	on_unqueued = {
+		owner = {
+			ruler = { remove_leader_flag = has_elite_guard }
+		}
+	}
+}
+
+# necron
+nec_army = {
+	damage = 8.00
+	health = 7.00
+	has_morale = no
+	morale_damage = 8.00
+	collateral_damage = 2.50
+	war_exhaustion = 0.05
+	time = 1000
+	icon_frame = 36
+	has_species = yes
+	
+	resources = {
+		minerals = 1000
+		energy = 800
+	}
+	resources = {
+		category = armies
+		cost = {
+			alloys = 250
+			minerals = 500
+			energy = 100
+		}
+
+		upkeep = {
+			energy = 2.5
+			alloys = 2
+		}
+	}
+	show_tech_unlock_if = { has_ascension_perk = ap_synthetic_evolution }
+	
+	prerequisites = { "tech_powered_exoskeletons" "tech_combat_training" "tech_starbase_5" }
+
+	potential = {
+		from = { has_trait = "trait_mechanical" }
+		
+		owner = { has_ascension_perk = ap_synthetic_evolution }
+	}
+}
+
+
+### Mecha Armies Mod END

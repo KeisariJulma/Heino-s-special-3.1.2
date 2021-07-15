@@ -1,0 +1,259 @@
+#Power Plant II
+tech_power_plant_2 = {
+	cost = @tier1cost1
+	area = physics
+	tier = 1
+	category = { field_manipulation }
+	prerequisites = { "tech_power_plant_1" }
+	weight = @tier1weight1
+	
+	potential = {
+		NOT = {
+			has_origin = origin_infestation_hive
+		}
+	}
+	
+	modifier = {
+		planet_technician_energy_produces_mult = 0.2
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 3	#power plants are good
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#Power Plant III
+tech_power_plant_3 = {
+	cost = @tier2cost1
+	area = physics
+	tier = 2
+	category = { field_manipulation }
+	prerequisites = { "tech_power_plant_2" }
+	weight = @tier2weight1
+	
+	potential = {
+		NOT = {
+			has_origin = origin_infestation_hive
+		}
+	}
+	
+	modifier = {
+		planet_technician_energy_produces_mult = 0.2
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 3	#power plants are good
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#Power Plant IV
+tech_power_plant_4 = {
+	cost = @tier3cost1
+	area = physics
+	tier = 3
+	category = { field_manipulation }
+	prerequisites = { "tech_power_plant_3" }
+	weight = @tier3weight1
+	
+	potential = {
+		NOT = {
+			has_origin = origin_infestation_hive
+		}
+	}
+	
+	modifier = {
+		planet_technician_energy_produces_mult = 0.2
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 3	#power plants are good
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#Global Energy Management
+tech_power_hub_1 = {
+	cost = @tier1cost3
+	area = physics
+	tier = 1
+	category = { field_manipulation }
+	prerequisites = { "tech_power_plant_1" }
+	weight = @tier1weight3
+	
+	potential = {
+		NOT = {
+			has_origin = origin_infestation_hive
+		}
+	}
+	
+	weight_modifier = {
+		factor = 2
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+#Planetary Power Grid
+tech_power_hub_2 = {
+	cost = @tier2cost3
+	area = physics
+	tier = 2
+	category = { field_manipulation }
+	prerequisites = { "tech_power_hub_1" "tech_colonial_centralization"}
+	weight = @tier2weight3
+	
+	potential = {
+		NOT = {
+			has_origin = origin_infestation_hive
+		}
+	}
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOR = {
+				has_technology = tech_mine_exotic_gases
+				has_technology = tech_exotic_gases
+				has_country_flag = has_market_access
+			}
+		}
+		modifier = {
+			factor = 2
+			has_tradition = tr_prosperity_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+tech_repeatable_improved_tile_energy_output = {
+	area = physics
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { field_manipulation }
+	levels = -1
+	prerequisites = {"tech_power_plant_3"}
+	weight = @repeatableTechWeight
+	
+	potential = {
+		NOT = {
+			has_origin = origin_infestation_hive
+		}
+	}
+	
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	
+	modifier = {
+		planet_jobs_energy_produces_mult = 0.05
+	}
+}

@@ -1,0 +1,8 @@
+﻿l_english:
+
+ mandate_miner_chain_desc:3 "[This.GetRulerTitle] [This.GetRulerName] was elected on a platform of increasing £minerals£ §YMineral output§! by building §YMining Stations§! in orbit around suitable planetary bodies.\n\nReward:\n$mandate_unity_reward$"
+ mandate_orbresearch_chain_desc:3 "[This.GetRulerTitle] [This.GetRulerName] was elected on a platform of increasing §YResearch output§! by building §YResearch Stations§! in orbit around suitable planetary bodies.\n\nReward:\n$mandate_unity_reward$"
+ mandate_emancipation2_chain_desc:2 "[This.GetRulerTitle] [This.GetRulerName] was elected on a platform of §Yfreeing all slaves§! on §H[free_planet.GetName]§! at some point during their reign.\n\nReward:\n$mandate_influence_reward_t3$\n$mandate_happiness_reward_t1$"
+ planet_freed:0 "World Freed"
+ mandate_separatist_chain_desc:2 "[This.GetRulerTitle] [This.GetRulerName] was elected on a platform of §Yreleasing§! the [release_planet.GetPlanetMoon] of §H[release_planet.GetName]§! as an Independent Empire. Consult the §YFactions list§! for details.\n\nReward:\n$mandate_influence_reward_t3$"
+ planet_ceded:0 "World Ceded"

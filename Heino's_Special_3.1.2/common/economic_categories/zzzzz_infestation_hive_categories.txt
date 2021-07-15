@@ -1,0 +1,891 @@
+###############
+### Planets ###
+###############
+
+### Job Categories ###
+
+planet_desolver = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+	}
+}
+
+planet_synthesis = {
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+	}
+}
+
+### Buildings ##
+planet_buildings = {
+	parent = planet_structures
+	
+	generate_mult_modifiers = {
+		cost
+	}
+	generate_add_modifiers = {
+		cost
+	}
+}
+
+planet_buildings_strongholds = {
+	parent = planet_structures
+	
+	generate_mult_modifiers = {
+		cost
+	}
+	generate_add_modifiers = {
+		cost
+	}
+}
+
+#############
+### Ships ###
+#############
+
+ships = {
+	use_for_ai_budget = yes
+	ai_use_parent_for_resources_upkeep = {
+		energy
+	}
+	parent = country
+	
+### Global ###
+
+	generate_mult_modifiers = {
+		upkeep
+		cost
+	}
+
+###############
+### Vanilla ###
+
+	###Science
+	triggered_cost_modifier = {
+		key = ship_science
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes 
+			is_ship_class = shipclass_science_ship
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = ship_science
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes 
+			is_ship_class = shipclass_science_ship
+		}
+	}
+	
+	###Constructor
+	triggered_cost_modifier = {
+		key = ship_constructor
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes 
+			is_ship_class = shipclass_constructor
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = ship_constructor
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_class = shipclass_constructor
+		}
+	}
+
+	###Colonizer
+	triggered_cost_modifier = {
+		key = ship_colonizer
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_class = shipclass_colonizer
+		}
+	}
+		
+	###Corvette
+	triggered_cost_modifier = {
+		key = ship_corvette
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = corvette
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = ship_corvette
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = corvette
+		}
+	}
+	
+	###Destroyer
+	triggered_cost_modifier = {
+		key = ship_destroyer
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = destroyer
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = ship_destroyer
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = destroyer
+		}
+	}
+	
+	###Cruiser
+	triggered_cost_modifier = {
+		key = ship_cruiser
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = cruiser
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = ship_cruiser
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = cruiser
+		}
+	}
+	
+	###Battleship
+	triggered_cost_modifier = {
+		key = ship_battleship
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = battleship
+		}
+	}
+	
+	triggered_upkeep_modifier = {
+		key = ship_battleship
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = battleship
+		}
+	}
+	
+	###Titan
+	triggered_cost_modifier = {
+		key = ship_titan
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = titan
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_titan
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = titan
+		}
+	}
+	
+	###Juggernaut
+	triggered_cost_modifier = {
+		key = ship_juggernaut
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = juggernaut
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_juggernaut
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = juggernaut
+		}
+	}
+	
+	###Colossus
+	triggered_cost_modifier = {
+		key = ship_colossus
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = colossus
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_colossus
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = colossus
+		}
+	}
+	
+### Vanilla ###
+###############
+	
+#######################
+### Realistic Ships ###
+	
+	#battlecruiser
+	triggered_cost_modifier = {
+		key = ship_rs_battlecruiser
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_battlecruiser
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_rs_battlecruiser
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_battlecruiser
+		}
+	}
+	#support cruiser
+	triggered_cost_modifier = {
+		key = ship_rs_support_cruiser
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_support_cruiser
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_rs_support_cruiser
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_support_cruiser
+		}
+	}
+	#electronic attack cruiser
+	triggered_cost_modifier = {
+		key = ship_rs_ea_cruiser
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_ea_cruiser
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_rs_ea_cruiser
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_ea_cruiser
+		}
+	}
+	#dreadnought
+	triggered_cost_modifier = {
+		key = ship_rs_dreadnought
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_dreadnought
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_rs_dreadnought
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_dreadnought
+		}
+	}
+	#heavy dreadnought A
+	triggered_cost_modifier = {
+		key = ship_rs_heavy_dreadnought_type_a
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_heavy_dreadnought_type_a
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_rs_heavy_dreadnought_type_a
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_heavy_dreadnought_type_a
+		}
+	}
+	#heavy dreadnought B
+	triggered_cost_modifier = {
+		key = ship_rs_heavy_dreadnought_type_b
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_heavy_dreadnought_type_b
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_rs_heavy_dreadnought_type_b
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_heavy_dreadnought_type_b
+		}
+	}
+	#heavy dreadnought C
+	triggered_cost_modifier = {
+		key = ship_rs_heavy_dreadnought_type_c
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_heavy_dreadnought_type_c
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_rs_heavy_dreadnought_type_c
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_heavy_dreadnought_type_c
+		}
+	}
+	#heavy dreadnought D
+	triggered_cost_modifier = {
+		key = ship_rs_heavy_dreadnought_type_d
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_heavy_dreadnought_type_d
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_rs_heavy_dreadnought_type_d
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_heavy_dreadnought_type_d
+		}
+	}
+	#heavy dreadnought E
+	triggered_cost_modifier = {
+		key = ship_rs_heavy_dreadnought_type_e
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_heavy_dreadnought_type_e
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_rs_heavy_dreadnought_type_e
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_heavy_dreadnought_type_e
+		}
+	}
+	#heavy dreadnought F
+	triggered_cost_modifier = {
+		key = ship_rs_heavy_dreadnought_type_f
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_heavy_dreadnought_type_f
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_rs_heavy_dreadnought_type_f
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_heavy_dreadnought_type_f
+		}
+	}
+	#heavy dreadnought G
+	triggered_cost_modifier = {
+		key = ship_rs_heavy_dreadnought_type_g
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_heavy_dreadnought_type_g
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_rs_heavy_dreadnought_type_g
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_heavy_dreadnought_type_g
+		}
+	}
+	#heavy dreadnought H
+	triggered_cost_modifier = {
+		key = ship_rs_heavy_dreadnought_type_h
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_heavy_dreadnought_type_h
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_rs_heavy_dreadnought_type_h
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_heavy_dreadnought_type_h
+		}
+	}
+	#heavy dreadnought I
+	triggered_cost_modifier = {
+		key = ship_rs_heavy_dreadnought_type_i
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_heavy_dreadnought_type_i
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_rs_heavy_dreadnought_type_i
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = rs_heavy_dreadnought_type_i
+		}
+	}
+	
+### Realistic Ships ###
+#######################
+
+###########
+### NSC ###
+	
+	#explorationship
+	triggered_cost_modifier = {
+		key = ship_explorationship
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = explorationship
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_explorationship
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = explorationship
+		}
+	}
+	#strikecruiser
+	triggered_cost_modifier = {
+		key = ship_StrikeCruiser
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = StrikeCruiser
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_StrikeCruiser
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = StrikeCruiser
+		}
+	}
+	#escortcarrier
+	triggered_cost_modifier = {
+		key = ship_escortcarrier
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = escortcarrier
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_escortcarrier
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = escortcarrier
+		}
+	}
+	#Battlecruiser
+	triggered_cost_modifier = {
+		key = ship_Battlecruiser
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = Battlecruiser
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_Battlecruiser
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = Battlecruiser
+		}
+	}
+	#Carrier
+	triggered_cost_modifier = {
+		key = ship_Carrier
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = Carrier
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_Carrier
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = Carrier
+		}
+	}
+	#Dreadnought
+	triggered_cost_modifier = {
+		key = ship_Dreadnought
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = Dreadnought
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_Dreadnought
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = Dreadnought
+		}
+	}
+	#Flagship
+	triggered_cost_modifier = {
+		key = ship_Flagship
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = Flagship
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_Flagship
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = Flagship
+		}
+	}
+	#headquarters
+	triggered_cost_modifier = {
+		key = ship_headquarters
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = headquarters
+		}
+	}
+	triggered_upkeep_modifier = {
+		key = ship_headquarters
+		use_parent_icon = yes
+		modifier_types = {
+			mult
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = headquarters
+		}
+	}
+	
+### NSC ###
+###########
+
+##############
+### At War ###
+	
+	#pdf 1
+	triggered_upkeep_modifier = {
+		key = ship_eac_pdf_patrol_craft_1
+		use_parent_icon = yes
+		modifier_types = {
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = eac_pdf_patrol_craft_1
+		}
+	}
+	#pdf 2
+	triggered_upkeep_modifier = {
+		key = ship_eac_pdf_patrol_craft_2
+		use_parent_icon = yes
+		modifier_types = {
+			add
+		}
+		trigger = {
+			is_scope_valid = yes
+			is_ship_size = eac_pdf_patrol_craft_2
+		}
+	}
+
+### At War ###
+##############
+
+}

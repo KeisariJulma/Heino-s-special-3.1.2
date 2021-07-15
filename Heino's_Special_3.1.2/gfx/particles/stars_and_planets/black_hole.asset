@@ -1,0 +1,431 @@
+particle={
+	name="black_hole_file"
+	#dust/smoke
+	subsystem={
+		name="dust_smoke"
+		max_amount=45
+		slave_particles=0
+		emitter_type="sphere"
+		sphere_emitter_radius={ 15.000 0.200 }
+		sphere_emitter_yaw={ 0.000 180.000 }
+		sphere_emitter_pitch={ 0.000 0.000 }
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		hide=no
+		texture={
+			file="gfx/particles/cloud.dds"
+			x=1
+			y=1
+			shader="ParticleAlphaBlend"
+		}
+		color={
+			x=252.000
+			y=61.000
+			z=3.000
+			alpha=25.000,flash_fade
+		}
+		position={
+			x=0.000
+			y=0.200
+			z=0.000
+		}
+		start=0.000
+		duration=-1.000
+		emitter_yaw={ 0.000 0.000 }
+		emitter_pitch={ 0.000 0.000 }
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity={ 0.000 0.000 }
+		life={ 8.000 0.000 }
+		emission=3.000
+		size={ 15.000 0.000 }
+		particle_yaw={ 0.000 0.000 }
+		particle_pitch={ 90.000 0.000 }
+		rotation={ 0.000 180.000 }
+		rotation_speed={ 5.000 0.000 }
+		force=point,orbit
+	}
+	subsystem={
+		name="dust_smoke2"
+		max_amount=50
+		slave_particles=0
+		emitter_type="sphere"
+		sphere_emitter_radius={ 20.000 0.200 }
+		sphere_emitter_yaw={ 0.000 180.000 }
+		sphere_emitter_pitch={ 0.000 0.000 }
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		hide=no
+		texture={
+			file="gfx/particles/cloud.dds"
+			x=1
+			y=1
+			shader="ParticleAlphaBlend"
+		}
+		color={
+			x=252.000
+			y=61.000
+			z=3.000
+			alpha=25.000,flash_fade
+		}
+		position={
+			x=0.000
+			y=0.200
+			z=0.000
+		}
+		start=0.000
+		duration=-1.000
+		emitter_yaw={ 0.000 0.000 }
+		emitter_pitch={ 0.000 0.000 }
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity={ 0.000 0.000 }
+		life={ 8.000 0.000 }
+		emission=3.000
+		size={ 20.000 0.000 }
+		particle_yaw={ 0.000 0.000 }
+		particle_pitch={ 90.000 0.000 }
+		rotation={ 0.000 180.000 }
+		rotation_speed={ 5.000 0.000 }
+		force=point,orbit
+	}
+	subsystem={
+		name="blue_smoke"
+		max_amount=500
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/cloud.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=150.000
+			y=200.000
+			z=255.000
+			alpha=15.000,alpha_fade
+		}
+		position={
+			y=-2.000
+		}
+		duration=-1.000
+		velocity_pitch=90.000
+		velocity=7.000
+		life={ 1.500 0.500 }
+		emission=300.000
+		size={ 1.000 0.500 }
+		rotation={ 0.000 180.000 }
+	}
+	subsystem={
+		name="base_smoke"
+		max_amount=50
+		slave_particles=0
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/cloud.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=200.000
+			y=220.000
+			z=255.000
+			alpha=200.000,alpha_fade
+		}
+		position={
+			y=-3.000
+		}
+		duration=-1.000
+		velocity_pitch=90.000
+		velocity=10.000
+		life=0.500
+		emission=50.000
+		size=3.000,shrink
+		rotation={ 0.000 180.000 }
+	}
+	#rocks
+	subsystem={
+		name="rocks"
+		max_amount=100
+		slave_particles=0
+		emitter_type="sphere"
+		sphere_emitter_radius={ 18.000 4.000 }
+		sphere_emitter_yaw={ 0.000 180.000 }
+		sphere_emitter_pitch={ 0.000 0.000 }
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		hide=no
+		texture={
+			file="gfx/particles/rain.dds"
+			x=1
+			y=1
+			shader="ParticleAlphaBlend"
+		}
+		color={
+			x=252.000
+			y=240.000
+			z=3.000
+			alpha=50.000,flash_fade
+		}
+		position={
+			x=0.000
+			y=-0.200
+			z=0.000
+		}
+		start=0.000
+		duration=-1.000
+		emitter_yaw={ 0.000 0.000 }
+		emitter_pitch={ 0.000 0.000 }
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity={ 0.000 0.000 }
+		life={ 8.000 0.000 }
+		emission=10.000
+		size={ 5.000 1.000 }
+		particle_yaw={ 0.000 10.000 }
+		particle_pitch={ 90.000 10.000 }
+		rotation={ 0.000 180.000 }
+		rotation_speed={ 5.000 0.000 }
+		force=orbit,point
+	}
+	#colours
+	subsystem={
+		name="orbit_fire1" #yellow
+		max_amount=50
+		slave_particles=0
+		emitter_type="sphere"
+		sphere_emitter_radius={ 5.000 0.200 }
+		sphere_emitter_yaw={ 0.000 180.000 }
+		sphere_emitter_pitch={ 0.000 0.000 }
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		hide=no
+		texture={
+			file="gfx/particles/gradient_circle2.dds"
+			x=1
+			y=1
+			shader="ParticleAlphaBlend"
+		}
+		color={
+			x=252.000
+			y=186.000
+			z=3.000
+			alpha=10.000,flash_fade
+		}
+		position={
+			x=0.000
+			y=0.200
+			z=0.000
+		}
+		start=0.000
+		duration=-1.000
+		emitter_yaw={ 0.000 0.000 }
+		emitter_pitch={ 0.000 0.000 }
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity={ 0.000 0.000 }
+		life={ 8.000 0.000 }
+		emission=5.000
+		size={ 10.000 0.000 }
+		particle_yaw={ 0.000 0.000 }
+		particle_pitch={ 90.000 0.000 }
+		rotation={ 0.000 180.000 }
+		rotation_speed={ 5.000 0.000 }
+		force=point,orbit
+	}
+	subsystem={
+		name="orbit_fire2" #red
+		max_amount=50
+		slave_particles=0
+		emitter_type="sphere"
+		sphere_emitter_radius={ 20.000 0.200 }
+		sphere_emitter_yaw={ 0.000 180.000 }
+		sphere_emitter_pitch={ 0.000 0.000 }
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		hide=no
+		texture={
+			file="gfx/particles/gradient_circle2.dds"
+			x=1
+			y=1
+			shader="ParticleAlphaBlend"
+		}
+		color={
+			x=252.000
+			y=61.000
+			z=3.000
+			alpha=25.000,flash_fade
+		}
+		position={
+			x=0.000
+			y=0.100
+			z=0.000
+		}
+		start=0.000
+		duration=-1.000
+		emitter_yaw={ 0.000 0.000 }
+		emitter_pitch={ 0.000 0.000 }
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity={ 0.000 0.000 }
+		life={ 8.000 0.000 }
+		emission=5.000
+		size={ 20.000 0.000 }
+		particle_yaw={ 0.000 0.000 }
+		particle_pitch={ 90.000 0.000 }
+		rotation={ 0.000 180.000 }
+		rotation_speed={ 15.000 0.000 }
+		force=point,orbit
+	}
+	subsystem={
+		name="orbit_fire3" #orange
+		max_amount=100
+		slave_particles=0
+		emitter_type="sphere"
+		sphere_emitter_radius={ 15.000 0.200 }
+		sphere_emitter_yaw={ 0.000 180.000 }
+		sphere_emitter_pitch={ 0.000 0.000 }
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		hide=no
+		texture={
+			file="gfx/particles/gradient_circle2.dds"
+			x=1
+			y=1
+			shader="ParticleAlphaBlend"
+		}
+		color={
+			x=252.000
+			y=240.000
+			z=3.000
+			alpha=20.000,flash_fade
+		}
+		position={
+			x=0.000
+			y=0.200
+			z=0.000
+		}
+		start=0.000
+		duration=-1.000
+		emitter_yaw={ 0.000 0.000 }
+		emitter_pitch={ 0.000 0.000 }
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity={ 0.000 0.000 }
+		life={ 8.000 0.000 }
+		emission=10.000
+		size={ 20.000 0.000 }
+		particle_yaw={ 0.000 0.000 }
+		particle_pitch={ 90.000 0.000 }
+		rotation={ 0.000 180.000 }
+		rotation_speed={ 10.000 0.000 }
+		force=point,orbit
+	}
+	#animation
+	animation={
+		name="flash_fade"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.200 1.000 0.600 1.000 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="alpha_fade"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.485 1.000 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="shrink"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 1.000 0.094 0.984 0.265 0.695 0.574 0.258 1.000 0.102 
+		}
+		op="MUL"
+		time="life"
+	}
+	#force
+	force={
+		type="point"
+		name="point"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=-0.100
+	}
+	force={
+		type="spin"
+		name="orbit"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=0.075
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}

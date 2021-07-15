@@ -1,0 +1,316 @@
+building_automated_refinery = {
+	base_buildtime = @b2_time
+	icon = building_refinery
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			exotic_gases = 2
+		}
+		cost = {
+			minerals = @b2_minerals
+			uploaded_pops = 1
+		}
+		upkeep = {
+			energy = 4
+			minerals = 10
+		}
+	}
+
+	prerequisites = {
+		tech_exotic_gases
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_automated_chemical_plant = {
+	base_buildtime = @b2_time
+	icon = building_chemical_plant
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			volatile_motes = 2
+		}
+		cost = {
+			minerals = @b2_minerals
+			uploaded_pops = 1
+		}
+		upkeep = {
+			energy = 4
+			minerals = 10
+		}
+	}
+
+	prerequisites = {
+		tech_volatile_motes
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_automated_crystal_plant = {
+	base_buildtime = @b2_time
+	icon = building_crystal_plant
+
+	category = manufacturing
+
+	potential = {
+		building_basic_income_check = yes
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			rare_crystals = 2
+		}
+		cost = {
+			minerals = @b2_minerals
+			uploaded_pops = 1
+		}
+		upkeep = {
+			energy = 4
+			minerals = 10
+		}
+	}
+
+	prerequisites = {
+		tech_rare_crystals
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+##Autonomous Foundries
+
+#Autonomous Foundry
+building_autonomous_foundry_1 = {
+	base_buildtime = 480
+	can_be_ruined = no
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			alloys = 30
+		}
+		cost = {
+			minerals = 600
+			uploaded_pops = 10
+		}
+		upkeep = {
+			energy = 12
+			minerals = 60
+		}
+	}
+
+	upgrades = {
+		building_autonomous_foundry_2
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Autonomous Mega-Forge
+building_autonomous_foundry_2 = {
+	base_buildtime = 480
+	can_build = no
+	can_be_ruined = no
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			alloys = 60
+		}
+		cost = {
+			minerals = 600
+			uploaded_pops = 10
+		}
+		upkeep = {
+			energy = 45
+			minerals = 120
+			volatile_motes = 1
+		}
+	}
+
+	upgrades = {
+		building_autonomous_foundry_3
+	}
+
+	prerequisites = {
+		full_automation_technology_advanced
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Autonomous Giga-Forge
+building_autonomous_foundry_3 = {
+	base_buildtime = 480
+	can_build = no
+	can_be_ruined = no
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			alloys = 350
+		}
+		cost = {
+			minerals = 480
+			uploaded_pops = 80
+		}
+		upkeep = {
+			energy = 250
+			minerals = 600
+			volatile_motes = 4
+		}
+	}
+
+	upgrades = {
+	}
+
+	prerequisites = {
+		full_automation_technology_ascended
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+##Autonomous Factories
+
+#Autonomous Factory
+building_autonomous_factory_1 = {
+	base_buildtime = 480
+	can_be_ruined = no
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			consumer_goods = 60
+		}
+		cost = {
+			minerals = 600
+			uploaded_pops = 10
+		}
+		upkeep = {
+			energy = 12
+			minerals = 60
+		}
+	}
+
+	upgrades = {
+		building_autonomous_factory_2
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Autonomous Fabricator
+building_autonomous_factory_2 = {
+	base_buildtime = 480
+	can_build = no
+	can_be_ruined = no
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			consumer_goods = 120
+		}
+		cost = {
+			minerals = 600
+			uploaded_pops = 10
+		}
+		upkeep = {
+			energy = 45
+			minerals = 120
+			volatile_motes = 1
+		}
+	}
+
+	upgrades = {
+		building_autonomous_factory_3
+	}
+
+	prerequisites = {
+		full_automation_technology_advanced
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Autonomous Gigafactory
+building_autonomous_factory_3 = {
+	base_buildtime = 480
+	can_build = no
+	can_be_ruined = no
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			consumer_goods = 700
+		}
+		cost = {
+			minerals = 600
+			uploaded_pops = 80
+		}
+		upkeep = {
+			energy = 250
+			minerals = 600
+			volatile_motes = 4
+		}
+	}
+
+	upgrades = {
+	}
+
+	prerequisites = {
+		full_automation_technology_ascended
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

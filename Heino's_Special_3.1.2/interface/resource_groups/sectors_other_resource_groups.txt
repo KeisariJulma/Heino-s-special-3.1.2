@@ -7,12 +7,7 @@ sectors_others_group = {
 		sr_zro
 		sr_dark_matter
 		nanites
-		minor_artifacts
-		esc_living_crystal
-		esc_gravitic_anomaly
-		esc_psionic_charge
-		esc_transdimensional_vortex
-		esc_enigmatic_energy
+		uploaded_pops
 	}
 	localization = {
 		"RESOURCE_GROUP_BALANCE_ONLY" = default

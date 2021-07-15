@@ -1,0 +1,107 @@
+namespace = mechroid_event
+#add mechroid trait to newly recruited leaders
+country_event = {
+    id = mechroid_event.1
+    is_triggered_only = yes
+    hide_window = yes
+
+    trigger = {
+		OR = {
+			has_global_flag = mcr_mechroids_new_game
+			days_passed < 2
+		}
+	    from = {
+		    species = { has_trait = trait_mechroid }
+	    }
+    }
+
+    immediate = {
+	    from = {
+		    if = {
+			    limit = { leader_class = admiral }
+			    add_trait = leader_trait_admiral_mechroid
+			    add_ruler_trait = leader_trait_ruler_mechroid
+			    break = yes
+		    }
+		    if = {
+			    limit = { leader_class = general }
+			    add_trait = leader_trait_general_mechroid
+			    add_ruler_trait = leader_trait_ruler_mechroid
+			    break = yes
+		    }
+		    if = {
+			    limit = { leader_class = governor }
+			    add_trait = leader_trait_governor_mechroid
+			    add_ruler_trait = leader_trait_ruler_mechroid
+			    break = yes
+		    }
+		    if = {
+			    limit = { leader_class = scientist }
+			    add_trait = leader_trait_scientist_mechroid
+			    add_ruler_trait = leader_trait_ruler_mechroid
+			    break = yes
+		    }
+		    if = {
+			    limit = { leader_class = ruler }
+			    add_trait = leader_trait_ruler_mechroid
+			    break = yes
+		    }
+	    }
+    }
+}
+
+# Ruler gets normal class trait if one hasn't been assigned
+country_event = {
+	id = mechroid_event.2
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {	
+		has_global_flag = mcr_mechroids_new_game
+		from = {
+		    species = { has_trait = trait_mechroid }
+			NOR = {
+				has_trait = leader_trait_general_mechroid
+				has_trait = leader_trait_governor_mechroid
+				has_trait = leader_trait_scientist_mechroid
+				has_trait = leader_trait_admiral_mechroid
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = general }
+				add_trait = leader_trait_general_mechroid
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = leader_trait_governor_mechroid
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = leader_trait_scientist_mechroid
+				break = yes
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = leader_trait_admiral_mechroid
+				break = yes
+			}
+		}
+	}
+}
+
+# New game toggle event
+event = {
+	id = mechroid_event.3
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		set_global_flag = mcr_mechroids_new_game
+	}
+}

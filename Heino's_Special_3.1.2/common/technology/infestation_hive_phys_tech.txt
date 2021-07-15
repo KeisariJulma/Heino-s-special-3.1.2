@@ -1,0 +1,161 @@
+infestation_hive_tech_power_plant_1 = {
+	cost = @tier1cost1
+	area = physics
+	tier = 1
+	category = { field_manipulation }
+	prerequisites = { "tech_power_plant_1" }
+	weight = @tier1weight1
+	
+	potential = {
+		has_origin = origin_infestation_hive
+	}
+	
+	modifier = {
+		planet_jobs_energy_produces_mult = 0.20
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 3	#power plants are good
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+infestation_hive_tech_power_plant_2 = {
+	cost = @tier2cost1
+	area = physics
+	tier = 2
+	category = { field_manipulation }
+	prerequisites = { "infestation_hive_tech_power_plant_1" }
+	weight = @tier2weight1
+	
+	potential = {
+		has_origin = origin_infestation_hive
+	}
+	
+	modifier = {
+		planet_jobs_energy_produces_mult = 0.20
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 3	#power plants are good
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+infestation_hive_tech_power_plant_3 = {
+	cost = @tier3cost1
+	area = physics
+	tier = 3
+	category = { field_manipulation }
+	prerequisites = { "infestation_hive_tech_power_plant_2" }
+	weight = @tier3weight1
+	
+	potential = {
+		has_origin = origin_infestation_hive
+	}
+	
+	modifier = {
+		planet_jobs_energy_produces_mult = 0.20
+		show_only_custom_tooltip = yes
+		custom_tooltip = infestation_hive_tech_power_plant_3_tooltip
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_prosperity_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 3	#power plants are good
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_field_manipulation"
+			}
+		}
+	}
+}
+
+infestation_hive_tech_repeatable_improved_tile_energy_output = {
+	area = physics
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { field_manipulation }
+	levels = -1
+	prerequisites = {"infestation_hive_tech_power_plant_3"}
+	weight = @repeatableTechWeight
+	
+	potential = {
+		has_origin = origin_infestation_hive
+	}
+	
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	
+	modifier = {
+		planet_jobs_energy_produces_mult = 0.05
+	}
+}

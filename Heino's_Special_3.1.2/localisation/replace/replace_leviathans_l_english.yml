@@ -1,0 +1,8 @@
+﻿l_english:
+
+ leviathans.300.b.reply:0 "Oh, I see. That is unfortunate, [my_country.GetSpeciesName], but we thank you for your initial support.\n\nGoodbye."
+ leviathans.1018.a.tooltip:0 "Changes the planet classes of all planets within the [guardians_stellarite_home_system.GetName] system.\n\n[stellarite_rich_planet.GetName] becomes a $pc_gaia$ and gains the following resource:\n£energy£ §G+25§!\n£minerals£ §G+10§!"
+ leviathans.1018.b.tooltip:0 "The [Root.GetName] is destroyed.\n\nChanges the planet classes of all planets within the [guardians_stellarite_home_system.GetName] system.\n\n[stellarite_rich_planet.GetName] becomes a $pc_tundra$ and gains the following resource:\n£energy£ §G+10§!\n£minerals£ §G+15§!"
+ leviathans.1018.c.tooltip:0 "Changes the planet classes of all planets within the [guardians_stellarite_home_system.GetName] system.\n\n[stellarite_rich_planet.GetName] becomes a $pc_gaia$."
+ leviathans.1018.d.tooltip:0 "The [Root.GetName] is destroyed.\n\nChanges the planet classes of all planets within the [guardians_stellarite_home_system.GetName] system.\n\n[stellarite_rich_planet.GetName] becomes a $pc_tundra$."
+ enclave_artist_festival_outrage_desc:0 "The Festival of Worlds brought about chaos on this [This.GetPlanetMoon] as the crowds trampled their fellow citizens."

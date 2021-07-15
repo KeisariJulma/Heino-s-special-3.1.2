@@ -1,0 +1,146 @@
+infestation_hive_tech_mining_1 = {
+	cost = @tier1cost1
+	area = engineering
+	tier = 1
+	category = { industry }
+	prerequisites = { "tech_basic_industry" }
+	weight = @tier1weight1
+	
+	potential = {
+		has_origin = origin_infestation_hive
+	}
+	
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.20
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+infestation_hive_tech_mining_2 = {
+	cost = @tier2cost1
+	area = engineering
+	tier = 2
+	category = { industry }
+	prerequisites = { "infestation_hive_tech_mining_1" }
+	weight = @tier2weight1
+	
+	potential = {
+		has_origin = origin_infestation_hive
+	}
+	
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.20
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+infestation_hive_tech_mining_3 = {
+	cost = @tier3cost1
+	area = engineering
+	tier = 3
+	category = { industry }
+	prerequisites = { "infestation_hive_tech_mining_2" }
+	weight = @tier3weight1
+	
+	potential = {
+		has_origin = origin_infestation_hive
+	}
+	
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.20
+		show_only_custom_tooltip = yes
+		custom_tooltip = infestation_hive_tech_mining_3_tooltip
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_expertise_industry"
+			}
+		}
+	}
+}
+
+infestation_hive_tech_repeatable_improved_tile_mineral_output = {
+	area = engineering
+	cost = @repeatableTechBaseCost
+	cost_per_level = @repeatableTechLevelCost
+	tier = @repeatableTechTier
+	category = { industry }
+	levels = -1
+	prerequisites = { "infestation_hive_tech_mining_3" }
+	weight = @repeatableTechWeight
+	
+	potential = {
+		has_origin = origin_infestation_hive
+	}
+	
+	weight_modifier = {
+		factor = @repatableTechFactor
+	}
+	
+	ai_weight = {
+		factor = 1.0
+	}
+	
+	weight_groups = {
+		repeatable
+	}
+	mod_weight_if_group_picked = {
+		repeatable = 0.01
+	}
+	
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.05
+	}
+}

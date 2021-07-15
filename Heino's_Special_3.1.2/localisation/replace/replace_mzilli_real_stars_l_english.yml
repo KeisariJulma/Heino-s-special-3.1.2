@@ -1,0 +1,14 @@
+﻿l_english:
+
+ sc_binary_cygnus_x1:0 "$sc_b$\n$sc_black_hole$"
+ sc_quaternary_regulus:0 "$sc_b$\n$sc_k$\n$sc_m$\n$sc_f$"
+ sc_trinary_castor:0 "$sc_a$\n$sc_m$\n$sc_m$"
+ sc_trinary_40_eridani:0 "$sc_k$\n$sc_f$\n$sc_m$"
+ sc_trinary_epsilon_indi:0 "$sc_k$\n$sc_t$\n$sc_t$"
+ sc_binary_izar:0 "$sc_m_giant$\n$sc_a$"
+ sc_binary_izar_10x:0 "$sc_k_giant$\n$sc_a$"
+ sc_binary_61_cygni:0 "$sc_k$\n$sc_k$"
+ sc_binary_beta_aquilae:0 "$sc_g$\n$sc_m$"
+ sc_trinary_algol:0 "$sc_b$\n$sc_k$\n$sc_a$"
+ sc_trinary_polaris:0 "$sc_f$\n$sc_f$\n$sc_f$"
+ sc_trinary_fomalhaut:0 "$sc_a$\n$sc_k$\n$sc_m$"

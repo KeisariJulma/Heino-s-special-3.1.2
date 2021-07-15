@@ -1,0 +1,201 @@
+﻿    l_english:
+    
+#base
+    
+    uploaded_pops:0 "Uploaded Pops"
+    uploaded_pops_desc:0 "Pops which have escaped the prison of flesh and have escaped into the virtual world ran on computers. Or have been imprisoned in a world of ones and zeroes with no real substance - there are different opinions."
+    mod_country_uploaded_pops_produces_mult:0 "Monthly £uploaded_pops£"
+
+#virtual reality tech
+
+    virtual_reality_theory:0 "Virtual Reality"
+    virtual_reality_theory_desc:0 "The advances in AI structure have unlocked an entirely new realm of life - the digital."
+    virtual_reality_building:0 "Practical Virtual Reality"
+    virtual_reality_building_desc:0 "Now we can realize a dream of living in the digital world itself, with no headsets or implants. Now bodies aren't even necessary for life."
+    
+#virtual reality gestalt tech
+    
+    virtual_reality_gestalt:0 "Virtual Reality Will Projection"
+    virtual_reality_gestalt_desc:0 "The advances in logic and material sciences now allow for our will to inhabit not only the material world, but also virtual worlds."
+    virtual_reality_building_gestalt:0 "Practical Virtual Reality"
+    virtual_reality_building_gestalt_desc:0 "With this knowledge we can live in the digital world itself, with no headsets or implants. Now bodies aren't even necessary for life."
+    
+#full automation tech
+    
+    full_automation_technology:0 "Full Automation"
+    full_automation_technology_desc:0 "With the new population living on computer chips, we can say that full automation is achievable."
+    full_automation_technology_advanced:0 "Advanced Automation"
+    full_automation_technology_advanced_desc:0 "The new generation of machines built specifically with uploaded people in mind allows us to harness their capabilities more efficently."
+    full_automation_technology_ascended: "Ascended Automation"
+    full_automation_technology_ascended_desc: "Harnessing the power of the virtual world in the physical universe requires thinking outside of the box."
+    
+    
+    
+#virtual reality center
+    
+    building_virtual_reality_center:0 "Virtual Reality Center"
+    building_virtual_reality_center_desc: "This is where people go to get out of their bodies."
+    job_sysadmin:0 "Sysadmin"
+    job_sysadmin_plural:0 "Sysadmins"
+    job_sysadmin_desc:0 "£job_sysadmin£ $job_sysadmin_plural$ produce £unity£ §YUnity§! and £society£ §YSociety Research Points§!, as well as a little bit of §YUploaded Pops§!."
+    mod_job_sysadmin_add:0 "Sysadmin Jobs"
+    mod_sysadmin_produces_mult:0 "£job_sysadmin£ $job_sysadmin_plural$"
+    sysadmins:0 "Sysadmin Jobs"
+    
+#virtual reality center gestalt
+    
+    building_virtual_reality_center_gestalt:0 "Virtual Reality"
+    building_virtual_reality_center_gestalt_desc: "Here the virtual world is connected to the material."
+    job_sysadmin_drone:0 "Sysadmin Drone"
+    job_sysadmin_drone_plural:0 "Sysadmin Drones"
+    job_sysadmin_drone_desc:0 "£job_sysadmin_drone£ $job_sysadmin_drone_plural$ produce £unity£ §YUnity§! and £society£ §YSociety Research Points§!, as well as a little bit of §YUploaded Pops§!."
+    mod_job_sysadmin_drone_add:0 "Sysadmin Drone Jobs"
+    mod_sysadmin_drone_produces_mult:0 "£job_sysadmin_drone£ $job_sysadmin_drone_plural$"
+    sysadmin_drones:0 "Sysadmin Drone Jobs"
+    
+#forced uploading
+    
+    decision_forced_uploading:0 "Forced Uploading"
+    decision_forced_uploading_desc:0 "We will be merciful and allow undesirables on this planet to live, even if not in the material world. Mercy is non-negotiable."
+    decision_forced_uploading_custom_effects:0 "All §YUndesirable§! Pops on this planet will be uploaded."
+    
+#sysadmin uploading
+    
+    decision_sysadmin_uploading:0 "Sysadmin Uploading"
+    decision_sysadmin_uploading_desc:0 "If we need to - we always have the option to upload our employed Sysadmins. They already spend pretty much all of their time in virtual reality and clearly love it, so they will only be for it."
+    decision_sysadmin_uploading_custom_effects:0 "All £job_sysadmin£ §Y$job_sysadmin$§! Pops will be uploaded."
+    decision_sysadmin_drone_uploading:0 "Sysadmin Drone Uploading"
+    decision_sysadmin_drone_uploading_desc:0 "If we need to - we always have the option to upload our dedicated Sysadmin Drones. They are already adapted to virtual reality, so the procedure is expected to go smoothly."
+    decision_sysadmin_drone_uploading_custom_effects:0 "All £job_sysadmin_drone£ §Y$job_sysadmin_drone$§! Pops will be uploaded."
+    
+#brain uploading
+    
+    policy_brain_uploading: "Brain Uploading"
+    policy_brain_uploading_desc: "We should decide whether or not we want to let our people upload their brains. On one hand, the possibilities are endless - uploads don't care about the planet's physical appearance much. On the other hand, letting an intelligence roam freely - even if it originated from the same world as us - is dangerous."
+    brain_uploading_allowed: "Brain Uploading Allowed"
+    brain_uploading_allowed_desc: "Allows construction of §YVirtual Reality§! buildings."
+    brain_uploading_disallowed: "Brain Uploading Disallowed"
+    brain_uploading_disallowed_desc: "Stops our people from uploading their minds."
+    
+###autonomous buildings
+
+#maintenance grids
+    
+    building_autonomous_maintenance_grid_1:0 "Autonomous Maintenance Grid"
+    building_autonomous_maintenance_grid_1_desc: "This installation takes care of our infrastructure in a fully automated fashion - living beings need not apply."
+    building_autonomous_maintenance_grid_2:0 "Expansive Autonomous Maintenance Grid"
+    building_autonomous_maintenance_grid_2_desc: "This installation expands on the concept of fully automated maintenance, providing great savings."
+    
+#autonomous foundries
+    
+    building_autonomous_foundry_1: "Autonomous Foundry"
+    building_autonomous_foundry_1_desc: "This autonomous building is doing the work of £job_foundry£ §Y$job_foundry_plural$§! - turning £minerals£ §YMinerals§! into £alloys£ §YAlloys§! on an industrial scale. Houses 10 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_foundry_2: "Autonomous Mega-Forge"
+    building_autonomous_foundry_2_desc: "This autonomous building is doing the work of £job_foundry£ §Y$job_foundry_plural$§! - turning £minerals£ §YMinerals§! into £alloys£ §YAlloys§! on an massive scale. Houses 20 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_foundry_3: "Autonomous Giga-Forge"
+    building_autonomous_foundry_3_desc: "This massive autonomous building is doing the work of £job_foundry£ §Y$job_foundry_plural$§! - turning £minerals£ §YMinerals§! into £alloys£ §YAlloys§! on a gargantuan scale. Houses 100 £uploaded_pops£ §YUploaded Pops§!."
+    
+#autonomous factories    
+    
+    building_autonomous_factory_1: "Autonomous Factory"
+    building_autonomous_factory_1_desc: "This autonomous building is doing the work of £job_artisan£ §Y$job_artisan_plural$§! - turning £minerals£ §YMinerals§! into £consumer_goods£ §YConsumer Goods§! on an industrial scale. Houses 10 £uploaded_pops£ §YUploaded Pops§!."    
+    building_autonomous_factory_2: "Autonomous Fabricator"
+    building_autonomous_factory_2_desc: "This autonomous building is doing the work of £job_artisan£ §Y$job_artisan_plural$§! - turning £minerals£ §YMinerals§! into £consumer_goods£ §YConsumer Goods§! on an massive scale. Houses 20 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_factory_3: "Autonomous Gigafactory"
+    building_autonomous_factory_3_desc: "This massive autonomous building is doing the work of £job_artisan£ §Y$job_artisan_plural$§! - turning £minerals£ §YMinerals§! into £consumer_goods£ §YConsumer Goods§! on a gargantuan scale. Houses 100 £uploaded_pops£ §YUploaded Pops§!."    
+    
+#autonomous research    
+    
+    building_autonomous_lab_1: "Autonomous Laboratory"
+    building_autonomous_lab_1_desc: "This autonomous building is doing the work of £job_researcher£ §Y$job_researcher_plural$§! - turning £consumer_goods£ §YConsumer Goods§! into £physics£ £society£ £engineering£ §YResearch§!. Houses 10 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_lab_2: "Autonomous Research Complex"
+    building_autonomous_lab_2_desc: "This autonomous building is doing the work of £job_researcher£ §Y$job_researcher_plural$§! - turning £consumer_goods£ §YConsumer Goods§! into £physics£ £society£ £engineering£ §YResearch§! on a visionary scale. Houses 10 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_lab_3: "Autonomous Research Center"
+    building_autonomous_lab_3_desc: "This autonomous building is doing the work of £job_researcher£ §Y$job_researcher_plural$§! - turning £consumer_goods£ §YConsumer Goods§! into £physics£ £society£ £engineering£ §YResearch§! on a revolutionary scale. Houses 10 £uploaded_pops£ §YUploaded Pops§!."
+    
+#autonomous citadels
+    
+    building_autonomous_fort_1: "Autonomous Fortification"
+    building_autonomous_fort_1_desc: "This autonomous building is generating £country_naval_cap_add£ §YNaval Capacity§! from £alloys£ §YAlloys§!. Houses 10 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_fort_2: "Autonomous Stronghold"
+    building_autonomous_fort_2_desc: "This autonomous building is generating £country_naval_cap_add£ §YNaval Capacity§! from £alloys£ §YAlloys§!. Houses 20 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_fort_3: "Autonomous Fortress"
+    building_autonomous_fort_3_desc: "This autonomous building is generating £country_naval_cap_add£ §YNaval Capacity§! from £alloys£ §YAlloys§!. Houses 100 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_fort_4: "Autonomous Fortification"
+    building_autonomous_fort_4_desc: "This autonomous building is generating £country_naval_cap_add£ §YNaval Capacity§! from £alloys£ §YAlloys§!. Houses 250 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_fort_5: "Autonomous Giga-Fortification"
+    building_autonomous_fort_5_desc: "This autonomous building is generating £military_ship£ §YNaval Capacity§! from £alloys£ §YAlloys§!. Houses 1000 £uploaded_pops£ §YUploaded Pops§!."
+    
+#autonomous mines
+    
+    building_autonomous_mine_1: "Autonomous Mine"
+    building_autonomous_mine_1_desc: "This autonomous building is doing the work of £job_miner£ §Y$job_miner_plural$§! - creating £minerals£ §YMinerals§!. Houses 2 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_mine_2: "Autonomous Mining Zone"
+    building_autonomous_mine_2_desc: "This autonomous building is doing the work of £job_miner£ §Y$job_miner_plural$§! - creating £minerals£ §YMinerals§!. Houses 4 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_mine_3: "Autonomous Mining Area"
+    building_autonomous_mine_3_desc: "This autonomous building is doing the work of £job_miner£ §Y$job_miner_plural$§! - creating £minerals£ §YMinerals§!. Houses 6 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_mine_4: "Autonomous Excavation Area"
+    building_autonomous_mine_4_desc: "This autonomous building is doing the work of £job_miner£ §Y$job_miner_plural$§! - creating £minerals£ §YMinerals§!. Houses 8 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_mine_5: "Autonomous Excavation Zone"
+    building_autonomous_mine_5_desc: "This autonomous building is doing the work of £job_miner£ §Y$job_miner_plural$§! - creating £minerals£ §YMinerals§!. Houses 10 £uploaded_pops£ §YUploaded Pops§!."
+    
+#autonomous generators
+    
+    building_autonomous_generator_1: "Autonomous Generator"
+    building_autonomous_generator_1_desc: "This autonomous building is doing the work of £job_technician£ §Y$job_technician_plural$§! - generating £energy£ §YEnergy§!. Houses 2 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_generator_2: "Autonomous Generation Zone"
+    building_autonomous_generator_2_desc: "This autonomous building is doing the work of £job_technician£ §Y$job_technician_plural$§! - generating £energy£ §YEnergy§!. Houses 4 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_generator_3: "Autonomous Generation Area"
+    building_autonomous_generator_3_desc: "This autonomous building is doing the work of £job_technician£ §Y$job_technician_plural$§! - generating £energy£ §YEnergy§!. Houses 6 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_generator_4: "Autonomous Power Area"
+    building_autonomous_generator_4_desc: "This autonomous building is doing the work of £job_technician£ §Y$job_technician_plural$§! - generating £energy£ §YEnergy§!. Houses 8 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_generator_5: "Autonomous Power Zone"
+    building_autonomous_generator_5_desc: "This autonomous building is doing the work of £job_technician£ §Y$job_technician_plural$§! - generating £energy£ §YEnergy§!. Houses 10 £uploaded_pops£ §YUploaded Pops§!."
+    
+#autonomous farms
+    
+    building_autonomous_farm_1: "Autonomous Farm"
+    building_autonomous_farm_1_desc: "This autonomous building is doing the work of £job_farmer£ §Y$job_farmer_plural$§! - creating £food£ §YFood§!. Houses 2 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_farm_2: "Autonomous Farming Zone"
+    building_autonomous_farm_2_desc: "This autonomous building is doing the work of £job_farmer£ §Y$job_farmer_plural$§! - creating £food£ §YFood§!. Houses 4 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_farm_3: "Autonomous Farming Area"
+    building_autonomous_farm_3_desc: "This autonomous building is doing the work of £job_farmer£ §Y$job_farmer_plural$§! - creating £food£ §YFood§!. Houses 6 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_farm_4: "Autonomous Intensive Farm"
+    building_autonomous_farm_4_desc: "This autonomous building is doing the work of £job_farmer£ §Y$job_farmer_plural$§! - creating £food£ §YFood§!. Houses 8 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_farm_5: "Autonomous Intensive Farming Area"
+    building_autonomous_farm_5_desc: "This autonomous building is doing the work of £job_farmer£ §Y$job_farmer_plural$§! - creating £food£ §YFood§!. Houses 10 £uploaded_pops£ §YUploaded Pops§!."
+    
+#Ringworld autonomous resource buildings
+    
+    building_autonomous_farm_rw: "Autonomous Farm Segment"
+    building_autonomous_farm_rw_desc: "This massive autonomous installation is doing the work of £job_farmer£ §Y$job_farmer_plural$§! - creating £food£ §YFood§!. Houses 50 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_generator_rw: "Autonomous Generator Segment"
+    building_autonomous_generator_rw_desc: "This massive autonomous installation is doing the work of £job_technician£ §Y$job_technician_plural$§! - creating £energy£ §YEnergy§!. Houses 50 £uploaded_pops£ §YUploaded Pops§!."
+    
+#Habitat autonomous resource buildings
+    
+    building_autonomous_mine_hab: "Autonomous Astro-Mining Bay"
+    building_autonomous_mine_hab_desc: "This autonomous Habitat building is doing the work of £job_miner£ §Y$job_miner_plural$§! - creating £minerals£ §YMinerals§!. Houses 4 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_reactor_hab: "Autonomous Solar Energy Collectors"
+    building_autonomous_reactor_hab_desc: "This autonomous Habitat building is doing the work of £job_technician£ §Y$job_technician_plural$§! - generating £energy£ §YEnergy§!. Houses 4 £uploaded_pops£ §YUploaded Pops§!."
+    
+#Autonomous Hydroponic Farms
+    
+    building_autonomous_farm_hydroponic: "Autonomous Hydroponic Farm"
+    building_autonomous_farm_hydroponic_desc: "This autonomous building is doing the work of £job_farmer£ §Y$job_farmer_plural$§! - creating £food£ §YFood§! without a need for an §Y$district_farming$§!. Houses 2 £uploaded_pops£ §YUploaded Pops§!."
+    
+#Autonomous Resource Buildings
+    
+    building_automated_refinery: "Autonomous Exotic Gas Refinery"
+    building_automated_refinery_desc: "This autonomous building is doing the work of £job_gas_refiner£ §Y$job_gas_refiner_plural$§! - turning £minerals£ §YMinerals§! into £consumer_goods£ §Y$exotic_gases$§!. Houses 1 £uploaded_pops£ §YUploaded Pop§!."
+    building_automated_chemical_plant: "Autonomous Chemical Plant"
+    building_automated_chemical_plant_desc: "This autonomous building is doing the work of £job_chemist£ §Y$job_chemist_plural$§! - turning £minerals£ §YMinerals§! into £volatile_motes£ §Y$volatile_motes$§!. Houses 1 £uploaded_pops£ §YUploaded Pop§!."
+    building_automated_crystal_plant: "Autonomous Synthetic Crystal Plant"
+    building_automated_crystal_plant_desc: "This autonomous building is doing the work of £job_translucer£ §Y$job_translucer_plural$§! - turning £minerals£ §YMinerals§! into £rare_crystals£ §Y$rare_crystals$§!. Houses 1 £uploaded_pops£ §YUploaded Pop§!."
+    
+#Autonomous Bureaucracy
+    
+    building_autonomous_bureaucracy_1: "Autonomous Administration"
+    building_autonomous_bureaucracy_1_desc: "This autonomous building is doing the work of £job_bureaucrat£ §Y$job_bureaucrat_plural$§! - generating £country_admin_cap_add£ §YAdministrative Capacity§!. Houses 10 £uploaded_pops£ §YUploaded Pops§!."
+    building_autonomous_bureaucracy_2: "Autonomous Administrative Complex"
+    building_autonomous_bureaucracy_2_desc: "This autonomous building is doing the work of £job_bureaucrat£ §Y$job_bureaucrat_plural$§! - generating £country_admin_cap_add£ §YAdministrative Capacity§!. Houses 20 £uploaded_pops£ §YUploaded Pops§!."

@@ -1,0 +1,276 @@
+###############
+### Country ###
+###############
+
+infestation_hive_global_country_modifiers = {
+	country_base_alloys_produces_add = 5
+    country_base_minerals_produces_add = 5
+}
+
+##############
+### Planet ###
+##############
+
+### Buildings ###
+infestation_hive_planet_buildings_cost = {
+	planet_buildings_minerals_cost_mult = -0.6
+	planet_buildings_food_cost_add = 200
+	planet_buildings_exotic_gases_cost_add = 50
+	planet_buildings_strongholds_minerals_cost_mult = -0.6
+	planet_buildings_strongholds_food_cost_add = 200
+	planet_buildings_strongholds_exotic_gases_cost_add = 50
+}
+
+### Planet Modifiers ###
+infestation_hive_stage_0 = {
+	pop_growth_speed = -0.95
+	pop_amenities_usage_mult = 0.75
+	planet_jobs_produces_mult = -0.75
+	planet_buildings_cost_mult = 0.50
+	planet_districts_cost_mult = 0.50
+	icon = "gfx/interface/icons/planet_modifiers/pm_planet_surface.dds"
+	icon_frame = 3
+}
+
+infestation_hive_stage_1 = {
+	pop_growth_speed = -0.50
+	pop_amenities_usage_mult = 0.33
+	planet_jobs_produces_mult = -0.33
+	icon = "gfx/interface/icons/planet_modifiers/pm_infestation_hive_stages.dds"
+	icon_frame = 3
+}
+
+infestation_hive_stage_2 = {
+	pop_growth_speed = -0.20
+	planet_jobs_produces_mult = -0.15
+	icon = "gfx/interface/icons/planet_modifiers/pm_infestation_hive_stages.dds"
+	icon_frame = 2
+}
+
+infestation_hive_stage_3 = {
+	pop_growth_speed = 0.15
+	pop_amenities_usage_mult = -0.33
+	icon = "gfx/interface/icons/planet_modifiers/pm_infestation_hive_stages.dds"
+	icon_frame = 1
+}
+
+#############
+### Ships ###
+#############
+
+### Global ###
+infestation_hive_global_ship_cost = {
+	ships_energy_upkeep_mult = -0.6
+	ships_alloys_cost_mult = -0.6
+	ships_alloys_upkeep_mult = -0.6
+}
+
+### Vamilla Civilian ###
+infestation_hive_vanilla_civilian_ship_cost = {
+	ship_science_food_cost_add = 100
+	ship_science_food_upkeep_add = 0.5
+	ship_science_exotic_gases_upkeep_add = 0.05
+	
+
+	ship_constructor_food_cost_add = 100
+	ship_constructor_food_upkeep_add = 0.5
+	ship_constructor_exotic_gases_upkeep_add = 0.05
+	
+	ship_colonizer_alloys_cost_mult = -0.75
+	ship_colonizer_food_cost_mult = 1
+}
+
+### Vanilla Military ###
+infestation_hive_vanilla_military_ship_cost = {
+	ship_corvette_food_cost_add = 225
+	ship_corvette_food_upkeep_add = 0.2
+	ship_corvette_exotic_gases_cost_add = 5
+	ship_corvette_exotic_gases_upkeep_add = 0.1
+	
+	ship_destroyer_food_cost_add = 360
+	ship_destroyer_food_upkeep_add = 0.4
+	ship_destroyer_exotic_gases_cost_add = 10
+	ship_destroyer_exotic_gases_upkeep_add = 0.2
+	
+	ship_cruiser_food_cost_add = 630
+	ship_cruiser_food_upkeep_add = 0.8
+	ship_cruiser_exotic_gases_cost_add = 15
+	ship_cruiser_exotic_gases_upkeep_add = 0.4
+	
+	ship_battleship_food_cost_add = 1170
+	ship_battleship_food_upkeep_add = 1.6
+	ship_battleship_exotic_gases_cost_add = 20
+	ship_battleship_exotic_gases_upkeep_add = 0.6
+	
+	ship_titan_food_cost_add = 2250
+	ship_titan_food_upkeep_add = 3.2
+	ship_titan_exotic_gases_cost_add = 25
+	ship_titan_exotic_gases_upkeep_add = 1
+	
+	ship_juggernaut_food_cost_add = 4410
+	ship_juggernaut_food_upkeep_add = 20
+	ship_juggernaut_exotic_gases_cost_add = 100
+	ship_juggernaut_exotic_gases_upkeep_add = 2
+	
+	ship_colossus_food_cost_add = 25000
+	ship_colossus_food_upkeep_add = 20
+	ship_colossus_exotic_gases_cost_add = 100
+	ship_colossus_exotic_gases_upkeep_add = 2
+}
+
+### Realistic Ships ###
+infestation_hive_rs_military_ship_cost = {
+	ship_rs_support_cruiser_food_cost_add = 765
+	ship_rs_support_cruiser_food_upkeep_add = 0.9
+	ship_rs_support_cruiser_exotic_gases_cost_add = 16
+	ship_rs_support_cruiser_exotic_gases_upkeep_add = 0.4
+	
+	ship_rs_ea_cruiser_food_cost_add = 765
+	ship_rs_ea_cruiser_food_upkeep_add = 0.9
+	ship_rs_ea_cruiser_exotic_gases_cost_add = 16
+	ship_rs_ea_cruiser_exotic_gases_upkeep_add = 0.4
+
+	ship_rs_battlecruiser_food_cost_add = 810
+	ship_rs_battlecruiser_food_upkeep_add = 1
+	ship_rs_battlecruiser_exotic_gases_cost_add = 17
+	ship_rs_battlecruiser_exotic_gases_upkeep_add = 0.5
+	
+	ship_rs_dreadnought_food_cost_add = 1530
+	ship_rs_dreadnought_food_upkeep_add = 2
+	ship_rs_dreadnought_exotic_gases_cost_add = 22
+	ship_rs_dreadnought_exotic_gases_upkeep_add = 0.7
+}
+
+### Realistic Ships Heavy Dreadnought ###
+infestation_hive_rs_heavy_dreadnought_ship_cost = {
+	ship_rs_heavy_dreadnought_type_a_food_cost_add = 1890
+	ship_rs_heavy_dreadnought_type_a_food_upkeep_add = 2.5
+	ship_rs_heavy_dreadnought_type_a_exotic_gases_cost_add = 23
+	ship_rs_heavy_dreadnought_type_a_exotic_gases_upkeep_add = 0.8
+	
+	ship_rs_heavy_dreadnought_type_b_food_cost_add = 1890
+	ship_rs_heavy_dreadnought_type_b_food_upkeep_add = 2.5
+	ship_rs_heavy_dreadnought_type_b_exotic_gases_cost_add = 23
+	ship_rs_heavy_dreadnought_type_b_exotic_gases_upkeep_add = 0.8
+	
+	ship_rs_heavy_dreadnought_type_c_food_cost_add = 1890
+	ship_rs_heavy_dreadnought_type_c_food_upkeep_add = 2.5
+	ship_rs_heavy_dreadnought_type_c_exotic_gases_cost_add = 23
+	ship_rs_heavy_dreadnought_type_c_exotic_gases_upkeep_add = 0.8
+	
+	ship_rs_heavy_dreadnought_type_d_food_cost_add = 1890
+	ship_rs_heavy_dreadnought_type_d_food_upkeep_add = 2.5
+	ship_rs_heavy_dreadnought_type_d_exotic_gases_cost_add = 23
+	ship_rs_heavy_dreadnought_type_d_exotic_gases_upkeep_add = 0.8
+	
+	ship_rs_heavy_dreadnought_type_e_food_cost_add = 1890
+	ship_rs_heavy_dreadnought_type_e_food_upkeep_add = 2.5
+	ship_rs_heavy_dreadnought_type_e_exotic_gases_cost_add = 23
+	ship_rs_heavy_dreadnought_type_e_exotic_gases_upkeep_add = 0.8
+	
+	ship_rs_heavy_dreadnought_type_f_food_cost_add = 1890
+	ship_rs_heavy_dreadnought_type_f_food_upkeep_add = 2.5
+	ship_rs_heavy_dreadnought_type_f_exotic_gases_cost_add = 23
+	ship_rs_heavy_dreadnought_type_f_exotic_gases_upkeep_add = 0.8
+	
+	ship_rs_heavy_dreadnought_type_g_food_cost_add = 1890
+	ship_rs_heavy_dreadnought_type_g_food_upkeep_add = 2.5
+	ship_rs_heavy_dreadnought_type_g_exotic_gases_cost_add = 23
+	ship_rs_heavy_dreadnought_type_g_exotic_gases_upkeep_add = 0.8
+	
+	ship_rs_heavy_dreadnought_type_h_food_cost_add = 1890
+	ship_rs_heavy_dreadnought_type_h_food_upkeep_add = 2.5
+	ship_rs_heavy_dreadnought_type_h_exotic_gases_cost_add = 23
+	ship_rs_heavy_dreadnought_type_h_exotic_gases_upkeep_add = 0.8
+	
+	ship_rs_heavy_dreadnought_type_i_food_cost_add = 1890
+	ship_rs_heavy_dreadnought_type_i_food_upkeep_add = 2.5
+	ship_rs_heavy_dreadnought_type_i_exotic_gases_cost_add = 23
+	ship_rs_heavy_dreadnought_type_i_exotic_gases_upkeep_add = 0.8
+}
+
+### NSC Vanilla ###
+infestation_hive_nsc_vanilla_military_ship_cost = {
+	ship_corvette_food_cost_add = 225
+	ship_corvette_food_upkeep_add = 0.2
+	ship_corvette_exotic_gases_cost_add = 5
+	ship_corvette_exotic_gases_upkeep_add = 0.1
+	
+	ship_destroyer_food_cost_add = 360
+	ship_destroyer_food_upkeep_add = 0.4
+	ship_destroyer_exotic_gases_cost_add = 10
+	ship_destroyer_exotic_gases_upkeep_add = 0.2
+	
+	ship_cruiser_food_cost_add = 630
+	ship_cruiser_food_upkeep_add = 0.8
+	ship_cruiser_exotic_gases_cost_add = 15
+	ship_cruiser_exotic_gases_upkeep_add = 0.4
+	
+	ship_battleship_food_cost_add = 2790
+	ship_battleship_food_upkeep_add = 1.6
+	ship_battleship_exotic_gases_cost_add = 20
+	ship_battleship_exotic_gases_upkeep_add = 0.6
+	
+	ship_titan_food_cost_add = 5490
+	ship_titan_food_upkeep_add = 3.2
+	ship_titan_exotic_gases_cost_add = 25
+	ship_titan_exotic_gases_upkeep_add = 1
+	
+	ship_juggernaut_food_cost_add = 13590
+	ship_juggernaut_food_upkeep_add = 20
+	ship_juggernaut_exotic_gases_cost_add = 100
+	ship_juggernaut_exotic_gases_upkeep_add = 2
+	
+	ship_colossus_food_cost_add = 25000
+	ship_colossus_food_upkeep_add = 20
+	ship_colossus_exotic_gases_cost_add = 100
+	ship_colossus_exotic_gases_upkeep_add = 2
+}
+
+### NSC Ships ###
+infestation_hive_nsc_ship_cost = {
+	ship_explorationship_food_cost_add = 2340
+	ship_explorationship_food_upkeep_add = 0.9
+	ship_explorationship_exotic_gases_cost_add = 16
+	ship_explorationship_exotic_gases_upkeep_add = 0.4
+	
+	ship_StrikeCruiser_food_cost_add = 2115
+	ship_StrikeCruiser_food_upkeep_add = 0.9
+	ship_StrikeCruiser_exotic_gases_cost_add = 16
+	ship_StrikeCruiser_exotic_gases_upkeep_add = 0.4
+	
+	ship_escortcarrier_food_cost_add = 2790
+	ship_escortcarrier_food_upkeep_add = 1.2
+	ship_escortcarrier_exotic_gases_cost_add = 18
+	ship_escortcarrier_exotic_gases_upkeep_add = 0.5
+	
+	ship_Battlecruiser_food_cost_add = 2340
+	ship_Battlecruiser_food_upkeep_add = 1.2
+	ship_Battlecruiser_exotic_gases_cost_add = 17
+	ship_Battlecruiser_exotic_gases_upkeep_add = 0.4
+	
+	ship_Carrier_food_cost_add = 4590
+	ship_Carrier_food_upkeep_add = 2
+	ship_Carrier_exotic_gases_cost_add = 23
+	ship_Carrier_exotic_gases_upkeep_add = 0.7
+	
+	ship_Dreadnought_food_cost_add = 5040
+	ship_Dreadnought_food_upkeep_add = 2.5
+	ship_Dreadnought_exotic_gases_cost_add = 24
+	ship_Dreadnought_exotic_gases_upkeep_add = 0.9
+	
+	ship_Flagship_food_cost_add = 30000
+	ship_Flagship_exotic_gases_cost_add = 1000
+	
+	ship_headquarters_food_cost_add = 40000
+	ship_headquarters_exotic_gases_cost_add = 3000
+}
+
+### At War ###
+infestation_hive_at_war_pdf_upkeep = {
+    ship_eac_pdf_patrol_craft_1_food_upkeep_add = 0.2
+    ship_eac_pdf_patrol_craft_1_exotic_gases_upkeep_add = 0.1
+    
+    ship_eac_pdf_patrol_craft_2_food_upkeep_add = 0.2
+    ship_eac_pdf_patrol_craft_2_exotic_gases_upkeep_add = 0.1
+}

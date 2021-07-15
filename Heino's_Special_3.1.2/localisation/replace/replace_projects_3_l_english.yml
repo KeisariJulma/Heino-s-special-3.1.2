@@ -1,0 +1,4 @@
+﻿l_english:
+
+ AI_ADMIRAL_PROJECT_DESC:0 "An ancient fleet has been found crashed on a desert [Root.GetPlanetMoon], with a still-active shipboard AI. If we do not move to subdue it, things might take a turn for the worse."
+ ROBOT_CLEANERS_PROJECT_DESC:0 "A facility filled with robots has been found on a distant [Root.GetPlanetMoon]. If we reactivate them, they might reveal the secrets of their home."

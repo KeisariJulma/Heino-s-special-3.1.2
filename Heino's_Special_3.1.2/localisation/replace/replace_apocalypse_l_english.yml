@@ -1,0 +1,7 @@
+﻿l_english:
+
+ planet_destruction.101.name:0 "[From.GetPlanetMoonCap] Cracked"
+ planet_destruction.101.desc:0 "The [From.From.GetName]'s gentle rocking - buffeted by [From.GetName]'s rupturing crust and unraveling magnetosphere - subsides as the Colossus completes its cataclysmic task.\n\nThe sheer violence of a dying [From.GetPlanetMoon] is difficult to comprehend, but the funereal beauty of [From.GetName]'s molten core cooling in gelid space is undeniable."
+ holy_player_planet_desc:0 "This [This.GetPlanetMoon] is unspoiled by sapient life and considered sacred."
+ has_holy_world_candidate:0 "$TRIGGER_FAIL$§RThere is no uncolonized §Y$pc_gaia§! within our borders§!"
+ yuht_homeworld_desc:0 "The ancient Yuht originated on this [This.GetPlanetMoon]. Orbital bombardment has pulverized most structures on the surface, but there are still pockets of abandoned subterranean habitats that could be studied."

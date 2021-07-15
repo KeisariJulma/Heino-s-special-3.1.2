@@ -1,0 +1,17 @@
+sysadmins = {
+	icon = "job_sysadmin"
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+}
+
+sysadmin_drone = {
+	icon = "job_sysadmin"
+	parent = planet_jobs
+	generate_mult_modifiers = {
+		produces
+		upkeep
+	}
+}

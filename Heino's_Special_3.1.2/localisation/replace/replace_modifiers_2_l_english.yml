@@ -1,0 +1,15 @@
+﻿l_english:
+
+ cunning_flora_desc:0 "Plants on this [This.GetPlanetMoon] exhibit both extreme aggression and a relatively complex social order."
+ drone_space_elevator_desc:0 "Efforts to demolish a gigantic space elevator slows down production on this [This.GetPlanetMoon]."
+ fascinating_flora_desc:0 "This [This.GetPlanetMoon] is home to the wonderful Mharin Kharin flower."
+ pheromoned_detox_desc:0 "The Mharin Kharin bloom has killed the [This.GetPlanetMoon]'s biosphere, along with everything within it. A new cycle begins."
+ uplift_rocky_desc:0 "The uplifted species on this [This.GetPlanetMoon] has some trouble adjusting to the new social order."
+ unhappy_with_experiments_desc:0 "The [This.GetPlanetMoon]'s $XenophileY$ population is unhappy with unethical experiments on native life-forms."
+ unproductive_without_experiments_desc:0 "The [This.GetPlanetMoon]'s $Society researchY$ output suffers as excellent opportunities for experimentation and clinical tests pass scientists by."
+ cornucopia_desc:0 "This [This.GetPlanetMoon] is home to an abundance of viable food sources."
+ raw_materials_desc:0 "This [This.GetPlanetMoon] is home to an abundance of easily-accessible minerals and ores."
+ shadow_play_desc:0 "Shadows drift across the surface of this [This.GetPlanetMoon], forming shapes of apparent intent but indeterminable meaning."
+ grimacing_desc:0 "This [This.GetPlanetMoon]'s internal turmoil makes for an interesting object of study."
+ unusual_tectonics_desc:0 "This [This.GetPlanetMoon] exhibits highly unusual tectonophysical properties."
+ unbalanced_ecosystem_desc:0 "The biosphere's tendencies toward extreme homogeneity in plant life makes this [This.GetPlanetMoon] unsuitable for agricultural pursuits."

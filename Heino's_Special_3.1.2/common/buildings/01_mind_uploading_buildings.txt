@@ -1,0 +1,540 @@
+# Regular empire
+building_virtual_reality_center = {
+	base_buildtime = 360
+
+	potential = {
+		exists = owner
+		NOT = { has_modifier = slave_colony }
+		owner = {
+			has_policy_flag = brain_uploading_allowed
+			NOR = {
+				is_machine_empire = yes
+				is_spiritualist = yes
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			has_modifier = slave_colony
+			owner = {
+				OR = {
+					is_gestalt = yes
+					is_spiritualist = yes
+				}
+			}
+		}
+	}
+
+	convert_to = {
+		building_virtual_reality_gestalt_center
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 10
+			consumer_goods = 2
+		}
+	}
+
+	prerequisites = {
+		"virtual_reality_building"
+	}
+	
+	planet_modifier = {
+		job_sysadmin_add = 2
+	}
+
+	show_tech_unlock_if = {
+		is_gestalt = no
+		is_spiritualist = no
+	}
+
+	triggered_desc = {
+		text = job_sysadmin_desc
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Gestalt empires
+
+building_virtual_reality_center_gestalt = {
+	base_buildtime = 360
+	icon = building_virtual_reality_center
+
+	potential = {
+		exists = owner
+		owner = {
+			has_policy_flag = brain_uploading_allowed
+			is_machine_empire = yes
+		}
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+		buildings_upgrade_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			OR = {
+				is_gestalt = no
+			}
+		}
+	}
+
+	convert_to = {
+		building_virtual_reality_center_gestalt
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 15
+		}
+	}
+
+	prerequisites = {
+		"virtual_reality_building_gestalt"
+	}
+	
+	planet_modifier = {
+		job_sysadmin_drone_add = 2
+	}
+
+	show_tech_unlock_if = {
+		is_machine_empire = yes
+	}
+
+	triggered_desc = {
+		text = job_sysadmin_drone_desc
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+### Automated buildings
+
+##Adding building slots
+#Autonomous Maintenance Grid
+building_autonomous_maintenance_grid_1 = {
+	base_buildtime = 600
+
+	category = manufacturing
+
+	planet_modifier = {
+		planet_amenities_add = 5
+		planet_max_buildings_add = 5
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 700
+			uploaded_pops = 10
+		}
+		upkeep = {
+			energy = 12
+		}
+	}
+
+	upgrades = {
+		building_autonomous_maintenance_grid_2
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Expansive Autonomous Maintenance Grid
+building_autonomous_maintenance_grid_2 = {
+	base_buildtime = 1200
+	can_build = no
+
+	category = manufacturing
+
+	planet_modifier = {
+		planet_amenities_add = 25
+		planet_max_buildings_add = 25
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 2100
+			uploaded_pops = 50
+		}
+		upkeep = {
+			energy = 55
+		}
+	}
+
+	upgrades = {
+	}
+
+	prerequisites = {
+		full_automation_technology_advanced
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+##Autonomous Research Laboratories
+
+#Autonomous Laboratory
+building_autonomous_lab_1 = {
+	base_buildtime = 480
+	can_be_ruined = no
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			physics_research = 40
+			engineering_research = 40
+			society_research = 40
+		}
+		cost = {
+			minerals = 600
+			uploaded_pops = 10
+		}
+		upkeep = {
+			energy = 52
+		}
+	}
+
+	upgrades = {
+		building_autonomous_lab_2
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Autonomous Research Complex
+building_autonomous_lab_2 = {
+	base_buildtime = 600
+	can_build = no
+	can_be_ruined = no
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			physics_research = 100
+			engineering_research = 100
+			society_research = 100
+		}
+		cost = {
+			minerals = 600
+			uploaded_pops = 10
+		}
+		upkeep = {
+			energy = 145
+		}
+	}
+
+	upgrades = {
+		building_autonomous_lab_3
+	}
+
+	prerequisites = {
+		full_automation_technology_advanced
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Autonomous Research Center
+building_autonomous_lab_3 = {
+	base_buildtime = 600
+	can_build = no
+	can_be_ruined = no
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			physics_research = 550
+			engineering_research = 550
+			society_research = 550
+		}
+		cost = {
+			minerals = 600
+			uploaded_pops = 80
+		}
+		upkeep = {
+			energy = 700
+		}
+	}
+
+	upgrades = {
+	}
+
+	prerequisites = {
+		full_automation_technology_ascended
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Autonomous Fortifications
+#Autonomous Fortification
+building_autonomous_fort_1 = {
+	base_buildtime = 480
+
+	category = army
+
+	country_modifier = { country_naval_cap_add = 30 }
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+			uploaded_pops = 10
+		}
+		upkeep = {
+			energy = 12
+			alloys = 2
+		}
+	}
+
+	upgrades = {
+		building_autonomous_fort_2
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Autonomous Stronghold
+building_autonomous_fort_2 = {
+	base_buildtime = 600
+	can_build = no
+
+	category = army
+
+	country_modifier = { country_naval_cap_add = 60 }
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1200
+			uploaded_pops = 10
+		}
+		upkeep = {
+			energy = 45
+			alloys = 4
+		}
+	}
+
+	upgrades = {
+		building_autonomous_fort_3
+	}
+
+	prerequisites = {
+		full_automation_technology_advanced
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Autonomous Fortress
+building_autonomous_fort_3 = {
+	base_buildtime = 1200
+	can_build = no
+
+	country_modifier = { country_naval_cap_add = 300 }
+
+	category = army
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 6000
+			uploaded_pops = 80
+		}
+		upkeep = {
+			energy = 250
+			alloys = 20
+		}
+	}
+
+	upgrades = {
+		building_autonomous_fort_4
+	}
+
+	prerequisites = {
+		full_automation_technology_ascended
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Autonomous Citadel
+building_autonomous_fort_4 = {
+	base_buildtime = 1200
+	can_build = no
+
+	country_modifier = { country_naval_cap_add = 750 }
+
+	category = army
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 6000
+			uploaded_pops = 150
+		}
+		upkeep = {
+			energy = 600
+			alloys = 50
+		}
+	}
+
+	upgrades = {
+		building_autonomous_fort_5
+	}
+
+	prerequisites = {
+		full_automation_technology_ascended
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Autonomous Giga-Fortification
+building_autonomous_fort_5 = {
+	base_buildtime = 1200
+	can_build = no
+
+	country_modifier = { country_naval_cap_add = 3000 }
+
+	category = army
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 6000
+			uploaded_pops = 750
+		}
+		upkeep = {
+			energy = 2250
+			alloys = 200
+		}
+	}
+
+	upgrades = {
+	}
+
+	prerequisites = {
+		full_automation_technology_ascended
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Autonomous Administration
+building_autonomous_bureaucracy_1 = {
+	base_buildtime = 480
+
+	category = government
+
+	country_modifier = { country_admin_cap_add = 100 }
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 600
+			uploaded_pops = 10
+		}
+		upkeep = {
+			energy = 22
+		}
+	}
+
+	upgrades = {
+		building_autonomous_bureaucracy_2
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Autonomous Administrative Complex
+building_autonomous_bureaucracy_2 = {
+	base_buildtime = 600
+	can_build = no
+
+	category = government
+
+	country_modifier = { country_admin_cap_add = 200 }
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1200
+			uploaded_pops = 10
+		}
+		upkeep = {
+			energy = 55
+		}
+	}
+
+	prerequisites = {
+		full_automation_technology_advanced
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

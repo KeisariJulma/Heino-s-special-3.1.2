@@ -1,0 +1,6 @@
+﻿l_english:
+
+ syndaw.505.desc:0 "Planetary administration on [target_planet.GetName] has reported that an unplanned surplus of robotic workforce units have been located planetside. Though the efficiency of these new robotic workers is exceptional, administration is somewhat baffled by their sudden appearance. It seems the robots' serial numbers cannot be traced to any known manufacturies on record, though their construction and interfacing does suggest [Root.GetAdj] design.\n\nNonetheless, some of the local populace have expressed concerns over potential job displacement due to this increase in automation."
+ syndaw.525.desc:0 "The robotic workers on [target_planet.GetName] have resisted an influx of [Root.GetSpeciesAdj] laborers, claiming recent geothermic instability in the region has made the area unsafe for organic habitation. Oddly enough, our planetary surveys have not been able to confirm these claims."
+ syndaw.525.a:0 "Send in the [Root.GetSpeciesAdj] laborers anyway."
+ syndaw.526.desc:0 "Administration on [target_planet.GetName] reports that upon arrival at their target region, the [Root.GetSpeciesAdj] laborers discovered that the robotic inhabitants were nowhere to be found. Investigation of facilities in the region suggest the robots vacated the area in a hurry, but we have no indication of where they have gone."

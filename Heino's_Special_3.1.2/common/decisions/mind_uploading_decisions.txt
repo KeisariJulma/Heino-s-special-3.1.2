@@ -1,0 +1,101 @@
+#Forced uploading
+decision_forced_uploading = {
+	owned_planets_only = yes
+	sound = event_ai_started_01.wav
+	icon = decision_forced_uploading
+	ai_weight = { weight = 0 }
+
+	potential = {
+		owner = {
+			OR = {
+				has_technology = virtual_reality_building
+				has_technology = virtual_reality_building_gestalt
+			}
+		}
+	}
+
+	allow = {
+		AND = {
+		    any_owned_pop = { is_pop_category = purge }
+		    NOT = {
+				is_robot_pop = yes
+			}
+		}
+	}
+
+	effect = {
+		custom_tooltip = "decision_forced_uploading_custom_effects"
+		hidden_effect = {
+		    every_owned_pop = {
+				limit = { is_pop_category = purge }
+				limit = { is_robot_pop = no }
+				kill_pop = yes
+				prev.owner = { add_resource = { uploaded_pops = 1 } }
+			}
+		}
+	}
+}
+
+#Sysadmin Mind Uploading
+
+decision_sysadmin_uploading = {
+	owned_planets_only = yes
+	sound = event_ai_started_01.wav
+	icon = decision_uploading
+	ai_weight = { weight = 0 }
+
+	potential = {
+		owner = {
+			has_technology = virtual_reality_building
+			is_gestalt = no
+		}
+	}
+
+	allow = {
+		any_owned_pop = { has_job = sysadmin }
+	}
+
+	effect = {
+		custom_tooltip = "decision_sysadmin_uploading_custom_effects"
+		hidden_effect = {
+			every_owned_pop = {	
+				limit = { has_job = sysadmin }
+				kill_pop = yes
+				prev.owner = { add_resource = { uploaded_pops = 1 } }
+				prev.owner = { add_resource = { unity = 10 } }
+			}
+		}
+	}
+}
+
+#Sysadmin Mind Uploading
+
+decision_sysadmin_drone_uploading = {
+	owned_planets_only = yes
+	sound = event_ai_started_01.wav
+	icon = decision_uploading
+	ai_weight = { weight = 0 }
+
+	potential = {
+		owner = {
+			has_technology = virtual_reality_building_gestalt
+			is_gestalt = yes
+		}
+	}
+
+	allow = {
+		any_owned_pop = { has_job = sysadmin_drone }
+	}
+
+	effect = {
+		custom_tooltip = "decision_sysadmin_drone_uploading_custom_effects"
+		hidden_effect = {
+			every_owned_pop = {	
+				limit = { has_job = sysadmin_drone }
+				kill_pop = yes
+				prev.owner = { add_resource = { uploaded_pops = 1 } }
+				prev.owner = { add_resource = { unity = 10 } }
+			}
+		}
+	}
+}

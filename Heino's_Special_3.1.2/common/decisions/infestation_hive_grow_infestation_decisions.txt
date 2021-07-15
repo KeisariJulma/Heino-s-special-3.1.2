@@ -1,0 +1,251 @@
+### Stage 1
+decision_infestation_hive_stage_1 = {
+	owned_planets_only = yes
+	icon = decision_resources
+	enactment_time = 900
+	resources = {
+		category = decisions
+		cost = {
+			food = 1000 
+			energy = 500
+			exotic_gases = 200
+		}
+	}
+	potential = {
+		habitable_structure = no
+		is_colony = yes
+		owner = {
+			has_origin = origin_infestation_hive
+		}
+		NOT = {
+			is_planet_class = pc_infestation
+		}
+		NOR = {
+			has_planet_flag = infestation_hive_stage_1
+			has_planet_flag = infestation_hive_stage_2
+			has_planet_flag = infestation_hive_stage_3
+		}
+	}
+	allow = {
+		owner = {
+			has_origin = origin_infestation_hive
+		}
+	}
+	effect = {
+		set_planet_flag = infestation_hive_stage_1
+		remove_modifier = infestation_hive_stage_0
+		add_modifier = {
+			modifier = infestation_hive_stage_1
+			days = -1
+		}
+		change_pc = pc_infestation
+		clear_deposits = yes
+	}
+	ai_weight = {
+		weight = 1000
+	}
+}
+ ### Stage 2
+decision_infestation_hive_stage_2 = {
+	owned_planets_only = yes
+	icon = decision_resources
+
+	enactment_time = 1440
+	resources = {
+		category = decisions
+		cost = {
+			food = 1000 
+			energy = 1000
+			exotic_gases = 250
+		}
+	}
+	
+	potential = {
+		is_planet_class = pc_infestation
+		has_planet_flag = infestation_hive_stage_1
+		habitable_structure = no
+		is_colony = yes
+		owner = {
+			has_origin = origin_infestation_hive
+		}
+		NOR = {
+			has_planet_flag = infestation_hive_stage_2
+			has_planet_flag = infestation_hive_stage_3
+		}
+	}
+
+	allow = {
+		owner = {
+			has_origin = origin_infestation_hive
+		}
+		is_colony = yes
+	}
+	
+	effect = {
+		set_planet_entity = {
+			entity = "infestation_planet_second_stage_01_entity"
+		}
+		remove_planet_flag = infestation_hive_stage_1
+		set_planet_flag = infestation_hive_stage_2
+		remove_modifier = infestation_hive_stage_1
+		add_modifier = {
+			modifier = infestation_hive_stage_2
+			days = -1
+		}
+	}
+	ai_weight = {
+		weight = 1000
+	}
+}
+### Stage 3
+decision_infestation_hive_stage_3 = {
+	owned_planets_only = yes
+	icon = decision_resources
+
+	enactment_time = 1800
+	resources = {
+		category = decisions
+		cost = {
+			food = 3000 
+			energy = 3000
+			exotic_gases = 300
+		}
+	}
+	
+	potential = {
+		is_planet_class = pc_infestation
+		has_planet_flag = infestation_hive_stage_2
+		habitable_structure = no
+		is_colony = yes
+		owner = {
+			has_origin = origin_infestation_hive
+		}
+		NOR = {
+			has_planet_flag = infestation_hive_stage_1
+			has_planet_flag = infestation_hive_stage_3
+		}
+	}
+
+	allow = {
+		owner = {
+			has_origin = origin_infestation_hive
+		}
+		is_colony = yes
+	}
+	
+	effect = {
+		set_planet_entity = {
+			entity = "infestation_planet_third_stage_01_entity"
+		}
+		remove_planet_flag = infestation_hive_stage_2
+		set_planet_flag = infestation_hive_stage_3
+		remove_modifier = infestation_hive_stage_2
+		add_modifier = {
+			modifier = infestation_hive_stage_3
+			days = -1
+		}
+	}
+	ai_weight = {
+		weight = 1000
+	}
+}
+
+### Remove Infestation
+decision_infestation_hive_remove_infestation = {
+	owned_planets_only = yes
+	icon = decision_resources
+
+	enactment_time = 1800
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 200 
+			energy = 1500
+		}
+	}
+	
+	potential = {
+		is_planet_class = pc_infestation
+		habitable_structure = no
+		is_colony = yes
+		NOT = {
+			owner = {
+				has_origin = origin_infestation_hive
+			}
+		}
+	}
+
+	allow = {
+		NOT = {
+			owner = {
+				has_origin = origin_infestation_hive
+			}
+		}
+		is_colony = yes
+	}
+	
+	effect = {
+		change_pc = pc_nuked	
+		reset_planet = yes
+		remove_planet_flag = infestation_hive_stage_1
+		remove_planet_flag = infestation_hive_stage_2
+		remove_planet_flag = infestation_hive_stage_3
+		remove_modifier = infestation_hive_stage_1
+		remove_modifier = infestation_hive_stage_2
+		remove_modifier = infestation_hive_stage_3
+	}
+	ai_weight = {
+		weight = 10000
+	}
+}
+
+### Infest if bug happend
+
+decision_infestation_hive_bug_fix = {
+	owned_planets_only = yes
+	icon = decision_resources
+	enactment_time = 1
+	resources = {
+		category = decisions
+		cost = {
+			food = 1
+		}
+	}
+	potential = {
+		habitable_structure = no
+		is_colony = yes
+		owner = {
+			has_origin = origin_infestation_hive
+		}
+		NOT = {
+			is_planet_class = pc_infestation
+		}
+		OR = {
+			has_planet_flag = infestation_hive_stage_1
+			has_planet_flag = infestation_hive_stage_2
+			has_planet_flag = infestation_hive_stage_3
+		}
+	}
+	allow = {
+		owner = {
+			has_origin = origin_infestation_hive
+		}
+	}
+	effect = {
+		set_planet_flag = infestation_hive_stage_1
+		remove_planet_flag = infestation_hive_stage_2
+		remove_planet_flag = infestation_hive_stage_3
+		remove_modifier = infestation_hive_stage_1
+		remove_modifier = infestation_hive_stage_2
+		remove_modifier = infestation_hive_stage_3
+		add_modifier = {
+			modifier = infestation_hive_stage_1
+			days = -1
+		}
+		change_pc = pc_infestation
+		clear_deposits = yes
+	}
+	ai_weight = {
+		weight = 100000
+	}
+}

@@ -1,0 +1,83 @@
+namespace = mzilli_localisation
+
+event = {
+	id = mzilli_localisation.1
+	title = OK
+	desc = OK
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	immediate = {
+		every_country = {
+			limit = { has_origin = origin_syncretic_evolution }
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = syncretic_evolution_1 } } }
+				set_country_flag = syncretic_evolution_1
+				random_owned_pop = {
+					limit = { has_trait = trait_syncretic_proles }
+					species = {
+						save_global_event_target_as = syncretic_species_1
+						set_species_flag = syncretic_species_1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_country = { has_country_flag = syncretic_evolution_1 }
+					NOT = { any_country = { has_country_flag = syncretic_evolution_2 } }
+				}
+				set_country_flag = syncretic_evolution_2
+				random_owned_pop = {
+					limit = { has_trait = trait_syncretic_proles }
+					species = {
+						save_global_event_target_as = syncretic_species_2
+						set_species_flag = syncretic_species_2
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_country = { has_country_flag = syncretic_evolution_2 }
+					NOT = { any_country = { has_country_flag = syncretic_evolution_3 } }
+				}
+				set_country_flag = syncretic_evolution_3
+				random_owned_pop = {
+					limit = { has_trait = trait_syncretic_proles }
+					species = {
+						save_global_event_target_as = syncretic_species_3
+						set_species_flag = syncretic_species_3
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_country = { has_country_flag = syncretic_evolution_3 }
+					NOT = { any_country = { has_country_flag = syncretic_evolution_4 } }
+				}
+				set_country_flag = syncretic_evolution_4
+				random_owned_pop = {
+					limit = { has_trait = trait_syncretic_proles }
+					species = {
+						save_global_event_target_as = syncretic_species_4
+						set_species_flag = syncretic_species_4
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_country = { has_country_flag = syncretic_evolution_4 }
+					NOT = { any_country = { has_country_flag = syncretic_evolution_5 } }
+				}
+				set_country_flag = syncretic_evolution_5
+				random_owned_pop = {
+					limit = { has_trait = trait_syncretic_proles }
+					species = {
+						save_global_event_target_as = syncretic_species_5
+						set_species_flag = syncretic_species_5
+					}
+				}
+			}
+		}
+	}
+}

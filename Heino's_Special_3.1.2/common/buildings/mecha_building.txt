@@ -1,0 +1,359 @@
+#
+# BALANCE
+# can change the time and cost of all common buildings with these variables below
+
+@b0time = 120
+@b0cost = 30
+@b0effect = 1
+@b0upkeep = 0.5
+
+@b1time = 210
+@b1cost = 60
+@b1effect = 2
+@b1upkeep = 1
+
+@b2time = 180
+@b2cost = 90
+@b2effect = 3
+@b2upkeep = 1.5
+
+@b3time = 180
+@b3cost = 120
+@b3effect = 4
+@b3upkeep = 2
+
+@b4time = 180
+@b4cost = 150
+@b4effect = 5
+@b4upkeep = 2.5
+
+@b5time = 180
+@b5cost = 180
+@b5effect = 8
+@b5upkeep = 3
+
+@science1 = 1
+@science2 = 2
+@science3 = 3
+@science4 = 4
+@science5 = 6
+
+@natural_equilibrium_happiness = 0.02
+
+
+building_titan_forge = {
+	base_buildtime = 480
+	planet_unique = yes
+	empire_unique = yes
+	base_cap_amount = 1
+
+	category = army
+	
+	potential = {
+		owner = { has_ascension_perk = ap_the_flesh_is_weak }
+		planet = {
+			NOT = { is_planet_class = pc_habitat }	
+		}
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	army_modifier = {
+		army_starting_experience_add = 100
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_roboticist_add = 4
+			job_soldier_add = 4
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}			
+		upkeep = {
+			energy = 10
+		}
+	}
+	
+	prerequisites = {
+		"tech_mega_engineering"
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_soldier_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 0.5
+	}
+}
+
+building_psi_forge = {
+	base_buildtime = 480
+	planet_unique = yes
+	empire_unique = yes
+	base_cap_amount = 1
+
+	category = army
+	
+	potential = {
+		owner = { has_ascension_perk = ap_mind_over_matter }
+	}
+	planet = {
+		NOT = { is_planet_class = pc_habitat }	
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	army_modifier = {
+		army_starting_experience_add = 100
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_soldier_add = 8
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}			
+		upkeep = {
+			energy = 10
+		}
+	}
+	
+	prerequisites = {
+		"tech_mega_engineering"
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_soldier_effect_desc
+	}
+	
+	show_tech_unlock_if = { has_ascension_perk = ap_mind_over_matter }
+	
+	ai_weight = {
+		weight = 0.5
+	}
+}
+
+building_titanic_preserve = {
+	base_buildtime = 480
+	planet_unique = yes
+	empire_unique = yes
+	base_cap_amount = 1
+
+	category = army
+	
+	potential = {
+		owner = { has_ascension_perk = ap_engineered_evolution }
+	}
+	planet = {
+		NOT = { is_planet_class = pc_habitat }	
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	army_modifier = {
+		army_starting_experience_add = 100
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = no }
+		}
+		modifier = {
+			job_soldier_add = 8
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}			
+		upkeep = {
+			energy = 10
+		}
+	}
+	
+	prerequisites = {
+		"tech_mega_engineering"
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_soldier_effect_desc
+	}
+	
+	show_tech_unlock_if = { has_ascension_perk = ap_engineered_evolution }
+	
+	ai_weight = {
+		weight = 0.5
+	}
+}
+
+building_titan_factory = {
+	base_buildtime = 480
+	planet_unique = yes
+	empire_unique = yes
+	base_cap_amount = 1
+
+	category = army
+	
+	potential = {
+		owner = { 
+			has_authority = auth_machine_intelligence
+		}
+	}
+	planet = {
+		NOT = { is_planet_class = pc_habitat }	
+	}
+	destroy_if = {
+		exists = owner
+		owner = {
+			NOT = { 
+				has_authority = auth_machine_intelligence
+			}
+		}		
+	}
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	army_modifier = {
+		army_starting_experience_add = 100
+	}
+	
+	triggered_planet_modifier = {
+		modifier = {
+			job_replicator_add = 6
+			job_warrior_drone_add = 2
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}			
+		upkeep = {
+			energy = 10
+		}
+	}
+	
+	prerequisites = {
+		"tech_mega_engineering"
+	}
+	
+	triggered_desc = {
+		text = job_replicator_add
+	}
+	
+	show_tech_unlock_if = { has_authority = auth_machine_intelligence }
+	
+	ai_weight = {
+		weight = 0.5
+	}
+}
+
+
+building_titan_nest = {
+	base_buildtime = 480
+	planet_unique = yes
+	empire_unique = yes
+	base_cap_amount = 1
+
+	category = army
+	
+	potential = {
+		owner = { 
+			has_authority = auth_hive_mind
+		}
+	}
+	planet = {
+		NOT = { is_planet_class = pc_habitat }	
+	}
+	destroy_if = {
+		exists = owner
+		owner = {
+			NOT = { 
+				has_authority = auth_hive_mind
+			}
+		}		
+	}
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	army_modifier = {
+		army_starting_experience_add = 100
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_warrior_drone_add = 8
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1000
+		}			
+		upkeep = {
+			energy = 10
+		}
+	}
+	
+	prerequisites = {
+		"tech_mega_engineering"
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_warrior_drone_effect_desc
+	}
+	
+	show_tech_unlock_if = { has_authority = auth_hive_mind }
+	
+	ai_weight = {
+		weight = 0.5
+	}
+}

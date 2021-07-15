@@ -1,0 +1,869 @@
+### Mining and Energy buildings
+# Autonomous Mine
+building_autonomous_mine_1 = {
+	base_buildtime = 300
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			minerals = 12
+		}
+		cost = {
+			minerals = 340
+			uploaded_pops = 2
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	upgrades = {
+		building_autonomous_mine_2
+	}
+
+	potential = {
+		free_district_slots >= 1
+		num_free_districts = {
+			type = district_mining
+			value >= 1
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+		district_mining_max = -1
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Autonomous Excavation Zone
+building_autonomous_mine_2 = {
+	base_buildtime = 300
+	can_build = no
+	icon = building_autonomous_mine_1
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			minerals = 24
+		}
+		cost = {
+			minerals = 340
+			uploaded_pops = 2
+		}
+		upkeep = {
+			energy = 6
+		}
+	}
+
+	potential = {
+		free_district_slots >= 1
+		num_free_districts = {
+			type = district_mining
+			value >= 1
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -2
+		district_mining_max = -2
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	upgrades = {
+		building_autonomous_mine_3
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_autonomous_mine_3 = {
+	base_buildtime = 300
+	can_build = no
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			minerals = 36
+		}
+		cost = {
+			minerals = 340
+			uploaded_pops = 2
+		}
+		upkeep = {
+			energy = 9
+		}
+	}
+
+	upgrades = {
+		building_autonomous_mine_4
+	}
+
+	potential = {
+		free_district_slots >= 1
+		num_free_districts = {
+			type = district_mining
+			value >= 1
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -3
+		district_mining_max = -3
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_autonomous_mine_4 = {
+	base_buildtime = 300
+	icon = building_autonomous_mine_3
+
+	category = manufacturing
+	can_build = no
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			minerals = 48
+		}
+		cost = {
+			minerals = 340
+			uploaded_pops = 2
+		}
+		upkeep = {
+			energy = 15
+		}
+	}
+
+	upgrades = {
+		building_autonomous_mine_5
+	}
+
+	potential = {
+		free_district_slots >= 1
+		num_free_districts = {
+			type = district_mining
+			value >= 1
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -4
+		district_mining_max = -4
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_autonomous_mine_5 = {
+	base_buildtime = 600
+	can_build = no
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			minerals = 60
+		}
+		cost = {
+			minerals = 340
+			uploaded_pops = 2
+		}
+		upkeep = {
+			energy = 18
+		}
+	}
+
+	potential = {
+		free_district_slots >= 1
+		num_free_districts = {
+			type = district_mining
+			value >= 1
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -5
+		district_mining_max = -5
+	}
+
+	prerequisites = {
+		full_automation_technology_advanced
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# Autonomous Generator
+building_autonomous_generator_1 = {
+	base_buildtime = 300
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			energy = 12
+		}
+		cost = {
+			minerals = 340
+			uploaded_pops = 2
+		}
+	}
+
+	upgrades = {
+		building_autonomous_generator_2
+	}
+
+	potential = {
+		free_district_slots >= 1
+		num_free_districts = {
+			type = district_generator
+			value >= 1
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+		district_generator_max = -1
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Autonomous Generation Zone
+building_autonomous_generator_2 = {
+	base_buildtime = 300
+	can_build = no
+	icon = building_autonomous_generator_1
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			energy = 24
+		}
+		cost = {
+			minerals = 340
+			uploaded_pops = 2
+		}
+	}
+
+	potential = {
+		free_district_slots >= 1
+		num_free_districts = {
+			type = district_generator
+			value >= 1
+		}
+	}
+
+	upgrades = {
+		building_autonomous_generator_3
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -2
+		district_generator_max = -2
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_autonomous_generator_3 = {
+	base_buildtime = 300
+	can_build = no
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			energy = 36
+		}
+		cost = {
+			minerals = 340
+			uploaded_pops = 2
+		}
+	}
+
+	potential = {
+		free_district_slots >= 1
+		num_free_districts = {
+			type = district_generator
+			value >= 1
+		}
+	}
+
+	upgrades = {
+		building_autonomous_generator_4
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -3
+		district_generator_max = -3
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_autonomous_generator_4 = {
+	base_buildtime = 300
+	can_build = no
+	icon = building_autonomous_generator_3
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			energy = 48
+		}
+		cost = {
+			minerals = 340
+			uploaded_pops = 2
+		}
+	}
+
+	potential = {
+		free_district_slots >= 1
+		num_free_districts = {
+			type = district_generator
+			value >= 1
+		}
+	}
+
+	upgrades = {
+		building_autonomous_generator_5
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -4
+		district_generator_max = -4
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_autonomous_generator_5 = {
+	base_buildtime = 300
+	can_build = no
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			energy = 60
+		}
+		cost = {
+			minerals = 340
+			uploaded_pops = 2
+		}
+	}
+
+	potential = {
+		free_district_slots >= 1
+		num_free_districts = {
+			type = district_generator
+			value >= 1
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -5
+		district_generator_max = -5
+	}
+
+	prerequisites = {
+		full_automation_technology_advanced
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+###Autonomous Farms
+# Autonomous Farm
+building_autonomous_farm_1 = {
+	base_buildtime = 300
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			food = 12
+		}
+		cost = {
+			minerals = 340
+			uploaded_pops = 2
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	upgrades = {
+		building_autonomous_farm_2
+	}
+
+	potential = {
+		owner = { country_uses_food = yes }
+		free_district_slots >= 1
+		num_free_districts = {
+			type = district_farming
+			value >= 1
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+		district_farming_max = -1
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Autonomous Intensive Farm
+building_autonomous_farm_2 = {
+	base_buildtime = 600
+	can_build = no
+	icon = building_autonomous_farm_1
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			food = 24
+		}
+		cost = {
+			minerals = 340
+			uploaded_pops = 2
+		}
+		upkeep = {
+			energy = 6
+		}
+	}
+
+	potential = {
+		owner = { country_uses_food = yes }
+		free_district_slots >= 1
+		num_free_districts = {
+			type = district_farming
+			value >= 1
+		}
+	}
+
+	upgrades = {
+		building_autonomous_farm_3
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -2
+		district_farming_max = -2
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_autonomous_farm_3 = {
+	base_buildtime = 300
+	can_build = no
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			food = 36
+		}
+		cost = {
+			minerals = 340
+			uploaded_pops = 2
+		}
+		upkeep = {
+			energy = 9
+		}
+	}
+
+	upgrades = {
+		building_autonomous_farm_4
+	}
+
+	potential = {
+		owner = { country_uses_food = yes }
+		free_district_slots >= 1
+		num_free_districts = {
+			type = district_farming
+			value >= 1
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -3
+		district_farming_max = -3
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_autonomous_farm_4 = {
+	base_buildtime = 300
+	icon = building_autonomous_farm_3
+
+	category = manufacturing
+	can_build = no
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			food = 48
+		}
+		cost = {
+			minerals = 340
+			uploaded_pops = 2
+		}
+		upkeep = {
+			energy = 15
+		}
+	}
+
+	upgrades = {
+		building_autonomous_farm_5
+	}
+
+	potential = {
+		owner = { country_uses_food = yes }
+		free_district_slots >= 1
+		num_free_districts = {
+			type = district_farming
+			value >= 1
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -4
+		district_farming_max = -4
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+building_autonomous_farm_5 = {
+	base_buildtime = 600
+	can_build = no
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			food = 60
+		}
+		cost = {
+			minerals = 340
+			uploaded_pops = 2
+		}
+		upkeep = {
+			energy = 18
+		}
+	}
+
+	potential = {
+		owner = { country_uses_food = yes }
+		free_district_slots >= 1
+		num_free_districts = {
+			type = district_farming
+			value >= 1
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -5
+		district_farming_max = -5
+	}
+
+	prerequisites = {
+		full_automation_technology_advanced
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+### ### Ringworld and Habitat Autonomous Resource Buildings
+
+### Ringworld Autonomous Buildings
+
+# Autonomous Ringworld Generator
+building_autonomous_generator_rw = {
+	base_buildtime = 600
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			energy = 400
+		}
+		cost = {
+			minerals = 2500
+			uploaded_pops = 50
+		}
+	}
+
+	potential = {
+		uses_district_set = ring_world
+		free_district_slots >= 1
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	prerequisites = {
+		full_automation_technology_advanced
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+# Autonomous Ringworld Farm
+building_autonomous_farm_rw = {
+	base_buildtime = 600
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			food = 400
+		}
+		cost = {
+			minerals = 2500
+			uploaded_pops = 50
+		}
+		upkeep = {
+			energy = 60
+		}
+	}
+
+	potential = {
+		uses_district_set = ring_world
+		owner = { country_uses_food = yes }
+		free_district_slots >= 1
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	prerequisites = {
+		full_automation_technology_advanced
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+### Habitat Autonomous Buildings
+
+
+# Autonomous Astro-Mining Bay
+building_autonomous_mine_hab = {
+	base_buildtime = 240
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			minerals = 24
+		}
+		cost = {
+			minerals = 400
+			uploaded_pops = 4
+		}
+		upkeep = {
+			energy = 6
+		}
+	}
+
+	potential = {
+		has_planet_flag = mining_habitat
+		uses_district_set = habitat
+		free_district_slots >= 1
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+#Autonomous Solar Energy Collectors
+building_autonomous_reactor_hab = {
+	base_buildtime = 240
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			energy = 25
+		}
+		cost = {
+			minerals = 400
+			uploaded_pops = 4
+		}
+	}
+
+	potential = {
+		has_planet_flag = energy_habitat
+		uses_district_set = habitat
+		free_district_slots >= 1
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	prerequisites = {
+		full_automation_technology
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+### Autonomous Hydroponic Farm
+building_autonomous_farm_hydroponic = {
+	base_buildtime = 300
+	icon = building_autonomous_farm_3
+
+	category = manufacturing
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			food = 12
+		}
+		cost = {
+			minerals = 340
+			uploaded_pops = 2
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+
+	potential = {
+		owner = { country_uses_food = yes }
+	}
+
+	prerequisites = {
+		full_automation_technology
+		tech_hydroponics
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

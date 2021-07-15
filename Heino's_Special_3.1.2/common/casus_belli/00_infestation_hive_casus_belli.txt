@@ -1,0 +1,19 @@
+cb_spread_infestation = {
+	show_in_diplomacy = no
+	show_notification = no
+	potential = {
+		has_country_flag = infestation_hive_cb_yes
+		has_origin = origin_infestation_hive
+		NOT = {
+			has_civic = civic_hive_devouring_swarm
+			has_country_flag = infestation_hive_cb_no
+		}
+	}
+	is_valid = {
+		NOT = { is_overlord_to = FROM }
+		OR = {
+			is_subject = no
+			overlord = { NOT = { is_same_value = from } }
+		}
+	}
+}

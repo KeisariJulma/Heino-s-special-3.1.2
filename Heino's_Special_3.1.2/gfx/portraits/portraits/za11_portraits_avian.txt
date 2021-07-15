@@ -1,0 +1,147 @@
+##############################################################
+###	PORTRAITS SETTINGS
+###
+### Which portraits are used is set in 
+### common\species_classes\00_species_classes.txt
+###
+###	This file configures how portraits and planet backgrounds are built.
+###	Default position orientation is lower left.
+##############################################################
+
+
+portraits = {
+	
+	avi11 = {	entity = "portrait_avian_11_entity"	clothes_selector = "avian_massive_clothes_01" hair_selector = "no_texture"	greeting_sound = "avian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/avian/avian_massive_11_beige_blue.dds"
+					"gfx/models/portraits/avian/avian_massive_11_white.dds"
+					"gfx/models/portraits/avian/avian_massive_11_beige.dds"
+					"gfx/models/portraits/avian/avian_massive_11_brown.dds"
+					"gfx/models/portraits/avian/avian_massive_11_black.dds"
+				}
+	}
+	avi11_2 = {	entity = "portrait_avian_11_entity"	clothes_selector = "avian_massive_clothes_01" hair_selector = "no_texture"	greeting_sound = "avian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/avian/avian_massive_11_amber.dds"
+					"gfx/models/portraits/avian/avian_massive_11_amethyst.dds"
+					"gfx/models/portraits/avian/avian_massive_11_blue.dds"
+					"gfx/models/portraits/avian/avian_massive_11_blue_blue.dds"
+					"gfx/models/portraits/avian/avian_massive_11_citrine.dds"
+					"gfx/models/portraits/avian/avian_massive_11_cyan_cyan.dds"
+					"gfx/models/portraits/avian/avian_massive_11_emerald.dds"
+					"gfx/models/portraits/avian/avian_massive_11_orange.dds"
+					"gfx/models/portraits/avian/avian_massive_11_pale_white.dds"
+					"gfx/models/portraits/avian/avian_massive_11_purple.dds"
+					"gfx/models/portraits/avian/avian_massive_11_red.dds"
+#					"gfx/models/portraits/avian/avian_massive_11_rich_brown.dds"
+					"gfx/models/portraits/avian/avian_massive_11_ruby.dds"
+					"gfx/models/portraits/avian/avian_massive_11_sapphire.dds"
+					"gfx/models/portraits/avian/avian_massive_11_sienna.dds"
+					"gfx/models/portraits/avian/avian_massive_11_turquoise.dds"
+					"gfx/models/portraits/avian/avian_massive_11_yellow_yellow.dds"
+				}
+	}
+	avi11_3 = {	entity = "portrait_avian_11_entity"	clothes_selector = "avian_massive_clothes_01" hair_selector = "no_texture"	greeting_sound = "avian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/avian/avian_massive_11_black_amber.dds"
+					"gfx/models/portraits/avian/avian_massive_11_black_amethyst.dds"
+					"gfx/models/portraits/avian/avian_massive_11_black_blue.dds"
+					"gfx/models/portraits/avian/avian_massive_11_black_citrine.dds"
+					"gfx/models/portraits/avian/avian_massive_11_black_cyan.dds"
+					"gfx/models/portraits/avian/avian_massive_11_black_emerald.dds"
+					"gfx/models/portraits/avian/avian_massive_11_black_orange.dds"
+					"gfx/models/portraits/avian/avian_massive_11_black_purple.dds"
+					"gfx/models/portraits/avian/avian_massive_11_black_red.dds"
+					"gfx/models/portraits/avian/avian_massive_11_black_ruby.dds"
+					"gfx/models/portraits/avian/avian_massive_11_black_sapphire.dds"
+					"gfx/models/portraits/avian/avian_massive_11_black_white.dds"
+				}
+	}
+	avi11_4 = {	entity = "portrait_avian_11_entity"	clothes_selector = "avian_massive_clothes_01" hair_selector = "no_texture"	greeting_sound = "avian_01_greetings" 
+			character_textures = {
+					"gfx/models/portraits/avian/avian_massive_11_dual_blue_orange.dds"
+					"gfx/models/portraits/avian/avian_massive_11_dual_orange_blue.dds"
+					"gfx/models/portraits/avian/avian_massive_11_dual_cyan_green.dds"
+					"gfx/models/portraits/avian/avian_massive_11_dual_cyan_purple.dds"
+					"gfx/models/portraits/avian/avian_massive_11_dual_cyan_rbrown.dds"
+					"gfx/models/portraits/avian/avian_massive_11_dual_green_red.dds"
+					"gfx/models/portraits/avian/avian_massive_11_dual_red_green.dds"
+					"gfx/models/portraits/avian/avian_massive_11_dual_red_blue.dds"
+					"gfx/models/portraits/avian/avian_massive_11_dual_red_orange.dds"
+					"gfx/models/portraits/avian/avian_massive_11_dual_white_black.dds"
+					"gfx/models/portraits/avian/avian_massive_11_dual_white_orange.dds"
+					"gfx/models/portraits/avian/avian_massive_11_dual_white_purple.dds"
+					"gfx/models/portraits/avian/avian_massive_11_dual_white_yellow.dds"
+					"gfx/models/portraits/avian/avian_massive_11_dual_purple_yellow.dds"
+					"gfx/models/portraits/avian/avian_massive_11_dual_yellow_purple.dds"
+					"gfx/models/portraits/avian/avian_massive_11_dual_yellow_rbrown.dds"
+				}
+	}
+}
+
+
+portrait_groups = {
+	
+	avi11 = {
+		default = avi11
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				portraits = {
+					avi11
+					avi11_2
+					avi11_3
+					avi11_4
+				}
+			}
+		}
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					avi11
+					avi11_2
+					avi11_3
+					avi11_4
+				}
+			}
+		}		
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				portraits = {
+					avi11
+					avi11_2
+					avi11_3
+					avi11_4
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				portraits = {
+					avi11
+					avi11_2
+					avi11_3
+					avi11_4
+				}
+			}
+		}
+		#leader scope 
+		ruler = {
+			add = {
+				portraits = {
+					avi11
+					avi11_2
+					avi11_3
+					avi11_4
+				}
+			}
+		}
+	}
+	
+	
+	
+}

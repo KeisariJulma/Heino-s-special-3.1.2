@@ -1,0 +1,7 @@
+﻿l_english:
+
+ r_omnicodex_desc:0 "Eons ago a benevolent race of cyborgs set out to ensure the perpetuation of biological life by sampling and indexing every race in the galaxy, to ensure that any extinction event need not be permanent. While their goal of galactic salvation was eventually thwarted by foolish zealots and a disgusting Hive Mind, their legacy remains."
+
+ mega.201.desc:0 "For untold generations, the cold and empty ruins of [Root.GetName] have stood dormant, as quiet symbols of a golden age that came to an abrupt end eons ago.\n\nNo longer. The [Root.GetPlanetMoon]-wide city has at last been reborn, and those same dilapidated ruins are once more alive with activity. Where possible, existing buildings and infrastructure have been repaired and repurposed. Where the damage was too great, the rubble and ruins have been cleared away to allow for new construction."
+ pm_yuht_cleansing_desc:0 "This [This.GetPlanetMoon] was violently cleansed of most hostile wildlife."
+ planet_manager_awards_desc:0 "Executives and managers on this [This.GetPlanetMoon] are competing to maximize business synergies and exceed key performance indicator goals."

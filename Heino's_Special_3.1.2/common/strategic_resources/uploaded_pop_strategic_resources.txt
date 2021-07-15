@@ -1,0 +1,7 @@
+uploaded_pops = {
+	tradable = no
+	max = 10000
+	visibility_prerequisite = { always = yes }
+	ai_weight = { weight = 100 }
+	prerequisites = { "virtual_reality_theory" "virtual_reality_gestalt" }
+}

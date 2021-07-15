@@ -1,0 +1,177 @@
+triggered_opinion_is_mechroid = {
+	trigger = {
+		has_global_flag = mcr_mechroids_new_game
+		is_country_type = default
+		is_mechanical_empire = no
+		is_cyborg_empire = no	
+		NOR = {
+			has_authority = auth_machine_intelligence
+			has_ethic = ethic_gestalt_consciousness
+			has_ethic = ethic_materialist
+			has_ethic = ethic_fanatic_materialist
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_fanatic_xenophile
+			has_trait = trait_mechroid		
+		}
+		FROM = {
+			has_trait = trait_mechroid
+		}
+	}	
+	opinion = {
+		base = -20
+	}
+}
+
+triggered_opinion_is_mechroid_also_materialist = {
+	trigger = {
+		has_global_flag = mcr_mechroids_new_game
+		OR = {
+			is_mechanical_empire = yes
+			is_cyborg_empire = yes	
+			has_ethic = ethic_materialist
+			has_ethic = ethic_fanatic_materialist
+			has_trait = trait_mechroid
+		}
+		FROM = {
+			has_trait = trait_mechroid
+		}
+	}
+	opinion = {
+		base = 10
+	}
+}
+
+triggered_opinion_is_mechroid_also_spiritualist = {
+	trigger = {
+		has_global_flag = mcr_mechroids_new_game
+		has_ethic = ethic_spiritualist
+		is_cyborg_empire = no
+		is_mechanical_empire = no
+		NOT = {
+			has_trait = trait_mechroid		
+		}
+		FROM = {
+			has_trait = trait_mechroid
+		}
+	}
+	opinion = {
+		base = -30
+	}
+}
+
+triggered_opinion_is_mechroid_also_fanatic_spiritualist = {
+	trigger = {
+		has_global_flag = mcr_mechroids_new_game
+		has_ethic = ethic_fanatic_spiritualist
+		is_cyborg_empire = no
+		is_mechanical_empire = no
+		NOT = {
+			has_trait = trait_mechroid		
+		}
+		FROM = {
+			has_trait = trait_mechroid
+		}
+	}
+	opinion = {
+		base = -40
+	}
+}
+
+triggered_opinion_uses_emotion_inhibitor_xenophile = {
+	trigger = {
+		has_global_flag = mcr_mechroids_new_game
+		OR = {
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_fanatic_xenophile
+		}
+		NOT = {
+			has_trait = trait_emotion_inhibitor
+		}
+		FROM = {
+			has_trait = trait_emotion_inhibitor
+		}
+	}
+	opinion = {
+		base = -100
+	}
+}
+
+triggered_opinion_emotionless = {
+	trigger = {
+		has_global_flag = mcr_mechroids_new_game
+		NOR = {
+			has_ethic = ethic_xenophile
+			has_ethic = ethic_fanatic_xenophile
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+			has_authority = auth_machine_intelligence
+			has_ethic = ethic_gestalt_consciousness
+			has_trait = trait_emotion_inhibitor
+		}
+		FROM = {
+			has_trait = trait_emotion_inhibitor
+		}
+	}
+	opinion = {
+		base = -20
+	}
+}
+
+triggered_opinion_emotionless_machineauth = {
+	trigger = {
+		has_global_flag = mcr_mechroids_new_game
+		OR = {
+			has_trait = trait_emotion_inhibitor			
+			has_authority = auth_machine_intelligence
+		}
+		NOT = {
+			has_trait = trait_robot_emotion_emulators
+		}
+		FROM = {
+			has_trait = trait_emotion_inhibitor
+		}
+	}
+	opinion = {
+		base = 10
+	}
+}
+
+triggered_opinion_uses_emotion_inhibitor_spiritualist = {
+	trigger = {
+		has_global_flag = mcr_mechroids_new_game
+		OR = {
+			has_ethic = ethic_spiritualist
+			has_ethic = ethic_fanatic_spiritualist
+		}
+		NOT = {
+			has_trait = trait_emotion_inhibitor
+		}
+		FROM = {
+			has_trait = trait_emotion_inhibitor
+		}
+	}
+	opinion = {
+		base = -100
+	}
+}
+
+triggered_opinion_has_emotion_inhibitor = {
+	trigger = {
+		has_global_flag = mcr_mechroids_new_game
+		has_trait = trait_emotion_inhibitor
+		FROM = {
+			NOR = {
+				has_ethic = ethic_gestalt_consciousness
+				has_authority = auth_machine_intelligence				
+				has_trait = trait_emotion_inhibitor
+			}
+		}
+	}
+	opinion = {
+		base = -10
+	}
+}
+
+

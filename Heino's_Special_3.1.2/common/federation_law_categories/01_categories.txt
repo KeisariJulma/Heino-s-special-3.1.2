@@ -6,7 +6,6 @@ law_category_centralization = {
 		centralization_medium
 		centralization_high
 		centralization_very_high
-		centralization_imperial_loyalists # Event only
 	}
 }
 
@@ -27,11 +26,33 @@ law_category_fleet_contribution = {
 		fleet_contribution_high_trade
 		fleet_contribution_high_hegemony
 		fleet_contribution_high_martial
-		fleet_contribution_low_peacekeeper
-		fleet_contribution_medium_peacekeeper
-		fleet_contribution_high_peacekeeper
+		FEDEXP_fleet_contribution_low
+		FEDEXP_fleet_contribution_medium
+		FEDEXP_fleet_contribution_high
+		FEDEXP_fleet_contribution_full
 	}
 }
+
+law_category_FEDEXP_diplomatic_contribution = {
+	laws = {
+		FEDEXP_diplomatic_contribution_none
+		FEDEXP_diplomatic_contribution_low
+		FEDEXP_diplomatic_contribution_medium
+		FEDEXP_diplomatic_contribution_high
+		FEDEXP_diplomatic_contribution_very_high
+	}
+}
+
+#FEDEXP_federation_law_category_economic_integration = {
+#	laws = {
+#		FEDEXP_economic_integration_very_low 
+#		FEDEXP_economic_integration_none
+#		FEDEXP_economic_integration_low
+#		FEDEXP_economic_integration_medium
+#		FEDEXP_economic_integration_high
+#		FEDEXP_economic_integration_very_high
+#	}
+#}
 
 law_category_succession_type = {
 	laws = {
@@ -40,7 +61,6 @@ law_category_succession_type = {
 		succession_type_challenge
 		succession_type_strongest
 		succession_type_strongest_hegemony
-		succession_type_none # Event only
 	}
 }
 
@@ -67,7 +87,6 @@ law_category_succession_term = {
 		succession_term_years_30
 		succession_term_years_40
 		succession_term_status_change
-		succession_term_perpetual # Event only
 	}
 }
 
@@ -78,6 +97,14 @@ law_category_challenge = {
 		challenge_type_psionic_battle
 		challenge_type_bidding_war
 		challenge_type_thesis
+	}
+}
+
+law_category_FEDEXP_political_union = {
+	laws = {
+		FEDEXP_political_union_low
+		FEDEXP_political_union_medium
+		FEDEXP_political_union_high
 	}
 }
 
@@ -97,7 +124,6 @@ law_category_allow_subjects_to_join = {
 	laws = {
 		allow_subjects_to_join_no
 		allow_subjects_to_join_yes
-		allow_subjects_to_join_yes_imperial_loyalists # Event only
 	}
 }
 
@@ -105,7 +131,6 @@ law_category_voting_weight = {
 	laws = {
 		vote_weight_equal
 		vote_weight_diplomatic
-		vote_weight_diplomatic_imperial_loyalists # Event only
 	}
 }
 
@@ -115,7 +140,6 @@ law_category_war_declaration_vote = {
 		declare_war_majority_vote
 		declare_war_majority_vote_hegemony
 		declare_war_president_vote
-		declare_war_president_vote_imperial_loyalists # Event only
 	}
 }
 
@@ -125,7 +149,6 @@ law_category_invite_members_vote = {
 		invite_members_majority_vote
 		invite_members_president_vote
 		invite_members_president_vote_hegemony
-		invite_members_president_vote_imperial_loyalists # Event only
 	}
 }
 
@@ -134,7 +157,6 @@ law_category_kick_members_vote = {
 		kick_members_majority_vote
 		kick_members_president_vote
 		kick_members_president_vote_hegemony
-		kick_members_president_vote_imperial_loyalists # Event only
 	}
 }
 
@@ -149,6 +171,15 @@ law_category_separate_treaties = {
 	laws = {
 		treaties_separate_yes
 		treaties_separate_no
-		treaties_separate_no_imperial_loyalists # Event only
+	}
+}
+
+law_category_FEDEXP_defend_associates = {
+	laws = {
+		FEDEXP_defend_associates_none
+		FEDEXP_defend_associates_rivals
+		FEDEXP_defend_associates_all
+		FEDEXP_defend_associates_rivals_defensive_coalition
+		FEDEXP_defend_associates_all_defensive_coalition
 	}
 }
