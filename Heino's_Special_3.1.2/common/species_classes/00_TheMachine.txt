@@ -1,0 +1,638 @@
+DH02_cyberman = {
+	archetype =  ROBOT
+
+	playable = {
+		has_global_flag = game_started
+		host_has_dlc = "Synthetic Dawn Story Pack"
+ 	}
+	randomized = no
+	robotic = yes
+	gender = no
+	use_climate_preference = no
+	portrait_modding = yes
+	leader_age_min = 2
+	leader_age_max = 10
+	custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"DH02_cyberman"
+		}
+	}
+	graphical_culture = ai_01
+	move_pop_sound_effect = "moving_pop_confirmation"
+	species_trait_points = @robot_trait_points
+	species_max_traits = @robot_max_traits
+}
+
+DH03_dalek = {
+	archetype = ROBOT
+
+	playable = {
+	has_global_flag = game_started
+	host_has_dlc = "Synthetic Dawn Story Pack"
+ 	}
+		randomized = no
+		robotic = yes
+		gender = no
+		use_climate_preference = no
+		portrait_modding = yes
+
+		leader_age_min = 2
+		leader_age_max = 10
+
+		custom_portraits = {
+			randomized = { always = yes }
+			playable = { always = yes }
+			portraits = {
+				"DH03_dalek"
+			}
+		}
+
+		graphical_culture = ai_01
+		move_pop_sound_effect = "molluscoid_pops_move_01"
+
+		species_trait_points = @robot_trait_points
+		species_max_traits = @robot_max_traits
+}
+
+# --- Fantasy ---
+
+FAN12_robot_SF = {
+	archetype = ROBOT
+
+	playable = {
+		has_global_flag = game_started
+		host_has_dlc = "Synthetic Dawn Story Pack"
+	}
+	randomized = no
+	robotic = yes
+	gender = no
+	use_climate_preference = no
+	portrait_modding = yes
+
+	leader_age_min = 2
+	leader_age_max = 10
+
+	custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"FAN12_robot_SF"
+		}
+	}
+
+	graphical_culture = ai_01
+	move_pop_sound_effect = "molluscoid_pops_move_01"
+
+	species_trait_points = @robot_trait_points
+	species_max_traits = @robot_max_traits
+}
+
+# --- Halo ---
+
+HA17_cortana = {
+	archetype = ROBOT
+
+	playable = {
+		has_global_flag = game_started
+		host_has_dlc = "Synthetic Dawn Story Pack"
+	}
+	randomized = no
+	robotic = yes
+	gender = no
+	use_climate_preference = no
+	portrait_modding = yes
+
+	leader_age_min = 2
+	leader_age_max = 10
+
+	custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"HA17_cortana"
+		}
+	}
+
+	graphical_culture = ai_01
+	move_pop_sound_effect = "molluscoid_pops_move_01"
+
+	species_trait_points = @robot_trait_points
+	species_max_traits = @robot_max_traits
+}
+
+HA14_promethean = {
+	archetype = ROBOT
+
+	playable = {
+		has_global_flag = game_started
+		host_has_dlc = "Synthetic Dawn Story Pack"
+	}
+	randomized = no
+	robotic = yes
+	gender = no
+	use_climate_preference = no
+	portrait_modding = yes
+
+	leader_age_min = 2
+	leader_age_max = 10
+
+	custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"HA14_promethean"
+		}
+	}
+
+	graphical_culture = ai_01
+	move_pop_sound_effect = "molluscoid_pops_move_01"
+
+	species_trait_points = @robot_trait_points
+	species_max_traits = @robot_max_traits
+}
+
+# --- Mass Effect ---
+
+ME25_edi = {
+	archetype = ROBOT
+
+	playable = {
+		has_global_flag = game_started
+		host_has_dlc = "Synthetic Dawn Story Pack"
+	}
+	randomized = no
+	robotic = yes
+	gender = no
+	use_climate_preference = no
+	portrait_modding = yes
+
+	leader_age_min = 2
+	leader_age_max = 10
+
+	custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"ME25_edi"
+		}
+	}
+
+	graphical_culture = ai_01
+	move_pop_sound_effect = "molluscoid_pops_move_01"
+
+	species_trait_points = @robot_trait_points
+	species_max_traits = @robot_max_traits
+}
+
+ME06_geth = {
+	archetype = ROBOT
+
+	playable = {
+		has_global_flag = game_started
+		host_has_dlc = "Synthetic Dawn Story Pack"
+	}
+	randomized = no
+	robotic = yes
+	gender = no
+	use_climate_preference = no
+	portrait_modding = yes
+
+	leader_age_min = 2
+	leader_age_max = 10
+
+	custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"ME06_geth"
+		}
+	}
+
+	graphical_culture = ai_01
+	move_pop_sound_effect = "molluscoid_pops_move_01"
+
+	species_trait_points = @robot_trait_points
+	species_max_traits = @robot_max_traits
+}
+
+# --- Misc ---
+
+MI26_terminator = {
+	archetype = ROBOT
+
+	playable = {
+		has_global_flag = game_started
+		host_has_dlc = "Synthetic Dawn Story Pack"
+	}
+	randomized = no
+	robotic = yes
+	gender = no
+	use_climate_preference = no
+	portrait_modding = yes
+
+	leader_age_min = 2
+	leader_age_max = 10
+
+	custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"MI26_terminator"
+		}
+	}
+
+	graphical_culture = ai_01
+	move_pop_sound_effect = "molluscoid_pops_move_01"
+
+	species_trait_points = @robot_trait_points
+	species_max_traits = @robot_max_traits
+}
+
+MI30_dominator = {
+	archetype = ROBOT
+
+	playable = {
+		has_global_flag = game_started
+		host_has_dlc = "Synthetic Dawn Story Pack"
+	}
+	randomized = no
+	robotic = yes
+	gender = no
+	use_climate_preference = no
+	portrait_modding = yes
+
+	leader_age_min = 2
+	leader_age_max = 10
+
+	custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"MI30_dominator"
+		}
+	}
+
+	graphical_culture = ai_01
+	move_pop_sound_effect = "molluscoid_pops_move_01"
+
+	species_trait_points = @robot_trait_points
+	species_max_traits = @robot_max_traits
+}
+
+# --- Spec Races ---
+
+SP13_ai_1 = {
+	archetype = ROBOT
+
+	playable = {
+		has_global_flag = game_started
+		host_has_dlc = "Synthetic Dawn Story Pack"
+	}
+	randomized = no
+	robotic = yes
+	gender = no
+	use_climate_preference = no
+	portrait_modding = yes
+
+	leader_age_min = 2
+	leader_age_max = 10
+
+	custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"SP13_ai_1"
+		}
+	}
+}
+
+	SP13_ai_2 = {
+		archetype = ROBOT
+
+		playable = {
+			has_global_flag = game_started
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+		randomized = no
+		robotic = yes
+		gender = no
+		use_climate_preference = no
+		portrait_modding = yes
+
+		leader_age_min = 2
+		leader_age_max = 10
+
+		custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"SP13_ai_2"
+		}
+	}
+}
+
+	exd4 = {
+		archetype = ROBOT
+
+		playable = {
+			has_global_flag = game_started
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+		randomized = no
+		robotic = yes
+		gender = no
+		use_climate_preference = no
+		portrait_modding = yes
+
+		leader_age_min = 2
+		leader_age_max = 10
+
+		custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"exd4"
+		}
+	}
+}
+
+	exd5 = {
+		archetype = ROBOT
+
+		playable = {
+			has_global_flag = game_started
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+		randomized = no
+		robotic = yes
+		gender = no
+		use_climate_preference = no
+		portrait_modding = yes
+
+		leader_age_min = 2
+		leader_age_max = 10
+
+		custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"exd5"
+		}
+	}
+}
+
+	exd6 = {
+		archetype = ROBOT
+
+		playable = {
+			has_global_flag = game_started
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+		randomized = no
+		robotic = yes
+		gender = no
+		use_climate_preference = no
+		portrait_modding = yes
+
+		leader_age_min = 2
+		leader_age_max = 10
+
+		custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"exd6"
+		}
+	}
+}
+	exd7 = {
+		archetype = ROBOT
+
+		playable = {
+			has_global_flag = game_started
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+		randomized = no
+		robotic = yes
+		gender = no
+		use_climate_preference = no
+		portrait_modding = yes
+
+		leader_age_min = 2
+		leader_age_max = 10
+
+		custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"exd7"
+		}
+	}
+}
+
+	exd8 = {
+		archetype = ROBOT
+
+		playable = {
+			has_global_flag = game_started
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+		randomized = no
+		robotic = yes
+		gender = no
+		use_climate_preference = no
+		portrait_modding = yes
+
+		leader_age_min = 2
+		leader_age_max = 10
+
+		custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"exd8"
+		}
+	}
+}
+
+	exd9 = {
+		archetype = ROBOT
+
+		playable = {
+			has_global_flag = game_started
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+		randomized = no
+		robotic = yes
+		gender = no
+		use_climate_preference = no
+		portrait_modding = yes
+
+		leader_age_min = 2
+		leader_age_max = 10
+
+		custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"exd9"
+		}
+	}
+}
+
+	exd10 = {
+		archetype = ROBOT
+
+		playable = {
+			has_global_flag = game_started
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+		randomized = no
+		robotic = yes
+		gender = no
+		use_climate_preference = no
+		portrait_modding = yes
+
+		leader_age_min = 2
+		leader_age_max = 10
+
+		custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"exd10"
+		}
+	}
+}
+
+	exd11 = {
+		archetype = ROBOT
+
+		playable = {
+			has_global_flag = game_started
+			host_has_dlc = "Synthetic Dawn Story Pack"
+		}
+		randomized = no
+		robotic = yes
+		gender = no
+		use_climate_preference = no
+		portrait_modding = yes
+
+		leader_age_min = 2
+		leader_age_max = 10
+
+		custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"exd11"
+		}
+	}
+}
+
+# --- Star Wars ---
+
+SW18_robot = {
+	archetype = ROBOT
+
+	playable = {
+		has_global_flag = game_started
+		host_has_dlc = "Synthetic Dawn Story Pack"
+	}
+	randomized = no
+	robotic = yes
+	gender = no
+	use_climate_preference = no
+	portrait_modding = yes
+
+	leader_age_min = 2
+	leader_age_max = 10
+
+	custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"SW18_robot"
+		}
+	}
+}
+
+# --- Warhammer 40K ---
+
+WH10_necron = {
+	archetype = ROBOT
+
+	playable = {
+		has_global_flag = game_started
+		host_has_dlc = "Synthetic Dawn Story Pack"
+	}
+	randomized = no
+	robotic = yes
+	gender = no
+	use_climate_preference = no
+	portrait_modding = yes
+
+	leader_age_min = 2
+	leader_age_max = 10
+
+	custom_portraits = {
+		randomized = { always = yes }
+		playable = { always = yes }
+		portraits = {
+			"WH10_necron"
+		}
+	}
+}
+
+TheMachine = {
+		archetype = MACHINE
+
+		playable = { host_has_dlc = "Synthetic Dawn Story Pack" }
+		randomized = {
+		# The create_species effect can't properly take the possible trigger below into account.
+		# Work around this by disabling this class for species randomization after game start.
+		NOT = { has_global_flag = game_started }
+		}
+		possible = { authority = { OR = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_USE_MACHINE_INTELLIGENCE } } }
+		possible_secondary = { always = no text = SECONDARY_SPECIES_CLASS_INVALID }
+
+		robotic = yes
+		gender = no
+		use_climate_preference = no
+		portrait_modding = yes
+
+		leader_age_min = 2
+		leader_age_max = 10
+
+		portraits = {
+		"DH02_cyberman"
+		"DH03_dalek"
+		"FAN12_robot_SF"
+		"HA17_cortana"
+		"HA14_promethean"
+		"ME25_edi"
+		"ME06_geth"
+		"MI26_terminator"
+		"MI30_dominator"
+		"SP13_ai_1"
+		"SP13_ai_2"
+		"exd4"
+		"exd5"
+		"exd6"
+		"exd7"
+		"exd8"
+		"exd9"
+		"exd10"
+		"exd11"
+		"SW18_robot"
+		"WH10_necron"
+		}
+
+		species_trait_points = @machine_trait_points
+		species_max_traits = @machine_max_traits
+
+		graphical_culture = molluscoid_01
+		move_pop_sound_effect = "molluscoid_pops_move_01"
+}
